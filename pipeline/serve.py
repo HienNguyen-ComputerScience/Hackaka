@@ -111,6 +111,7 @@ class State:
                     nothing += (" The nearest chains, which do not answer this, are about: "
                                 + "; ".join(", ".join(t) for t in out["nearest"]["topics"]) + ".")
             return {"question": question, "scope": out.get("scope"), "never_mentions": out.get("never_mentions") or [],
+                    "direct": out.get("direct"),
                     "groups": groups, "attribution": att, "initiative": initiative, "empty": empty, "nothing": nothing}
 
     def delete(self, person_id):
@@ -201,10 +202,11 @@ function statement(s){
 function renderAnswer(a){
   let h = "";
   if(a.never_mentions && a.never_mentions.length)
-    h += `<p class="note">The archive never uses the word(s): ${esc(a.never_mentions.join(", "))}.` +
-         (a.groups.length ? " Chains below are related context, not an answer to that part of the question." : "") + `</p>`;
+    h += `<p class="note">The archive never uses the word(s): ${esc(a.never_mentions.join(", "))}.</p>`;
   if(a.empty) return h + `<p class="note">${esc(a.nothing)}</p>`;
   if(a.scope) h += `<p class="muted">scoped to ${esc(a.scope)}: retrieval limited to that period; chains with statements then are favoured</p>`;
+  const contextOnly = a.groups.length && a.direct === false;
+  if(contextOnly) h += `<p class="note">NO DIRECT ANSWER: no statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</p>`;
   if(a.initiative){
     h += `<div class="g"><div class="lbl">agreed and not done</div>`;
     if(!a.initiative.length) h += `<div class="s muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
@@ -222,7 +224,7 @@ function renderAnswer(a){
     h += `</div>`;
   }
   for(const g of a.groups){
-    h += `<div class="g"><div class="lbl">${esc(g.fact_keys.join(", "))}</div>`;
+    h += `<div class="g"><div class="lbl">${contextOnly ? "related context: " : ""}${esc(g.fact_keys.join(", "))}</div>`;
     if(g.head_removed){
       const n = g.removed_statements, pl = n===1?"":"s";
       if(g.statements.length){

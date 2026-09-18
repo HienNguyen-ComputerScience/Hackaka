@@ -226,7 +226,27 @@ class Answerer:
             if covered != rest:
                 nearest = {"topics": [self.groups[g]["fact_keys"][:2] for g in top_groups[:3]]}
                 top_groups = []
-        out = {"query": query, "scope": scope[2] if scope else None, "never_mentions": never, "groups": [],
+        # direct-answer test: does some single statement in the chosen chains address the question as asked?
+        # A statement qualifies when it is semantically close to the question, or covers half its content
+        # words, or covers a third of them while being moderately close. If no statement qualifies, or the
+        # question uses words the archive never uses, the chains are labelled related context, not an answer.
+        direct = None
+        if top_groups and not scope:
+            direct = False
+            rest = qtok - never_stems
+            # words the archive never uses veto a direct answer only when they are the bulk of the ask;
+            # an incidental paraphrase word ("proportion" for "share") does not
+            if 3 * len(never) < len(qtok):
+                for gid in top_groups:
+                    for c in self.by_group[gid]:
+                        cos = float(self.semb[self.sidx[c["claim_id"]]] @ qv)
+                        cov = len(rest & content_tokens(f"{c['statement']} {c.get('value') or ''}")) / len(rest) if rest else 0.0
+                        if cos >= 0.48 or cov >= 0.5 or (cov >= 0.33 and cos >= 0.40):
+                            direct = True
+                            break
+                    if direct:
+                        break
+        out = {"query": query, "scope": scope[2] if scope else None, "never_mentions": never, "direct": direct, "groups": [],
                "attribution": None, "initiative": None, "nearest": nearest, "hits": [h["pin"]["where"] for h in hits]}
         for gid in top_groups:
             members = sorted(self.by_group[gid], key=lambda c: (c["date"], c["turn_index"] or 0))
@@ -358,15 +378,18 @@ def render(out):
     if out.get("scope"):
         lines.append(f"(scoped to {out['scope']}: retrieval limited to that period; chains with statements then are favoured)")
     if out.get("never_mentions"):
-        lines.append(f"The archive never uses the word(s): {', '.join(out['never_mentions'])}."
-                     + (" Chains below are related context, not an answer to that part of the question." if out["groups"] else ""))
+        lines.append(f"The archive never uses the word(s): {', '.join(out['never_mentions'])}.")
     if out.get("empty"):
         lines.append(NOTHING)
         if out.get("nearest"):
             lines.append("  The nearest chains, which do not answer this, are about: "
                          + "; ".join(", ".join(t) for t in out["nearest"]["topics"]) + ".")
+    context_only = out["groups"] and out.get("direct") is False
+    if context_only:
+        lines.append("NO DIRECT ANSWER: no statement in the archive directly answers the question as asked. "
+                     "The chains below are related context, not an answer.")
     for g in out["groups"]:
-        lines.append(f"== {', '.join(g['fact_keys'][:3])} ==")
+        lines.append(f"== {'related context: ' if context_only else ''}{', '.join(g['fact_keys'][:3])} ==")
         if g.get("head_removed"):
             n = g["removed_statements"]
             if g["statements"]:

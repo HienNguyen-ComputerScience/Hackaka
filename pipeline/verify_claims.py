@@ -23,26 +23,46 @@ def chain(members):
     return [c for c in members if c["chain_pos"]]
 
 
-# P5 shelf-life series, AFTER the deleted technical consultant's removal (P7): the chain lost its
-# head (his 61% of 2025-12-11) and his two 48% statements. It must say so, name Ana Duarte's 48% of
-# 2024-12-20 as the newest surviving figure, and call nothing current.
+# P5 shelf-life series. State-aware: data/ is either the full archive (no deletion log) or post-deletion
+# (a log exists). The expectation follows the state, and the state is read from the data, never assumed.
+#   full archive    one CURRENT, the four dated statements the corpus carries, nothing flagged head_removed
+#   post-deletion   if the log says this chain lost its head: head_removed on the group and on exactly one
+#                   newest-surviving claim, the removed member ids gone, removed count matching the log;
+#                   if the log does not touch the chain: intact, one CURRENT, no head_removed flag
 GROUPS = json.loads((DATA / "claim_groups.json").read_text(encoding="utf-8"))
+LOG = DATA / "deletion_log.jsonl"
+log_records = [json.loads(l) for l in LOG.open(encoding="utf-8") if l.strip()] if LOG.exists() else []
 g = chain(group_of("share of articles with shelf-life data populated"))
 grp = GROUPS[g[0]["group_id"]]
-newest = [c for c in g if c["is_current"]]
-figs = [c for c in g if c.get("value") and any(ch.isdigit() for ch in str(c["value"]))]
-gone = {"2024-09-24", "2024-09-30", "2025-12-11"}
+cur = [c for c in g if c["is_current"]]
 dates = {c["date"][:10] for c in g}
-p5 = (grp.get("head_removed") is True and grp.get("removed_statements") == 4
-      and len(newest) == 1 and newest[0].get("head_removed") is True
-      and not (gone & dates)
-      and figs and figs[-1]["asserted_by"] == "Ana Duarte" and figs[-1]["date"][:10] == "2024-12-20" and figs[-1]["value"] == "48%"
-      and all(c["where"] for c in g))
-print(f"[P5] shelf-life chain after deletion: head_removed={grp.get('head_removed')} removed={grp.get('removed_statements')} "
-      f"deleted dates absent={not (gone & dates)} newest figure={figs[-1]['asserted_by'] if figs else None} {figs[-1]['value'] if figs else None} "
-      f"{figs[-1]['date'][:10] if figs else ''} ->", "PASS" if p5 else "FAIL")
+chain_ids = {c["claim_id"] for c in g}
+if not log_records:
+    state = "full archive"
+    need = {"2024-04-18", "2024-09-24", "2024-09-30", "2025-09-12"}
+    p5 = (len(cur) == 1 and need <= dates and not grp.get("head_removed") and not any(c.get("head_removed") for c in g)
+          and all(c["superseded_by"] for c in g if not c["is_current"]) and all(c["where"] for c in g))
+    detail = f"{len(cur)} current, required dates present={need <= dates}, no head_removed flag={not grp.get('head_removed')}"
+else:
+    state = f"post-deletion ({len(log_records)} log record(s))"
+    touching = [r for rec in log_records for r in rec.get("chains_head_removed", [])
+                if r.get("new_group") == g[0]["group_id"] or chain_ids & set(r.get("members_surviving", []))]
+    removed_ids = {m for r in touching for m in r.get("members_removed", [])}
+    if touching:
+        expected_removed = sum(r.get("removed_statements_total", len(r.get("members_removed", []))) for r in touching[-1:])
+        flagged = [c for c in g if c.get("head_removed")]
+        p5 = (grp.get("head_removed") is True and grp.get("removed_statements") == expected_removed
+              and len(cur) == 1 and flagged == cur
+              and not (chain_ids & removed_ids) and all(c["where"] for c in g))
+        detail = (f"chain lost its head: head_removed={grp.get('head_removed')} removed={grp.get('removed_statements')} "
+                  f"(log says {expected_removed}), newest survivor flagged={flagged == cur}, removed ids absent={not (chain_ids & removed_ids)}")
+    else:
+        p5 = (len(cur) == 1 and not grp.get("head_removed") and not any(c.get("head_removed") for c in g)
+              and all(c["superseded_by"] for c in g if not c["is_current"]) and all(c["where"] for c in g))
+        detail = f"chain untouched by the deletion: {len(cur)} current, no head_removed flag={not grp.get('head_removed')}"
+print(f"[P5] shelf-life chain, state = {state}: {detail} ->", "PASS" if p5 else "FAIL")
 for c in g:
-    lab = "NEWEST SURVIVING" if c["is_current"] else "superseded"
+    lab = ("NEWEST SURVIVING" if c.get("head_removed") else "CURRENT") if c["is_current"] else "superseded"
     print(f"      {c['date'][:10]} {c['asserted_by']:15s} {lab:16s} {c['truth_status']:15s} {c.get('value')!r:34s} {c['where'][:60]}")
 ok &= bool(p5)
 

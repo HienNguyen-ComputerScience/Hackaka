@@ -60,7 +60,7 @@ UNSEEN = [
     ("U11", "What did the Q1 2026 waste reporting say about availability and waste?", True),
     ("U12", "Was a file size check adopted to detect feed failures?", True),
     ("U13", "What is the name of Acme's chief executive?", False),
-    ("U14", "How many employees does Meridian Consulting have?", False),
+    ("U14", "How many people work at Meridian Consulting?", False),   # phrased in archive vocabulary: no never-used word to catch it
     ("U15", "Which programming language is the DC-2 middleware written in?", False),
 ]
 
@@ -247,19 +247,23 @@ def part2(A, units):
         head = "\n".join(text.split("\n")[:14])
         print(f"\n----- {qid}: {q}\n{head}\n      ...")
         probs = hygiene(qid, out, text, units)
+        cited = all(s.get("cite") for s in all_statements(out))
         if in_archive:
-            ok = not out["empty"] and all(s.get("cite") for s in all_statements(out)) and not probs
-            note = f"{len(out['groups'])} chain(s), every statement cited" if ok else ("; ".join(probs) or "no chain found")
+            # must answer directly: a "related context" label on a question the archive does answer is a failure
+            ok = not out["empty"] and cited and not probs and out.get("direct") is not False
+            note = f"{len(out['groups'])} chain(s), every statement cited, direct answer" if ok else \
+                ("; ".join(probs) or ("no chain found" if out["empty"] else "labelled as related context only"))
         else:
-            # said so outright, or said which asked-for words the archive never uses and showed only cited
-            # related context with no invented figure
+            # said so outright, or labelled everything shown as related context (never-used words named, or
+            # no statement passing the direct-answer test), all of it cited, no invented figure
             if out["empty"]:
                 ok, note = not probs, "archive does not contain it: said so"
-            elif out.get("never_mentions"):
-                ok = not probs and all(s.get("cite") for s in all_statements(out))
-                note = f"says the archive never uses {out['never_mentions']}; {len(out['groups'])} related chain(s) shown as context, all cited"
+            elif out.get("direct") is False:
+                ok = not probs and cited
+                why = f"never-used words {out['never_mentions']}" if out.get("never_mentions") else "no statement passes the direct-answer test"
+                note = f"NO DIRECT ANSWER stated ({why}); {len(out['groups'])} chain(s) shown as related context, all cited"
             else:
-                ok, note = False, f"answered with {len(out['groups'])} chain(s) without saying the archive does not contain it"
+                ok, note = False, f"answered with {len(out['groups'])} chain(s) as if direct, without saying the archive does not contain it"
             if probs:
                 note = "; ".join(probs)
         row("2", f"{qid} {'in archive' if in_archive else 'NOT in archive'}", ok, note)

@@ -83,6 +83,23 @@ Making it green needed four deterministic additions to `answer.py`:
   discusses at length ("which language is the DC-2 middleware written in") is caught only through
   the never-used words; a paraphrase that avoids new words would show the topic's chains as context.
 
+**Direct-answer label.** Every non-scoped answer is tested for whether a single statement in the chosen
+chains addresses the question as asked (semantically close, or covering half the question's content
+words, or a third of them while moderately close). If none does, or if words the archive never uses
+make up a third of the question, the answer opens with "NO DIRECT ANSWER" and every chain is headed
+"related context". Related context never reads as an answer. Residual gap: a question about an
+attribute the archive never mentions, phrased with words the archive does use elsewhere ("what version
+of Windows does the middleware run on"), can pass the test through the topic's own statements.
+
+**verify_claims.py is state-aware.** It reads the deletion log to decide whether `data/` is the full
+archive or post-deletion, and whether the shelf-life chain was touched, and asserts the matching
+expectation. Checked: ALL PASS on the full archive, ALL PASS after a deletion that beheads the chain,
+FAIL when the head_removed flag is cleared post-deletion, FAIL when it is faked on the full archive.
+
+**Head-loss counts.** Deleting the technical consultant yields 71 chains that lost their head;
+deleting the project manager yields 171. Both were verified independently by counting the old groups
+whose current claim is among the removed claims: the sets match the log exactly, no double counting.
+
 Of the nine, P8 and P9 are the two without a clean answer, and the system says so in both: P8's
 trails end with "no later statement in the archive says it was done", and P9's chain ends with the
 statement that "completed" meant the job ran and the file landed and that the content was never
