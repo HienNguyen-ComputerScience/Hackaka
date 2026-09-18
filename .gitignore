@@ -1,0 +1,20 @@
+# Generated data stores. These are rebuilt from corpus/ by the pipeline and, after a deletion,
+# are the only place a removed person's pre-deletion state could still exist (in OS file history,
+# an editor swap file, or a careless `git add -A`). Never commit anything under here.
+/data/
+
+# Supplied input corpus. Not our work; not ours to redistribute via this repo either.
+/corpus/
+
+# Any backup / snapshot copy of a data store, wherever it's named or nested (e.g. taken before a
+# deletion run to diff against). Same reasoning as /data/ above.
+*backup*/
+*snapshot*/
+*_before/
+*_before.*
+*.bak
+
+# Python / stray crash-dump housekeeping
+__pycache__/
+*.pyc
+*.stackdump
