@@ -28,6 +28,36 @@ from every derived store, with an auditable log and a full-text + structural ver
     so no gap or ordinal discloses that a deletion happened, and appends an audit record (with an
     `id_remap`, not the person's data) to `data/deletion_log.jsonl`.
   - `verify_*.py` — acceptance checks for each stage, runnable standalone.
+  - `test_full.py` — the whole acceptance in one command (practice questions, unseen questions,
+    deletion end to end with restore from the snapshot, hygiene). `python pipeline/test_full.py`;
+    `--skip-deletion` leaves `data/` untouched.
+  - `serve.py` — the judge-facing UI (standard library only): ask a question, expand citations to
+    the stored unit text, delete a person. It calls `answer.py` in-process and runs `delete.py` as
+    a subprocess. It sends the browser an allow-list of fields only: no unit id, claim id or turn
+    index, and it never reads `corpus/`.
+
+## Run the UI
+
+```
+pip install -r requirements.txt
+python pipeline/serve.py --host 0.0.0.0 --port 8080
+```
+
+The first start loads the embedding model (about 20 s) and then prints `ready`. The page is at
+`http://localhost:8080`; on the same network, judges use `http://<this machine's IP>:8080`. For
+judges elsewhere, put a tunnel in front of the same port (for example `cloudflared tunnel --url
+http://localhost:8080`, or ngrok) and send them the URL it prints, or run the same two commands on a
+VM with port 8080 open. There is no login: anyone with the URL can delete a person.
+
+`data/` must be present (the pipeline output). Deletion in the UI is real and has no undo, so keep a
+copy of `data/` **outside the repository** before judging and reset between runs:
+
+```
+# PowerShell, from the repo root; the snapshot lives beside the repo, never inside it
+Remove-Item -Recurse -Force data; Copy-Item -Recurse ..\relex-data-snapshot data
+```
+
+Restart `serve.py` after a reset: it holds the loaded index in memory.
 
 ## The one rule that matters most
 

@@ -34,6 +34,60 @@ Confirmed separately: `retrieve.py`/`answer.py` render citations from `data/unit
 stored text, never from `corpus/` — so there's no click-through path back to a deleted person's
 original text. This must hold for the UI too.
 
+## UI (`pipeline/serve.py`)
+
+Standard-library HTTP server, one page, three controls: question box, expandable citations,
+person picker + delete. It calls `answer.py` in-process and runs `delete.py` as a subprocess, then
+reloads the index. The JSON sent to the browser is built from an allow-list (no unit id, claim id or
+turn index; internal-transcript anchors have "turn N" stripped), and citations are the unit text
+stored in `data/units.jsonl`, never `corpus/`. Deletion confirmation is an in-page second click, not
+a native dialog, and the post-deletion summary deliberately does not repeat the erased name.
+
+Two `answer.py` changes were needed for the UI acceptance. (1) Group selection: window
+co-occurrence used to count every claim in a retrieved window, so a chatty window could outrank a
+chain whose fact key literally named the question (P2's "pilot service level target" lost to an
+unrelated transcript). Now a group counts once per hit, fact-key similarity has a lower threshold,
+and a word-overlap channel on fact keys was added; the attribution pool also admits any top group
+that holds both a proposal and its answer. (2) Relevance gate: a chain is shown only if its fact keys
+relate to the question by meaning or by words, so an off-topic question yields no chains and the
+renderer says the archive does not contain it, instead of surfacing whatever the windows touched.
+
+## Full test (`pipeline/test_full.py`)
+
+One command, four parts, a pass/fail table, exit code. Part 1 renders the nine practice questions
+against the full archive and checks each against its stated bar. Part 2 asks fifteen unseen
+questions (three outside the archive) and flags any unsourced statement or invented figure. Part 3
+deletes one person for real (whoever authored most of P1's chain statements, chosen from the data,
+never named in source), reruns P1 and four neighbours, runs `delete.py`'s text and structural
+sweeps, restores from the snapshot beside the repo and byte-compares. Part 4 checks every rendered
+answer: every statement cited, every figure present in its cited unit (dates the extractor resolved
+from headers are not figures), no value on a truncated claim, no id or turn index in the text.
+
+Making it green needed four deterministic additions to `answer.py`:
+
+- **Date scope** ("September 2024", "Q1 2026", "2025"): retrieval is also run restricted to the
+  period, chains with statements in it are favoured, and when the question asks for figures, chains
+  carrying a number then are favoured and the group limit rises. This is what P1 needed: nothing but
+  the date tied the question to the assessment figures.
+- **Agreed-and-not-done trails** (P8): chains where a commitment is followed by a later statement
+  that it is outstanding, with no later statement that it was done. The renderer shows the
+  commitment, the latest statement, the gap in days, who committed and who raised it, and says
+  explicitly that the archive does not record whether it was ever done.
+- **Status-report flag** (P9): a statement taken from `reports/` is labelled as evidence of what was
+  reported, not of the underlying state.
+- **Answer rule**: a chain on the same topic is not an answer. Outside a date scope a chain must
+  share two content words with the question or contain a statement semantically close to it;
+  question words the archive never uses anywhere are stated as such, and when they make up a third
+  of the question and the rest is not covered either, the answer is "not contained" with the nearest
+  topics named. Known limit: a question about an attribute the archive never mentions of a topic it
+  discusses at length ("which language is the DC-2 middleware written in") is caught only through
+  the never-used words; a paraphrase that avoids new words would show the topic's chains as context.
+
+Of the nine, P8 and P9 are the two without a clean answer, and the system says so in both: P8's
+trails end with "no later statement in the archive says it was done", and P9's chain ends with the
+statement that "completed" meant the job ran and the file landed and that the content was never
+checked, with every report line flagged as evidence of reporting only.
+
 ## Git
 
 Discovered the working checkout's `.git` lived at the drive root (`C:/`) rather than inside the
