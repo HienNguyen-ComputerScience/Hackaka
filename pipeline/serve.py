@@ -145,86 +145,182 @@ class State:
 STATE = State()
 
 PAGE = """<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>relex archive</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>relex archive</title>
 <style>
- body{font:15px/1.45 system-ui,sans-serif;max-width:60em;margin:1.5em auto;padding:0 1em;color:#111;background:#fff}
- textarea{width:100%;height:4em;font:inherit}
- button{font:inherit;padding:.3em .9em}
- fieldset{margin:1.2em 0;padding:.8em 1em}
- .g{border-top:1px solid #999;padding:.6em 0}
- .s{margin:.7em 0 .7em 1em}
- .lbl{font-weight:600}
- .cur{background:#dfd}.sup{background:#eee}.nsv{background:#ffd}
- .note{background:#fee;padding:.4em .6em;margin:.4em 0}
- details{margin:.2em 0 .2em 1em}summary{cursor:pointer;color:#036}
- pre{white-space:pre-wrap;background:#f6f6f6;padding:.5em;margin:.3em 0}
- .muted{color:#555}
+ :root{
+   --bg:#faf6ee; --paper:#fffdf9; --text:#25201a; --muted:#71675a; --border:#e6dcc7; --border-soft:#efe8d8;
+   --accent:#8a4a2b; --accent-soft:#f1e2d4;
+   --tag-current-bg:#e2f1e2; --tag-current-fg:#1f6d3d; --tag-current-bd:#b9ddb9;
+   --tag-superseded-bg:#ece7dc; --tag-superseded-fg:#5c5548; --tag-superseded-bd:#d7cdb8;
+   --tag-newest-bg:#fbecc4; --tag-newest-fg:#7a5300; --tag-newest-bd:#e9cd83;
+   --tag-nevertrue-bg:#f8dcd8; --tag-nevertrue-fg:#992a1e; --tag-nevertrue-bd:#eab3ac;
+   --tag-nodirect-bg:#e7e0f2; --tag-nodirect-fg:#4f3487; --tag-nodirect-bd:#cdbdea;
+   --error-bg:#fbe4e1; --error-bd:#e7b6ae; --error-fg:#8a2a1c;
+ }
+ *{box-sizing:border-box}
+ body{
+   margin:0; background:var(--bg); color:var(--text);
+   font:16px/1.5 -apple-system,"Segoe UI",system-ui,sans-serif;
+ }
+ .wrap{max-width:42rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+ h1{font-size:1.3rem;letter-spacing:.02em;margin:0 0 .15em}
+ .tagline{color:var(--muted);margin:0 0 2rem;font-size:.95rem}
+ .card{background:var(--paper);border:1px solid var(--border);border-radius:.6rem;padding:1.25rem 1.4rem;margin:0 0 1.75rem}
+ .field-label{display:block;font-weight:600;font-size:.9rem;margin-bottom:.5em}
+ textarea{width:100%;min-height:4.5em;font-family:inherit;font-size:15px;line-height:1.5;padding:.6em .7em;
+   border:1px solid var(--border);border-radius:.4rem;background:#fff;color:var(--text);resize:vertical}
+ textarea:focus,select:focus,button:focus{outline:2px solid var(--accent);outline-offset:1px}
+ .row{display:flex;align-items:center;gap:.7em;margin-top:.8em;flex-wrap:wrap}
+ button{font:600 .92rem/1 inherit;padding:.55em 1.1em;border-radius:.4rem;border:1px solid var(--accent);
+   background:var(--accent);color:#fff;cursor:pointer}
+ button:hover{filter:brightness(1.08)}
+ button:disabled{opacity:.55;cursor:default}
+ button.btn-quiet{background:transparent;color:var(--accent)}
+ select{font:inherit;padding:.5em .6em;border:1px solid var(--border);border-radius:.4rem;background:#fff;color:var(--text)}
+ .muted{color:var(--muted)}
+ .small{font-size:.85em}
+
+ /* answer: reading typography */
+ #answer{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Cambria,serif;font-size:17px;line-height:1.7}
+ #answer > p:first-child{margin-top:0}
+
+ .eyebrow{display:block;font:600 .74rem/1 -apple-system,"Segoe UI",system-ui,sans-serif;letter-spacing:.08em;
+   text-transform:uppercase;color:var(--muted);margin-bottom:.3em}
+ .lbl{font:700 1.02em/1.4 -apple-system,"Segoe UI",system-ui,sans-serif;color:var(--text)}
+ .g{border-top:1px solid var(--border);padding:1.1em 0}
+ .g:first-child{border-top:none;padding-top:0}
+ .s{margin:.9em 0 .9em 0;padding-left:1em;border-left:2px solid var(--border-soft)}
+
+ /* status tags: colour + word, never colour alone */
+ .tag{display:inline-block;font:700 .68rem/1 -apple-system,"Segoe UI",system-ui,sans-serif;letter-spacing:.03em;
+   text-transform:uppercase;padding:.32em .55em;border-radius:.3rem;border:1px solid transparent;vertical-align:middle}
+ .tag-current{background:var(--tag-current-bg);color:var(--tag-current-fg);border-color:var(--tag-current-bd)}
+ .tag-superseded{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd)}
+ .tag-newest{background:var(--tag-newest-bg);color:var(--tag-newest-fg);border-color:var(--tag-newest-bd)}
+ .tag-nevertrue{background:var(--tag-nevertrue-bg);color:var(--tag-nevertrue-fg);border-color:var(--tag-nevertrue-bd)}
+ .tag-nodirect{background:var(--tag-nodirect-bg);color:var(--tag-nodirect-fg);border-color:var(--tag-nodirect-bd)}
+
+ .s-meta{display:flex;align-items:center;gap:.55em;flex-wrap:wrap;font:14px/1.3 -apple-system,"Segoe UI",system-ui,sans-serif}
+ .s-date{font-weight:600}
+ .s-text{margin:.4em 0}
+
+ /* deliberate system statements: distinct from tags, not alarming */
+ .sysnote{background:var(--accent-soft);border:1px solid var(--border);border-left:3px solid var(--accent);
+   border-radius:.3rem;padding:.65em .8em;margin:.6em 0;font-size:15px;line-height:1.55}
+ .sysnote .tag{margin-right:.4em}
+
+ /* real problems: kept visually separate from system statements */
+ .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.3rem;
+   padding:.65em .8em;margin:.6em 0;font-size:15px}
+
+ details{margin:.35em 0}
+ summary{cursor:pointer;color:var(--accent);font:600 .88rem/1.3 -apple-system,"Segoe UI",system-ui,sans-serif;
+   display:list-item}
+ summary:hover{text-decoration:underline}
+ details > div.cite-meta{color:var(--muted);font-size:.85em;margin:.4em 0 .2em}
+ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--border-soft);border-radius:.35rem;
+   padding:.7em .8em;margin:.3em 0;font:15px/1.55 Georgia,"Iowan Old Style",serif;color:var(--text)}
+
+ hr.section-break{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+
+ /* deletion: visually quieter than the answer */
+ .quiet-panel{background:transparent;border:1px solid var(--border-soft);border-radius:.6rem;padding:1.1rem 1.3rem}
+ .quiet-title{font-size:.95rem;color:var(--muted);font-weight:600;margin:0 0 .3em;text-transform:uppercase;
+   letter-spacing:.04em}
+ .fineprint{color:var(--muted);font-size:.83rem;line-height:1.5;margin:.8em 0 0}
+ .confirm-box{background:var(--tag-newest-bg);border:1px solid var(--tag-newest-bd);border-radius:.4rem;
+   padding:.8em 1em;margin-top:.8em}
+ .confirm-box .row{margin-top:.7em}
+ .confirm-result{background:var(--tag-current-bg);border:1px solid var(--tag-current-bd);border-radius:.4rem;
+   padding:.8em 1em;margin-top:.8em;font-size:14.5px;line-height:1.55}
+ .confirm-result ul{margin:.4em 0 0;padding-left:1.2em}
 </style></head><body>
+<div class="wrap">
+
+<header>
 <h1>relex archive</h1>
+<p class="tagline">Ask a question; the answer is rendered from the claim graph, with sources you can expand.</p>
+</header>
 
-<fieldset><legend>Ask a question</legend>
+<section class="card">
+<label class="field-label" for="q">Ask a question</label>
 <textarea id="q" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
-<p><button id="ask">Ask</button> <span id="askstate" class="muted"></span></p>
-<div id="answer"></div>
-</fieldset>
+<div class="row"><button id="ask">Ask</button> <span id="askstate" class="muted small"></span></div>
+</section>
 
-<fieldset><legend>Delete a person from the archive</legend>
-<p><select id="person"></select> <button id="del">Delete</button> <span id="delstate" class="muted"></span></p>
-<p id="delconfirm" class="note" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
- <button id="delyes">Confirm delete</button> <button id="delno">Cancel</button></p>
-<p class="muted">This runs the deletion pipeline: their statements, statements about them, their registry row, the
+<div id="answer"></div>
+
+<hr class="section-break">
+
+<section class="quiet-panel">
+<h2 class="quiet-title">Delete a person from the archive</h2>
+<div class="row"><select id="person"></select> <button id="del" class="btn-quiet">Delete</button> <span id="delstate" class="muted small"></span></div>
+<div id="delconfirm" class="confirm-box" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
+ <div class="row"><button id="delyes">Confirm delete</button> <button id="delno" class="btn-quiet">Cancel</button></div>
+</div>
+<p class="fineprint">This runs the deletion pipeline: their statements, statements about them, their registry row, the
 retrieval index and embeddings, and every derived chain are rebuilt without them. There is no undo.</p>
 <div id="delresult"></div>
-</fieldset>
+</section>
 
+</div>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function tag(kind, label){
+  return `<span class="tag tag-${kind}">${esc(label)}</span>`;
+}
+function currencyTag(currency){
+  if(currency==="CURRENT") return tag("current", "CURRENT");
+  if(currency==="SUPERSEDED") return tag("superseded", "SUPERSEDED");
+  if(currency==="NEWEST SURVIVING") return tag("newest", "NEWEST SURVIVING");
+  return `<span class="muted small">unlinked</span>`;
+}
 function cite(c, prefix){
   if(!c) return "";
   const head = c.heading ? esc(c.heading) + " — " : "";
   return `<details><summary>${esc(prefix||"cite")}: ${esc(c.label)}</summary>` +
-         `<div class="muted">${head}${esc(c.speaker)}, ${esc(c.date)}</div><pre>${esc(c.text)}</pre></details>`;
+         `<div class="cite-meta">${head}${esc(c.speaker)}, ${esc(c.date)}</div><pre>${esc(c.text)}</pre></details>`;
 }
 function statement(s){
-  const cls = s.currency==="CURRENT"?"cur":(s.currency==="SUPERSEDED"?"sup":(s.currency==="NEWEST SURVIVING"?"nsv":""));
   const val = s.value!==null&&s.value!==undefined ? ` · value: ${esc(s.value)}` : (s.truncated ? " · value: TRUNCATED IN SOURCE" : "");
-  let h = `<div class="s"><div><span class="lbl">${esc(s.date.slice(0,16))}</span> · ${esc(s.asserted_by)} · ` +
-          `<span class="lbl ${cls}">[${esc(s.currency||"unlinked")}]</span> · ${esc(s.truth_status)}${val}</div>`;
-  h += `<div>“${esc(s.statement)}”</div>` + cite(s.cite);
-  if(s.reported) h += `<div class="muted">status report: evidence of what was reported at the time, not of the underlying state</div>`;
-  if(s.supersession) h += `<div class="muted">${esc(s.supersession)}</div>` + cite(s.supersession_cite, "superseding document");
-  if(s.order_confidence) h += `<div class="muted">order confidence: ${esc(s.order_confidence)}</div>`;
-  if(s.correction) h += `<div class="note">NEVER TRUE: ${esc(s.correction)}</div>` + cite(s.correction_cite, "correcting document");
-  else if(s.truth_status==="unverified") h += `<div class="muted">unverified: ${esc(s.truth_reason)}</div>`;
-  if(s.responds_to) h += `<div class="muted">in response to: ${esc(s.responds_to)}</div>`;
+  let h = `<div class="s"><div class="s-meta"><span class="s-date">${esc(s.date.slice(0,16))}</span> · ${esc(s.asserted_by)} · ` +
+          `${currencyTag(s.currency)} · <span class="muted">${esc(String(s.truth_status).replace(/_/g," "))}</span>${val}</div>`;
+  h += `<div class="s-text">“${esc(s.statement)}”</div>` + cite(s.cite);
+  if(s.reported) h += `<div class="muted small">status report: evidence of what was reported at the time, not of the underlying state</div>`;
+  if(s.supersession) h += `<div class="muted small">${esc(s.supersession)}</div>` + cite(s.supersession_cite, "superseding document");
+  if(s.order_confidence) h += `<div class="muted small">order confidence: ${esc(s.order_confidence)}</div>`;
+  if(s.correction) h += `<div class="sysnote">${tag("nevertrue","NEVER TRUE")}${esc(s.correction)}</div>` + cite(s.correction_cite, "correcting document");
+  else if(s.truth_status==="unverified") h += `<div class="muted small">unverified: ${esc(s.truth_reason)}</div>`;
+  if(s.responds_to) h += `<div class="muted small">in response to: ${esc(s.responds_to)}</div>`;
   return h + "</div>";
 }
 function renderAnswer(a){
   let h = "";
   if(a.never_mentions && a.never_mentions.length)
-    h += `<p class="note">The archive never uses the word(s): ${esc(a.never_mentions.join(", "))}.</p>`;
-  if(a.empty) return h + `<p class="note">${esc(a.nothing)}</p>`;
-  if(a.scope) h += `<p class="muted">scoped to ${esc(a.scope)}: retrieval limited to that period; chains with statements then are favoured</p>`;
+    h += `<div class="sysnote">The archive never uses the word(s): ${esc(a.never_mentions.join(", "))}.</div>`;
+  if(a.empty) return h + `<div class="sysnote">${esc(a.nothing)}</div>`;
+  if(a.scope) h += `<p class="muted small">scoped to ${esc(a.scope)}: retrieval limited to that period; chains with statements then are favoured</p>`;
   const contextOnly = a.groups.length && a.direct === false;
-  if(contextOnly) h += `<p class="note">NO DIRECT ANSWER: no statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</p>`;
+  if(contextOnly) h += `<div class="sysnote">${tag("nodirect","NO DIRECT ANSWER")}No statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</div>`;
   if(a.initiative){
-    h += `<div class="g"><div class="lbl">agreed and not done</div>`;
+    h += `<div class="g"><span class="eyebrow">agreed and not done</span>`;
     if(!a.initiative.length) h += `<div class="s muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
     a.initiative.forEach((t, i) => {
       const ag = t.agreed, l = t.latest;
-      h += `<div class="s"><div class="lbl">${i+1}. ${esc(t.fact_keys.join(", "))}</div>` +
+      h += `<div class="s"><div class="eyebrow">${i+1}. ${esc(t.fact_keys.join(", "))}</div>` +
            `<div>COMMITTED: ${esc(ag.date.slice(0,10))} · ${esc(ag.asserted_by)} · “${esc(ag.statement)}”</div>` + cite(ag.cite) +
            `<div>LATEST ON RECORD (${t.days} days later): ${esc(l.date.slice(0,10))} · ${esc(l.asserted_by)} · “${esc(l.statement)}”</div>` + cite(l.cite);
-      if(t.still_open) h += `<div class="note">No later statement in the archive says it was done; the archive does not record whether it ever was.</div>`;
+      if(t.still_open) h += `<div class="sysnote">No later statement in the archive says it was done; the archive does not record whether it ever was.</div>`;
       else h += `<div>Later reported done: ${esc(t.done_later.date.slice(0,10))} · ${esc(t.done_later.asserted_by)} · “${esc(t.done_later.statement)}”</div>` + cite(t.done_later.cite);
       const who = [`${esc(t.committer)} (made the commitment)`].concat(t.raised_by.map(([n,d]) => `${esc(n)} (raised it on ${esc(d)})`));
-      h += `<div>Who would have needed to notice: ${who.join("; ")}</div>`;
+      h += `<div class="muted small">Who would have needed to notice: ${who.join("; ")}</div>`;
       h += `<details><summary>full trail (${t.statements.length} statements)</summary>` + t.statements.map(statement).join("") + `</details></div>`;
     });
     h += `</div>`;
   }
   for(const g of a.groups){
-    h += `<div class="g"><div class="lbl">${contextOnly ? "related context: " : ""}${esc(g.fact_keys.join(", "))}</div>`;
+    h += `<div class="g">${contextOnly ? '<span class="eyebrow">related context</span>' : ""}<div class="lbl">${esc(g.fact_keys.join(", "))}</div>`;
     if(g.head_removed){
       const n = g.removed_statements, pl = n===1?"":"s";
       if(g.statements.length){
@@ -232,28 +328,28 @@ function renderAnswer(a){
         const isFig = /\d/.test(String(f.value ?? ""));
         const what = isFig ? "figure" : "statement";
         const fv = f.value!==null&&f.value!==undefined ? `${esc(f.asserted_by)}'s “${esc(f.value)}”` : `${esc(f.asserted_by)}'s statement`;
-        h += `<div class="note">The most recent statement in this chain was removed (${n} statement${pl} removed by deletion). ` +
+        h += `<div class="sysnote">${tag("newest","NEWEST SURVIVING")}The most recent statement in this chain was removed (${n} statement${pl} removed by deletion). ` +
              `The newest surviving ${what} is ${fv} from ${esc(f.date.slice(0,10))}, and it may have been superseded by a later ` +
              `statement that no longer exists. No statement below is current.</div>` + cite(f.cite, "newest surviving " + what);
       } else {
-        h += `<div class="note">The archive no longer contains a statement on this. ${n} statement${pl} existed and ` +
+        h += `<div class="sysnote">The archive no longer contains a statement on this. ${n} statement${pl} existed and ` +
              `${n===1?"was":"were"} removed by deletion; none survive.</div>`;
       }
     }
     for(const s of g.statements) h += statement(s);
     if(g.other.length){
-      h += `<div class="muted">related (proposals / questions, not part of the chain):</div>`;
+      h += `<p class="muted small">related (proposals / questions, not part of the chain):</p>`;
       for(const s of g.other) h += statement(s);
     }
     h += "</div>";
   }
   const at = a.attribution;
   if(at){
-    h += `<div class="g"><div class="lbl">attribution</div>`;
+    h += `<div class="g"><span class="eyebrow">attribution</span>`;
     for(const [name, items] of [["PROPOSED", at.proposed], ["AGREED / DECIDED", at.agreed], ["REJECTED", at.rejected]]){
       h += `<div class="lbl">${name}</div>` + (items.length ? items.map(statement).join("") : `<div class="s muted">(none)</div>`);
     }
-    h += `<div>verdict: ${esc(at.verdict)}</div></div>`;
+    h += `<p class="muted">verdict: ${esc(at.verdict)}</p></div>`;
   }
   return h;
 }
@@ -272,8 +368,8 @@ function fillPeople(list){
 document.getElementById("ask").onclick = async () => {
   const q = document.getElementById("q").value.trim(); if(!q) return;
   document.getElementById("askstate").textContent = "…"; document.getElementById("answer").innerHTML = "";
-  try { const a = await post("/api/ask", {question:q}); document.getElementById("answer").innerHTML = a.error ? `<p class="note">${esc(a.error)}</p>` : renderAnswer(a); }
-  catch(e){ document.getElementById("answer").innerHTML = `<p class="note">request failed: ${esc(e)}</p>`; }
+  try { const a = await post("/api/ask", {question:q}); document.getElementById("answer").innerHTML = a.error ? `<div class="error">${esc(a.error)}</div>` : renderAnswer(a); }
+  catch(e){ document.getElementById("answer").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
   document.getElementById("askstate").textContent = "";
 };
 document.getElementById("del").onclick = () => {
@@ -289,19 +385,20 @@ document.getElementById("delyes").onclick = async () => {
   document.getElementById("del").disabled = true; document.getElementById("delresult").innerHTML = "";
   try {
     const r = await post("/api/delete", {person_id:pid});
-    if(!r.ok){ document.getElementById("delresult").innerHTML = `<p class="note">${esc(r.error)}<br>${esc(r.detail||"")}</p>`; }
+    if(!r.ok){ document.getElementById("delresult").innerHTML = `<div class="error">${esc(r.error)}<br>${esc(r.detail||"")}</div>`; }
     else {
       const s = r.summary;
       document.getElementById("delresult").innerHTML =
-        `<p class="note">Deleted. Removed from the archive:</p><ul>` +
+        `<div class="confirm-result"><strong>Deleted.</strong> Removed from the archive:<ul>` +
         `<li>${s.units_removed} messages / turns they authored removed; ${s.units_redacted} others that named them redacted</li>` +
         `<li>${s.claims_removed} claims removed (theirs, and others' claims about them)</li>` +
         `<li>${s.chains_lost_head} chains lost their most recent statement: ${s.chains_with_newest_survivor} now show a newest surviving statement, ${s.chains_now_empty} are empty</li>` +
         `<li>retrieval index rebuilt: ${s.passages[0]} → ${s.passages[1]} passages, embeddings re-encoded; claims ${s.claims[0]} → ${s.claims[1]}</li>` +
-        `<li>full-text and structural sweep: ${s.verify_clean ? "clean" : "NOT CLEAN — see deletion log"}</li></ul>`;
+        `<li>full-text and structural sweep: ${s.verify_clean ? "clean" : "NOT CLEAN — see deletion log"}</li></ul></div>`;
+      if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error">Verification sweep did not come back clean — see the deletion log.</div>`;
       fillPeople(r.people);
     }
-  } catch(e){ document.getElementById("delresult").innerHTML = `<p class="note">request failed: ${esc(e)}</p>`; }
+  } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
   document.getElementById("delstate").textContent = ""; document.getElementById("del").disabled = false;
 };
 fetch("/api/people").then(r => r.json()).then(fillPeople);
