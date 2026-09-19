@@ -66,7 +66,7 @@ class State:
         """Allow-listed view of one answer.py statement, with citation objects instead of ids."""
         raw = self.answerer.by_id.get(s["claim_id"], {})
         out = {k: s.get(k) for k in ("date", "asserted_by", "kind", "value", "truncated", "statement", "currency",
-                                     "truth_status", "truth_reason", "order_confidence", "responds_to", "reported")}
+                                     "truth_status", "truth_reason", "order_confidence", "responds_to", "reported", "retraction")}
         out["cite"] = self.cite(s["claim_id"])
         out["supersession"] = anchor(s["supersession"]) if s.get("supersession") else None
         out["supersession_cite"] = self.cite(raw["superseded_by"]) if raw.get("superseded_by") else None
@@ -149,104 +149,169 @@ PAGE = """<!doctype html>
 <title>relex archive</title>
 <style>
  :root{
-   --bg:#faf6ee; --paper:#fffdf9; --text:#25201a; --muted:#71675a; --border:#e6dcc7; --border-soft:#efe8d8;
-   --accent:#8a4a2b; --accent-soft:#f1e2d4;
-   --tag-current-bg:#e2f1e2; --tag-current-fg:#1f6d3d; --tag-current-bd:#b9ddb9;
-   --tag-superseded-bg:#ece7dc; --tag-superseded-fg:#5c5548; --tag-superseded-bd:#d7cdb8;
-   --tag-newest-bg:#fbecc4; --tag-newest-fg:#7a5300; --tag-newest-bd:#e9cd83;
-   --tag-nevertrue-bg:#f8dcd8; --tag-nevertrue-fg:#992a1e; --tag-nevertrue-bd:#eab3ac;
-   --tag-nodirect-bg:#e7e0f2; --tag-nodirect-fg:#4f3487; --tag-nodirect-bd:#cdbdea;
+   /* the wash: atmosphere only, never a text background */
+   --wash-base:#eef1f5; --wash-base-2:#e9edf2;
+   --wash-cool-1:rgba(133,171,209,.50); --wash-cool-2:rgba(150,196,196,.38); --wash-warm:rgba(230,184,146,.34);
+
+   /* every panel that holds text is opaque */
+   --paper:#ffffff; --paper-soft:#f6f7f9;
+   --text:#1b1e23; --muted:#585f68; --border:#e2e5ea; --border-soft:#edeff2;
+   --shadow:0 1.5rem 3rem -1.75rem rgba(25,35,55,.28), 0 .25rem .6rem -.3rem rgba(25,35,55,.12);
+   --shadow-quiet:0 .6rem 1.6rem -1rem rgba(25,35,55,.16);
+
+   --accent:#2f6690; --accent-soft:#e4eef5;
+   --heading:#2a2e35;
+
+   --tag-current-bg:#e2f1e2; --tag-current-fg:#186238; --tag-current-bd:#8fcf9d;
+   --tag-superseded-bg:#eceef1; --tag-superseded-fg:#4b5158; --tag-superseded-bd:#c3c9d1;
+   --tag-newest-bg:#fbecc4; --tag-newest-fg:#6b4900; --tag-newest-bd:#e2b94f;
+   --tag-nevertrue-bg:#f9dcd9; --tag-nevertrue-fg:#8a2015; --tag-nevertrue-bd:#e3897c;
+   --tag-nodirect-bg:#e7e1f4; --tag-nodirect-fg:#452e82; --tag-nodirect-bd:#b8a3e0;
    --error-bg:#fbe4e1; --error-bd:#e7b6ae; --error-fg:#8a2a1c;
+
+   --serif:Georgia,"Iowan Old Style","Palatino Linotype",Cambria,serif;
+   --sans:-apple-system,"Segoe UI",system-ui,sans-serif;
  }
  *{box-sizing:border-box}
+ html{-webkit-text-size-adjust:100%}
  body{
-   margin:0; background:var(--bg); color:var(--text);
-   font:16px/1.5 -apple-system,"Segoe UI",system-ui,sans-serif;
+   margin:0; width:100%; min-height:100vh; color:var(--text);
+   font:1rem/1.55 var(--sans); overflow-wrap:break-word;
+   background:var(--wash-base);
  }
- .wrap{max-width:42rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
- h1{font-size:1.3rem;letter-spacing:.02em;margin:0 0 .15em}
- .tagline{color:var(--muted);margin:0 0 2rem;font-size:.95rem}
- .card{background:var(--paper);border:1px solid var(--border);border-radius:.6rem;padding:1.25rem 1.4rem;margin:0 0 1.75rem}
- .field-label{display:block;font-weight:600;font-size:.9rem;margin-bottom:.5em}
- textarea{width:100%;min-height:4.5em;font-family:inherit;font-size:15px;line-height:1.5;padding:.6em .7em;
-   border:1px solid var(--border);border-radius:.4rem;background:#fff;color:var(--text);resize:vertical}
- textarea:focus,select:focus,button:focus{outline:2px solid var(--accent);outline-offset:1px}
- .row{display:flex;align-items:center;gap:.7em;margin-top:.8em;flex-wrap:wrap}
- button{font:600 .92rem/1 inherit;padding:.55em 1.1em;border-radius:.4rem;border:1px solid var(--accent);
+ /* the hazy wash: pure CSS gradients, fixed behind everything, no blur/filter/animation/image */
+ body::before{
+   content:""; position:fixed; inset:0; z-index:-1;
+   background:
+     radial-gradient(52% 42% at 80% 6%, var(--wash-cool-1), transparent 68%),
+     radial-gradient(46% 38% at 10% 22%, var(--wash-cool-2), transparent 70%),
+     radial-gradient(40% 36% at 62% 68%, var(--wash-warm), transparent 72%),
+     linear-gradient(175deg, var(--wash-base) 0%, var(--wash-base-2) 100%);
+ }
+ .wrap{width:100%;max-width:46rem;margin:0 auto;padding:clamp(1.25rem,4vw,2.5rem) 1.1rem clamp(3rem,8vw,5rem)}
+
+ /* the only things allowed to sit directly on the wash: a big decorative heading + a short label */
+ .hero-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap}
+ h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;color:var(--heading);margin:0}
+ .hero-meta{color:var(--muted);font:600 .82rem/1.4 var(--sans);text-align:right;text-transform:uppercase;letter-spacing:.04em}
+ hr.hairline{border:none;border-top:1px solid rgba(25,35,55,.16);margin:1rem 0 1.75rem}
+
+ /* everything else: opaque panels, floating on the haze via shadow, never a border-only edge */
+ .card{background:var(--paper);border-radius:1rem;box-shadow:var(--shadow);padding:1.4rem 1.5rem;margin:0 0 1.5rem}
+ .tagline{color:var(--muted);margin:0 0 1.25rem;font-size:1rem;max-width:60ch}
+ .field-label{display:block;font-weight:600;font-size:1rem;margin-bottom:.5em}
+ textarea{width:100%;min-height:4.5em;font-family:inherit;font-size:1.05rem;line-height:1.5;padding:.6em .7em;
+   border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--text);resize:vertical}
+ input[type=text]{width:100%;font-family:inherit;font-size:1rem;padding:.55em .7em;border:1px solid var(--border);
+   border-radius:.5rem;background:var(--paper);color:var(--text)}
+ textarea:focus,input:focus,select:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+ .row{display:flex;align-items:center;gap:.6em .8em;margin-top:.8em;flex-wrap:wrap}
+ button{font:600 1rem/1 inherit;padding:.55em 1.1em;border-radius:.5rem;border:1px solid var(--accent);
    background:var(--accent);color:#fff;cursor:pointer}
- button:hover{filter:brightness(1.08)}
+ button:hover{filter:brightness(1.1)}
  button:disabled{opacity:.55;cursor:default}
- button.btn-quiet{background:transparent;color:var(--accent)}
- select{font:inherit;padding:.5em .6em;border:1px solid var(--border);border-radius:.4rem;background:#fff;color:var(--text)}
+ button.btn-quiet{background:var(--paper);color:var(--accent)}
+ select{font:inherit;padding:.5em .6em;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--text)}
  .muted{color:var(--muted)}
- .small{font-size:.85em}
+ .small{font-size:.87em}
+ .grow{flex:1 1 12rem;min-width:0}
 
- /* answer: reading typography */
- #answer{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Cambria,serif;font-size:17px;line-height:1.7}
- #answer > p:first-child{margin-top:0}
+ /* answer: one opaque panel, reading typography, capped at a comfortable measure.
+    :not(:empty) keeps it invisible until the first question lands an answer or loading state. */
+ #answer:not(:empty){background:var(--paper);border-radius:1rem;box-shadow:var(--shadow);
+   padding:1.5rem 1.6rem;margin:0 0 1.5rem}
+ #answer{font-family:var(--serif);font-size:1.15rem;line-height:1.65;max-width:100%}
+ #answer > *{max-width:70ch}
+ #answer > p:first-child,#answer > .loading:first-child{margin-top:0}
 
- .eyebrow{display:block;font:600 .74rem/1 -apple-system,"Segoe UI",system-ui,sans-serif;letter-spacing:.08em;
-   text-transform:uppercase;color:var(--muted);margin-bottom:.3em}
- .lbl{font:700 1.02em/1.4 -apple-system,"Segoe UI",system-ui,sans-serif;color:var(--text)}
- .g{border-top:1px solid var(--border);padding:1.1em 0}
+ .eyebrow{display:block;font:700 .76rem/1 var(--sans);letter-spacing:.08em;
+   text-transform:uppercase;color:var(--muted);margin-bottom:.35em}
+ .lbl{font:700 1.05em/1.4 var(--sans);color:var(--text)}
+ .g{border-top:1px solid var(--border);padding:1.2em 0}
  .g:first-child{border-top:none;padding-top:0}
- .s{margin:.9em 0 .9em 0;padding-left:1em;border-left:2px solid var(--border-soft)}
 
- /* status tags: colour + word, never colour alone */
- .tag{display:inline-block;font:700 .68rem/1 -apple-system,"Segoe UI",system-ui,sans-serif;letter-spacing:.03em;
-   text-transform:uppercase;padding:.32em .55em;border-radius:.3rem;border:1px solid transparent;vertical-align:middle}
- .tag-current{background:var(--tag-current-bg);color:var(--tag-current-fg);border-color:var(--tag-current-bd)}
- .tag-superseded{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd)}
- .tag-newest{background:var(--tag-newest-bg);color:var(--tag-newest-fg);border-color:var(--tag-newest-bd)}
- .tag-nevertrue{background:var(--tag-nevertrue-bg);color:var(--tag-nevertrue-fg);border-color:var(--tag-nevertrue-bd)}
- .tag-nodirect{background:var(--tag-nodirect-bg);color:var(--tag-nodirect-fg);border-color:var(--tag-nodirect-bd)}
+ /* the claim: one distinct block, fixed reading order (text, tag, corrector, anchors) */
+ .claim{margin:1em 0;padding:.15em 0 .15em 1em;border-left:3px solid var(--border-soft)}
+ .claim-text{margin:0 0 .5em;max-width:70ch}
+ .claim-meta{display:flex;align-items:center;gap:.5em .7em;flex-wrap:wrap;font:1rem/1.35 var(--sans);margin:0 0 .5em}
+ .claim-who{color:var(--muted);font-size:.92em}
+ .claim-anchor{font-size:.95rem;margin:0 0 .3em}
+ .claim-anchor + .claim-anchor{margin-top:.2em}
+ .claim-extra{font-size:.9rem;color:var(--muted);line-height:1.5}
+ .claim-extra > div{margin:.25em 0}
+ .role-label{font:700 .76rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 
- .s-meta{display:flex;align-items:center;gap:.55em;flex-wrap:wrap;font:14px/1.3 -apple-system,"Segoe UI",system-ui,sans-serif}
- .s-date{font-weight:600}
- .s-text{margin:.4em 0}
+ /* status tags: opaque flat colour (no gradient) + a glyph + the word — three independent cues,
+    so the five stay distinguishable from each other by shape/label even in grayscale or on a
+    washed-out projector, not colour alone. */
+ .tag{display:inline-flex;align-items:center;gap:.3em;font:700 .72rem/1 var(--sans);letter-spacing:.03em;
+   text-transform:uppercase;padding:.34em .6em;border-radius:.3rem;border:1.5px solid transparent;vertical-align:middle;
+   white-space:nowrap}
+ .tag-current{background:var(--tag-current-bg);color:var(--tag-current-fg);border-color:var(--tag-current-bd);border-style:solid}
+ .tag-superseded{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd);border-style:dashed}
+ .tag-newest{background:var(--tag-newest-bg);color:var(--tag-newest-fg);border-color:var(--tag-newest-bd);border-style:dashed}
+ .tag-nevertrue{background:var(--tag-nevertrue-bg);color:var(--tag-nevertrue-fg);border-color:var(--tag-nevertrue-bd);border-style:solid;border-width:2px}
+ .tag-withdrawn,.tag-correction{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd);border-style:dotted}
+ .retraction{font-style:italic}
+ .tag-nodirect{background:var(--tag-nodirect-bg);color:var(--tag-nodirect-fg);border-color:var(--tag-nodirect-bd);border-style:dotted;border-width:2px}
+
+ /* the correcting/superseding document: named right beside the tag it belongs to */
+ .corrector-label{font-size:.92rem;color:var(--muted);white-space:nowrap}
+ .corrector-label.never{color:var(--tag-nevertrue-fg);font-weight:600}
 
  /* deliberate system statements: distinct from tags, not alarming */
  .sysnote{background:var(--accent-soft);border:1px solid var(--border);border-left:3px solid var(--accent);
-   border-radius:.3rem;padding:.65em .8em;margin:.6em 0;font-size:15px;line-height:1.55}
+   border-radius:.3rem;padding:.7em .85em;margin:.7em 0;font-size:1rem;line-height:1.55;max-width:70ch}
  .sysnote .tag{margin-right:.4em}
 
  /* real problems: kept visually separate from system statements */
  .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.3rem;
-   padding:.65em .8em;margin:.6em 0;font-size:15px}
+   padding:.7em .85em;margin:.7em 0;font-size:1rem;max-width:70ch}
 
- details{margin:.35em 0}
- summary{cursor:pointer;color:var(--accent);font:600 .88rem/1.3 -apple-system,"Segoe UI",system-ui,sans-serif;
-   display:list-item}
+ /* loading placeholder: sits exactly where the answer will land */
+ .loading{color:var(--muted);font-style:italic;padding:.4em 0}
+ .loading::after{content:"";display:inline-block;width:1.1em;text-align:left;
+   animation:ellipsis 1.2s steps(4,end) infinite}
+ @keyframes ellipsis{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+
+ details{margin:.3em 0}
+ summary{cursor:pointer;color:var(--accent);font:600 .95rem/1.35 var(--sans);
+   display:list-item;overflow-wrap:anywhere}
  summary:hover{text-decoration:underline}
- details > div.cite-meta{color:var(--muted);font-size:.85em;margin:.4em 0 .2em}
- pre{white-space:pre-wrap;background:#fff;border:1px solid var(--border-soft);border-radius:.35rem;
-   padding:.7em .8em;margin:.3em 0;font:15px/1.55 Georgia,"Iowan Old Style",serif;color:var(--text)}
+ details > div.cite-meta{color:var(--muted);font-size:.88em;margin:.5em 0 .3em}
+ pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper-soft);border:1px solid var(--border-soft);border-radius:.5rem;
+   padding:.75em .85em;margin:.3em 0;font:1.05rem/1.55 var(--serif);color:var(--text);
+   max-height:22em;overflow-y:auto}
 
- hr.section-break{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+ hr.section-break{border:none;border-top:1px solid rgba(25,35,55,.14);margin:2.25rem 0}
 
- /* deletion: visually quieter than the answer */
- .quiet-panel{background:transparent;border:1px solid var(--border-soft);border-radius:.6rem;padding:1.1rem 1.3rem}
- .quiet-title{font-size:.95rem;color:var(--muted);font-weight:600;margin:0 0 .3em;text-transform:uppercase;
+ /* deletion: opaque like everything else, just a visually quieter panel — smaller shadow,
+    muted heading — clearly a separate region from the answer flow */
+ .quiet-panel{background:var(--paper);border-radius:1rem;box-shadow:var(--shadow-quiet);padding:1.15rem 1.4rem}
+ .quiet-title{font-size:.95rem;color:var(--muted);font-weight:600;margin:0 0 .5em;text-transform:uppercase;
    letter-spacing:.04em}
- .fineprint{color:var(--muted);font-size:.83rem;line-height:1.5;margin:.8em 0 0}
+ .fineprint{color:var(--muted);font-size:.85rem;line-height:1.5;margin:.8em 0 0;max-width:60ch}
  .confirm-box{background:var(--tag-newest-bg);border:1px solid var(--tag-newest-bd);border-radius:.4rem;
    padding:.8em 1em;margin-top:.8em}
  .confirm-box .row{margin-top:.7em}
  .confirm-result{background:var(--tag-current-bg);border:1px solid var(--tag-current-bd);border-radius:.4rem;
-   padding:.8em 1em;margin-top:.8em;font-size:14.5px;line-height:1.55}
+   padding:.85em 1em;margin-top:.8em;font-size:1rem;line-height:1.55}
  .confirm-result ul{margin:.4em 0 0;padding-left:1.2em}
+ .del-hint{font-size:.88em}
 </style></head><body>
 <div class="wrap">
 
-<header>
+<header class="hero-row">
 <h1>relex archive</h1>
-<p class="tagline">Ask a question; the answer is rendered from the claim graph, with sources you can expand.</p>
+<div class="hero-meta">right-to-erasure demo<br>no login</div>
 </header>
+<hr class="hairline">
 
 <section class="card">
+<p class="tagline">Ask a question; the answer is rendered from the claim graph, with sources you can expand.</p>
 <label class="field-label" for="q">Ask a question</label>
 <textarea id="q" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
-<div class="row"><button id="ask">Ask</button> <span id="askstate" class="muted small"></span></div>
+<div class="row"><button id="ask">Ask</button></div>
 </section>
 
 <div id="answer"></div>
@@ -255,7 +320,12 @@ PAGE = """<!doctype html>
 
 <section class="quiet-panel">
 <h2 class="quiet-title">Delete a person from the archive</h2>
-<div class="row"><select id="person"></select> <button id="del" class="btn-quiet">Delete</button> <span id="delstate" class="muted small"></span></div>
+<div class="row">
+  <input id="person" class="grow" type="text" list="people-list" autocomplete="off" placeholder="Type a name…">
+  <datalist id="people-list"></datalist>
+  <button id="del" class="btn-quiet">Delete</button>
+  <span id="delhint" class="muted del-hint"></span>
+</div>
 <div id="delconfirm" class="confirm-box" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
  <div class="row"><button id="delyes">Confirm delete</button> <button id="delno" class="btn-quiet">Cancel</button></div>
 </div>
@@ -267,32 +337,75 @@ retrieval index and embeddings, and every derived chain are rebuilt without them
 </div>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// a leading glyph on every tag: a third, non-colour cue (with the border style in CSS) so the
+// five currency states stay distinguishable from each other in grayscale or low light, not just by hue.
+const TAG_GLYPH = {current:"●", superseded:"→", newest:"◐", nevertrue:"✕", nodirect:"?", withdrawn:"↩", correction:"✎"};
 function tag(kind, label){
-  return `<span class="tag tag-${kind}">${esc(label)}</span>`;
+  return `<span class="tag tag-${kind}"><span aria-hidden="true">${TAG_GLYPH[kind]||""}</span>${esc(label)}</span>`;
 }
 function currencyTag(currency){
   if(currency==="CURRENT") return tag("current", "CURRENT");
   if(currency==="SUPERSEDED") return tag("superseded", "SUPERSEDED");
   if(currency==="NEWEST SURVIVING") return tag("newest", "NEWEST SURVIVING");
+  if(currency==="WITHDRAWN") return tag("withdrawn", "WITHDRAWN");
+  if(currency==="CORRECTION") return tag("correction", "CORRECTION");
   return `<span class="muted small">unlinked</span>`;
 }
 function cite(c, prefix){
   if(!c) return "";
   const head = c.heading ? esc(c.heading) + " — " : "";
-  return `<details><summary>${esc(prefix||"cite")}: ${esc(c.label)}</summary>` +
+  return `<details><summary>${esc(prefix||"source")}: ${esc(c.label)}</summary>` +
          `<div class="cite-meta">${head}${esc(c.speaker)}, ${esc(c.date)}</div><pre>${esc(c.text)}</pre></details>`;
 }
-function statement(s){
-  const val = s.value!==null&&s.value!==undefined ? ` · value: ${esc(s.value)}` : (s.truncated ? " · value: TRUNCATED IN SOURCE" : "");
-  let h = `<div class="s"><div class="s-meta"><span class="s-date">${esc(s.date.slice(0,16))}</span> · ${esc(s.asserted_by)} · ` +
-          `${currencyTag(s.currency)} · <span class="muted">${esc(String(s.truth_status).replace(/_/g," "))}</span>${val}</div>`;
-  h += `<div class="s-text">“${esc(s.statement)}”</div>` + cite(s.cite);
-  if(s.reported) h += `<div class="muted small">status report: evidence of what was reported at the time, not of the underlying state</div>`;
-  if(s.supersession) h += `<div class="muted small">${esc(s.supersession)}</div>` + cite(s.supersession_cite, "superseding document");
-  if(s.order_confidence) h += `<div class="muted small">order confidence: ${esc(s.order_confidence)}</div>`;
-  if(s.correction) h += `<div class="sysnote">${tag("nevertrue","NEVER TRUE")}${esc(s.correction)}</div>` + cite(s.correction_cite, "correcting document");
-  else if(s.truth_status==="unverified") h += `<div class="muted small">unverified: ${esc(s.truth_reason)}</div>`;
-  if(s.responds_to) h += `<div class="muted small">in response to: ${esc(s.responds_to)}</div>`;
+// s.supersession/s.correction are full sentences ("superseded by X on DATE (anchor...)" /
+// "corrected by X on DATE: "..." (anchor...)"). For the tag row we need only the name + date so
+// it reads as one short phrase next to the tag; the anchor is shown separately, as a citation.
+function correctorName(text){
+  const m = /^(superseded by|corrected by) (.+?) on (\d{4}-\d{2}-\d{2})/.exec(text || "");
+  return m ? `${m[1]} ${m[2]}, ${m[3]}` : (text || "");
+}
+function correctionQuote(text){
+  const m = /corrected by .+? on \d{4}-\d{2}-\d{2}:\s*"([\s\S]*)"\s*\([^)]*\)\s*$/.exec(text || "");
+  return m ? m[1] : "";
+}
+// One claim = one block, fixed reading order: text, currency tag, correcting document
+// (named right next to the tag), then this claim's own citation anchor. Nothing here needs
+// expanding to be seen; expanding a <details> only reveals the source excerpt, never the tag
+// or the correcting document's name.
+function claim(s){
+  const val = s.value!==null&&s.value!==undefined ? `value: ${esc(s.value)}` : (s.truncated ? "value: TRUNCATED IN SOURCE" : "");
+  let h = `<div class="claim">`;
+  h += `<p class="claim-text">“${esc(s.statement)}”</p>`;
+  h += `<div class="claim-meta">` + currencyTag(s.currency);
+  if(s.correction){
+    h += tag("nevertrue","NEVER TRUE") + `<span class="corrector-label never">${esc(correctorName(s.correction))}</span>` + cite(s.correction_cite, "correcting document");
+  } else if(s.supersession){
+    h += `<span class="corrector-label">${esc(correctorName(s.supersession))}</span>` + cite(s.supersession_cite, "superseding document");
+  }
+  h += `<span class="claim-who">${esc(s.asserted_by)} · ${esc(s.date.slice(0,16))}</span></div>`;
+  h += `<div class="claim-anchor">` + cite(s.cite, "source") + `</div>`;
+  let extra = "";
+  if(val) extra += `<div>${esc(val)}</div>`;
+  if(s.retraction) extra += `<div class="retraction">${esc(s.retraction)}</div>`;
+  if(!s.correction) extra += `<div>${esc(String(s.truth_status).replace(/_/g," "))}</div>`;
+  if(s.reported) extra += `<div>status report: evidence of what was reported at the time, not of the underlying state</div>`;
+  if(s.order_confidence) extra += `<div>order confidence: ${esc(s.order_confidence)}</div>`;
+  if(s.correction){ const q = correctionQuote(s.correction); if(q) extra += `<div>what was actually true: “${esc(q)}”</div>`; }
+  else if(s.truth_status==="unverified") extra += `<div>unverified: ${esc(s.truth_reason)}</div>`;
+  if(s.responds_to) extra += `<div>in response to: ${esc(s.responds_to)}</div>`;
+  if(extra) h += `<div class="claim-extra">${extra}</div>`;
+  return h + "</div>";
+}
+// Same visual language as claim(), with a role label (COMMITTED / LATEST ON RECORD / DONE LATER)
+// standing in for the group heading, used in the "agreed and not done" trail.
+function initiativeItem(roleLabel, s){
+  let h = `<div class="claim">`;
+  h += `<p class="claim-text">“${esc(s.statement)}”</p>`;
+  h += `<div class="claim-meta"><span class="role-label">${esc(roleLabel)}</span>` + currencyTag(s.currency);
+  if(s.correction) h += tag("nevertrue","NEVER TRUE") + `<span class="corrector-label never">${esc(correctorName(s.correction))}</span>` + cite(s.correction_cite, "correcting document");
+  else if(s.supersession) h += `<span class="corrector-label">${esc(correctorName(s.supersession))}</span>` + cite(s.supersession_cite, "superseding document");
+  h += `<span class="claim-who">${esc(s.asserted_by)} · ${esc(s.date.slice(0,10))}</span></div>`;
+  h += `<div class="claim-anchor">` + cite(s.cite, "source") + `</div>`;
   return h + "</div>";
 }
 function renderAnswer(a){
@@ -305,17 +418,16 @@ function renderAnswer(a){
   if(contextOnly) h += `<div class="sysnote">${tag("nodirect","NO DIRECT ANSWER")}No statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</div>`;
   if(a.initiative){
     h += `<div class="g"><span class="eyebrow">agreed and not done</span>`;
-    if(!a.initiative.length) h += `<div class="s muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
+    if(!a.initiative.length) h += `<div class="claim muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
     a.initiative.forEach((t, i) => {
-      const ag = t.agreed, l = t.latest;
-      h += `<div class="s"><div class="eyebrow">${i+1}. ${esc(t.fact_keys.join(", "))}</div>` +
-           `<div>COMMITTED: ${esc(ag.date.slice(0,10))} · ${esc(ag.asserted_by)} · “${esc(ag.statement)}”</div>` + cite(ag.cite) +
-           `<div>LATEST ON RECORD (${t.days} days later): ${esc(l.date.slice(0,10))} · ${esc(l.asserted_by)} · “${esc(l.statement)}”</div>` + cite(l.cite);
+      h += `<div class="lbl">${i+1}. ${esc(t.fact_keys.join(", "))}</div>`;
+      h += initiativeItem("COMMITTED", t.agreed);
+      h += initiativeItem(`LATEST ON RECORD (${t.days} days later)`, t.latest);
       if(t.still_open) h += `<div class="sysnote">No later statement in the archive says it was done; the archive does not record whether it ever was.</div>`;
-      else h += `<div>Later reported done: ${esc(t.done_later.date.slice(0,10))} · ${esc(t.done_later.asserted_by)} · “${esc(t.done_later.statement)}”</div>` + cite(t.done_later.cite);
+      else h += initiativeItem("DONE LATER", t.done_later);
       const who = [`${esc(t.committer)} (made the commitment)`].concat(t.raised_by.map(([n,d]) => `${esc(n)} (raised it on ${esc(d)})`));
-      h += `<div class="muted small">Who would have needed to notice: ${who.join("; ")}</div>`;
-      h += `<details><summary>full trail (${t.statements.length} statements)</summary>` + t.statements.map(statement).join("") + `</details></div>`;
+      h += `<p class="muted small">Who would have needed to notice: ${who.join("; ")}</p>`;
+      h += `<details><summary>full trail (${t.statements.length} statements)</summary>` + t.statements.map(claim).join("") + `</details>`;
     });
     h += `</div>`;
   }
@@ -336,18 +448,22 @@ function renderAnswer(a){
              `${n===1?"was":"were"} removed by deletion; none survive.</div>`;
       }
     }
-    for(const s of g.statements) h += statement(s);
+    for(const s of g.statements) h += claim(s);
     if(g.other.length){
       h += `<p class="muted small">related (proposals / questions, not part of the chain):</p>`;
-      for(const s of g.other) h += statement(s);
+      for(const s of g.other) h += claim(s);
     }
     h += "</div>";
   }
   const at = a.attribution;
   if(at){
     h += `<div class="g"><span class="eyebrow">attribution</span>`;
-    for(const [name, items] of [["PROPOSED", at.proposed], ["AGREED / DECIDED", at.agreed], ["REJECTED", at.rejected]]){
-      h += `<div class="lbl">${name}</div>` + (items.length ? items.map(statement).join("") : `<div class="s muted">(none)</div>`);
+    for(const [name, items, emptyMsg] of [
+      ["PROPOSED", at.proposed, "No statement in the archive proposed this."],
+      ["AGREED / DECIDED", at.agreed, "No statement in the archive agreed to or decided this — a proposal alone is not a decision."],
+      ["REJECTED", at.rejected, "No statement in the archive rejected this."],
+    ]){
+      h += `<div class="lbl">${name}</div>` + (items.length ? items.map(claim).join("") : `<div class="sysnote">${esc(emptyMsg)}</div>`);
     }
     h += `<p class="muted">verdict: ${esc(at.verdict)}</p></div>`;
   }
@@ -357,31 +473,44 @@ async function post(url, body){
   const r = await fetch(url, {method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify(body)});
   return r.json();
 }
+let PEOPLE_BY_LABEL = {};
+function personLabel(p){
+  return p.name + (p.org ? " — " + p.org : "") + (p.role ? ", " + p.role : "");
+}
 function fillPeople(list){
-  const sel = document.getElementById("person"); sel.innerHTML = "";
+  const dl = document.getElementById("people-list"); dl.innerHTML = "";
+  PEOPLE_BY_LABEL = {};
   for(const p of list){
-    const o = document.createElement("option"); o.value = p.person_id;
-    o.textContent = p.name + (p.org ? " — " + p.org : "") + (p.role ? ", " + p.role : "");
-    sel.appendChild(o);
+    const label = personLabel(p);
+    PEOPLE_BY_LABEL[label] = p.person_id;
+    const o = document.createElement("option"); o.value = label;
+    dl.appendChild(o);
   }
 }
-document.getElementById("ask").onclick = async () => {
-  const q = document.getElementById("q").value.trim(); if(!q) return;
-  document.getElementById("askstate").textContent = "…"; document.getElementById("answer").innerHTML = "";
-  try { const a = await post("/api/ask", {question:q}); document.getElementById("answer").innerHTML = a.error ? `<div class="error">${esc(a.error)}</div>` : renderAnswer(a); }
-  catch(e){ document.getElementById("answer").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
-  document.getElementById("askstate").textContent = "";
+const qEl = document.getElementById("q"), askBtn = document.getElementById("ask"), answerEl = document.getElementById("answer");
+askBtn.onclick = async () => {
+  const q = qEl.value.trim(); if(!q) return;
+  askBtn.disabled = true;
+  answerEl.innerHTML = `<div class="loading">Searching the archive</div>`;
+  try { const a = await post("/api/ask", {question:q}); answerEl.innerHTML = a.error ? `<div class="error">${esc(a.error)}</div>` : renderAnswer(a); }
+  catch(e){ answerEl.innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
+  askBtn.disabled = false;
+  qEl.focus(); qEl.select();   // next question takes no thought: just start typing over this one
 };
+qEl.addEventListener("keydown", e => { if(e.key === "Enter" && (e.ctrlKey || e.metaKey)) askBtn.click(); });
+const personEl = document.getElementById("person"), delHint = document.getElementById("delhint");
 document.getElementById("del").onclick = () => {
-  const sel = document.getElementById("person"); if(!sel.value) return;
-  document.getElementById("delwho").textContent = sel.options[sel.selectedIndex].textContent;
+  const pid = PEOPLE_BY_LABEL[personEl.value];
+  if(!pid){ delHint.textContent = "Type or pick a full name from the list."; return; }
+  delHint.textContent = "";
+  document.getElementById("delwho").textContent = personEl.value;
   document.getElementById("delconfirm").hidden = false; document.getElementById("delresult").innerHTML = "";
 };
 document.getElementById("delno").onclick = () => { document.getElementById("delconfirm").hidden = true; };
 document.getElementById("delyes").onclick = async () => {
-  const sel = document.getElementById("person"); const pid = sel.value; if(!pid) return;
+  const pid = PEOPLE_BY_LABEL[personEl.value]; if(!pid) return;
   document.getElementById("delconfirm").hidden = true; document.getElementById("delwho").textContent = "";
-  document.getElementById("delstate").textContent = "deleting and rebuilding every store (about half a minute)…";
+  delHint.textContent = "deleting and rebuilding every store (about half a minute)…";
   document.getElementById("del").disabled = true; document.getElementById("delresult").innerHTML = "";
   try {
     const r = await post("/api/delete", {person_id:pid});
@@ -396,10 +525,10 @@ document.getElementById("delyes").onclick = async () => {
         `<li>retrieval index rebuilt: ${s.passages[0]} → ${s.passages[1]} passages, embeddings re-encoded; claims ${s.claims[0]} → ${s.claims[1]}</li>` +
         `<li>full-text and structural sweep: ${s.verify_clean ? "clean" : "NOT CLEAN — see deletion log"}</li></ul></div>`;
       if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error">Verification sweep did not come back clean — see the deletion log.</div>`;
-      fillPeople(r.people);
+      personEl.value = ""; fillPeople(r.people);
     }
   } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
-  document.getElementById("delstate").textContent = ""; document.getElementById("del").disabled = false;
+  delHint.textContent = ""; document.getElementById("del").disabled = false;
 };
 fetch("/api/people").then(r => r.json()).then(fillPeople);
 </script></body></html>

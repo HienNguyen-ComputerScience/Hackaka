@@ -34,6 +34,7 @@ from link import numeric  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 NOTHING = "The archive does not contain a statement on this."
+RETRACTING = ("withdrawal", "correction")
 ATTRIB_WORDS = re.compile(r"\b(who|propos|suggest|agree|accept|sign|commit|decid|approv|confirm)", re.I)
 INITIATIVE_WORDS = re.compile(r"\b(never (been )?(done|delivered|happened|finished|completed|received)|not done|"
                               r"agreed (and|but|then)|still (open|outstanding|waiting)|outstanding|"
@@ -43,7 +44,8 @@ UNDONE = re.compile(r"\b(not (been |yet )?(received|done|delivered|sent|finished
                     r"finished|got|came)|still (open|not|outstanding|waiting|missing|pending)|had not|has not|"
                     r"hasn't|hadn't|no (reply|answer|response)|not yet|remains? (open|outstanding)|chased|chasing)\b", re.I)
 DONE = re.compile(r"\b(done|delivered|received|sent|completed|finished|removed|resolved|closed|fixed|answered)\b", re.I)
-NUMERIC_INTENT = re.compile(r"\b(figure|number|how many|how much|proportion|percent|percentage|share|count|total|rate)s?\b", re.I)
+NUMERIC_INTENT = re.compile(r"\b(figure|number|how many|how much|proportion|percent|percentage|share|count|total|rate"
+                            r"|charge|cost|price|fee|invoice|pay|paid)s?\b", re.I)
 EVERY = re.compile(r"\b(every|all|each|list)\b", re.I)
 TURN_INDEX = re.compile(r" turn \d+ \(line")   # internal-transcript anchors carry a turn number; never rendered
 MONTHS = {m: i + 1 for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split())}
@@ -92,6 +94,22 @@ def date_scope(query):
     return None
 
 
+DATE_TOKENS = re.compile(
+    r"\b\d{4}-\d\d-\d\d(?:t\d\d:\d\d)?\b"                                    # ISO date, optional clock
+    r"|\b(?:\d{1,2}\s+)?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(?:19|20)\d\d\b"   # 5 March 2026 / March 2026
+    r"|\bweek\s+\d{1,2}\b"                                                     # Week 48
+    r"|\bq[1-4]\s+(?:19|20)\d\d\b"                                             # Q1 2026
+    r"|\b(?:19|20)\d\d\b",                                                     # bare year
+    re.I)
+
+
+def carries_figure(value):
+    """A value holds a figure once its date tokens are stripped; a value that is only a date does not."""
+    if value is None:
+        return False
+    return numeric(DATE_TOKENS.sub(" ", str(value))) is not None
+
+
 def has_number(value):
     return value is not None and re.search(r"\d", str(value)) is not None and numeric(value) is not None
 
@@ -121,6 +139,8 @@ class Answerer:
         # statement embeddings: a chain is only shown if one of its statements actually addresses the question
         self.semb = self.r._embed_batch([c["statement"] for c in self.claims])
         self.sidx = {c["claim_id"]: i for i, c in enumerate(self.claims)}
+        # retractions whose target link.py resolved to a claim in the archive (the target carries corrected_by)
+        self.resolved_retractions = {c["corrected_by"] for c in self.claims if c.get("corrected_by")}
         # every content word the archive uses anywhere: texts, subjects, meeting names, names in headers.
         # A question word outside this set is a concept the archive never mentions.
         self.vocab = set().union(*self.gtok) if self.gtok else set()
@@ -228,20 +248,23 @@ class Answerer:
                 top_groups = []
         # direct-answer test: does some single statement in the chosen chains address the question as asked?
         # A statement qualifies when it is semantically close to the question, or covers half its content
-        # words, or covers a third of them while being moderately close. If no statement qualifies, or the
-        # question uses words the archive never uses, the chains are labelled related context, not an answer.
+        # words, or covers a third of them while being moderately close. If no statement qualifies, the
+        # chains are labelled related context, not an answer. When the question uses a word the archive
+        # never uses, word coverage cannot qualify a statement (the remaining words are the easy ones to
+        # cover; "charge" struck from "what did X charge for Y" leaves X and Y); only closeness can, and
+        # never-words that are the bulk of the ask veto even that.
         direct = None
         if top_groups and not scope:
             direct = False
             rest = qtok - never_stems
-            # words the archive never uses veto a direct answer only when they are the bulk of the ask;
-            # an incidental paraphrase word ("proportion" for "share") does not
-            if 3 * len(never) < len(qtok):
+            # a question asking for a figure is not answered by chains that hold none, however close their wording
+            no_figure = numeric_intent and not any(carries_figure(c.get("value")) for g in top_groups for c in self.by_group[g])
+            if 3 * len(never) < len(qtok) and not no_figure:
                 for gid in top_groups:
                     for c in self.by_group[gid]:
                         cos = float(self.semb[self.sidx[c["claim_id"]]] @ qv)
                         cov = len(rest & content_tokens(f"{c['statement']} {c.get('value') or ''}")) / len(rest) if rest else 0.0
-                        if cos >= 0.48 or cov >= 0.5 or (cov >= 0.33 and cos >= 0.40):
+                        if cos >= 0.48 or (not never and (cov >= 0.5 or (cov >= 0.33 and cos >= 0.40))):
                             direct = True
                             break
                     if direct:
@@ -252,12 +275,13 @@ class Answerer:
             members = sorted(self.by_group[gid], key=lambda c: (c["date"], c["turn_index"] or 0))
             chain = [c for c in members if c["chain_pos"]]
             g = self.groups[gid]
+            head = None if g.get("head_removed") else self.head_of(chain)
             out["groups"].append({
                 "group_id": gid, "fact_keys": g["fact_keys"],
-                "current": None if g.get("head_removed") else g["current"],
+                "current": None if g.get("head_removed") else (head["claim_id"] if head else g["current"]),
                 "head_removed": bool(g.get("head_removed")), "removed_statements": int(g.get("removed_statements") or 0),
                 "newest_surviving_figure": self.newest_figure(chain) if g.get("head_removed") else None,
-                "statements": [self.fmt(c) for c in chain],
+                "statements": [self.fmt(c, head) for c in self.chain_order(chain, head)],
                 "other": [self.fmt(c) for c in members if not c["chain_pos"]],
             })
         if ATTRIB_WORDS.search(query):
@@ -276,11 +300,82 @@ class Answerer:
         pick = (figs or chain or [None])[-1]
         return self.fmt(pick) if pick else None
 
-    def fmt(self, c):
+    @staticmethod
+    def head_of(chain):
+        """The chain's current statement: its newest factual claim. A withdrawal or correction is about an
+        earlier statement and never carries the current value itself, so it cannot be the head."""
+        factual = [c for c in chain if c["kind"] not in RETRACTING]
+        return (factual or chain or [None])[-1]
+
+    @staticmethod
+    def chain_order(chain, head):
+        """Chronological, except that withdrawals newer than the head are lifted to sit directly above
+        it, so a chain reads: history, labelled retraction(s), then the statement that is current."""
+        if head is None or head not in chain:
+            return chain
+        i = chain.index(head)
+        later = chain[i + 1:]
+        return chain[:i] + [c for c in later if c["kind"] == "withdrawal"] + [head] + [c for c in later if c["kind"] != "withdrawal"]
+
+    def match_retraction(self, c):
+        """The claim a retraction's free-text `corrects` describes, found at render time when link.py left
+        no corrected_by pointer. Strict: an earlier, non-retracting claim in the same chain that the text
+        names by speaker, dates, and whose value (every number) or wording (half its content words) it
+        repeats. Exactly one such claim, else None; nothing is written back."""
+        text = c.get("corrects") or ""
+        dates = {f"{y}-{m}-{d}" for y, m, d in re.findall(r"\b(20\d\d)-(\d\d)-(\d\d)\b", text)}
+        months = set()
+        for d, mon, y in re.findall(r"\b(\d{1,2})?\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(20\d\d)\b", text, re.I):
+            mm = MONTHS[mon[:3].lower()]
+            (dates if d else months).add(f"{y}-{mm:02d}-{int(d):02d}" if d else f"{y}-{mm:02d}")
+        if not dates and not months:
+            return None
+        ttok = content_tokens(text)
+        tnums = set(re.findall(r"\d+", text))
+        members = sorted(self.by_group[c["group_id"]], key=lambda x: (x["chain_pos"] or 0))
+        hits = []
+        for x in members:
+            if x["claim_id"] == c["claim_id"] or x["kind"] in RETRACTING or not x["chain_pos"] or x["chain_pos"] >= (c["chain_pos"] or 0):
+                continue
+            if x["asserted_by"] not in text or not (x["date"][:10] in dates or x["date"][:7] in months):
+                continue
+            vnums = set(re.findall(r"\d+", str(x.get("value") or "")))
+            vtok = content_tokens(str(x.get("value") or ""))
+            stok = content_tokens(x["statement"])
+            value_ok = bool(vnums or vtok) and vnums <= tnums and vtok <= ttok
+            wording_ok = bool(stok) and len(stok & ttok) / len(stok) >= 0.5
+            if value_ok or wording_ok:
+                hits.append(x)
+        return hits[0] if len(hits) == 1 else None
+
+    def fmt(self, c, head=None):
         head_removed = self.groups.get(c["group_id"], {}).get("head_removed")
-        label = ("NEWEST SURVIVING" if head_removed else "CURRENT") if c["is_current"] else ("SUPERSEDED" if c["superseded_by"] else "")
+        is_head = c["is_current"] if head is None else c["claim_id"] == head["claim_id"]
+        if c["kind"] == "withdrawal":
+            label = "WITHDRAWN"
+        elif c["kind"] == "correction":
+            label = "CORRECTION"
+        elif is_head:
+            label = "NEWEST SURVIVING" if head_removed else "CURRENT"
+        else:
+            label = "SUPERSEDED" if c["superseded_by"] else ""
+        retraction = None
+        if c["kind"] in RETRACTING and c.get("corrects"):
+            resolved = c["claim_id"] in self.resolved_retractions
+            if c["kind"] == "withdrawal":
+                retraction = f"WITHDRAWN: retracts {c['corrects']}"
+            elif not resolved:
+                retraction = f"CORRECTS: {c['corrects']}"
+            if retraction and not resolved:
+                m = self.match_retraction(c)
+                if m:
+                    retraction += (f" (link not established automatically; matching claim: {m['asserted_by']} on {m['date'][:10]}, "
+                                   f"\"{m['statement']}\" ({anchor(m['where'])}))")
+                else:
+                    retraction += " (the retracted statement is not held in the archive as a claim)"
         sup = None
-        if c["superseded_by"]:
+        # the head's stored successor can only be a retraction (see head_of); a current statement is not superseded
+        if c["superseded_by"] and not (is_head and not head_removed):
             n = self.by_id[c["superseded_by"]]
             sup = f"superseded by {n['asserted_by']} on {n['date'][:10]} ({anchor(n['where'])})"
             if c["order_confidence"] == "same_day_unknown":
@@ -293,7 +388,7 @@ class Answerer:
             "claim_id": c["claim_id"], "unit_id": c["unit_id"], "date": c["date"], "asserted_by": c["asserted_by"], "kind": c["kind"],
             "value": c.get("value"), "truncated": bool(c.get("truncated")), "statement": c["statement"],
             "currency": label, "supersession": sup, "truth_status": c["truth_status"], "truth_reason": c["truth_reason"],
-            "correction": corr, "order_confidence": c["order_confidence"], "cite": anchor(c["where"]),
+            "correction": corr, "retraction": retraction, "order_confidence": c["order_confidence"], "cite": anchor(c["where"]),
             "reported": c["source_file"].startswith("reports/"),
         }
 
@@ -362,6 +457,8 @@ def _statement_lines(s, indent="  "):
     lines = [f"{indent}{s['date'][:16]}  {s['asserted_by']:16s} {flag:12s} {s['truth_status']:15s}{val}",
              f"{indent}    \"{s['statement']}\"",
              f"{indent}    cite: {s['cite']}"]
+    if s.get("retraction"):
+        lines.append(f"{indent}    {s['retraction']}")
     if s.get("reported"):
         lines.append(f"{indent}    status report: evidence of what was reported at the time, not of the underlying state")
     if s["supersession"]:

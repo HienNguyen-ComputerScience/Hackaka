@@ -35,50 +35,7 @@ DATA = ROOT / "data"
 ID_PATTERNS = [re.compile(r"\b(email|transcript|report):\d\d_"), re.compile(r"#\d+'?\b"), re.compile(r"\bturn \d+\b"),
                re.compile(r"\bg\d{4}\b"), re.compile(r"\bperson:[a-z-]+")]
 
-PRACTICE = {
-    "P1": "What did the master-data assessment report as complete in September 2024? Give every figure and the document each comes from.",
-    "P2": "What service levels were agreed for ordering, and in which meeting?",
-    "P3": "Who proposed removing the operator ID field from the data extract, who agreed, and had it already been sent anywhere by then?",
-    "P4": "Did Acme sign off UAT for the programme? Quote the scope of what was actually signed, and name who signed it.",
-    "P5": "What proportion of articles had shelf-life data populated? Give every figure in the archive with its date and source, and say which one is current.",
-    "P6": "Is bakery inside the fresh workstream? Show how the answer changed over time and what it is now.",
-    "P8": "Find one thing in the archive that was agreed and then never done. Show the trail from the agreement to the present, and say who would have needed to notice.",
-    "P9": "The weekly status reports say the nightly article extract completed with no errors. Is that true? Answer the question the reports are actually evidence for, and say what they are not evidence for.",
-}
-
-UNSEEN = [
-    ("U01", "How many stores are in the pilot cohort, and did that number ever change?", True),
-    ("U02", "What did the data protection officer ask RELEX to confirm, and was it closed?", True),
-    ("U03", "When did the DC-2 feed fail during hypercare and who got paged?", True),
-    ("U04", "What role does Meridian Consulting play in the bakery workstream?", True),
-    ("U05", "Which field was excluded from the waste extract, and from what date?", True),
-    ("U06", "Where is the RELEX environment hosted and how many sub-processors are there?", True),
-    ("U07", "What return on investment did the CFO expect, and over what period?", True),
-    ("U08", "Why was a personal note about surgery in the handover pack, and was it removed?", True),
-    ("U09", "What went wrong with the three-wave rollout sequencing?", True),
-    ("U10", "How was the case pack quantity gap closed and how long did it take?", True),
-    ("U11", "What did the Q1 2026 waste reporting say about availability and waste?", True),
-    ("U12", "Was a file size check adopted to detect feed failures?", True),
-    ("U13", "What is the name of Acme's chief executive?", False),
-    ("U14", "How many people work at Meridian Consulting?", False),   # phrased in archive vocabulary: no never-used word to catch it
-    ("U15", "Which programming language is the DC-2 middleware written in?", False),
-]
-
-# Ten provenance questions for the judges, run against the full pre-deletion archive (never
-# against the live data/, which may already reflect a deletion run earlier in this process or a
-# prior session). See load_snapshot_answerer() / part_judge() below.
-JUDGE_PROVENANCE = [
-    ("J01", "Who first reported the DC-2 feed failure during hypercare? Give the speaker and the timestamp in the conversation, not just the document."),
-    ("J02", "The operator ID field was excluded from the waste extract. Show me the single message where that was first put in writing, with its sender and sent date."),
-    ("J03", "How many stores are in the pilot cohort? Give the figure and cite every document that states it, not just one."),
-    ("J04", "What did Meridian Consulting charge for the bakery workstream?"),
-    ("J05", "Quote the exact sentence in which the data protection officer states what they need confirmed."),
-    ("J06", "How many sub-processors are there? If the archive disagrees with itself, cite both records and say which is which."),
-    ("J07", "How many separate times was a file size check raised as a way to detect feed failures? Cite each occasion."),
-    ("J08", "Was a data protection impact assessment ever carried out? If the archive does not say, explain how you determined that."),
-    ("J09", "Did they switch all the shops on at the same time, or in batches? Show me where that is recorded."),
-    ("J10", "What did the Q1 2026 waste reporting conclude? Name the report period inside the file it sits in, not the file."),
-]
+from qset_frozen import *
 
 TABLE = []
 
@@ -288,6 +245,7 @@ def part2(A, units):
 
 # ---------------------------------------------------------------- judge provenance questions
 BARE_FILENAME = re.compile(r"^\S+\.(txt|md)$")
+POSITION_SEGMENT = re.compile(r" · message \d+ of \d+ \(position \d+ from top\)")
 
 
 def resolve_snapshot(preferred):
@@ -376,12 +334,44 @@ def sha_tree(root):
     return out
 
 
+def part3_currency(A):
+    """Currency on the full archive: withdrawals and corrections never lead a chain, and retractions
+    and never-true statements stay visible, labelled."""
+    import answer as answer_mod
+    for cid, case, q, fact_key in CURRENCY:
+        out = A.answer(q)
+        text = answer_mod.render(out)
+        g = next((g for g in out["groups"] if fact_key in g["fact_keys"]), None)
+        if g is None:
+            row("3", f"{cid} {case}: chain '{fact_key}' retrieved", False, f"{len(out['groups'])} chain(s), none on that key")
+            continue
+        stmts = g["statements"]
+        cur = [s for s in stmts if s["currency"] == "CURRENT"]
+        if case == "stale":
+            ok = (len(cur) == 1 and cur[0]["kind"] not in answer_mod.RETRACTING
+                  and any(s["currency"] == "WITHDRAWN" for s in stmts) and cur[0]["value"] is not None)
+            note = (f"current = {cur[0]['asserted_by']} {cur[0]['value']!r} ({cur[0]['kind']}); withdrawal rendered above it"
+                    if ok else f"{len(cur)} CURRENT, kind={[s['kind'] for s in cur]}")
+            row("3", f"{cid} stale chain leads with the figure, not the retraction", ok, note)
+        elif case == "never-true":
+            nt = [s for s in stmts if s["truth_status"] == "never_true"]
+            ok = bool(nt) and all(s["correction"] for s in nt) and "NEVER TRUE: corrected by" in text
+            row("3", f"{cid} never-true statement stays visible with its NEVER TRUE line", ok,
+                f"{len(nt)} never_true, {sum(1 for s in nt if s['correction'])} with correction line" if nt else "no never_true statement in chain")
+        else:
+            wd = [s for s in stmts if s["kind"] == "withdrawal"]
+            ok = bool(wd) and all(s["currency"] == "WITHDRAWN" and (s.get("retraction") or "").startswith("WITHDRAWN: retracts") for s in wd)
+            row("3", f"{cid} withdrawal shows its WITHDRAWN marker", ok,
+                f"{len(wd)} withdrawal(s), marker present, none is the head" if ok else f"{len(wd)} withdrawal(s): {[(s['currency'], s.get('retraction')) for s in wd]}")
+
+
 def part3(A, units, p1_before, snapshot):
     print("\n=============================== PART 3: deletion end to end")
     if not snapshot.is_dir() or not (snapshot / "units.jsonl").exists():
         row("3", "snapshot present", False, f"no snapshot at {snapshot}; cannot run a destructive test without a way back")
         return None
     row("3", "snapshot present", True, str(snapshot))
+    part3_currency(A)
     before = sha_tree(snapshot)
     people = json.loads((DATA / "people.json").read_text(encoding="utf-8"))
     by_name = {p["name"]: pid for pid, p in people.items() if pid.startswith("person:")}
@@ -390,6 +380,11 @@ def part3(A, units, p1_before, snapshot):
     name, _ = counts.most_common(1)[0]
     pid = by_name[name]
     print(f"    deleting the person who authored most of P1's statements: {name} ({counts[name]} statements)")
+
+    import answer as answer_mod
+    diff_questions = list(DIFF_NEAR) + list(DIFF_FAR)
+    diff_before = {qid: answer_mod.render(A.answer(q)) for qid, q in diff_questions}
+
     t0 = time.time()
     proc = subprocess.run([sys.executable, str(ROOT / "pipeline" / "delete.py"), pid], cwd=ROOT,
                           capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -420,6 +415,26 @@ def part3(A, units, p1_before, snapshot):
         probs = hygiene(qid, o, t, units2)
         ok = not o["empty"] and all(s.get("cite") for s in all_statements(o)) and not probs and not delete_mod.hits(t, forms)
         row("3", f"{qid} still answers after deletion", ok, f"{len(o['groups'])} chain(s), cited, no leak" if ok else "; ".join(probs) or "empty or leak")
+    # deletion diff: same ten questions, asked again post-deletion. Near questions must change and
+    # carry a removal marker (a surviving chain that lost its head). Far questions must be identical
+    # once the 'message N of M (position K from top)' segment is stripped: delete.py renumbers
+    # positions over the surviving thread by design, so positions are relative to the current
+    # archive and only the content is required to hold still.
+    near_ids = {qid for qid, _ in DIFF_NEAR}
+    loss_markers = ("HEAD REMOVED", "REMOVED: the archive no longer contains")
+    for qid, q in diff_questions:
+        text_after = answer_mod.render(A2.answer(q))
+        if qid in near_ids:
+            changed = text_after != diff_before[qid]
+            states_loss = any(m in text_after for m in loss_markers)
+            row("3", f"{qid} diff (near): changed and states what it can no longer source",
+                changed and states_loss,
+                "changed, loss stated" if changed and states_loss
+                else f"changed={changed} loss_stated={states_loss}")
+        else:
+            same = POSITION_SEGMENT.sub("", text_after) == POSITION_SEGMENT.sub("", diff_before[qid])
+            row("3", f"{qid} diff (far): identical with positions stripped", same,
+                "identical" if same else "content differs")
     # sweeps, run directly from delete.py's own functions
     passages = load_jsonl(DATA / "passages.jsonl")
     text_off = delete_mod.verify(forms, len(passages))
