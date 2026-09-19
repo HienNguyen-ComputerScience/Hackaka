@@ -269,6 +269,14 @@ class Answerer:
                             break
                     if direct:
                         break
+        if direct is False:
+            # related context must be about the question's named subject: a chain admitted only through common
+            # words (bakery, workstream) whose fact keys never name the proper noun asked about is off-subject
+            proper = set(content_map(" ".join(w for w in query.split() if w[:1].isupper()))) & self.vocab
+            if proper:
+                on_subject = [g for g in top_groups if proper & content_tokens(" ".join(self.groups[g]["fact_keys"]))]
+                if on_subject:
+                    top_groups = on_subject
         out = {"query": query, "scope": scope[2] if scope else None, "never_mentions": never, "direct": direct, "groups": [],
                "attribution": None, "initiative": None, "nearest": nearest, "hits": [h["pin"]["where"] for h in hits]}
         for gid in top_groups:
