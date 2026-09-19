@@ -225,7 +225,7 @@ class Answerer:
             return (gid in sem or lex.get(gid, 0) >= 2 or (lex.get(gid, 0) >= 1 and co.get(gid, 0) > 0)
                     or (scope is not None and in_scope.get(gid) and co_scoped.get(gid, 0) > 0))
 
-        top_groups = [g for g, _ in sorted(gscore.items(), key=lambda kv: -kv[1]) if related(g)][:max_groups]
+        top_groups = [g for g, _ in sorted(gscore.items(), key=lambda kv: (-round(kv[1], 6), kv[0])) if related(g)][:max_groups]
         # answer rule: a chain on the same topic is not an answer. Outside a date scope, each chain must either
         # share two content words with the question or contain a statement semantically close to it
         # (cosine >= 0.45). If nothing survives, the answer is "not contained" and the nearest topics are named.
