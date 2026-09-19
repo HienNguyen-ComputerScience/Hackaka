@@ -293,7 +293,12 @@ class Answerer:
                 "other": [self.fmt(c) for c in members if not c["chain_pos"]],
             })
         if ATTRIB_WORDS.search(query):
-            out["attribution"] = self.attribution(top_groups, retrieved_units, qtok, qv)
+            # a proposal that restates the question anchors the block even when its chain was not selected
+            ssims = self.semb @ qv
+            restating = [self.claims[i]["group_id"] for i in ssims.argsort()[::-1][:5]
+                         if ssims[i] >= 0.75 and self.claims[i]["kind"] == "proposal"]
+            extra = [g for g in dict.fromkeys(restating) if g not in top_groups]
+            out["attribution"] = self.attribution(top_groups + extra, retrieved_units, qtok, qv)
         if INITIATIVE_WORDS.search(query):
             out["initiative"] = self.initiative()
         out["empty"] = not out["groups"] and not out["initiative"]
@@ -448,11 +453,16 @@ class Answerer:
                     answered[t["claim_id"]] += 1
             head = max(props_c, key=lambda p: (answered[p["claim_id"]], relevance(p)))
             props_c = [head] + [p for p in props_c if p is not head]
-            # a reply to a different proposal in the same chains is not agreement with this one
+            # a reply to a different proposal in the same chains is not agreement with this one, and nothing said
+            # before the proposal (an earlier day, or an earlier turn of the same source that day) can agree to it
+            def before(a):
+                if a["date"][:10] != head["date"][:10]:
+                    return a["date"][:10] < head["date"][:10]
+                return a["source_file"] == head["source_file"] and (a["turn_index"] or 0) < (head["turn_index"] or 0)
             kept = []
             for a in acts_c:
                 t = target(a, head)
-                if t is not None and t["kind"] == "proposal" and t is not head:
+                if before(a) or (t is not None and t["kind"] == "proposal" and t is not head):
                     continue
                 kept.append(a)
             acts_c = kept
