@@ -147,46 +147,45 @@ STATE = State()
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
  :root{
-   --bg:#f4f5f7; --paper:#ffffff; --paper-soft:#f7f8fa;
-   --text:#15181d; --muted:#5b6470; --line:#e4e7eb; --line-strong:#7f8791;
-   --accent:#0f5f8f; --accent-hover:#0c4f78; --accent-soft:#e7f0f7;
-   --danger:#a6301f; --danger-soft:#fbe9e5;
-   --shadow:0 1px 2px rgba(20,30,45,.06), 0 8px 24px -12px rgba(20,30,45,.18);
+   --bg:#F8FAFC; --paper:#FFFFFF; --paper-soft:#F1F5F9;
+   --text:#0F172A; --muted:#475569; --line:#CBD5E1; --line-strong:#64748B;
+   --accent:#1E3A8A; --accent-hover:#1E40AF; --accent-soft:#E9EEF5;
+   --cta:#B45309; --cta-hover:#92400E;
+   --danger:#DC2626; --danger-hover:#B91C1C; --danger-soft:#FEE2E2;
+   --shadow:0 1px 2px rgba(15,23,42,.06);
    --tag-current-bg:#e3f3e6; --tag-current-fg:#14603a; --tag-current-bd:#8fcf9d;
    --tag-superseded-bg:#eef0f3; --tag-superseded-fg:#4b5158; --tag-superseded-bd:#c3c9d1;
    --tag-newest-bg:#fbecc4; --tag-newest-fg:#6b4900; --tag-newest-bd:#e2b94f;
    --tag-nevertrue-bg:#f9dcd9; --tag-nevertrue-fg:#8a2015; --tag-nevertrue-bd:#e3897c;
    --tag-nodirect-bg:#e7e1f4; --tag-nodirect-fg:#452e82; --tag-nodirect-bd:#b8a3e0;
-   --error-bg:#fbe4e1; --error-bd:#e7b6ae; --error-fg:#8a2a1c;
-   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,system-ui,sans-serif;
-   --r:.6rem;
+   --error-bg:#FEE2E2; --error-bd:#FCA5A5; --error-fg:#991B1B;
+   --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+   --head:Lexend,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+   --r:.375rem;
    --s1:.5rem; --s2:1rem; --s3:1.5rem;
  }
  *{box-sizing:border-box}
  html{-webkit-text-size-adjust:100%}
- body{margin:0;min-height:100vh;color:var(--text);background:var(--bg);font:16px/1.55 var(--sans);overflow-wrap:break-word}
- /* the wash: soft blue atmosphere fixed behind everything; pure CSS gradients, never a text background */
- body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
-   radial-gradient(55% 45% at 82% 4%, rgba(133,171,209,.42), transparent 68%),
-   radial-gradient(48% 40% at 8% 20%, rgba(150,196,196,.30), transparent 70%),
-   radial-gradient(42% 38% at 60% 70%, rgba(230,184,146,.22), transparent 72%),
-   linear-gradient(175deg, #eef1f5 0%, #e9edf2 100%)}
+ body{margin:0;min-height:100vh;color:var(--text);background:var(--bg);font:17px/1.55 var(--sans);overflow-wrap:break-word}
+ /* flat ground: Swiss-style, no atmosphere behind the content */
  a{color:var(--accent)}
  /* top bar */
- .topbar{background:rgba(255,255,255,.85);border-bottom:1px solid var(--line)}
+ .topbar{background:var(--paper);border-bottom:1px solid var(--line)}
  .topbar-in{max-width:46rem;margin:0 auto;padding:.85rem 1.1rem;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
- .brand{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;color:var(--text);margin:0}
+ .brand{font:700 1.3rem/1 var(--head);letter-spacing:-.01em;color:var(--accent);margin:0}
  .topbar-sub{color:var(--muted);font-size:.92rem}
  .wrap{max-width:46rem;margin:0 auto;padding:var(--s3) 1rem 4rem}
  /* intro */
  .intro{margin:0 0 var(--s3)}
- .intro h1{font-size:1.6rem;line-height:1.25;font-weight:750;letter-spacing:-.015em;margin:0 0 var(--s1)}
+ .intro h1{font:600 1.7rem/1.25 var(--head);letter-spacing:-.01em;margin:0 0 var(--s1)}
  .intro p{margin:0;color:var(--muted)}
  /* cards */
- .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s3);margin:0 0 var(--s2)}
- .field-label{display:block;font-weight:600;font-size:.95rem;margin-bottom:var(--s1)}
+ .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);margin:0 0 var(--s2)}
+ .field-label{display:block;font:600 .95rem/1.4 var(--head);margin-bottom:var(--s1)}
  textarea{display:block;width:100%;min-height:3.4em;font:inherit;line-height:1.5;padding:.7em .85em;border:1px solid var(--line-strong);border-radius:var(--r);
    background:var(--paper);color:var(--text);resize:none;overflow:hidden;-webkit-appearance:none;appearance:none}
  textarea::placeholder,input::placeholder{color:#8a919b}
@@ -196,21 +195,23 @@ PAGE = """<!doctype html>
  .helper{color:var(--muted);font-size:.86rem;margin:var(--s1) 0 0}
  .row{display:flex;align-items:center;gap:var(--s1) var(--s2);margin-top:var(--s2);flex-wrap:wrap}
  button{font:600 .95rem/1 var(--sans);min-height:2.75rem;padding:.6em 1.25em;border-radius:var(--r);border:1px solid var(--accent);
-   background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:background-color .12s ease,border-color .12s ease}
+   background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:background-color .2s ease,border-color .2s ease}
  button:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+ #ask{background:var(--cta);border-color:var(--cta);padding-inline:1.6em}
+ #ask:hover{background:var(--cta-hover);border-color:var(--cta-hover)}
  button:disabled{opacity:.5;cursor:not-allowed}
  button.btn-quiet{background:var(--paper);color:var(--accent)}
  button.btn-quiet:hover{background:var(--accent-soft)}
  button.btn-danger{background:var(--danger);border-color:var(--danger)}
- button.btn-danger:hover{background:#8b2818;border-color:#8b2818}
+ button.btn-danger:hover{background:var(--danger-hover);border-color:var(--danger-hover)}
  button.btn-danger-quiet{background:var(--paper);border-color:var(--danger);color:var(--danger)}
  button.btn-danger-quiet:hover{background:var(--danger-soft)}
  .skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);color:var(--accent);padding:.5em .8em;border-radius:.4rem;box-shadow:var(--shadow);z-index:10;font:600 .95rem/1 var(--sans)}
  .skip:focus{left:.75rem}
  .examples{display:flex;flex-wrap:wrap;gap:var(--s1);align-items:center;margin-top:var(--s2);padding-top:var(--s2);border-top:1px solid var(--line)}
  .examples-label{color:var(--muted);font-size:.88rem;margin-right:.2rem}
- .chip{min-height:2.25rem;padding:.4em .85em;font:500 .88rem/1.3 var(--sans);background:var(--paper);color:var(--text);
-   border:1px solid var(--line);border-radius:999px;cursor:pointer;text-align:left}
+ .chip{min-height:2.25rem;padding:.4em .85em;font:600 .88rem/1.3 var(--sans);background:var(--paper);color:var(--accent);
+   border:1px solid var(--line);border-radius:var(--r);cursor:pointer;text-align:left;transition:background-color .2s ease,border-color .2s ease}
  .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
  /* legend */
  .card-quiet{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:var(--s1) var(--s3);margin:0 0 var(--s2)}
@@ -222,13 +223,13 @@ PAGE = """<!doctype html>
  /* answer */
  #answer:not(:empty){margin:0 0 var(--s2)}
  .answer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s1) var(--s2);flex-wrap:wrap;margin:0 0 var(--s2);color:var(--muted);font-size:.9rem}
- .answer-head .q{display:block;color:var(--text);font-weight:650;font-size:1.15rem;line-height:1.35}
+ .answer-head .q{display:block;color:var(--text);font:600 1.15rem/1.35 var(--head)}
  .link-btn{background:none;border:none;color:var(--accent);font:600 .88rem/1 var(--sans);padding:.6em .4em;min-height:2.25rem;cursor:pointer;text-decoration:underline}
  .link-btn:hover{background:var(--accent-soft)}
  .eyebrow{display:block;font:700 .74rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5em}
- .g{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s3);margin:0 0 var(--s2)}
- .lbl{font:650 1.08rem/1.35 var(--sans);color:var(--text);margin:0 0 var(--s1)}
- h3.lbl{font-size:.95rem;margin:.9rem 0 .1rem;color:var(--muted)}
+ .g{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);margin:0 0 var(--s2)}
+ .lbl{font:600 1.05rem/1.35 var(--head);color:var(--text);margin:0 0 var(--s1)}
+ h3.lbl{font-size:.9rem;margin:.9rem 0 .1rem;color:var(--muted)}
  .lead-note{font:600 .76rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--tag-current-fg);margin:.6rem 0 .5rem}
  .claim{margin:.6rem 0;padding:.1rem 0 .1rem .9rem;border-left:3px solid var(--line)}
  .claim.lead{border-left-color:var(--tag-current-bd);background:var(--paper-soft);border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem .6rem 1rem}
@@ -262,7 +263,7 @@ PAGE = """<!doctype html>
  @keyframes ellipsis{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
  @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}.loading::after{content:"…"}}
  details{margin:.25em 0}
- summary{cursor:pointer;color:var(--accent);font:600 .9rem/1.4 var(--sans);display:list-item;overflow-wrap:anywhere;padding:.3em 0;touch-action:manipulation}
+ summary{cursor:pointer;color:var(--accent);font:600 .92rem/1.4 var(--sans);display:list-item;overflow-wrap:anywhere;padding:.3em 0;touch-action:manipulation}
  summary:hover{text-decoration:underline}
  details.history{margin:.5rem 0 .2rem}
  details > div.cite-meta{color:var(--muted);font-size:.85rem;margin:.4em 0 .3em}
@@ -271,7 +272,7 @@ PAGE = """<!doctype html>
  hr.section-break{border:none;border-top:1px solid var(--line);margin:var(--s2) 0}
  /* deletion */
  .quiet-panel{background:var(--paper-soft);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
- .quiet-title{font-size:1rem;font-weight:650;margin:0 0 var(--s1)}
+ .quiet-title{font:600 1rem/1.35 var(--head);margin:0 0 var(--s1)}
  .quiet-intro{color:var(--muted);font-size:.95rem;margin:0 0 var(--s2)}
  .fineprint{color:var(--text);font-size:.92rem;line-height:1.5;margin:var(--s2) 0 0}
  .confirm-box{background:var(--danger-soft);border:1px solid var(--tag-nevertrue-bd);border-radius:.45rem;padding:.8em 1em;margin-top:.8em}
