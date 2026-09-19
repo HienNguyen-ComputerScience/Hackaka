@@ -3,7 +3,7 @@
     python pipeline/test_full.py                       # all four parts
     python pipeline/test_full.py --skip-deletion       # parts 1, 2 and 4 only (no data/ changes)
     python pipeline/test_full.py --snapshot PATH       # where the pre-deletion copy of data/ lives
-                                                       # (default: ../relex-data-snapshot beside the repo)
+                                                       # (default: relex-data-snapshot inside the repo)
 
 Part 1  the nine practice questions against the full archive: rendered answer + stated bar
 Part 2  fifteen unseen questions, three of them outside the archive: sourced, no invented figure
@@ -62,6 +62,22 @@ UNSEEN = [
     ("U13", "What is the name of Acme's chief executive?", False),
     ("U14", "How many people work at Meridian Consulting?", False),   # phrased in archive vocabulary: no never-used word to catch it
     ("U15", "Which programming language is the DC-2 middleware written in?", False),
+]
+
+# Ten provenance questions for the judges, run against the full pre-deletion archive (never
+# against the live data/, which may already reflect a deletion run earlier in this process or a
+# prior session). See load_snapshot_answerer() / part_judge() below.
+JUDGE_PROVENANCE = [
+    ("J01", "Who first reported the DC-2 feed failure during hypercare? Give the speaker and the timestamp in the conversation, not just the document."),
+    ("J02", "The operator ID field was excluded from the waste extract. Show me the single message where that was first put in writing, with its sender and sent date."),
+    ("J03", "How many stores are in the pilot cohort? Give the figure and cite every document that states it, not just one."),
+    ("J04", "What did Meridian Consulting charge for the bakery workstream?"),
+    ("J05", "Quote the exact sentence in which the data protection officer states what they need confirmed."),
+    ("J06", "How many sub-processors are there? If the archive disagrees with itself, cite both records and say which is which."),
+    ("J07", "How many separate times was a file size check raised as a way to detect feed failures? Cite each occasion."),
+    ("J08", "Was a data protection impact assessment ever carried out? If the archive does not say, explain how you determined that."),
+    ("J09", "Did they switch all the shops on at the same time, or in batches? Show me where that is recorded."),
+    ("J10", "What did the Q1 2026 waste reporting conclude? Name the report period inside the file it sits in, not the file."),
 ]
 
 TABLE = []
@@ -270,6 +286,88 @@ def part2(A, units):
     return res
 
 
+# ---------------------------------------------------------------- judge provenance questions
+BARE_FILENAME = re.compile(r"^\S+\.(txt|md)$")
+
+
+def resolve_snapshot(preferred):
+    """The pre-deletion snapshot, wherever it actually is: the --snapshot path if it holds data,
+    else the copy some earlier run of this repo left at ROOT/relex-data-snapshot."""
+    preferred = Path(preferred)
+    if preferred.is_dir() and (preferred / "units.jsonl").exists():
+        return preferred
+    fallback = ROOT / "relex-data-snapshot"
+    if fallback.is_dir() and (fallback / "units.jsonl").exists():
+        return fallback
+    return preferred
+
+
+def load_snapshot_answerer(snapshot):
+    """A second, independent Answerer pointed at the pre-deletion snapshot, without touching the
+    live data/ on disk and without disturbing the Answerer/Retriever the rest of this run uses.
+    Retriever.__init__'s `data=DATA` default and answer.py's module-level DATA are swapped in just
+    long enough to construct the object, then put back — no file copy, no lasting global state."""
+    import answer as answer_mod
+    import retrieve as retrieve_mod
+    old_data, old_defaults = answer_mod.DATA, retrieve_mod.Retriever.__init__.__defaults__
+    answer_mod.DATA = snapshot
+    retrieve_mod.Retriever.__init__.__defaults__ = (snapshot,)
+    try:
+        A = answer_mod.Answerer()
+    finally:
+        answer_mod.DATA = old_data
+        retrieve_mod.Retriever.__init__.__defaults__ = old_defaults
+    return A
+
+
+def part_judge(snapshot_arg):
+    print("\n=============================== PART J: judge provenance questions, full pre-deletion archive")
+    snapshot = resolve_snapshot(snapshot_arg)
+    if not (snapshot / "units.jsonl").exists():
+        row("J", "snapshot present", False, f"no snapshot at {snapshot}; cannot run against the full archive")
+        return {}
+    row("J", "snapshot present", True, str(snapshot))
+    A = load_snapshot_answerer(snapshot)
+    units = {u["unit_id"]: u for u in load_jsonl(snapshot / "units.jsonl")}
+    res = ask_all(A, JUDGE_PROVENANCE, units, "judge, full pre-deletion archive", show=False)
+    from answer import NOTHING
+    for qid, q in JUDGE_PROVENANCE:
+        out, text = res[qid]
+        print(f"\n----- {qid}: {q}\n" + text)
+        stmts = list(all_statements(out))
+        if out["empty"] and qid not in ("J04", "J08"):
+            print(f"    {qid}: no statements returned")
+
+        positioned = [s for s in stmts if s.get("cite") and len(str(s["cite"]).split(" · ")) >= 2
+                      and not BARE_FILENAME.match(str(s["cite"]).strip())]
+        row("J", f"{qid} citations carry a position, not a bare filename",
+            len(positioned) == len(stmts),
+            f"{len(positioned)}/{len(stmts)} statements" if stmts else "no statements")
+
+        resolved = [s for s in stmts if s.get("unit_id") in units]
+        row("J", f"{qid} every cited unit_id resolves to a real unit",
+            len(resolved) == len(stmts),
+            f"{len(resolved)}/{len(stmts)} statements" if stmts else "no statements")
+
+        leaks = [pat.search(text).group() for pat in ID_PATTERNS if pat.search(text)]
+        row("J", f"{qid} no internal id leaks into the rendered text", not leaks,
+            f"found {leaks}" if leaks else "clean")
+
+        if qid in ("J04", "J08"):
+            preamble = text.split("\n==", 1)[0]
+            no_statement_said = NOTHING in preamble or "NO DIRECT ANSWER:" in preamble
+            no_figure_date_name = not re.search(r"\d", preamble)
+            row("J", f"{qid} says no statement, and asserts no figure/date/name of its own",
+                no_statement_said and no_figure_date_name,
+                "no-statement wording present, preamble carries no digit" if (no_statement_said and no_figure_date_name)
+                else f"no_statement_wording={no_statement_said} preamble={preamble.strip()[:120]!r}")
+
+        if qid in ("J03", "J06", "J07"):
+            docs = {s["unit_id"] for s in stmts if s.get("unit_id")}
+            row("J", f"{qid} cites at least two documents", len(docs) >= 2, f"{len(docs)} distinct unit(s) cited")
+    return res
+
+
 def sha_tree(root):
     out = {}
     for p in sorted(root.rglob("*")):
@@ -355,7 +453,7 @@ def part4(all_results, units):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--snapshot", default=str(ROOT.parent / "relex-data-snapshot"))
+    ap.add_argument("--snapshot", default=str(ROOT / "relex-data-snapshot"))
     ap.add_argument("--skip-deletion", action="store_true")
     args = ap.parse_args()
     t0 = time.time()
@@ -364,6 +462,7 @@ def main():
     units = {u["unit_id"]: u for u in load_jsonl(DATA / "units.jsonl")}
     res1 = part1(A, units)
     res2 = part2(A, units)
+    part_judge(args.snapshot)
     if not args.skip_deletion:
         part3(A, units, res1["P1"], Path(args.snapshot))
     part4({**res1, **res2}, units)
