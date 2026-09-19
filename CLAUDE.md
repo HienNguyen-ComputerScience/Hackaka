@@ -50,11 +50,14 @@ http://localhost:8080`, or ngrok) and send them the URL it prints, or run the sa
 VM with port 8080 open. There is no login: anyone with the URL can delete a person.
 
 `data/` must be present (the pipeline output). Deletion in the UI is real and has no undo, so keep a
-copy of `data/` **outside the repository** before judging and reset between runs:
+pre-deletion copy of `data/` before judging and reset between runs. `test_full.py` defaults to
+`relex-data-snapshot` **inside** the repo, where `.gitignore`'s `*snapshot*/` rule keeps it out of
+git history; it falls back to the older beside-the-repo location, and `--snapshot PATH` overrides
+both. Do not rename it to anything `*snapshot*/` would fail to catch.
 
 ```
-# PowerShell, from the repo root; the snapshot lives beside the repo, never inside it
-Remove-Item -Recurse -Force data; Copy-Item -Recurse ..\relex-data-snapshot data
+# PowerShell, from the repo root
+Remove-Item -Recurse -Force data; Copy-Item -Recurse relex-data-snapshot data
 ```
 
 Restart `serve.py` after a reset: it holds the loaded index in memory.

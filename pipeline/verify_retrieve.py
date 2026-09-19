@@ -2,6 +2,7 @@
 import json
 import logging
 import random
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -71,12 +72,50 @@ print(f"[5] {len(r.passages)} passages reference existing units, embeddings alig
 ok &= p5
 
 # 6. a random hit's pin resolves to the source lines
+TS_LINE = re.compile(r"^\d+:\d\d\d+:\d\d$")
+INITIALS = re.compile(r"^[A-Z][A-Z0-9]{0,3}$")   # 'KB', and 'G1' for an unnamed 'Guest 1'
+LAPTOP_LABEL = re.compile(r"^(Me|Them):\s*")
+
+
+def spoken_words(unit, pin, lines):
+    """The spoken words the pin's line range covers, with speaker chrome removed.
+
+    A transcript turn merges consecutive utterances by one speaker, and the source interleaves
+    speaker chrome between them, so a raw join of the range does not reproduce the stored text.
+    Matching against the raw join fails on ~14% of turns that are correctly anchored. The two
+    transcript formats hide the text differently:
+
+    teams           chrome occupies whole lines above the text (speaker name, doubled timestamp,
+                    initials, marker) — and not always all four, so drop by shape, not by offset.
+    internal_laptop the marker line *is* the text line, behind a "Me:" / "Them:" label — dropping
+                    it would discard the words themselves, so strip the label instead.
+    """
+    anchor = (unit or {}).get("anchor") or {}
+    segments = anchor.get("segments") or []
+    if not segments:
+        return " ".join(w for l in lines[pin["line_start"] - 1:pin["line_end"]] for w in l.split())
+
+    span = [lines[n - 1] for n in range(pin["line_start"], pin["line_end"] + 1)]
+    if anchor.get("format") == "internal_laptop":
+        keep = [LAPTOP_LABEL.sub("", l) for l in span]
+    else:
+        markers = {s["line"] for s in segments}
+        speaker = anchor.get("speaker")
+        keep = []
+        for n, line in zip(range(pin["line_start"], pin["line_end"] + 1), span):
+            stripped = line.strip()
+            if n in markers or stripped == speaker or TS_LINE.match(stripped) or INITIALS.match(stripped):
+                continue
+            keep.append(line)
+    return " ".join(w for l in keep for w in l.split())
+
+
 q = random.choice(["bakery inside the fresh workstream", "UAT sign-off scope", "nightly article extract completed with no errors",
                    "twelve months return on investment", "pilot store group", "hypercare incidents DC2"])
 h = random.choice(r.search(q, k=5))
 pin = h["pin"]
 lines = (CORPUS / pin["source_file"]).read_text(encoding="utf-8").split("\n")
-src = " ".join(w for l in lines[pin["line_start"] - 1:pin["line_end"]] for w in l.split())
+src = spoken_words(r.units.get(pin["unit_id"]), pin, lines)
 first_words = " ".join(pin["text"].split()[:6])
 p6 = first_words in src
 print(f"[6] random pin resolves to source (seed {seed}, query {q!r}) ->", "PASS" if p6 else "FAIL")

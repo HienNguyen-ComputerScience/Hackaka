@@ -292,11 +292,11 @@ BARE_FILENAME = re.compile(r"^\S+\.(txt|md)$")
 
 def resolve_snapshot(preferred):
     """The pre-deletion snapshot, wherever it actually is: the --snapshot path if it holds data,
-    else the copy some earlier run of this repo left at ROOT/relex-data-snapshot."""
+    else the older beside-the-repo location that earlier runs and older docs both used."""
     preferred = Path(preferred)
     if preferred.is_dir() and (preferred / "units.jsonl").exists():
         return preferred
-    fallback = ROOT / "relex-data-snapshot"
+    fallback = ROOT.parent / "relex-data-snapshot"
     if fallback.is_dir() and (fallback / "units.jsonl").exists():
         return fallback
     return preferred
@@ -464,7 +464,7 @@ def main():
     res2 = part2(A, units)
     part_judge(args.snapshot)
     if not args.skip_deletion:
-        part3(A, units, res1["P1"], Path(args.snapshot))
+        part3(A, units, res1["P1"], resolve_snapshot(args.snapshot))
     part4({**res1, **res2}, units)
 
     print("\n=============================== RESULTS")
