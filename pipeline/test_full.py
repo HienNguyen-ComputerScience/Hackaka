@@ -32,6 +32,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+# the full archive's claim count: link.py drops claims whose unit is gone and still exits 0, so a
+# split.py change that renames units would silently shrink the archive under every check below
+EXPECTED_CLAIMS = 1924
 ID_PATTERNS = [re.compile(r"\b(email|transcript|report):\d\d_"), re.compile(r"#\d+'?\b"), re.compile(r"\bturn \d+\b"),
                re.compile(r"\bg\d{4}\b"), re.compile(r"\bperson:[a-z-]+")]
 
@@ -466,6 +469,15 @@ def part4(all_results, units):
     row("4", "no figure absent from its cited unit; no completed truncation; no ids in text", total == 0, f"{figs} figures checked, {total} problem(s)")
 
 
+def assert_claim_count(n):
+    """Refuse to run against a shrunken archive: every bar below is calibrated to the full one."""
+    if n == 0:
+        sys.exit(f"FATAL: {DATA / 'claims.jsonl'} loaded 0 claims; nothing to test")
+    if n != EXPECTED_CLAIMS:
+        sys.exit(f"FATAL: {DATA / 'claims.jsonl'} loaded {n} claims, expected {EXPECTED_CLAIMS}; "
+                 f"the archive is not the full one (a deletion not restored, or link.py dropped orphaned claims)")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--snapshot", default=str(ROOT / "relex-data-snapshot"))
@@ -474,6 +486,8 @@ def main():
     t0 = time.time()
     from answer import Answerer
     A = Answerer()
+    assert_claim_count(len(A.claims))
+    print(f"claims loaded: {len(A.claims)} (expected {EXPECTED_CLAIMS})")
     units = {u["unit_id"]: u for u in load_jsonl(DATA / "units.jsonl")}
     res1 = part1(A, units)
     res2 = part2(A, units)
