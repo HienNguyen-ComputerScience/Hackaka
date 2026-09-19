@@ -441,7 +441,15 @@ def verify(pats, passages_n):
             continue
         if f.suffix in TEXT_SUFFIXES:
             text = f.read_text(encoding="utf-8", errors="replace")
-            h = hits(text, pats)
+            if f == DATA / "people.json":
+                # another person's registry row may legitimately carry the same initials as a structural
+                # field; only that field is exempt, and only from the initials pattern: names, e-mails and
+                # the person id are still swept over the whole registry, and initials in prose everywhere
+                rows = json.loads(text)
+                sans_initials = json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "initials"} for k, v in rows.items()}, ensure_ascii=False)
+                h = hits(text, [p for p in pats if p[0] != "initials"]) + hits(sans_initials, [p for p in pats if p[0] == "initials"])
+            else:
+                h = hits(text, pats)
             if h:
                 offences.append({"file": str(f.relative_to(ROOT)), "hits": len(h), "sample": sorted({x[1] for x in h})[:5]})
         elif f.suffix == ".npy":

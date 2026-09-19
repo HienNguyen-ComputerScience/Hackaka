@@ -368,6 +368,31 @@ def part3_currency(A):
                 f"{len(wd)} withdrawal(s), marker present, none is the head" if ok else f"{len(wd)} withdrawal(s): {[(s['currency'], s.get('retraction')) for s in wd]}")
 
 
+def part3_initials_collision(snapshot, before):
+    """Deleting a person whose initials another person shares must still verify clean: the other
+    person's registry row carries the same initials as a structural field, which is not a leak.
+    The person is chosen from the data; data/ is restored from the snapshot afterwards."""
+    people = json.loads((DATA / "people.json").read_text(encoding="utf-8"))
+    by_initials = Counter(p.get("initials") for pid, p in people.items() if pid.startswith("person:") and p.get("initials"))
+    shared = [pid for pid, p in sorted(people.items()) if pid.startswith("person:") and by_initials[p.get("initials")] > 1]
+    if not shared:
+        row("3", "initials collision: deletion exits clean", True, "no two people share initials in this archive")
+        return
+    pid = shared[0]
+    proc = subprocess.run([sys.executable, str(ROOT / "pipeline" / "delete.py"), pid], cwd=ROOT,
+                          capture_output=True, text=True, encoding="utf-8", errors="replace")
+    rec = json.loads((DATA / "deletion_log.jsonl").open(encoding="utf-8").readlines()[-1]) if (DATA / "deletion_log.jsonl").exists() else {}
+    clean = bool(rec.get("verify", {}).get("clean"))
+    ok = proc.returncode == 0 and clean
+    row("3", "initials collision: deletion exits clean", ok,
+        f"initials {people[pid].get('initials')!r} shared by {by_initials[people[pid].get('initials')]} people; exit {proc.returncode}, verify.clean={clean}"
+        + ("" if ok else f"; offences={rec.get('verify', {}).get('offences')}"))
+    shutil.rmtree(DATA)
+    shutil.copytree(snapshot, DATA)
+    if sha_tree(DATA) != before:
+        row("3", "initials collision: restored before main deletion", False, "data/ differs from snapshot after restore")
+
+
 def part3(A, units, p1_before, snapshot):
     print("\n=============================== PART 3: deletion end to end")
     if not snapshot.is_dir() or not (snapshot / "units.jsonl").exists():
@@ -376,6 +401,7 @@ def part3(A, units, p1_before, snapshot):
     row("3", "snapshot present", True, str(snapshot))
     part3_currency(A)
     before = sha_tree(snapshot)
+    part3_initials_collision(snapshot, before)
     people = json.loads((DATA / "people.json").read_text(encoding="utf-8"))
     by_name = {p["name"]: pid for pid, p in people.items() if pid.startswith("person:")}
     # the person who authored most of P1's chain statements: deleting them must knock the head off a P1 chain
