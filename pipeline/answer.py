@@ -293,7 +293,7 @@ class Answerer:
                 "other": [self.fmt(c) for c in members if not c["chain_pos"]],
             })
         if ATTRIB_WORDS.search(query):
-            out["attribution"] = self.attribution(top_groups, retrieved_units)
+            out["attribution"] = self.attribution(top_groups, retrieved_units, qtok, qv)
         if INITIATIVE_WORDS.search(query):
             out["initiative"] = self.initiative()
         out["empty"] = not out["groups"] and not out["initiative"]
@@ -400,7 +400,7 @@ class Answerer:
             "reported": c["source_file"].startswith("reports/"),
         }
 
-    def attribution(self, gids, retrieved_units):
+    def attribution(self, gids, retrieved_units, qtok=frozenset(), qv=None):
         # top two groups, plus any other top group that holds a proposal AND its answer (a self-contained
         # exchange); keeps neighbouring turns' unrelated proposals out without dropping the real one
         chosen = list(gids[:2])
@@ -415,9 +415,50 @@ class Answerer:
                 seen.add(c["claim_id"])
                 uniq.append(c)
         uniq.sort(key=lambda c: (c["date"], c["turn_index"] or 0))
-        props = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in uniq if c["kind"] == "proposal"]
-        agrees = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in uniq if c["kind"] in ("agreement", "decision")]
-        rejects = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in uniq if c["kind"] == "rejection"]
+        props_c = [c for c in uniq if c["kind"] == "proposal"]
+        acts_c = [c for c in uniq if c["kind"] in ("agreement", "decision")]
+        rejects_c = [c for c in uniq if c["kind"] == "rejection"]
+
+        def relevance(p):
+            cos = float(self.semb[self.sidx[p["claim_id"]]] @ qv) if qv is not None else 0.0
+            return cos + 0.1 * len(set(qtok) & content_tokens(p["statement"]))
+
+        # what a reply answers: its responds_to text names the proposer; among that person's earlier claims in
+        # the pool, the one sharing most content words with the text (ties: the head proposal, then a non-proposal)
+        def target(c, head=None):
+            text = c.get("responds_to") or ""
+            if not text:
+                return None
+            ttok = content_tokens(text)
+            when = (c["date"], c["turn_index"] or 0)
+            best, best_key = None, None
+            for x in uniq:
+                if x is c or x["asserted_by"] not in text or (x["date"], x["turn_index"] or 0) > when:
+                    continue
+                key = (len(ttok & content_tokens(x["statement"])), x is head, x["kind"] != "proposal")
+                if best is None or key > best_key:
+                    best, best_key = x, key
+            return best
+
+        if props_c:
+            answered = {p["claim_id"]: 0 for p in props_c}
+            for a in acts_c:
+                t = target(a)
+                if t is not None and t["claim_id"] in answered:
+                    answered[t["claim_id"]] += 1
+            head = max(props_c, key=lambda p: (answered[p["claim_id"]], relevance(p)))
+            props_c = [head] + [p for p in props_c if p is not head]
+            # a reply to a different proposal in the same chains is not agreement with this one
+            kept = []
+            for a in acts_c:
+                t = target(a, head)
+                if t is not None and t["kind"] == "proposal" and t is not head:
+                    continue
+                kept.append(a)
+            acts_c = kept
+        props = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in props_c]
+        agrees = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in acts_c]
+        rejects = [self.fmt(c) | {"responds_to": c.get("responds_to")} for c in rejects_c]
         return {
             "proposed": props, "agreed": agrees, "rejected": rejects,
             "verdict": ("nobody agreed: no agreement or decision claim found in the retrieved evidence"
