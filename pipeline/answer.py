@@ -277,6 +277,14 @@ class Answerer:
                 on_subject = [g for g in top_groups if proper & content_tokens(" ".join(self.groups[g]["fact_keys"]))]
                 if on_subject:
                     top_groups = on_subject
+        attrib = bool(ATTRIB_WORDS.search(query))
+        if attrib:
+            # a proposal that restates the question anchors the attribution block even when its chain was not
+            # selected; the chain is rendered too, so the answer is visible above the block, not only inside it
+            ssims = self.semb @ qv
+            restating = [self.claims[i]["group_id"] for i in ssims.argsort()[::-1][:5]
+                         if ssims[i] >= 0.75 and self.claims[i]["kind"] == "proposal"]
+            top_groups = top_groups + [g for g in dict.fromkeys(restating) if g not in top_groups]
         out = {"query": query, "scope": scope[2] if scope else None, "never_mentions": never, "direct": direct, "groups": [],
                "attribution": None, "initiative": None, "nearest": nearest, "hits": [h["pin"]["where"] for h in hits]}
         for gid in top_groups:
@@ -292,13 +300,8 @@ class Answerer:
                 "statements": [self.fmt(c, head) for c in self.chain_order(chain, head)],
                 "other": [self.fmt(c) for c in members if not c["chain_pos"]],
             })
-        if ATTRIB_WORDS.search(query):
-            # a proposal that restates the question anchors the block even when its chain was not selected
-            ssims = self.semb @ qv
-            restating = [self.claims[i]["group_id"] for i in ssims.argsort()[::-1][:5]
-                         if ssims[i] >= 0.75 and self.claims[i]["kind"] == "proposal"]
-            extra = [g for g in dict.fromkeys(restating) if g not in top_groups]
-            out["attribution"] = self.attribution(top_groups + extra, retrieved_units, qtok, qv)
+        if attrib:
+            out["attribution"] = self.attribution(top_groups, retrieved_units, qtok, qv)
         if INITIATIVE_WORDS.search(query):
             out["initiative"] = self.initiative()
         out["empty"] = not out["groups"] and not out["initiative"]
