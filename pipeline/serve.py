@@ -161,6 +161,10 @@ PAGE = """<!doctype html>
 
    --accent:#2f6690; --accent-soft:#e4eef5;
    --heading:#2a2e35;
+   /* control boundaries need 3:1 against the paper (non-text contrast); the soft border is for decoration only */
+   --border-input:#7f8791;
+   /* destructive action: its own semantic colour, never the primary accent */
+   --danger:#a6301f; --danger-soft:#fbe9e5;
 
    --tag-current-bg:#e2f1e2; --tag-current-fg:#186238; --tag-current-bd:#8fcf9d;
    --tag-superseded-bg:#eceef1; --tag-superseded-fg:#4b5158; --tag-superseded-bd:#c3c9d1;
@@ -201,16 +205,28 @@ PAGE = """<!doctype html>
  .tagline{color:var(--muted);margin:0 0 1.25rem;font-size:1rem;max-width:60ch}
  .field-label{display:block;font-weight:600;font-size:1rem;margin-bottom:.5em}
  textarea{width:100%;min-height:4.5em;font-family:inherit;font-size:1.05rem;line-height:1.5;padding:.6em .7em;
-   border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--text);resize:vertical}
- input[type=text]{width:100%;font-family:inherit;font-size:1rem;padding:.55em .7em;border:1px solid var(--border);
+   border:1px solid var(--border-input);border-radius:.5rem;background:var(--paper);color:var(--text);resize:vertical}
+ input[type=text]{width:100%;min-height:2.75rem;font-family:inherit;font-size:1rem;padding:.55em .7em;border:1px solid var(--border-input);
    border-radius:.5rem;background:var(--paper);color:var(--text)}
- textarea:focus,input:focus,select:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+ textarea:focus,input:focus,select:focus,button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ .helper{color:var(--muted);font-size:.87rem;line-height:1.5;margin:.45em 0 0}
  .row{display:flex;align-items:center;gap:.6em .8em;margin-top:.8em;flex-wrap:wrap}
- button{font:600 1rem/1 inherit;padding:.55em 1.1em;border-radius:.5rem;border:1px solid var(--accent);
-   background:var(--accent);color:#fff;cursor:pointer}
+ /* every pointer target is at least 44px tall; press feedback via colour/opacity only, never a layout shift */
+ button{font:600 1rem/1 inherit;min-height:2.75rem;padding:.55em 1.2em;border-radius:.5rem;border:1px solid var(--accent);
+   background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:filter .12s ease,background-color .12s ease}
  button:hover{filter:brightness(1.1)}
- button:disabled{opacity:.55;cursor:default}
+ button:active{filter:brightness(.92)}
+ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
  button.btn-quiet{background:var(--paper);color:var(--accent)}
+ button.btn-danger{background:var(--danger);border-color:var(--danger);color:#fff}
+ button.btn-danger-quiet{background:var(--paper);border-color:var(--danger);color:var(--danger)}
+ .skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);color:var(--accent);padding:.5em .8em;border-radius:.4rem;
+   box-shadow:var(--shadow-quiet);z-index:10;font:600 .95rem/1 var(--sans)}
+ .skip:focus{left:.75rem}
+ @media (prefers-reduced-motion:reduce){
+   *{transition:none !important;animation:none !important}
+   .loading::after{content:"…"}
+ }
  select{font:inherit;padding:.5em .6em;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--text)}
  .muted{color:var(--muted)}
  .small{font-size:.87em}
@@ -226,7 +242,8 @@ PAGE = """<!doctype html>
 
  .eyebrow{display:block;font:700 .76rem/1 var(--sans);letter-spacing:.08em;
    text-transform:uppercase;color:var(--muted);margin-bottom:.35em}
- .lbl{font:700 1.05em/1.4 var(--sans);color:var(--text)}
+ .lbl{font:700 1.05em/1.4 var(--sans);color:var(--text);margin:0}
+ h3.lbl{font-size:.95em;margin-top:.9em}
  .g{border-top:1px solid var(--border);padding:1.2em 0}
  .g:first-child{border-top:none;padding-top:0}
 
@@ -276,7 +293,7 @@ PAGE = """<!doctype html>
 
  details{margin:.3em 0}
  summary{cursor:pointer;color:var(--accent);font:600 .95rem/1.35 var(--sans);
-   display:list-item;overflow-wrap:anywhere}
+   display:list-item;overflow-wrap:anywhere;padding:.3em 0;touch-action:manipulation}
  summary:hover{text-decoration:underline}
  details > div.cite-meta{color:var(--muted);font-size:.88em;margin:.5em 0 .3em}
  pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper-soft);border:1px solid var(--border-soft);border-radius:.5rem;
@@ -299,6 +316,7 @@ PAGE = """<!doctype html>
  .confirm-result ul{margin:.4em 0 0;padding-left:1.2em}
  .del-hint{font-size:.88em}
 </style></head><body>
+<a class="skip" href="#main">Skip to the question</a>
 <div class="wrap">
 
 <header class="hero-row">
@@ -307,31 +325,35 @@ PAGE = """<!doctype html>
 </header>
 <hr class="hairline">
 
-<section class="card">
+<main id="main">
+<section class="card" aria-labelledby="ask-label">
 <p class="tagline">Ask a question; the answer is rendered from the claim graph, with sources you can expand.</p>
-<label class="field-label" for="q">Ask a question</label>
-<textarea id="q" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
-<div class="row"><button id="ask">Ask</button></div>
+<label class="field-label" id="ask-label" for="q">Ask a question</label>
+<textarea id="q" aria-describedby="q-help" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
+<p class="helper" id="q-help">Ctrl+Enter also asks. Every statement in an answer is cited to the stored archive text; expand a source to read it.</p>
+<div class="row"><button id="ask" type="button">Ask</button></div>
 </section>
 
-<div id="answer"></div>
+<div id="answer" role="region" aria-label="Answer" aria-live="polite" aria-busy="false"></div>
+</main>
 
 <hr class="section-break">
 
-<section class="quiet-panel">
-<h2 class="quiet-title">Delete a person from the archive</h2>
+<section class="quiet-panel" aria-labelledby="del-title">
+<h2 class="quiet-title" id="del-title">Delete a person from the archive</h2>
+<label class="field-label" for="person">Person to erase</label>
 <div class="row">
-  <input id="person" class="grow" type="text" list="people-list" autocomplete="off" placeholder="Type a name…">
+  <input id="person" class="grow" type="text" list="people-list" autocomplete="off" placeholder="Type or pick a name…" aria-describedby="delhint">
   <datalist id="people-list"></datalist>
-  <button id="del" class="btn-quiet">Delete</button>
-  <span id="delhint" class="muted del-hint"></span>
+  <button id="del" class="btn-danger-quiet" type="button">Delete</button>
+  <span id="delhint" class="muted del-hint" role="status"></span>
 </div>
-<div id="delconfirm" class="confirm-box" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
- <div class="row"><button id="delyes">Confirm delete</button> <button id="delno" class="btn-quiet">Cancel</button></div>
+<div id="delconfirm" class="confirm-box" role="alertdialog" aria-labelledby="delwho" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
+ <div class="row"><button id="delyes" class="btn-danger" type="button">Confirm delete</button> <button id="delno" class="btn-quiet" type="button">Cancel</button></div>
 </div>
 <p class="fineprint">This runs the deletion pipeline: their statements, statements about them, their registry row, the
 retrieval index and embeddings, and every derived chain are rebuilt without them. There is no undo.</p>
-<div id="delresult"></div>
+<div id="delresult" role="status" aria-live="polite"></div>
 </section>
 
 </div>
@@ -417,10 +439,10 @@ function renderAnswer(a){
   const contextOnly = a.groups.length && a.direct === false;
   if(contextOnly) h += `<div class="sysnote">${tag("nodirect","NO DIRECT ANSWER")}No statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</div>`;
   if(a.initiative){
-    h += `<div class="g"><span class="eyebrow">agreed and not done</span>`;
+    h += `<div class="g"><h2 class="eyebrow">agreed and not done</h2>`;
     if(!a.initiative.length) h += `<div class="claim muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
     a.initiative.forEach((t, i) => {
-      h += `<div class="lbl">${i+1}. ${esc(t.fact_keys.join(", "))}</div>`;
+      h += `<h3 class="lbl">${i+1}. ${esc(t.fact_keys.join(", "))}</h3>`;
       h += initiativeItem("COMMITTED", t.agreed);
       h += initiativeItem(`LATEST ON RECORD (${t.days} days later)`, t.latest);
       if(t.still_open) h += `<div class="sysnote">No later statement in the archive says it was done; the archive does not record whether it ever was.</div>`;
@@ -432,7 +454,7 @@ function renderAnswer(a){
     h += `</div>`;
   }
   for(const g of a.groups){
-    h += `<div class="g">${contextOnly ? '<span class="eyebrow">related context</span>' : ""}<div class="lbl">${esc(g.fact_keys.join(", "))}</div>`;
+    h += `<div class="g">${contextOnly ? '<span class="eyebrow">related context</span>' : ""}<h2 class="lbl">${esc(g.fact_keys.join(", "))}</h2>`;
     if(g.head_removed){
       const n = g.removed_statements, pl = n===1?"":"s";
       if(g.statements.length){
@@ -457,13 +479,13 @@ function renderAnswer(a){
   }
   const at = a.attribution;
   if(at){
-    h += `<div class="g"><span class="eyebrow">attribution</span>`;
+    h += `<div class="g"><h2 class="eyebrow">attribution</h2>`;
     for(const [name, items, emptyMsg] of [
       ["PROPOSED", at.proposed, "No statement in the archive proposed this."],
       ["AGREED / DECIDED", at.agreed, "No statement in the archive agreed to or decided this — a proposal alone is not a decision."],
       ["REJECTED", at.rejected, "No statement in the archive rejected this."],
     ]){
-      h += `<div class="lbl">${name}</div>` + (items.length ? items.map(claim).join("") : `<div class="sysnote">${esc(emptyMsg)}</div>`);
+      h += `<h3 class="lbl">${name}</h3>` + (items.length ? items.map(claim).join("") : `<div class="sysnote">${esc(emptyMsg)}</div>`);
     }
     h += `<p class="muted">verdict: ${esc(at.verdict)}</p></div>`;
   }
@@ -490,11 +512,11 @@ function fillPeople(list){
 const qEl = document.getElementById("q"), askBtn = document.getElementById("ask"), answerEl = document.getElementById("answer");
 askBtn.onclick = async () => {
   const q = qEl.value.trim(); if(!q) return;
-  askBtn.disabled = true;
+  askBtn.disabled = true; answerEl.setAttribute("aria-busy", "true");
   answerEl.innerHTML = `<div class="loading">Searching the archive</div>`;
-  try { const a = await post("/api/ask", {question:q}); answerEl.innerHTML = a.error ? `<div class="error">${esc(a.error)}</div>` : renderAnswer(a); }
-  catch(e){ answerEl.innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
-  askBtn.disabled = false;
+  try { const a = await post("/api/ask", {question:q}); answerEl.innerHTML = a.error ? `<div class="error" role="alert">${esc(a.error)}</div>` : renderAnswer(a); }
+  catch(e){ answerEl.innerHTML = `<div class="error" role="alert">request failed: ${esc(e)} — check the server is running, then try again.</div>`; }
+  askBtn.disabled = false; answerEl.setAttribute("aria-busy", "false");
   qEl.focus(); qEl.select();   // next question takes no thought: just start typing over this one
 };
 qEl.addEventListener("keydown", e => { if(e.key === "Enter" && (e.ctrlKey || e.metaKey)) askBtn.click(); });
@@ -514,7 +536,7 @@ document.getElementById("delyes").onclick = async () => {
   document.getElementById("del").disabled = true; document.getElementById("delresult").innerHTML = "";
   try {
     const r = await post("/api/delete", {person_id:pid});
-    if(!r.ok){ document.getElementById("delresult").innerHTML = `<div class="error">${esc(r.error)}<br>${esc(r.detail||"")}</div>`; }
+    if(!r.ok){ document.getElementById("delresult").innerHTML = `<div class="error" role="alert">${esc(r.error)}<br>${esc(r.detail||"")}</div>`; }
     else {
       const s = r.summary;
       document.getElementById("delresult").innerHTML =
