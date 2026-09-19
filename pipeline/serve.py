@@ -146,7 +146,7 @@ STATE = State()
 
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>relex archive</title>
+<title>Claim Archive: ask, trace, erase</title>
 <style>
  :root{
    /* the wash: atmosphere only, never a text background */
@@ -199,6 +199,34 @@ PAGE = """<!doctype html>
  h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;color:var(--heading);margin:0}
  .hero-meta{color:var(--muted);font:600 .82rem/1.4 var(--sans);text-align:right;text-transform:uppercase;letter-spacing:.04em}
  hr.hairline{border:none;border-top:1px solid rgba(25,35,55,.16);margin:1rem 0 1.75rem}
+ .hero-sub{color:var(--text);margin:.5em 0 0;max-width:60ch;font-size:1.02rem;line-height:1.55}
+ .steps{display:flex;gap:.6rem 1.4rem;flex-wrap:wrap;margin:1.1rem 0 0;padding:0;list-style:none;counter-reset:step}
+ .steps li{counter-increment:step;color:var(--muted);font-size:.95rem;line-height:1.45;flex:1 1 14rem;display:flex;gap:.55em;align-items:flex-start}
+ .steps li::before{content:counter(step);flex:none;width:1.6em;height:1.6em;border-radius:50%;background:var(--accent);color:#fff;
+   font:700 .8rem/1.6em var(--sans);text-align:center}
+ .steps b{color:var(--text)}
+ .examples{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:1rem}
+ .examples-label{color:var(--muted);font-size:.9rem}
+ .chip{min-height:2.25rem;padding:.4em .9em;font:500 .9rem/1.3 var(--sans);background:var(--accent-soft);color:var(--accent);
+   border:1px solid transparent;border-radius:999px;cursor:pointer;text-align:left}
+ .chip:hover{background:#d5e5f0;filter:none}
+ .card-quiet{background:var(--paper);border-radius:.8rem;box-shadow:var(--shadow-quiet);padding:.6rem 1.2rem;margin:0 0 1.5rem}
+ .card-quiet > summary{padding:.45em 0}
+ .legend-list{margin:.4em 0 .6em;display:grid;grid-template-columns:auto 1fr;gap:.55em .9em;align-items:start;font-size:.95rem}
+ .legend-list dt{margin:0;display:flex;gap:.3em;flex-wrap:wrap}
+ .legend-list dd{margin:0;color:var(--muted);line-height:1.45}
+ @media (max-width:520px){.legend-list{grid-template-columns:1fr}.legend-list dd{margin-bottom:.4em}}
+ /* answer: a header line, then per topic the current statement first and the history behind a disclosure */
+ .answer-head{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1rem;flex-wrap:wrap;
+   font:600 .9rem/1.4 var(--sans);color:var(--muted);margin:0 0 .8em}
+ .answer-head .q{color:var(--text);font-weight:600;max-width:60ch}
+ .link-btn{background:none;border:none;color:var(--accent);font:600 .9rem/1 var(--sans);padding:.6em .4em;min-height:2.25rem;cursor:pointer;text-decoration:underline}
+ .link-btn:hover{filter:none;background:var(--accent-soft)}
+ .lead-note{font:500 .88rem/1.4 var(--sans);color:var(--muted);margin:.2em 0 .4em}
+ details.history{margin:.4em 0 .2em}
+ details.history > summary{font-weight:600}
+ details.history > summary::after{content:"";}
+ .claim.lead{border-left-color:var(--tag-current-bd);background:var(--paper-soft);border-radius:0 .5rem .5rem 0;padding:.6em .9em .5em 1em}
 
  /* everything else: opaque panels, floating on the haze via shadow, never a border-only edge */
  .card{background:var(--paper);border-radius:1rem;box-shadow:var(--shadow);padding:1.4rem 1.5rem;margin:0 0 1.5rem}
@@ -320,19 +348,45 @@ PAGE = """<!doctype html>
 <div class="wrap">
 
 <header class="hero-row">
-<h1>relex archive</h1>
+<div>
+<h1>Claim Archive</h1>
+<p class="hero-sub">Ask a question about the project archive. Every answer is built only from stored statements, each one cited, with the history of what was said, corrected or withdrawn. Delete a person and every trace of them goes too.</p>
+</div>
 <div class="hero-meta">right-to-erasure demo<br>no login</div>
 </header>
+<ol class="steps" aria-label="How it works">
+<li><b>Ask</b> a question in plain words.</li>
+<li><b>Read</b> the current answer per topic, then open the history and sources.</li>
+<li><b>Delete</b> a person below and ask the same question again to see what changed.</li>
+</ol>
 <hr class="hairline">
 
 <main id="main">
 <section class="card" aria-labelledby="ask-label">
-<p class="tagline">Ask a question; the answer is rendered from the claim graph, with sources you can expand.</p>
-<label class="field-label" id="ask-label" for="q">Ask a question</label>
+<label class="field-label" id="ask-label" for="q">Your question</label>
 <textarea id="q" aria-describedby="q-help" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
-<p class="helper" id="q-help">Ctrl+Enter also asks. Every statement in an answer is cited to the stored archive text; expand a source to read it.</p>
-<div class="row"><button id="ask" type="button">Ask</button></div>
+<p class="helper" id="q-help">Press Ctrl+Enter or the button. Try one of the examples if you are not sure where to start.</p>
+<div class="row"><button id="ask" type="button">Ask the archive</button></div>
+<div class="examples" id="examples" aria-label="Example questions">
+  <span class="examples-label">Try:</span>
+  <button type="button" class="chip" data-q="What service levels were agreed for ordering, and in which meeting?">Service levels agreed for ordering</button>
+  <button type="button" class="chip" data-q="How many stores ended up in the pilot group, and who changed the number?">Pilot store count and who changed it</button>
+  <button type="button" class="chip" data-q="Who proposed taking bakery out of the fresh go-live, and who agreed?">Who took bakery out of the go-live</button>
+  <button type="button" class="chip" data-q="Find one thing in the archive that was agreed and then never done. Show the trail from the agreement to the last mention.">Something agreed and never done</button>
+</div>
 </section>
+
+<details class="legend card-quiet">
+<summary>How to read the labels</summary>
+<dl class="legend-list">
+  <dt><span class="tag tag-current"><span aria-hidden="true">●</span>CURRENT</span></dt><dd>The latest statement on this topic that still stands.</dd>
+  <dt><span class="tag tag-superseded"><span aria-hidden="true">→</span>SUPERSEDED</span></dt><dd>Was true when said; a later statement replaced it. The replacing document is named beside it.</dd>
+  <dt><span class="tag tag-nevertrue"><span aria-hidden="true">✕</span>NEVER TRUE</span></dt><dd>Later corrected: this was wrong when it was said. The correction is quoted.</dd>
+  <dt><span class="tag tag-correction"><span aria-hidden="true">✎</span>CORRECTION</span> <span class="tag tag-withdrawn"><span aria-hidden="true">↩</span>WITHDRAWN</span></dt><dd>A statement that corrects or retracts an earlier one.</dd>
+  <dt><span class="tag tag-newest"><span aria-hidden="true">◐</span>NEWEST SURVIVING</span></dt><dd>After a deletion removed the latest statement, this is the newest one left. It may itself have been out of date.</dd>
+  <dt><span class="tag tag-nodirect"><span aria-hidden="true">?</span>NO DIRECT ANSWER</span></dt><dd>Nothing in the archive answers the question as asked; what is shown is related context only.</dd>
+</dl>
+</details>
 
 <div id="answer" role="region" aria-label="Answer" aria-live="polite" aria-busy="false"></div>
 </main>
@@ -394,9 +448,9 @@ function correctionQuote(text){
 // (named right next to the tag), then this claim's own citation anchor. Nothing here needs
 // expanding to be seen; expanding a <details> only reveals the source excerpt, never the tag
 // or the correcting document's name.
-function claim(s){
+function claim(s, lead){
   const val = s.value!==null&&s.value!==undefined ? `value: ${esc(s.value)}` : (s.truncated ? "value: TRUNCATED IN SOURCE" : "");
-  let h = `<div class="claim">`;
+  let h = `<div class="claim${lead ? " lead" : ""}">`;
   h += `<p class="claim-text">“${esc(s.statement)}”</p>`;
   h += `<div class="claim-meta">` + currencyTag(s.currency);
   if(s.correction){
@@ -433,11 +487,11 @@ function initiativeItem(roleLabel, s){
 function renderAnswer(a){
   let h = "";
   if(a.never_mentions && a.never_mentions.length)
-    h += `<div class="sysnote">The archive never uses the word(s): ${esc(a.never_mentions.join(", "))}.</div>`;
+    h += `<div class="sysnote">The archive never uses the word${a.never_mentions.length>1?"s":""} <b>${esc(a.never_mentions.join(", "))}</b>, so nothing here can be matched on ${a.never_mentions.length>1?"them":"it"}.</div>`;
   if(a.empty) return h + `<div class="sysnote">${esc(a.nothing)}</div>`;
-  if(a.scope) h += `<p class="muted small">scoped to ${esc(a.scope)}: retrieval limited to that period; chains with statements then are favoured</p>`;
+  if(a.scope) h += `<p class="muted small">Limited to ${esc(a.scope)}: only statements from that period were searched; topics with statements then come first.</p>`;
   const contextOnly = a.groups.length && a.direct === false;
-  if(contextOnly) h += `<div class="sysnote">${tag("nodirect","NO DIRECT ANSWER")}No statement in the archive directly answers the question as asked. The chains below are related context, not an answer.</div>`;
+  if(contextOnly) h += `<div class="sysnote">${tag("nodirect","NO DIRECT ANSWER")}Nothing in the archive answers this question as asked. Below is the closest related context, shown so you can judge for yourself; it is not an answer.</div>`;
   if(a.initiative){
     h += `<div class="g"><h2 class="eyebrow">agreed and not done</h2>`;
     if(!a.initiative.length) h += `<div class="claim muted">no chain in the archive has a commitment followed by a statement that it is outstanding</div>`;
@@ -453,6 +507,9 @@ function renderAnswer(a){
     });
     h += `</div>`;
   }
+  // for a who-proposed / who-agreed question the attribution block is the answer: it goes first
+  const attribFirst = !!a.attribution && /(^|[^a-z])who([^a-z]|$)/i.test(a.question || "");
+  if(attribFirst) h += attributionBlock(a.attribution);
   for(const g of a.groups){
     h += `<div class="g">${contextOnly ? '<span class="eyebrow">related context</span>' : ""}<h2 class="lbl">${esc(g.fact_keys.join(", "))}</h2>`;
     if(g.head_removed){
@@ -470,26 +527,41 @@ function renderAnswer(a){
              `${n===1?"was":"were"} removed by deletion; none survive.</div>`;
       }
     }
-    for(const s of g.statements) h += claim(s);
+    // the statement that stands today leads; everything it replaced sits behind one disclosure
+    const st = g.statements;
+    const leadIdx = st.findIndex(s => s.currency === "CURRENT" || s.currency === "NEWEST SURVIVING");
+    const lead = leadIdx >= 0 ? st[leadIdx] : null;
+    const rest = lead ? st.filter((_, i) => i !== leadIdx) : st;
+    if(lead){
+      h += `<p class="lead-note">${lead.currency === "CURRENT" ? "What stands today" : "Newest statement still in the archive"}</p>` + claim(lead, true);
+    }
+    if(rest.length){
+      const open = rest.length <= 2 ? " open" : "";
+      h += `<details class="history"${open}><summary>${lead ? "How it got here" : "Statements"}: ${rest.length} earlier statement${rest.length===1?"":"s"}, oldest first</summary>` +
+           rest.map(s => claim(s)).join("") + `</details>`;
+    }
     if(g.other.length){
-      h += `<p class="muted small">related (proposals / questions, not part of the chain):</p>`;
-      for(const s of g.other) h += claim(s);
+      h += `<details class="history"><summary>Related proposals and questions (${g.other.length}), not part of the chain</summary>` + g.other.map(s => claim(s)).join("") + `</details>`;
     }
     h += "</div>";
   }
-  const at = a.attribution;
-  if(at){
-    h += `<div class="g"><h2 class="eyebrow">attribution</h2>`;
-    for(const [name, items, emptyMsg] of [
-      ["PROPOSED", at.proposed, "No statement in the archive proposed this."],
-      ["AGREED / DECIDED", at.agreed, "No statement in the archive agreed to or decided this — a proposal alone is not a decision."],
-      ["REJECTED", at.rejected, "No statement in the archive rejected this."],
-    ]){
-      h += `<h3 class="lbl">${name}</h3>` + (items.length ? items.map(claim).join("") : `<div class="sysnote">${esc(emptyMsg)}</div>`);
-    }
-    h += `<p class="muted">verdict: ${esc(at.verdict)}</p></div>`;
-  }
+  if(a.attribution && !attribFirst) h += attributionBlock(a.attribution);
   return h;
+}
+function attributionBlock(at){
+  let h = `<div class="g"><h2 class="eyebrow">Who proposed, who agreed</h2>`;
+  for(const [name, items, emptyMsg] of [
+    ["Proposed by", at.proposed, "No statement in the archive proposed this."],
+    ["Agreed or decided by", at.agreed, "No statement in the archive agreed to or decided this. A proposal alone is not a decision."],
+    ["Rejected by", at.rejected, "No statement in the archive rejected this."],
+  ]){
+    if(name.startsWith("Rejected") && !items.length) continue;
+    h += `<h3 class="lbl">${name}</h3>` + (items.length ? items.map((s, i) => claim(s, i === 0 && name.startsWith("Proposed"))).join("") : `<div class="sysnote">${esc(emptyMsg)}</div>`);
+  }
+  const verdict = at.verdict.startsWith("nobody agreed") ? "Nobody agreed: the archive holds the proposal but no agreement or decision on it."
+                : at.verdict.startsWith("no proposal") ? "No proposal found in the retrieved evidence." : "";
+  if(verdict) h += `<div class="sysnote">${esc(verdict)}</div>`;
+  return h + `</div>`;
 }
 async function post(url, body){
   const r = await fetch(url, {method:"POST", headers:{"content-type":"application/json"}, body:JSON.stringify(body)});
@@ -510,15 +582,32 @@ function fillPeople(list){
   }
 }
 const qEl = document.getElementById("q"), askBtn = document.getElementById("ask"), answerEl = document.getElementById("answer");
+let lastQuestion = "";
+function answerHead(q, a){
+  const n = a.groups ? a.groups.length : 0;
+  const what = a.empty ? "no matching statements" : `${n} topic${n===1?"":"s"}`;
+  return `<div class="answer-head"><span><span class="eyebrow">Answer</span><span class="q">${esc(q)}</span></span>` +
+         `<span>${what}${n ? ` · <button type="button" class="link-btn" id="expand-all">expand all history and sources</button>` : ""}</span></div>`;
+}
 askBtn.onclick = async () => {
   const q = qEl.value.trim(); if(!q) return;
+  lastQuestion = q;
   askBtn.disabled = true; answerEl.setAttribute("aria-busy", "true");
   answerEl.innerHTML = `<div class="loading">Searching the archive</div>`;
-  try { const a = await post("/api/ask", {question:q}); answerEl.innerHTML = a.error ? `<div class="error" role="alert">${esc(a.error)}</div>` : renderAnswer(a); }
-  catch(e){ answerEl.innerHTML = `<div class="error" role="alert">request failed: ${esc(e)} — check the server is running, then try again.</div>`; }
+  try {
+    const a = await post("/api/ask", {question:q});
+    answerEl.innerHTML = a.error ? `<div class="error" role="alert">${esc(a.error)}</div>` : answerHead(q, a) + renderAnswer(a);
+    const ex = document.getElementById("expand-all");
+    if(ex) ex.onclick = () => {
+      const all = answerEl.querySelectorAll("details"); const anyClosed = [...all].some(d => !d.open);
+      all.forEach(d => d.open = anyClosed); ex.textContent = anyClosed ? "collapse history and sources" : "expand all history and sources";
+    };
+    answerEl.scrollIntoView({block:"start", behavior:"smooth"});
+  }
+  catch(e){ answerEl.innerHTML = `<div class="error" role="alert">The request failed (${esc(e)}). Check that the server is still running, then ask again.</div>`; }
   askBtn.disabled = false; answerEl.setAttribute("aria-busy", "false");
-  qEl.focus(); qEl.select();   // next question takes no thought: just start typing over this one
 };
+document.querySelectorAll(".chip").forEach(c => c.onclick = () => { qEl.value = c.dataset.q; askBtn.click(); });
 qEl.addEventListener("keydown", e => { if(e.key === "Enter" && (e.ctrlKey || e.metaKey)) askBtn.click(); });
 const personEl = document.getElementById("person"), delHint = document.getElementById("delhint");
 document.getElementById("del").onclick = () => {
@@ -545,8 +634,11 @@ document.getElementById("delyes").onclick = async () => {
         `<li>${s.claims_removed} claims removed (theirs, and others' claims about them)</li>` +
         `<li>${s.chains_lost_head} chains lost their most recent statement: ${s.chains_with_newest_survivor} now show a newest surviving statement, ${s.chains_now_empty} are empty</li>` +
         `<li>retrieval index rebuilt: ${s.passages[0]} → ${s.passages[1]} passages, embeddings re-encoded; claims ${s.claims[0]} → ${s.claims[1]}</li>` +
-        `<li>full-text and structural sweep: ${s.verify_clean ? "clean" : "NOT CLEAN — see deletion log"}</li></ul></div>`;
-      if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error">Verification sweep did not come back clean — see the deletion log.</div>`;
+        `<li>full-text and structural sweep: ${s.verify_clean ? "clean" : "NOT CLEAN — see deletion log"}</li></ul>` +
+        (lastQuestion ? `<div class="row"><button type="button" id="askagain">Ask your last question again</button><span class="muted small">to see what the answer lost</span></div>` : "") + `</div>`;
+      if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error" role="alert">Verification sweep did not come back clean — see the deletion log.</div>`;
+      const again = document.getElementById("askagain");
+      if(again) again.onclick = () => { qEl.value = lastQuestion; askBtn.click(); document.getElementById("main").scrollIntoView({behavior:"smooth"}); };
       personEl.value = ""; fillPeople(r.people);
     }
   } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
