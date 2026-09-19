@@ -146,7 +146,7 @@ STATE = State()
 
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Relex · Claim archive</title>
+<title>Ledger</title>
 <style>
  :root{
    --bg:#f4f5f7; --paper:#ffffff; --paper-soft:#f7f8fa;
@@ -162,31 +162,39 @@ PAGE = """<!doctype html>
    --error-bg:#fbe4e1; --error-bd:#e7b6ae; --error-fg:#8a2a1c;
    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,system-ui,sans-serif;
    --r:.6rem;
+   --s1:.5rem; --s2:1rem; --s3:1.5rem;
  }
  *{box-sizing:border-box}
  html{-webkit-text-size-adjust:100%}
  body{margin:0;min-height:100vh;color:var(--text);background:var(--bg);font:16px/1.55 var(--sans);overflow-wrap:break-word}
+ /* the wash: soft blue atmosphere fixed behind everything; pure CSS gradients, never a text background */
+ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+   radial-gradient(55% 45% at 82% 4%, rgba(133,171,209,.42), transparent 68%),
+   radial-gradient(48% 40% at 8% 20%, rgba(150,196,196,.30), transparent 70%),
+   radial-gradient(42% 38% at 60% 70%, rgba(230,184,146,.22), transparent 72%),
+   linear-gradient(175deg, #eef1f5 0%, #e9edf2 100%)}
  a{color:var(--accent)}
  /* top bar */
- .topbar{background:var(--paper);border-bottom:1px solid var(--line)}
- .topbar-in{max-width:52rem;margin:0 auto;padding:.85rem 1.1rem;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+ .topbar{background:rgba(255,255,255,.85);border-bottom:1px solid var(--line)}
+ .topbar-in{max-width:46rem;margin:0 auto;padding:.85rem 1.1rem;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  .brand{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;color:var(--text);margin:0}
- .brand span{color:var(--accent)}
  .topbar-sub{color:var(--muted);font-size:.92rem}
- .wrap{max-width:52rem;margin:0 auto;padding:1.5rem 1.1rem 4rem}
+ .wrap{max-width:46rem;margin:0 auto;padding:var(--s3) 1rem 4rem}
  /* intro */
- .intro{margin:0 0 1.25rem}
- .intro h1{font-size:1.6rem;line-height:1.25;font-weight:750;letter-spacing:-.015em;margin:0 0 .4rem}
- .intro p{margin:0;color:var(--muted);max-width:62ch}
+ .intro{margin:0 0 var(--s3)}
+ .intro h1{font-size:1.6rem;line-height:1.25;font-weight:750;letter-spacing:-.015em;margin:0 0 var(--s1)}
+ .intro p{margin:0;color:var(--muted)}
  /* cards */
- .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem 1.35rem;margin:0 0 1.25rem}
- .field-label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.45rem}
- textarea{width:100%;min-height:4.4em;font:inherit;line-height:1.5;padding:.7em .85em;border:1px solid var(--line-strong);border-radius:var(--r);
-   background:var(--paper);color:var(--text);resize:vertical}
- input[type=text]{width:100%;min-height:2.75rem;font:inherit;padding:.55em .8em;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--paper);color:var(--text)}
- textarea:focus,input:focus,select:focus,button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
- .helper{color:var(--muted);font-size:.86rem;margin:.45rem 0 0}
- .row{display:flex;align-items:center;gap:.6rem .8rem;margin-top:.8rem;flex-wrap:wrap}
+ .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s3);margin:0 0 var(--s2)}
+ .field-label{display:block;font-weight:600;font-size:.95rem;margin-bottom:var(--s1)}
+ textarea{display:block;width:100%;min-height:3.4em;font:inherit;line-height:1.5;padding:.7em .85em;border:1px solid var(--line-strong);border-radius:var(--r);
+   background:var(--paper);color:var(--text);resize:none;overflow:hidden;-webkit-appearance:none;appearance:none}
+ textarea::placeholder,input::placeholder{color:#8a919b}
+ input[type=text]{display:block;width:100%;min-height:2.75rem;font:inherit;line-height:1.5;padding:.55em .85em;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--paper);color:var(--text);-webkit-appearance:none;appearance:none}
+ textarea:focus,input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ .helper{color:var(--muted);font-size:.86rem;margin:var(--s1) 0 0}
+ .row{display:flex;align-items:center;gap:var(--s1) var(--s2);margin-top:var(--s2);flex-wrap:wrap}
  button{font:600 .95rem/1 var(--sans);min-height:2.75rem;padding:.6em 1.25em;border-radius:var(--r);border:1px solid var(--accent);
    background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:background-color .12s ease,border-color .12s ease}
  button:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
@@ -199,32 +207,32 @@ PAGE = """<!doctype html>
  button.btn-danger-quiet:hover{background:var(--danger-soft)}
  .skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);color:var(--accent);padding:.5em .8em;border-radius:.4rem;box-shadow:var(--shadow);z-index:10;font:600 .95rem/1 var(--sans)}
  .skip:focus{left:.75rem}
- .examples{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+ .examples{display:flex;flex-wrap:wrap;gap:var(--s1);align-items:center;margin-top:var(--s2);padding-top:var(--s2);border-top:1px solid var(--line)}
  .examples-label{color:var(--muted);font-size:.88rem;margin-right:.2rem}
  .chip{min-height:2.25rem;padding:.4em .85em;font:500 .88rem/1.3 var(--sans);background:var(--paper);color:var(--text);
    border:1px solid var(--line);border-radius:999px;cursor:pointer;text-align:left}
  .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
  /* legend */
- .card-quiet{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.35rem 1.2rem;margin:0 0 1.25rem}
+ .card-quiet{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:var(--s1) var(--s3);margin:0 0 var(--s2)}
  .card-quiet > summary{padding:.55em 0;font-weight:600;color:var(--text)}
- .legend-list{margin:.3em 0 .8em;display:grid;grid-template-columns:auto 1fr;gap:.6em 1rem;align-items:start;font-size:.92rem}
+ .legend-list{margin:var(--s1) 0 var(--s2);display:grid;grid-template-columns:auto 1fr;gap:.6em 1rem;align-items:start;font-size:.92rem}
  .legend-list dt{margin:0;display:flex;gap:.3em;flex-wrap:wrap}
  .legend-list dd{margin:0;color:var(--muted);line-height:1.45}
  @media (max-width:520px){.legend-list{grid-template-columns:1fr}.legend-list dd{margin-bottom:.4em}}
  /* answer */
- #answer:not(:empty){margin:0 0 1.25rem}
- .answer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:.6rem 1rem;flex-wrap:wrap;margin:0 0 .9rem;color:var(--muted);font-size:.9rem}
- .answer-head .q{display:block;color:var(--text);font-weight:650;font-size:1.15rem;line-height:1.35;max-width:60ch}
+ #answer:not(:empty){margin:0 0 var(--s2)}
+ .answer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s1) var(--s2);flex-wrap:wrap;margin:0 0 var(--s2);color:var(--muted);font-size:.9rem}
+ .answer-head .q{display:block;color:var(--text);font-weight:650;font-size:1.15rem;line-height:1.35}
  .link-btn{background:none;border:none;color:var(--accent);font:600 .88rem/1 var(--sans);padding:.6em .4em;min-height:2.25rem;cursor:pointer;text-decoration:underline}
  .link-btn:hover{background:var(--accent-soft)}
  .eyebrow{display:block;font:700 .74rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5em}
- .g{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.1rem 1.35rem 1rem;margin:0 0 1rem}
- .lbl{font:650 1.08rem/1.35 var(--sans);color:var(--text);margin:0 0 .2rem}
+ .g{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:var(--s3);margin:0 0 var(--s2)}
+ .lbl{font:650 1.08rem/1.35 var(--sans);color:var(--text);margin:0 0 var(--s1)}
  h3.lbl{font-size:.95rem;margin:.9rem 0 .1rem;color:var(--muted)}
  .lead-note{font:600 .76rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--tag-current-fg);margin:.6rem 0 .5rem}
  .claim{margin:.6rem 0;padding:.1rem 0 .1rem .9rem;border-left:3px solid var(--line)}
  .claim.lead{border-left-color:var(--tag-current-bd);background:var(--paper-soft);border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem .6rem 1rem}
- .claim-text{margin:0 0 .45rem;font-size:1.02rem;line-height:1.55;max-width:70ch}
+ .claim-text{margin:0 0 .45rem;font-size:1.02rem;line-height:1.55}
  .claim.lead .claim-text{font-size:1.08rem}
  .claim-meta{display:flex;align-items:center;gap:.4em .7em;flex-wrap:wrap;font-size:.86rem;margin:0 0 .35rem;color:var(--muted)}
  .claim-who{color:var(--muted)}
@@ -246,9 +254,9 @@ PAGE = """<!doctype html>
  .retraction{font-style:italic}
  .corrector-label{font-size:.86rem;color:var(--muted)}
  .corrector-label.never{color:var(--tag-nevertrue-fg);font-weight:600}
- .sysnote{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:.3rem;padding:.65em .85em;margin:.6em 0;font-size:.95rem;line-height:1.5;max-width:70ch}
+ .sysnote{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:.3rem;padding:.65em .85em;margin:var(--s1) 0;font-size:.95rem;line-height:1.5}
  .sysnote .tag{margin-right:.4em}
- .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.4rem;padding:.7em .85em;margin:.6em 0;font-size:.95rem;max-width:70ch}
+ .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.4rem;padding:.7em .85em;margin:var(--s1) 0;font-size:.95rem}
  .loading{color:var(--muted);padding:.8rem 0}
  .loading::after{content:"";display:inline-block;width:1.1em;text-align:left;animation:ellipsis 1.2s steps(4,end) infinite}
  @keyframes ellipsis{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
@@ -260,12 +268,12 @@ PAGE = """<!doctype html>
  details > div.cite-meta{color:var(--muted);font-size:.85rem;margin:.4em 0 .3em}
  pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper-soft);border:1px solid var(--line);border-radius:.45rem;
    padding:.7em .85em;margin:.3em 0 .5em;font:.95rem/1.55 var(--sans);color:var(--text);max-height:22em;overflow-y:auto}
- hr.section-break{border:none;border-top:1px solid var(--line);margin:2rem 0}
+ hr.section-break{border:none;border-top:1px solid var(--line);margin:var(--s2) 0}
  /* deletion */
- .quiet-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.35rem}
- .quiet-title{font-size:1rem;font-weight:650;margin:0 0 .25rem}
- .quiet-intro{color:var(--muted);font-size:.92rem;margin:0 0 .9rem;max-width:62ch}
- .fineprint{color:var(--muted);font-size:.84rem;line-height:1.5;margin:.8em 0 0;max-width:62ch}
+ .quiet-panel{background:var(--paper-soft);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
+ .quiet-title{font-size:1rem;font-weight:650;margin:0 0 var(--s1)}
+ .quiet-intro{color:var(--muted);font-size:.95rem;margin:0 0 var(--s2)}
+ .fineprint{color:var(--text);font-size:.92rem;line-height:1.5;margin:var(--s2) 0 0}
  .confirm-box{background:var(--danger-soft);border:1px solid var(--tag-nevertrue-bd);border-radius:.45rem;padding:.8em 1em;margin-top:.8em}
  .confirm-result{background:var(--tag-current-bg);border:1px solid var(--tag-current-bd);border-radius:.45rem;padding:.85em 1em;margin-top:.8em;font-size:.95rem;line-height:1.55}
  .confirm-result ul{margin:.4em 0 0;padding-left:1.2em}
@@ -273,12 +281,12 @@ PAGE = """<!doctype html>
  .muted{color:var(--muted)} .small{font-size:.87em} .grow{flex:1 1 12rem;min-width:0}
 </style></head><body>
 <a class="skip" href="#main">Skip to the question</a>
-<div class="topbar"><div class="topbar-in"><p class="brand">Re<span>lex</span></p><span class="topbar-sub">Claim archive with right to erasure</span></div></div>
+<div class="topbar"><div class="topbar-in"><p class="brand">Ledger</p><span class="topbar-sub">Every answer cited. Every person erasable.</span></div></div>
 <div class="wrap">
 
 <div class="intro">
-<h1>Ask the archive anything. Every answer comes with its sources.</h1>
-<p>Answers are built only from statements stored in the archive, each one cited, with the history of what was said, corrected or withdrawn. Delete a person below and every trace of them goes too.</p>
+<h1>Ask the archive anything.</h1>
+<p>Answers are built only from statements stored in the archive, shown with the history of what was said, corrected or withdrawn.</p>
 </div>
 
 <main id="main">
@@ -296,7 +304,7 @@ PAGE = """<!doctype html>
 </div>
 </section>
 
-<details class="legend card-quiet">
+<details class="legend card-quiet" open>
 <summary>How to read the labels</summary>
 <dl class="legend-list">
   <dt><span class="tag tag-current"><span aria-hidden="true">●</span>CURRENT</span></dt><dd>The latest statement on this topic that still stands.</dd>
@@ -530,7 +538,9 @@ askBtn.onclick = async () => {
   catch(e){ answerEl.innerHTML = `<div class="error" role="alert">The request failed (${esc(e)}). Check that the server is still running, then ask again.</div>`; }
   askBtn.disabled = false; answerEl.setAttribute("aria-busy", "false");
 };
-document.querySelectorAll(".chip").forEach(c => c.onclick = () => { qEl.value = c.dataset.q; askBtn.click(); });
+function grow(){ qEl.style.height = "auto"; qEl.style.height = qEl.scrollHeight + "px"; }
+qEl.addEventListener("input", grow); window.addEventListener("resize", grow); grow();
+document.querySelectorAll(".chip").forEach(c => c.onclick = () => { qEl.value = c.dataset.q; grow(); askBtn.click(); });
 qEl.addEventListener("keydown", e => { if(e.key === "Enter" && (e.ctrlKey || e.metaKey)) askBtn.click(); });
 const personEl = document.getElementById("person"), delHint = document.getElementById("delhint");
 document.getElementById("del").onclick = () => {
@@ -561,7 +571,7 @@ document.getElementById("delyes").onclick = async () => {
         (lastQuestion ? `<div class="row"><button type="button" id="askagain">Ask your last question again</button><span class="muted small">to see what the answer lost</span></div>` : "") + `</div>`;
       if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error" role="alert">Verification sweep did not come back clean — see the deletion log.</div>`;
       const again = document.getElementById("askagain");
-      if(again) again.onclick = () => { qEl.value = lastQuestion; askBtn.click(); document.getElementById("main").scrollIntoView({behavior:"smooth"}); };
+      if(again) again.onclick = () => { qEl.value = lastQuestion; grow(); askBtn.click(); document.getElementById("main").scrollIntoView({behavior:"smooth"}); };
       personEl.value = ""; fillPeople(r.people);
     }
   } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
