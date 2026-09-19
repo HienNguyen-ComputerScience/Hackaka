@@ -71,6 +71,22 @@ an accidentally-committed intermediate file) makes the deleted person permanentl
 the repository, which defeats the deletion feature outright. `.gitignore` enforces this; don't
 override it with `git add -f`.
 
+## `split.py` is frozen — changing it destroys the claim layer
+
+`claims_raw/` is keyed to the exact unit ids `split.py` emits: `link.py` builds every `claim_id` as
+`unit_id#n` and **drops** any claim whose `unit_id` no longer resolves. It reports the count and
+exits zero, so a change that orphans every claim looks like a clean run that happens to produce an
+empty claim graph.
+
+Extraction is not re-runnable in practice — re-running it yields different claims, which changes
+answers, which invalidates the pass bars and the frozen question set. So there is no way back.
+**Do not change how `split.py` chunks, merges, orders or numbers units.** If a split change ever
+becomes genuinely necessary, it needs a matching id remap across `claims_raw/`, `extract_input/`
+and claim ids — the same cascade `delete.py` already performs — not a re-extraction.
+
+Bug fixes to `split.py` that leave unit ids untouched are fine. Check `link.py`'s `dropped:` count
+after any change to it; a non-zero jump means claims have been orphaned.
+
 ## Working conventions
 
 - Keep pipeline stages deterministic and re-runnable from `corpus/` (except the LLM extraction step).
