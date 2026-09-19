@@ -14,6 +14,11 @@
 *_before.*
 *.bak
 
+# Local attribution question set: names corpus people as expected proposers/agreers, so it must not
+# enter history (a deleted person's name would persist in versioned source). test_full.py skips the
+# A-rows when it is absent. Kept outside data/ so the deletion sweep and Part 3's restore ignore it.
+/attribution_local.json
+
 # Python / stray crash-dump housekeeping
 __pycache__/
 *.pyc

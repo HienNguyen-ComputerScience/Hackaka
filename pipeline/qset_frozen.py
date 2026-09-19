@@ -56,6 +56,15 @@ DIFF_NEAR = [
     ("D5", "How many tonnes of fresh waste were avoided on the cohort?"),
 ]
 
+# Attribution questions live in ../attribution_local.json (gitignored: they name corpus people as
+# expected proposers/agreers, and a deleted person's name must not persist in versioned source).
+# Row shape: [id, question, proposer, agreers, deciders, no_credit_before_proposal]. test_full.py
+# skips the A-rows with a note when the file is absent. EVERY QUESTION MUST CONTAIN A WORD FROM
+# answer.py's ATTRIB_WORDS (who / propos / suggest / agree / accept / sign / commit / decid / approv /
+# confirm): without one, out["attribution"] is None and the row fails for a reason that has nothing
+# to do with attribution.
+ATTRIBUTION_FILE = "attribution_local.json"
+
 # Three currency checks for Part 3, run on the full archive before the deletion. Each names the
 # fact key of the chain it inspects: a stale chain must lead with its figure (a withdrawal is
 # never the head), a never-true statement must stay visible with its NEVER TRUE line, and a

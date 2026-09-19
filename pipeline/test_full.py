@@ -246,6 +246,57 @@ def part2(A, units):
     return res
 
 
+# ---------------------------------------------------------------- attribution
+def part_attribution(A, units):
+    """Attribution graded against answer.py's PROPOSED / AGREED-DECIDED lists; see ATTRIBUTION."""
+    print("\n=============================== PART A: attribution")
+    import answer as answer_mod
+    path = ROOT / ATTRIBUTION_FILE
+    if not path.exists():
+        row("A", "attribution question set", True, f"skipped: no {ATTRIBUTION_FILE} beside the repo root (gitignored, holds corpus names)")
+        return {}
+    res = {}
+    for aid, q, proposer, agreers, deciders, since in json.loads(path.read_text(encoding="utf-8")):
+        out = A.answer(q)
+        text = answer_mod.render(out)
+        res[aid] = (out, text)
+        print(f"\n----- {aid}: {q}\n" + text)
+        a = out.get("attribution")
+        if a is None:
+            row("A", f"{aid} attribution", False, "no attribution block: the question has no ATTRIB_WORDS trigger")
+            continue
+        proposed, acted = a["proposed"], a["agreed"]
+        heads = bool(proposed) and proposed[0]["asserted_by"] == proposer
+        credited = {s["asserted_by"] for s in acted}
+        named = set(agreers) | set(deciders)
+        missing = named - credited
+        unnamed = credited - named
+        if agreers:
+            verdict_ok = True
+        else:
+            verdict_ok = a["verdict"].startswith("nobody agreed") and "nobody agreed" in text
+        early = []
+        if since:
+            pdates = [s["date"] for s in proposed if s["asserted_by"] == proposer]
+            if pdates:
+                early = [f"{s['asserted_by']} {s['date'][:10]}" for s in acted if s["date"] < min(pdates)]
+        ok = heads and not missing and not unnamed and verdict_ok and not early
+        probs = []
+        if not heads:
+            probs.append(f"PROPOSED headed by {proposed[0]['asserted_by'] if proposed else 'nobody'}, expected {proposer}")
+        if missing:
+            probs.append(f"not credited: {sorted(missing)}")
+        if unnamed:
+            probs.append(f"credited but unnamed: {sorted(unnamed)}")
+        if not verdict_ok:
+            probs.append(f"verdict does not say nobody agreed: {a['verdict']!r}")
+        if early:
+            probs.append(f"credited before the proposal: {early}")
+        row("A", f"{aid} attribution", ok,
+            f"proposer heads PROPOSED; credited {sorted(credited) or 'nobody'}" + ("; verdict: nobody agreed" if not agreers else "") if ok else "; ".join(probs))
+    return res
+
+
 # ---------------------------------------------------------------- judge provenance questions
 BARE_FILENAME = re.compile(r"^\S+\.(txt|md)$")
 POSITION_SEGMENT = re.compile(r" · message \d+ of \d+ \(position \d+ from top\)")
@@ -517,6 +568,7 @@ def main():
     units = {u["unit_id"]: u for u in load_jsonl(DATA / "units.jsonl")}
     res1 = part1(A, units)
     res2 = part2(A, units)
+    part_attribution(A, units)
     part_judge(args.snapshot)
     if not args.skip_deletion:
         part3(A, units, res1["P1"], resolve_snapshot(args.snapshot))
