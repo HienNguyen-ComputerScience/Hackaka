@@ -146,227 +146,147 @@ STATE = State()
 
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Claim Archive: ask, trace, erase</title>
+<title>Relex · Claim archive</title>
 <style>
  :root{
-   /* the wash: atmosphere only, never a text background */
-   --wash-base:#eef1f5; --wash-base-2:#e9edf2;
-   --wash-cool-1:rgba(133,171,209,.50); --wash-cool-2:rgba(150,196,196,.38); --wash-warm:rgba(230,184,146,.34);
-
-   /* every panel that holds text is opaque */
-   --paper:#ffffff; --paper-soft:#f6f7f9;
-   --text:#1b1e23; --muted:#585f68; --border:#e2e5ea; --border-soft:#edeff2;
-   --shadow:0 1.5rem 3rem -1.75rem rgba(25,35,55,.28), 0 .25rem .6rem -.3rem rgba(25,35,55,.12);
-   --shadow-quiet:0 .6rem 1.6rem -1rem rgba(25,35,55,.16);
-
-   --accent:#2f6690; --accent-soft:#e4eef5;
-   --heading:#2a2e35;
-   /* control boundaries need 3:1 against the paper (non-text contrast); the soft border is for decoration only */
-   --border-input:#7f8791;
-   /* destructive action: its own semantic colour, never the primary accent */
+   --bg:#f4f5f7; --paper:#ffffff; --paper-soft:#f7f8fa;
+   --text:#15181d; --muted:#5b6470; --line:#e4e7eb; --line-strong:#7f8791;
+   --accent:#0f5f8f; --accent-hover:#0c4f78; --accent-soft:#e7f0f7;
    --danger:#a6301f; --danger-soft:#fbe9e5;
-
-   --tag-current-bg:#e2f1e2; --tag-current-fg:#186238; --tag-current-bd:#8fcf9d;
-   --tag-superseded-bg:#eceef1; --tag-superseded-fg:#4b5158; --tag-superseded-bd:#c3c9d1;
+   --shadow:0 1px 2px rgba(20,30,45,.06), 0 8px 24px -12px rgba(20,30,45,.18);
+   --tag-current-bg:#e3f3e6; --tag-current-fg:#14603a; --tag-current-bd:#8fcf9d;
+   --tag-superseded-bg:#eef0f3; --tag-superseded-fg:#4b5158; --tag-superseded-bd:#c3c9d1;
    --tag-newest-bg:#fbecc4; --tag-newest-fg:#6b4900; --tag-newest-bd:#e2b94f;
    --tag-nevertrue-bg:#f9dcd9; --tag-nevertrue-fg:#8a2015; --tag-nevertrue-bd:#e3897c;
    --tag-nodirect-bg:#e7e1f4; --tag-nodirect-fg:#452e82; --tag-nodirect-bd:#b8a3e0;
    --error-bg:#fbe4e1; --error-bd:#e7b6ae; --error-fg:#8a2a1c;
-
-   --serif:Georgia,"Iowan Old Style","Palatino Linotype",Cambria,serif;
-   --sans:-apple-system,"Segoe UI",system-ui,sans-serif;
+   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,system-ui,sans-serif;
+   --r:.6rem;
  }
  *{box-sizing:border-box}
  html{-webkit-text-size-adjust:100%}
- body{
-   margin:0; width:100%; min-height:100vh; color:var(--text);
-   font:1rem/1.55 var(--sans); overflow-wrap:break-word;
-   background:var(--wash-base);
- }
- /* the hazy wash: pure CSS gradients, fixed behind everything, no blur/filter/animation/image */
- body::before{
-   content:""; position:fixed; inset:0; z-index:-1;
-   background:
-     radial-gradient(52% 42% at 80% 6%, var(--wash-cool-1), transparent 68%),
-     radial-gradient(46% 38% at 10% 22%, var(--wash-cool-2), transparent 70%),
-     radial-gradient(40% 36% at 62% 68%, var(--wash-warm), transparent 72%),
-     linear-gradient(175deg, var(--wash-base) 0%, var(--wash-base-2) 100%);
- }
- .wrap{width:100%;max-width:46rem;margin:0 auto;padding:clamp(1.25rem,4vw,2.5rem) 1.1rem clamp(3rem,8vw,5rem)}
-
- /* the only things allowed to sit directly on the wash: a big decorative heading + a short label */
- .hero-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem 1.5rem;flex-wrap:wrap}
- h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;color:var(--heading);margin:0}
- .hero-meta{color:var(--muted);font:600 .82rem/1.4 var(--sans);text-align:right;text-transform:uppercase;letter-spacing:.04em}
- hr.hairline{border:none;border-top:1px solid rgba(25,35,55,.16);margin:1rem 0 1.75rem}
- .hero-sub{color:var(--text);margin:.5em 0 0;max-width:60ch;font-size:1.02rem;line-height:1.55}
- .steps{display:flex;gap:.6rem 1.4rem;flex-wrap:wrap;margin:1.1rem 0 0;padding:0;list-style:none;counter-reset:step}
- .steps li{counter-increment:step;color:var(--muted);font-size:.95rem;line-height:1.45;flex:1 1 14rem;display:flex;gap:.55em;align-items:flex-start}
- .steps li::before{content:counter(step);flex:none;width:1.6em;height:1.6em;border-radius:50%;background:var(--accent);color:#fff;
-   font:700 .8rem/1.6em var(--sans);text-align:center}
- .steps b{color:var(--text)}
- .examples{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:1rem}
- .examples-label{color:var(--muted);font-size:.9rem}
- .chip{min-height:2.25rem;padding:.4em .9em;font:500 .9rem/1.3 var(--sans);background:var(--accent-soft);color:var(--accent);
-   border:1px solid transparent;border-radius:999px;cursor:pointer;text-align:left}
- .chip:hover{background:#d5e5f0;filter:none}
- .card-quiet{background:var(--paper);border-radius:.8rem;box-shadow:var(--shadow-quiet);padding:.6rem 1.2rem;margin:0 0 1.5rem}
- .card-quiet > summary{padding:.45em 0}
- .legend-list{margin:.4em 0 .6em;display:grid;grid-template-columns:auto 1fr;gap:.55em .9em;align-items:start;font-size:.95rem}
+ body{margin:0;min-height:100vh;color:var(--text);background:var(--bg);font:16px/1.55 var(--sans);overflow-wrap:break-word}
+ a{color:var(--accent)}
+ /* top bar */
+ .topbar{background:var(--paper);border-bottom:1px solid var(--line)}
+ .topbar-in{max-width:52rem;margin:0 auto;padding:.85rem 1.1rem;display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+ .brand{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;color:var(--text);margin:0}
+ .brand span{color:var(--accent)}
+ .topbar-sub{color:var(--muted);font-size:.92rem}
+ .wrap{max-width:52rem;margin:0 auto;padding:1.5rem 1.1rem 4rem}
+ /* intro */
+ .intro{margin:0 0 1.25rem}
+ .intro h1{font-size:1.6rem;line-height:1.25;font-weight:750;letter-spacing:-.015em;margin:0 0 .4rem}
+ .intro p{margin:0;color:var(--muted);max-width:62ch}
+ /* cards */
+ .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem 1.35rem;margin:0 0 1.25rem}
+ .field-label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.45rem}
+ textarea{width:100%;min-height:4.4em;font:inherit;line-height:1.5;padding:.7em .85em;border:1px solid var(--line-strong);border-radius:var(--r);
+   background:var(--paper);color:var(--text);resize:vertical}
+ input[type=text]{width:100%;min-height:2.75rem;font:inherit;padding:.55em .8em;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--paper);color:var(--text)}
+ textarea:focus,input:focus,select:focus,button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ .helper{color:var(--muted);font-size:.86rem;margin:.45rem 0 0}
+ .row{display:flex;align-items:center;gap:.6rem .8rem;margin-top:.8rem;flex-wrap:wrap}
+ button{font:600 .95rem/1 var(--sans);min-height:2.75rem;padding:.6em 1.25em;border-radius:var(--r);border:1px solid var(--accent);
+   background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:background-color .12s ease,border-color .12s ease}
+ button:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+ button:disabled{opacity:.5;cursor:not-allowed}
+ button.btn-quiet{background:var(--paper);color:var(--accent)}
+ button.btn-quiet:hover{background:var(--accent-soft)}
+ button.btn-danger{background:var(--danger);border-color:var(--danger)}
+ button.btn-danger:hover{background:#8b2818;border-color:#8b2818}
+ button.btn-danger-quiet{background:var(--paper);border-color:var(--danger);color:var(--danger)}
+ button.btn-danger-quiet:hover{background:var(--danger-soft)}
+ .skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);color:var(--accent);padding:.5em .8em;border-radius:.4rem;box-shadow:var(--shadow);z-index:10;font:600 .95rem/1 var(--sans)}
+ .skip:focus{left:.75rem}
+ .examples{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+ .examples-label{color:var(--muted);font-size:.88rem;margin-right:.2rem}
+ .chip{min-height:2.25rem;padding:.4em .85em;font:500 .88rem/1.3 var(--sans);background:var(--paper);color:var(--text);
+   border:1px solid var(--line);border-radius:999px;cursor:pointer;text-align:left}
+ .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+ /* legend */
+ .card-quiet{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:.35rem 1.2rem;margin:0 0 1.25rem}
+ .card-quiet > summary{padding:.55em 0;font-weight:600;color:var(--text)}
+ .legend-list{margin:.3em 0 .8em;display:grid;grid-template-columns:auto 1fr;gap:.6em 1rem;align-items:start;font-size:.92rem}
  .legend-list dt{margin:0;display:flex;gap:.3em;flex-wrap:wrap}
  .legend-list dd{margin:0;color:var(--muted);line-height:1.45}
  @media (max-width:520px){.legend-list{grid-template-columns:1fr}.legend-list dd{margin-bottom:.4em}}
- /* answer: a header line, then per topic the current statement first and the history behind a disclosure */
- .answer-head{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1rem;flex-wrap:wrap;
-   font:600 .9rem/1.4 var(--sans);color:var(--muted);margin:0 0 .8em}
- .answer-head .q{color:var(--text);font-weight:600;max-width:60ch}
- .link-btn{background:none;border:none;color:var(--accent);font:600 .9rem/1 var(--sans);padding:.6em .4em;min-height:2.25rem;cursor:pointer;text-decoration:underline}
- .link-btn:hover{filter:none;background:var(--accent-soft)}
- .lead-note{font:500 .88rem/1.4 var(--sans);color:var(--muted);margin:.2em 0 .4em}
- details.history{margin:.4em 0 .2em}
- details.history > summary{font-weight:600}
- details.history > summary::after{content:"";}
- .claim.lead{border-left-color:var(--tag-current-bd);background:var(--paper-soft);border-radius:0 .5rem .5rem 0;padding:.6em .9em .5em 1em}
-
- /* everything else: opaque panels, floating on the haze via shadow, never a border-only edge */
- .card{background:var(--paper);border-radius:1rem;box-shadow:var(--shadow);padding:1.4rem 1.5rem;margin:0 0 1.5rem}
- .tagline{color:var(--muted);margin:0 0 1.25rem;font-size:1rem;max-width:60ch}
- .field-label{display:block;font-weight:600;font-size:1rem;margin-bottom:.5em}
- textarea{width:100%;min-height:4.5em;font-family:inherit;font-size:1.05rem;line-height:1.5;padding:.6em .7em;
-   border:1px solid var(--border-input);border-radius:.5rem;background:var(--paper);color:var(--text);resize:vertical}
- input[type=text]{width:100%;min-height:2.75rem;font-family:inherit;font-size:1rem;padding:.55em .7em;border:1px solid var(--border-input);
-   border-radius:.5rem;background:var(--paper);color:var(--text)}
- textarea:focus,input:focus,select:focus,button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
- .helper{color:var(--muted);font-size:.87rem;line-height:1.5;margin:.45em 0 0}
- .row{display:flex;align-items:center;gap:.6em .8em;margin-top:.8em;flex-wrap:wrap}
- /* every pointer target is at least 44px tall; press feedback via colour/opacity only, never a layout shift */
- button{font:600 1rem/1 inherit;min-height:2.75rem;padding:.55em 1.2em;border-radius:.5rem;border:1px solid var(--accent);
-   background:var(--accent);color:#fff;cursor:pointer;touch-action:manipulation;transition:filter .12s ease,background-color .12s ease}
- button:hover{filter:brightness(1.1)}
- button:active{filter:brightness(.92)}
- button:disabled{opacity:.5;cursor:not-allowed;filter:none}
- button.btn-quiet{background:var(--paper);color:var(--accent)}
- button.btn-danger{background:var(--danger);border-color:var(--danger);color:#fff}
- button.btn-danger-quiet{background:var(--paper);border-color:var(--danger);color:var(--danger)}
- .skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);color:var(--accent);padding:.5em .8em;border-radius:.4rem;
-   box-shadow:var(--shadow-quiet);z-index:10;font:600 .95rem/1 var(--sans)}
- .skip:focus{left:.75rem}
- @media (prefers-reduced-motion:reduce){
-   *{transition:none !important;animation:none !important}
-   .loading::after{content:"…"}
- }
- select{font:inherit;padding:.5em .6em;border:1px solid var(--border);border-radius:.5rem;background:var(--paper);color:var(--text)}
- .muted{color:var(--muted)}
- .small{font-size:.87em}
- .grow{flex:1 1 12rem;min-width:0}
-
- /* answer: one opaque panel, reading typography, capped at a comfortable measure.
-    :not(:empty) keeps it invisible until the first question lands an answer or loading state. */
- #answer:not(:empty){background:var(--paper);border-radius:1rem;box-shadow:var(--shadow);
-   padding:1.5rem 1.6rem;margin:0 0 1.5rem}
- #answer{font-family:var(--serif);font-size:1.15rem;line-height:1.65;max-width:100%}
- #answer > *{max-width:70ch}
- #answer > p:first-child,#answer > .loading:first-child{margin-top:0}
-
- .eyebrow{display:block;font:700 .76rem/1 var(--sans);letter-spacing:.08em;
-   text-transform:uppercase;color:var(--muted);margin-bottom:.35em}
- .lbl{font:700 1.05em/1.4 var(--sans);color:var(--text);margin:0}
- h3.lbl{font-size:.95em;margin-top:.9em}
- .g{border-top:1px solid var(--border);padding:1.2em 0}
- .g:first-child{border-top:none;padding-top:0}
-
- /* the claim: one distinct block, fixed reading order (text, tag, corrector, anchors) */
- .claim{margin:1em 0;padding:.15em 0 .15em 1em;border-left:3px solid var(--border-soft)}
- .claim-text{margin:0 0 .5em;max-width:70ch}
- .claim-meta{display:flex;align-items:center;gap:.5em .7em;flex-wrap:wrap;font:1rem/1.35 var(--sans);margin:0 0 .5em}
- .claim-who{color:var(--muted);font-size:.92em}
- .claim-anchor{font-size:.95rem;margin:0 0 .3em}
- .claim-anchor + .claim-anchor{margin-top:.2em}
- .claim-extra{font-size:.9rem;color:var(--muted);line-height:1.5}
- .claim-extra > div{margin:.25em 0}
- .role-label{font:700 .76rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
-
- /* status tags: opaque flat colour (no gradient) + a glyph + the word — three independent cues,
-    so the five stay distinguishable from each other by shape/label even in grayscale or on a
-    washed-out projector, not colour alone. */
- .tag{display:inline-flex;align-items:center;gap:.3em;font:700 .72rem/1 var(--sans);letter-spacing:.03em;
-   text-transform:uppercase;padding:.34em .6em;border-radius:.3rem;border:1.5px solid transparent;vertical-align:middle;
-   white-space:nowrap}
- .tag-current{background:var(--tag-current-bg);color:var(--tag-current-fg);border-color:var(--tag-current-bd);border-style:solid}
+ /* answer */
+ #answer:not(:empty){margin:0 0 1.25rem}
+ .answer-head{display:flex;justify-content:space-between;align-items:flex-end;gap:.6rem 1rem;flex-wrap:wrap;margin:0 0 .9rem;color:var(--muted);font-size:.9rem}
+ .answer-head .q{display:block;color:var(--text);font-weight:650;font-size:1.15rem;line-height:1.35;max-width:60ch}
+ .link-btn{background:none;border:none;color:var(--accent);font:600 .88rem/1 var(--sans);padding:.6em .4em;min-height:2.25rem;cursor:pointer;text-decoration:underline}
+ .link-btn:hover{background:var(--accent-soft)}
+ .eyebrow{display:block;font:700 .74rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5em}
+ .g{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.1rem 1.35rem 1rem;margin:0 0 1rem}
+ .lbl{font:650 1.08rem/1.35 var(--sans);color:var(--text);margin:0 0 .2rem}
+ h3.lbl{font-size:.95rem;margin:.9rem 0 .1rem;color:var(--muted)}
+ .lead-note{font:600 .76rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--tag-current-fg);margin:.6rem 0 .5rem}
+ .claim{margin:.6rem 0;padding:.1rem 0 .1rem .9rem;border-left:3px solid var(--line)}
+ .claim.lead{border-left-color:var(--tag-current-bd);background:var(--paper-soft);border-radius:0 var(--r) var(--r) 0;padding:.75rem 1rem .6rem 1rem}
+ .claim-text{margin:0 0 .45rem;font-size:1.02rem;line-height:1.55;max-width:70ch}
+ .claim.lead .claim-text{font-size:1.08rem}
+ .claim-meta{display:flex;align-items:center;gap:.4em .7em;flex-wrap:wrap;font-size:.86rem;margin:0 0 .35rem;color:var(--muted)}
+ .claim-who{color:var(--muted)}
+ .kind{font:600 .74rem/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--line-strong);border-radius:.3rem;padding:.3em .5em}
+ .claim-anchor{font-size:.88rem;margin:0}
+ .claim-extra{font-size:.86rem;color:var(--muted);line-height:1.5;margin-top:.25rem}
+ .claim-extra > div{margin:.15em 0}
+ details.more{margin:.2rem 0 0}
+ details.more > summary{font-size:.8rem;color:var(--muted);font-weight:500}
+ .role-label{font:700 .74rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+ .tag{display:inline-flex;align-items:center;gap:.3em;font:700 .7rem/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;
+   padding:.32em .55em;border-radius:.3rem;border:1.5px solid transparent;white-space:nowrap}
+ .tag-current{background:var(--tag-current-bg);color:var(--tag-current-fg);border-color:var(--tag-current-bd)}
  .tag-superseded{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd);border-style:dashed}
  .tag-newest{background:var(--tag-newest-bg);color:var(--tag-newest-fg);border-color:var(--tag-newest-bd);border-style:dashed}
- .tag-nevertrue{background:var(--tag-nevertrue-bg);color:var(--tag-nevertrue-fg);border-color:var(--tag-nevertrue-bd);border-style:solid;border-width:2px}
+ .tag-nevertrue{background:var(--tag-nevertrue-bg);color:var(--tag-nevertrue-fg);border-color:var(--tag-nevertrue-bd);border-width:2px}
  .tag-withdrawn,.tag-correction{background:var(--tag-superseded-bg);color:var(--tag-superseded-fg);border-color:var(--tag-superseded-bd);border-style:dotted}
- .retraction{font-style:italic}
  .tag-nodirect{background:var(--tag-nodirect-bg);color:var(--tag-nodirect-fg);border-color:var(--tag-nodirect-bd);border-style:dotted;border-width:2px}
-
- /* the correcting/superseding document: named right beside the tag it belongs to */
- .corrector-label{font-size:.92rem;color:var(--muted);white-space:nowrap}
+ .retraction{font-style:italic}
+ .corrector-label{font-size:.86rem;color:var(--muted)}
  .corrector-label.never{color:var(--tag-nevertrue-fg);font-weight:600}
-
- /* deliberate system statements: distinct from tags, not alarming */
- .sysnote{background:var(--accent-soft);border:1px solid var(--border);border-left:3px solid var(--accent);
-   border-radius:.3rem;padding:.7em .85em;margin:.7em 0;font-size:1rem;line-height:1.55;max-width:70ch}
+ .sysnote{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:.3rem;padding:.65em .85em;margin:.6em 0;font-size:.95rem;line-height:1.5;max-width:70ch}
  .sysnote .tag{margin-right:.4em}
-
- /* real problems: kept visually separate from system statements */
- .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.3rem;
-   padding:.7em .85em;margin:.7em 0;font-size:1rem;max-width:70ch}
-
- /* loading placeholder: sits exactly where the answer will land */
- .loading{color:var(--muted);font-style:italic;padding:.4em 0}
- .loading::after{content:"";display:inline-block;width:1.1em;text-align:left;
-   animation:ellipsis 1.2s steps(4,end) infinite}
+ .error{background:var(--error-bg);border:1px solid var(--error-bd);color:var(--error-fg);border-radius:.4rem;padding:.7em .85em;margin:.6em 0;font-size:.95rem;max-width:70ch}
+ .loading{color:var(--muted);padding:.8rem 0}
+ .loading::after{content:"";display:inline-block;width:1.1em;text-align:left;animation:ellipsis 1.2s steps(4,end) infinite}
  @keyframes ellipsis{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
-
- details{margin:.3em 0}
- summary{cursor:pointer;color:var(--accent);font:600 .95rem/1.35 var(--sans);
-   display:list-item;overflow-wrap:anywhere;padding:.3em 0;touch-action:manipulation}
+ @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}.loading::after{content:"…"}}
+ details{margin:.25em 0}
+ summary{cursor:pointer;color:var(--accent);font:600 .9rem/1.4 var(--sans);display:list-item;overflow-wrap:anywhere;padding:.3em 0;touch-action:manipulation}
  summary:hover{text-decoration:underline}
- details > div.cite-meta{color:var(--muted);font-size:.88em;margin:.5em 0 .3em}
- pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper-soft);border:1px solid var(--border-soft);border-radius:.5rem;
-   padding:.75em .85em;margin:.3em 0;font:1.05rem/1.55 var(--serif);color:var(--text);
-   max-height:22em;overflow-y:auto}
-
- hr.section-break{border:none;border-top:1px solid rgba(25,35,55,.14);margin:2.25rem 0}
-
- /* deletion: opaque like everything else, just a visually quieter panel — smaller shadow,
-    muted heading — clearly a separate region from the answer flow */
- .quiet-panel{background:var(--paper);border-radius:1rem;box-shadow:var(--shadow-quiet);padding:1.15rem 1.4rem}
- .quiet-title{font-size:.95rem;color:var(--muted);font-weight:600;margin:0 0 .5em;text-transform:uppercase;
-   letter-spacing:.04em}
- .fineprint{color:var(--muted);font-size:.85rem;line-height:1.5;margin:.8em 0 0;max-width:60ch}
- .confirm-box{background:var(--tag-newest-bg);border:1px solid var(--tag-newest-bd);border-radius:.4rem;
-   padding:.8em 1em;margin-top:.8em}
- .confirm-box .row{margin-top:.7em}
- .confirm-result{background:var(--tag-current-bg);border:1px solid var(--tag-current-bd);border-radius:.4rem;
-   padding:.85em 1em;margin-top:.8em;font-size:1rem;line-height:1.55}
+ details.history{margin:.5rem 0 .2rem}
+ details > div.cite-meta{color:var(--muted);font-size:.85rem;margin:.4em 0 .3em}
+ pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper-soft);border:1px solid var(--line);border-radius:.45rem;
+   padding:.7em .85em;margin:.3em 0 .5em;font:.95rem/1.55 var(--sans);color:var(--text);max-height:22em;overflow-y:auto}
+ hr.section-break{border:none;border-top:1px solid var(--line);margin:2rem 0}
+ /* deletion */
+ .quiet-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem 1.35rem}
+ .quiet-title{font-size:1rem;font-weight:650;margin:0 0 .25rem}
+ .quiet-intro{color:var(--muted);font-size:.92rem;margin:0 0 .9rem;max-width:62ch}
+ .fineprint{color:var(--muted);font-size:.84rem;line-height:1.5;margin:.8em 0 0;max-width:62ch}
+ .confirm-box{background:var(--danger-soft);border:1px solid var(--tag-nevertrue-bd);border-radius:.45rem;padding:.8em 1em;margin-top:.8em}
+ .confirm-result{background:var(--tag-current-bg);border:1px solid var(--tag-current-bd);border-radius:.45rem;padding:.85em 1em;margin-top:.8em;font-size:.95rem;line-height:1.55}
  .confirm-result ul{margin:.4em 0 0;padding-left:1.2em}
  .del-hint{font-size:.88em}
+ .muted{color:var(--muted)} .small{font-size:.87em} .grow{flex:1 1 12rem;min-width:0}
 </style></head><body>
 <a class="skip" href="#main">Skip to the question</a>
+<div class="topbar"><div class="topbar-in"><p class="brand">Re<span>lex</span></p><span class="topbar-sub">Claim archive with right to erasure</span></div></div>
 <div class="wrap">
 
-<header class="hero-row">
-<div>
-<h1>Claim Archive</h1>
-<p class="hero-sub">Ask a question about the project archive. Every answer is built only from stored statements, each one cited, with the history of what was said, corrected or withdrawn. Delete a person and every trace of them goes too.</p>
+<div class="intro">
+<h1>Ask the archive anything. Every answer comes with its sources.</h1>
+<p>Answers are built only from statements stored in the archive, each one cited, with the history of what was said, corrected or withdrawn. Delete a person below and every trace of them goes too.</p>
 </div>
-<div class="hero-meta">right-to-erasure demo<br>no login</div>
-</header>
-<ol class="steps" aria-label="How it works">
-<li><b>Ask</b> a question in plain words.</li>
-<li><b>Read</b> the current answer per topic, then open the history and sources.</li>
-<li><b>Delete</b> a person below and ask the same question again to see what changed.</li>
-</ol>
-<hr class="hairline">
 
 <main id="main">
 <section class="card" aria-labelledby="ask-label">
 <label class="field-label" id="ask-label" for="q">Your question</label>
 <textarea id="q" aria-describedby="q-help" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
-<p class="helper" id="q-help">Press Ctrl+Enter or the button. Try one of the examples if you are not sure where to start.</p>
-<div class="row"><button id="ask" type="button">Ask the archive</button></div>
+<p class="helper" id="q-help">Ctrl+Enter also asks. Not sure where to start? Try an example.</p>
+<div class="row"><button id="ask" type="button">Ask</button></div>
 <div class="examples" id="examples" aria-label="Example questions">
   <span class="examples-label">Try:</span>
   <button type="button" class="chip" data-q="What service levels were agreed for ordering, and in which meeting?">Service levels agreed for ordering</button>
@@ -395,6 +315,7 @@ PAGE = """<!doctype html>
 
 <section class="quiet-panel" aria-labelledby="del-title">
 <h2 class="quiet-title" id="del-title">Delete a person from the archive</h2>
+<p class="quiet-intro">Pick a name, confirm, and their statements, mentions and every derived record are removed. Then ask your question again to see what the answer lost.</p>
 <label class="field-label" for="person">Person to erase</label>
 <div class="row">
   <input id="person" class="grow" type="text" list="people-list" autocomplete="off" placeholder="Type or pick a name…" aria-describedby="delhint">
@@ -405,8 +326,7 @@ PAGE = """<!doctype html>
 <div id="delconfirm" class="confirm-box" role="alertdialog" aria-labelledby="delwho" hidden><span id="delwho"></span> will be erased from every store. This cannot be undone from the interface.
  <div class="row"><button id="delyes" class="btn-danger" type="button">Confirm delete</button> <button id="delno" class="btn-quiet" type="button">Cancel</button></div>
 </div>
-<p class="fineprint">This runs the deletion pipeline: their statements, statements about them, their registry row, the
-retrieval index and embeddings, and every derived chain are rebuilt without them. There is no undo.</p>
+<p class="fineprint">This runs the real deletion pipeline and rebuilds the search index. It takes about half a minute. There is no undo.</p>
 <div id="delresult" role="status" aria-live="polite"></div>
 </section>
 
@@ -425,7 +345,7 @@ function currencyTag(currency){
   if(currency==="NEWEST SURVIVING") return tag("newest", "NEWEST SURVIVING");
   if(currency==="WITHDRAWN") return tag("withdrawn", "WITHDRAWN");
   if(currency==="CORRECTION") return tag("correction", "CORRECTION");
-  return `<span class="muted small">unlinked</span>`;
+  return "";
 }
 function cite(c, prefix){
   if(!c) return "";
@@ -452,24 +372,27 @@ function claim(s, lead){
   const val = s.value!==null&&s.value!==undefined ? `value: ${esc(s.value)}` : (s.truncated ? "value: TRUNCATED IN SOURCE" : "");
   let h = `<div class="claim${lead ? " lead" : ""}">`;
   h += `<p class="claim-text">“${esc(s.statement)}”</p>`;
-  h += `<div class="claim-meta">` + currencyTag(s.currency);
+  const ct = currencyTag(s.currency);
+  h += `<div class="claim-meta">` + (ct || `<span class="kind">${esc(s.kind || "statement")}</span>`);
   if(s.correction){
     h += tag("nevertrue","NEVER TRUE") + `<span class="corrector-label never">${esc(correctorName(s.correction))}</span>` + cite(s.correction_cite, "correcting document");
   } else if(s.supersession){
     h += `<span class="corrector-label">${esc(correctorName(s.supersession))}</span>` + cite(s.supersession_cite, "superseding document");
   }
-  h += `<span class="claim-who">${esc(s.asserted_by)} · ${esc(s.date.slice(0,16))}</span></div>`;
+  h += `<span class="claim-who">${esc(s.asserted_by)} · ${esc(s.date.slice(0,10))}</span></div>`;
   h += `<div class="claim-anchor">` + cite(s.cite, "source") + `</div>`;
-  let extra = "";
+  // what a reader needs stays visible; bookkeeping (truth status, ordering confidence) sits behind "details"
+  let extra = "", more = "";
   if(val) extra += `<div>${esc(val)}</div>`;
   if(s.retraction) extra += `<div class="retraction">${esc(s.retraction)}</div>`;
-  if(!s.correction) extra += `<div>${esc(String(s.truth_status).replace(/_/g," "))}</div>`;
-  if(s.reported) extra += `<div>status report: evidence of what was reported at the time, not of the underlying state</div>`;
-  if(s.order_confidence) extra += `<div>order confidence: ${esc(s.order_confidence)}</div>`;
-  if(s.correction){ const q = correctionQuote(s.correction); if(q) extra += `<div>what was actually true: “${esc(q)}”</div>`; }
-  else if(s.truth_status==="unverified") extra += `<div>unverified: ${esc(s.truth_reason)}</div>`;
-  if(s.responds_to) extra += `<div>in response to: ${esc(s.responds_to)}</div>`;
+  if(s.reported) extra += `<div>From a status report: evidence of what was reported at the time, not of the underlying state.</div>`;
+  if(s.correction){ const q = correctionQuote(s.correction); if(q) extra += `<div>What was actually true: “${esc(q)}”</div>`; }
+  if(s.responds_to) extra += `<div>In response to: ${esc(s.responds_to)}</div>`;
+  if(s.truth_status==="unverified" && s.truth_reason && !String(s.truth_reason).startsWith("kind=")) extra += `<div>Unverified: ${esc(s.truth_reason)}</div>`;
+  if(!s.correction) more += `<div>truth status: ${esc(String(s.truth_status).replace(/_/g," "))}</div>`;
+  if(s.order_confidence) more += `<div>order confidence: ${esc(s.order_confidence)}</div>`;
   if(extra) h += `<div class="claim-extra">${extra}</div>`;
+  if(more) h += `<details class="more"><summary>details</summary><div class="claim-extra">${more}</div></details>`;
   return h + "</div>";
 }
 // Same visual language as claim(), with a role label (COMMITTED / LATEST ON RECORD / DONE LATER)
