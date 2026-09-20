@@ -26,6 +26,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+TURN_INDEX = re.compile(r" turn \d+ \(line")   # "Them turn 22 (line 38)" -> "Them (line 38)"
+NOTHING = "The archive does not contain a statement on this."
+
+
+def anchor(where):
+    return TURN_INDEX.sub(" (line", where or "")
 
 
 class State:
