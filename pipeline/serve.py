@@ -9,13 +9,19 @@ Three things and nothing else:
   2. Clickable citations -> the human anchor string expands to the unit text stored in
      data/units.jsonl. corpus/ is never read at request time: it holds the unscrubbed original.
   3. A deletion control -> runs the real pipeline/delete.py as a subprocess, then reloads.
+  4. A reset control, for between judging runs -> replaces data/ with a copy of relex-data-snapshot/
+     (the pre-deletion pipeline output) and reloads in-process, so the port and any tunnel in front
+     of it survive. Click only: never on start-up, never on a timer. The snapshot is read, never
+     served, listed or written.
 
 No unit id, claim id or turn index reaches the browser: the JSON sent to the page is built from an
 allow-list of fields, and anchor strings have the internal-transcript turn number stripped.
 """
 import argparse
 import json
+import os
 import re
+import shutil
 import subprocess
 import sys
 import threading
@@ -26,6 +32,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+SNAPSHOT = ROOT / "relex-data-snapshot"   # pre-deletion output; copied from, never written to or served
+STAGING = ROOT / "data.restoring"         # a complete copy of the snapshot, built before data/ is touched
+STALE = ROOT / "data.stale"               # the old data/, set aside in one rename and then removed
 TURN_INDEX = re.compile(r" turn \d+ \(line")   # "Them turn 22 (line 38)" -> "Them (line 38)"
 NOTHING = "The archive does not contain a statement on this."
 
@@ -34,8 +43,66 @@ def anchor(where):
     return TURN_INDEX.sub(" (line", where or "")
 
 
+def _locked_file(root):
+    """Name one file under root that another process holds open, or None. A rename out and back
+    fails on Windows exactly when a handle without FILE_SHARE_DELETE is open on it."""
+    for f in sorted(root.rglob("*")):
+        if f.is_file():
+            probe = f.with_name(f.name + ".probe")
+            try:
+                os.rename(f, probe)
+            except OSError:
+                return f
+            os.rename(probe, f)
+    return None
+
+
+def _rmtree(path):
+    """Remove a tree, naming the first file that will not go."""
+    for p in sorted(path.rglob("*"), key=lambda q: len(q.parts), reverse=True):
+        try:
+            p.rmdir() if p.is_dir() else p.unlink()
+        except OSError as e:
+            raise OSError(f"{p.relative_to(ROOT).as_posix()}: {e.strerror or e}") from None
+    path.rmdir()
+
+
+def restore_data():
+    """Replace data/ with relex-data-snapshot/ (never merge: a stale file must not survive).
+
+    data/ is either the old tree or the complete new one at every step: the snapshot is copied to
+    a staging directory first, then the two are swapped by rename. A locked file blocks the swap
+    before anything is lost and is named in the error. Returns a warning string or None."""
+    if not SNAPSHOT.is_dir():
+        raise OSError(f"{SNAPSHOT.name}/ is missing; nothing to restore from")
+    for leftover in (STAGING, STALE):
+        if leftover.exists():
+            _rmtree(leftover)
+    shutil.copytree(SNAPSHOT, STAGING)
+    if DATA.exists():
+        try:
+            os.rename(DATA, STALE)
+        except OSError as e:
+            _rmtree(STAGING)
+            held = _locked_file(DATA)
+            what = f"{held.relative_to(ROOT).as_posix()} is open in another program" if held else (e.strerror or str(e))
+            raise OSError(f"{what}; data/ was left as it was") from None
+    try:
+        os.rename(STAGING, DATA)
+    except OSError as e:
+        if STALE.exists() and not DATA.exists():
+            os.rename(STALE, DATA)
+        raise OSError(f"could not move the restored copy into place ({e.strerror or e}); data/ was left as it was") from None
+    try:
+        if STALE.exists():
+            _rmtree(STALE)
+    except OSError as e:
+        return f"data/ is fully restored, but the previous archive could not be removed: {e}. Delete {STALE.name}/ by hand."
+    return None
+
+
 class State:
-    """Answerer + unit store, rebuilt after a deletion. One lock: a deletion blocks questions."""
+    """Answerer + unit store, rebuilt after a deletion or a reset. One lock: either blocks questions."""
 
     def __init__(self):
         self.lock = threading.Lock()
@@ -141,6 +208,21 @@ class State:
             self.load()   # warm, so the next question does not pay the model load
             return {"ok": True, "summary": summary, "people": self.people()}
 
+    def reset(self):
+        with self.lock:
+            try:
+                warning = restore_data()
+            except OSError as e:
+                return {"ok": False, "error": f"Reset failed: {e}"}
+            self.answerer = None
+            self.units = None
+            self.load()
+            claims = sum(1 for l in (DATA / "claims.jsonl").open(encoding="utf-8") if l.strip())
+            log = DATA / "deletion_log.jsonl"
+            entries = sum(1 for l in log.open(encoding="utf-8") if l.strip()) if log.exists() else 0
+            return {"ok": True, "claims": claims, "deletion_log_entries": entries, "warning": warning,
+                    "people": self.people()}
+
 
 STATE = State()
 
@@ -238,6 +320,16 @@ PAGE = r"""<!doctype html>
  .done ul{margin:var(--xs) 0 0;padding-left:1.1em}
  .done .row{margin-top:var(--sm)}
  .error{background:var(--danger-soft);border:1px solid #FCA5A5;color:#7F1D1D;border-radius:var(--r);padding:.7em .85em;margin:var(--sm) 0;font-size:.95rem}
+
+ /* reset strip: between judging runs, kept apart from the ask and erase controls */
+ .foot{border-top:1px solid var(--line);background:var(--card);margin-top:var(--xl)}
+ .foot-in{max-width:80rem;margin:0 auto;padding:var(--lg);display:flex;align-items:flex-start;gap:var(--sm) var(--lg);flex-wrap:wrap}
+ .foot h2{margin:0 0 var(--xs);font:600 .95rem/1.3 var(--ui)}
+ .foot p{margin:0;color:var(--muted);font-size:.88rem;max-width:44rem}
+ .foot-ctl{margin-left:auto;display:grid;gap:var(--sm);justify-items:end;min-width:min(100%,22rem)}
+ .foot .confirm,.foot .done{margin-top:0;width:100%}
+ #resetstatus{font-size:.9rem}
+ @media (max-width:900px){.foot-in{padding:var(--md)}.foot-ctl{margin-left:0;justify-items:start;width:100%}}
 
  /* the ledger column */
  .ledger-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sm) var(--md);flex-wrap:wrap;margin:0 0 var(--md)}
@@ -359,6 +451,22 @@ PAGE = r"""<!doctype html>
   <div id="answer" role="region" aria-label="Answer" aria-live="polite" aria-busy="false"></div>
 </main>
 </div>
+
+<footer class="foot" aria-labelledby="reset-h">
+  <div class="foot-in">
+    <div>
+      <h2 id="reset-h">Between judging runs</h2>
+      <p>Deletions are real. Reset puts the archive back to its pre-deletion state so the next judge starts from the full record. Questions and deletions wait while it runs.</p>
+    </div>
+    <div class="foot-ctl">
+      <button id="reset" class="quiet" type="button">Reset archive</button>
+      <div id="resetconfirm" class="confirm" role="alertdialog" aria-labelledby="reset-h" hidden>Every deletion made so far will be undone and the full archive restored.
+        <div class="row"><button id="resetyes" type="button">Confirm reset</button><button id="resetno" class="quiet" type="button">Cancel</button></div>
+      </div>
+      <div id="resetstatus" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</footer>
 
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -606,6 +714,24 @@ document.getElementById("delyes").onclick = async () => {
   } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
   delHint.textContent = ""; document.getElementById("del").disabled = false;
 };
+const resetBtn = document.getElementById("reset"), resetStatus = document.getElementById("resetstatus");
+resetBtn.onclick = () => { document.getElementById("resetconfirm").hidden = false; resetStatus.innerHTML = ""; document.getElementById("resetyes").focus(); };
+document.getElementById("resetno").onclick = () => { document.getElementById("resetconfirm").hidden = true; };
+document.getElementById("resetyes").onclick = async () => {
+  document.getElementById("resetconfirm").hidden = true;
+  resetBtn.disabled = true; document.getElementById("del").disabled = true; askBtn.disabled = true;
+  resetStatus.innerHTML = `<div class="loading">Restoring the archive and reloading the index</div>`;
+  try {
+    const r = await post("/api/reset", {});
+    if(!r.ok){ resetStatus.innerHTML = `<div class="error" role="alert">${esc(r.error)}</div>`; }
+    else {
+      resetStatus.innerHTML = `<div class="done"><strong>Archive reset.</strong> ${r.claims} claims, ${r.deletion_log_entries} deletion log ${r.deletion_log_entries===1?"entry":"entries"}.` +
+        (r.warning ? `<div class="error" role="alert">${esc(r.warning)}</div>` : "") + `</div>`;
+      personEl.value = ""; delHint.textContent = ""; document.getElementById("delresult").innerHTML = ""; fillPeople(r.people);
+    }
+  } catch(e){ resetStatus.innerHTML = `<div class="error" role="alert">request failed: ${esc(e)}</div>`; }
+  resetBtn.disabled = false; document.getElementById("del").disabled = false; askBtn.disabled = false;
+};
 fetch("/api/people").then(r => r.json()).then(fillPeople);
 </script></body></html>
 """
@@ -648,6 +774,8 @@ class Handler(BaseHTTPRequestHandler):
                 if not pid.startswith("person:"):
                     return self._send(400, {"ok": False, "error": "pick a person"})
                 return self._send(200, STATE.delete(pid))
+            if self.path == "/api/reset":
+                return self._send(200, STATE.reset())
         except Exception as e:   # surface, never fabricate
             return self._send(500, {"error": f"{type(e).__name__}: {e}"})
         return self._send(404, {"error": "not found"})
