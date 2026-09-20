@@ -26,6 +26,3 @@ __pycache__/
 
 # Local desktop-app launch config (machine-specific interpreter pin)
 .claude/
-
-# Reset staging directories (serve.py swaps a fresh snapshot copy in, sets the old data/ aside)
-/data.*/
