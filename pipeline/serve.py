@@ -412,7 +412,6 @@ PAGE = r"""<!doctype html>
 <div class="rail">
 
 <section class="panel panel-ask" aria-labelledby="ask-h">
-  <span class="step">Step 1</span>
   <h2 id="ask-h">Ask the archive</h2>
   <label class="lbl" for="q">Your question</label>
   <textarea id="q" aria-describedby="q-hint" placeholder="e.g. What service levels were agreed for ordering, and in which meeting?"></textarea>
@@ -420,7 +419,6 @@ PAGE = r"""<!doctype html>
 </section>
 
 <section class="panel panel-erase" aria-labelledby="del-h">
-  <span class="step">Step 2, when you are ready</span>
   <h2 id="del-h">Erase a person</h2>
   <p class="lede">Their statements, mentions and every derived record are removed for good. Then ask again and watch what the answer loses.</p>
   <label class="lbl" for="person">Person</label>
