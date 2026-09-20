@@ -9,7 +9,7 @@ Three things and nothing else:
   2. Clickable citations -> the human anchor string expands to the unit text stored in
      data/units.jsonl. corpus/ is never read at request time: it holds the unscrubbed original.
   3. A deletion control -> runs the real pipeline/delete.py as a subprocess, then reloads.
-  4. A reset control, for between judging runs -> replaces data/ with a copy of relex-data-snapshot/
+  4. A restore control -> replaces data/ with a copy of relex-data-snapshot/
      (the pre-deletion pipeline output) and reloads in-process, so the port and any tunnel in front
      of it survive. Click only: never on start-up, never on a timer. The snapshot is read, never
      served, listed or written.
@@ -206,22 +206,26 @@ class State:
                 "verify_clean": bool(rec.get("verify", {}).get("clean")),
             }
             self.load()   # warm, so the next question does not pay the model load
-            return {"ok": True, "summary": summary, "people": self.people()}
+            return {"ok": True, "summary": summary, "people": self.people(), "archive": self.archive()}
+
+    @staticmethod
+    def archive():
+        """Live state of data/: claims held, people deleted (one deletion-log record per person)."""
+        claims = sum(1 for l in (DATA / "claims.jsonl").open(encoding="utf-8") if l.strip())
+        log = DATA / "deletion_log.jsonl"
+        deleted = sum(1 for l in log.open(encoding="utf-8") if l.strip()) if log.exists() else 0
+        return {"claims": claims, "deleted_people": deleted}
 
     def reset(self):
         with self.lock:
             try:
                 warning = restore_data()
             except OSError as e:
-                return {"ok": False, "error": f"Reset failed: {e}"}
+                return {"ok": False, "error": f"Restore failed: {e}"}
             self.answerer = None
             self.units = None
             self.load()
-            claims = sum(1 for l in (DATA / "claims.jsonl").open(encoding="utf-8") if l.strip())
-            log = DATA / "deletion_log.jsonl"
-            entries = sum(1 for l in log.open(encoding="utf-8") if l.strip()) if log.exists() else 0
-            return {"ok": True, "claims": claims, "deletion_log_entries": entries, "warning": warning,
-                    "people": self.people()}
+            return {"ok": True, "archive": self.archive(), "warning": warning, "people": self.people()}
 
 
 STATE = State()
@@ -321,7 +325,7 @@ PAGE = r"""<!doctype html>
  .done .row{margin-top:var(--sm)}
  .error{background:var(--danger-soft);border:1px solid #FCA5A5;color:#7F1D1D;border-radius:var(--r);padding:.7em .85em;margin:var(--sm) 0;font-size:.95rem}
 
- /* reset strip: between judging runs, kept apart from the ask and erase controls */
+ /* archive strip: live state and the restore action, kept apart from the ask and erase controls */
  .foot{border-top:1px solid var(--line);background:var(--card);margin-top:var(--xl)}
  .foot-in{max-width:80rem;margin:0 auto;padding:var(--lg);display:flex;align-items:flex-start;gap:var(--sm) var(--lg);flex-wrap:wrap}
  .foot h2{margin:0 0 var(--xs);font:600 .95rem/1.3 var(--ui)}
@@ -452,16 +456,17 @@ PAGE = r"""<!doctype html>
 </main>
 </div>
 
-<footer class="foot" aria-labelledby="reset-h">
+<footer class="foot" aria-labelledby="archive-h">
   <div class="foot-in">
     <div>
-      <h2 id="reset-h">Between judging runs</h2>
-      <p>Deletions are real. Reset puts the archive back to its pre-deletion state so the next judge starts from the full record. Questions and deletions wait while it runs.</p>
+      <h2 id="archive-h">Archive</h2>
+      <p id="archive-line" role="status" aria-live="polite">Reading the archive…</p>
+      <p>Deletions are permanent. Restoring returns the archive to its complete record.</p>
     </div>
     <div class="foot-ctl">
-      <button id="reset" class="quiet" type="button">Reset archive</button>
-      <div id="resetconfirm" class="confirm" role="alertdialog" aria-labelledby="reset-h" hidden>Every deletion made so far will be undone and the full archive restored.
-        <div class="row"><button id="resetyes" type="button">Confirm reset</button><button id="resetno" class="quiet" type="button">Cancel</button></div>
+      <button id="reset" class="quiet" type="button" disabled>Restore full archive</button>
+      <div id="resetconfirm" class="confirm" role="alertdialog" aria-labelledby="archive-h" hidden>Every deleted person returns to the archive.
+        <div class="row"><button id="resetyes" type="button">Restore</button><button id="resetno" class="quiet" type="button">Cancel</button></div>
       </div>
       <div id="resetstatus" role="status" aria-live="polite"></div>
     </div>
@@ -709,29 +714,40 @@ document.getElementById("delyes").onclick = async () => {
       if(!s.verify_clean) document.getElementById("delresult").innerHTML += `<div class="error" role="alert">Verification sweep did not come back clean — see the deletion log.</div>`;
       const again = document.getElementById("askagain");
       if(again) again.onclick = () => { qEl.value = lastQuestion; grow(); askBtn.click(); };
-      personEl.value = ""; fillPeople(r.people);
+      personEl.value = ""; fillPeople(r.people); if(r.archive) showArchive(r.archive);
     }
   } catch(e){ document.getElementById("delresult").innerHTML = `<div class="error">request failed: ${esc(e)}</div>`; }
   delHint.textContent = ""; document.getElementById("del").disabled = false;
 };
-const resetBtn = document.getElementById("reset"), resetStatus = document.getElementById("resetstatus");
+const resetBtn = document.getElementById("reset"), resetStatus = document.getElementById("resetstatus"), archiveLine = document.getElementById("archive-line");
+// One sentence for the archive's state; the restore confirmation reuses it so the two read as one thing.
+function archiveWords(a){
+  return `${a.claims.toLocaleString()} claim${a.claims===1?"":"s"}, ${a.deleted_people===0 ? "no people" : a.deleted_people===1 ? "1 person" : a.deleted_people + " people"} deleted`;
+}
+function showArchive(a){
+  archiveLine.textContent = `The archive holds ${archiveWords(a)}.`;
+  resetBtn.disabled = a.deleted_people === 0;
+}
 resetBtn.onclick = () => { document.getElementById("resetconfirm").hidden = false; resetStatus.innerHTML = ""; document.getElementById("resetyes").focus(); };
 document.getElementById("resetno").onclick = () => { document.getElementById("resetconfirm").hidden = true; };
 document.getElementById("resetyes").onclick = async () => {
   document.getElementById("resetconfirm").hidden = true;
   resetBtn.disabled = true; document.getElementById("del").disabled = true; askBtn.disabled = true;
-  resetStatus.innerHTML = `<div class="loading">Restoring the archive and reloading the index</div>`;
+  resetStatus.innerHTML = `<div class="loading">Restoring the archive</div>`;
   try {
     const r = await post("/api/reset", {});
     if(!r.ok){ resetStatus.innerHTML = `<div class="error" role="alert">${esc(r.error)}</div>`; }
     else {
-      resetStatus.innerHTML = `<div class="done"><strong>Archive reset.</strong> ${r.claims} claims, ${r.deletion_log_entries} deletion log ${r.deletion_log_entries===1?"entry":"entries"}.` +
+      resetStatus.innerHTML = `<div class="done"><strong>Restored.</strong> The archive holds ${archiveWords(r.archive)}.` +
         (r.warning ? `<div class="error" role="alert">${esc(r.warning)}</div>` : "") + `</div>`;
+      showArchive(r.archive);
       personEl.value = ""; delHint.textContent = ""; document.getElementById("delresult").innerHTML = ""; fillPeople(r.people);
     }
   } catch(e){ resetStatus.innerHTML = `<div class="error" role="alert">request failed: ${esc(e)}</div>`; }
-  resetBtn.disabled = false; document.getElementById("del").disabled = false; askBtn.disabled = false;
+  document.getElementById("del").disabled = false; askBtn.disabled = false;
+  fetch("/api/archive").then(r => r.json()).then(showArchive);
 };
+fetch("/api/archive").then(r => r.json()).then(showArchive);
 fetch("/api/people").then(r => r.json()).then(fillPeople);
 </script></body></html>
 """
@@ -755,6 +771,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, PAGE, "text/html; charset=utf-8")
         if self.path == "/api/people":
             return self._send(200, STATE.people())
+        if self.path == "/api/archive":
+            return self._send(200, STATE.archive())
         return self._send(404, {"error": "not found"})
 
     def do_POST(self):
