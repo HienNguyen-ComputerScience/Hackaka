@@ -1,0 +1,49 @@
+# emails/07_op-id-field-exclusion.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:07_op-id-field-exclusion:m01] 2025-11-18T08:20 | Priya Nair -> Nadia Haddad | subject: OP_ID field - exclusion from fresh feed
+Nadia,
+
+Following Monday's call, confirming this as a condition rather than a request.
+
+The waste write-off extract currently includes OP_ID, a six digit operator identifier
+identifying the individual who scanned the item out. Examples from the November file:
+
+447102  Marika Lindqvist, store 118 Vantaa, nights
+448933  Osman Yildirim, store 118 Vantaa
+451207  Heidi Salminen, store 094 Espoo
+
+This has been in every file since February. It must be excluded at source before the
+next extract runs. Please confirm the field is dropped and tell me what you have done
+with the files already delivered.
+
+Our works council will ask. I would rather answer them than be asked.
+
+If the answer to the second question is complicated, put it on the agenda for the
+January session rather than replying to this.
+
+[email:07_op-id-field-exclusion:m02] 2025-11-19T11:44 | Nadia Haddad -> Priya Nair | subject: Re: OP_ID field - exclusion from fresh feed
+Hi Priya,
+
+Confirmed. OP_ID is dropped at the extract from the next run, which is Friday night.
+
+On files already delivered: they are in the raw landing zone and in the processed store.
+Kwame is checking whether the field made it into anything downstream. I will come back
+with a definitive answer rather than a reassuring one.
+
+[email:07_op-id-field-exclusion:m03] 2025-11-24T17:10 | Kwame Boateng -> Nadia Haddad | subject: Re: OP_ID field - exclusion from fresh feed
+Answer on the historic files.
+
+OP_ID is present in the raw landing zone for every daily file since 14 February. It is
+not carried into the aggregated waste tables, which group by store and article.
+
+However it is present in the reconciliation extracts we produced in June and September
+for the data quality review, because those were row level. Two of those were emailed as
+attachments, once to Priya and once to a distribution list of nine people including
+three at Meridian.
+
+I can purge the landing zone. I cannot purge the attachments.
+
+[email:07_op-id-field-exclusion:m04] 2025-11-24T17:55 | Priya Nair -> Kwame Boateng | subject: OP_ID field - exclusion from fresh feed
+Three at Meridian.
+

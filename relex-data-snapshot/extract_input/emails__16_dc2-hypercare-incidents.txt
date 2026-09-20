@@ -1,0 +1,51 @@
+# emails/16_dc2-hypercare-incidents.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:16_dc2-hypercare-incidents:m01] 2025-03-14T11:05 | Lena Fischer -> Ana Duarte | subject: DC-2 feed failures - 6 and 14 March
+Ana,
+
+Second failure this week. My planners worked all morning on Thursday's stock figures
+without knowing it. We over-ordered on about forty lines.
+
+The monitoring alerted Kwame, who is on holiday. Nobody else was watching.
+
+I raised the cover question with you in January and I was told it would be handled.
+
+Mit freundlichen Grüßen
+
+[email:16_dc2-hypercare-incidents:m02] 2025-03-14T12:20 | Ana Duarte -> Lena Fischer | subject: Re: DC-2 feed failures - 6 and 14 March
+Lena,
+
+You did raise it and I did not close it. That is on me.
+
+Tomas is covering from now until Kwame returns on the 24th. His number is in the runbook
+and I will send it separately.
+
+I will have a named second person on the runbook permanently by the end of next week.
+
+Best regards,
+
+[email:16_dc2-hypercare-incidents:m03] 2025-03-17T09:40 | Priya Nair -> Ana Duarte | subject: Re: DC-2 feed failures - 6 and 14 March
+Technical note so this is on the record properly.
+
+6 March: middleware failure on DC-2. This is the known issue from the April 2024
+assessment.
+
+14 March: not the middleware. The job ran and moved three files, one of which was empty
+because an upstream export had not completed. Job reported success.
+
+These are two different failure modes. Please do not let them be merged into one line in
+the incident log, because the fixes are different. The second one is a file size check
+and I can do it this week.
+
+[email:16_dc2-hypercare-incidents:m04] 2025-03-17T14:15 | Tomas Lindholm -> Priya Nair | subject: Re: DC-2 feed failures - 6 and 14 March
+Agreed and noted separately. Please do add the file size check.
+
+For the record, we should have had it from the start. An empty file passing as success is
+the kind of thing a design review is supposed to catch.
+
+Med vänliga hälsningar,
+
+[email:16_dc2-hypercare-incidents:m05] 2025-03-21T17:50 | Priya Nair -> Tomas Lindholm | subject: DC-2 feed failures - 6 and 14 March
+File size check in place. Any file under 1KB now fails the job loudly.
+

@@ -1,0 +1,315 @@
+# transcripts/02_2024-04-18_technical-due-diligence.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:02_2024-04-18_technical-due-diligence:t001] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 0:41 (line 15)
+— so if we can start with the estate and work inwards.
+
+[transcript:02_2024-04-18_technical-due-diligence:t002] 2024-04-18 | Priya Nair | Priya Nair @ 0:51 (line 20)
+Sorry, who am I talking talking to? I
+
+[transcript:02_2024-04-18_technical-due-diligence:t003] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 0:58 (line 25)
+Okay.
+
+[transcript:02_2024-04-18_technical-due-diligence:t004] 2024-04-18 | Priya Nair | Priya Nair @ 1:01 (line 30)
+got the invite from Marco but I have not met you.
+
+[transcript:02_2024-04-18_technical-due-diligence:t005] 2024-04-18 | Marco Rossi | Marco Rossi @ 1:11 (line 37)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t006] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 1:15 (line 42)
+I mean, tomas Lindholm, solution architect. I do the part where we find out whether what Marco has
+
+[transcript:02_2024-04-18_technical-due-diligence:t007] 2024-04-18 | Marco Rossi | Marco Rossi @ 1:29 (line 49)
+True.
+
+[transcript:02_2024-04-18_technical-due-diligence:t008] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 1:31 (line 54)
+promised is possible.
+
+[transcript:02_2024-04-18_technical-due-diligence:t009] 2024-04-18 | Priya Nair | Priya Nair @ 1:38 (line 59)
+Good. I have questions for...
+
+[transcript:02_2024-04-18_technical-due-diligence:t010] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 1:42 (line 64)
+Yes.
+
+[transcript:02_2024-04-18_technical-due-diligence:t011] 2024-04-18 | Priya Nair | Priya Nair @ 1:44 (line 69)
+that person.
+
+[transcript:02_2024-04-18_technical-due-diligence:t012] 2024-04-18 | Marco Rossi | Marco Rossi @ 1:51 (line 74)
+I did warn you.
+
+[transcript:02_2024-04-18_technical-due-diligence:t013] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 1:57 (line 79)
+Let us
+
+[transcript:02_2024-04-18_technical-due-diligence:t014] 2024-04-18 | Lena Fischer | Lena Fischer @ 2:00 (line 84)
+Yeah, yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t015] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 2:04 (line 89)
+start with the ERP.
+
+[transcript:02_2024-04-18_technical-due-diligence:t016] 2024-04-18 | Priya Nair | Priya Nair @ 2:08 (line 94)
+SAP. ECC six,
+
+[transcript:02_2024-04-18_technical-due-diligence:t017] 2024-04-18 | Lena Fischer | Lena Fischer @ 2:12 (line 99)
+Understood.
+
+[transcript:02_2024-04-18_technical-due-diligence:t018] 2024-04-18 | Priya Nair | Priya Nair @ 2:13 (line 104)
+point zero.
+
+[transcript:02_2024-04-18_technical-due-diligence:t019] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 2:20 (line 109)
+Fair enough. Not S/4.
+
+[transcript:02_2024-04-18_technical-due-diligence:t020] 2024-04-18 | Priya Nair | Priya Nair @ 2:29 (line 119)
+No, and I want to be clear about that now rather than in month three, you,
+
+[transcript:02_2024-04-18_technical-due-diligence:t021] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 2:49 (line 128)
+True.
+
+[transcript:02_2024-04-18_technical-due-diligence:t022] 2024-04-18 | Priya Nair | Priya Nair @ 2:50 (line 133)
+know because every vendor assumes. There is no, Sorry, go ahead. S/4 migration the roadmap. There is a slide somewhere that says 2029 and but... not plan around it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t023] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 3:15 (line 146)
+Okay, yeah. ECC is fine.
+
+[transcript:02_2024-04-18_technical-due-diligence:t024] 2024-04-18 | Marco Rossi | Marco Rossi @ 3:21 (line 156)
+Right.
+
+[transcript:02_2024-04-18_technical-due-diligence:t025] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 3:24 (line 161)
+Most of our retail base is on it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t026] 2024-04-18 | Priya Nair | Priya Nair @ 3:31 (line 166)
+Then you are the first...
+
+[transcript:02_2024-04-18_technical-due-diligence:t027] 2024-04-18 | Marco Rossi | Marco Rossi @ 3:36 (line 171)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t028] 2024-04-18 | Priya Nair | Priya Nair @ 3:39 (line 176)
+who has said that without pausing.
+
+[transcript:02_2024-04-18_technical-due-diligence:t029] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 3:42 (line 181)
+How do we get data out?
+
+[transcript:02_2024-04-18_technical-due-diligence:t030] 2024-04-18 | Marco Rossi | Marco Rossi @ 3:45 (line 186)
+Mm, okay.
+
+[transcript:02_2024-04-18_technical-due-diligence:t031] 2024-04-18 | Priya Nair | Priya Nair @ 3:47 (line 191)
+Nightly batch. There is an extract that runs at two in the morning and produces master so the...
+
+[transcript:02_2024-04-18_technical-due-diligence:t032] 2024-04-18 | Lena Fischer | Lena Fischer @ 4:01 (line 200)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t033] 2024-04-18 | Priya Nair | Priya Nair @ 4:05 (line 205)
+That is the mechanism, and it is the only mechanism.
+
+[transcript:02_2024-04-18_technical-due-diligence:t034] 2024-04-18 | Lena Fischer | Lena Fischer @ 4:12 (line 210)
+Sure.
+
+[transcript:02_2024-04-18_technical-due-diligence:t035] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 4:15 (line 215)
+No real-time interface.
+
+[transcript:02_2024-04-18_technical-due-diligence:t036] 2024-04-18 | Priya Nair | Priya Nair @ 4:20 (line 220)
+No, and there will not be one for this project. Building one is a separate business so... does not
+
+[transcript:02_2024-04-18_technical-due-diligence:t037] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 4:36 (line 229)
+Mm, okay.
+
+[transcript:02_2024-04-18_technical-due-diligence:t038] 2024-04-18 | Priya Nair | Priya Nair @ 4:37 (line 234)
+have the people.
+
+[transcript:02_2024-04-18_technical-due-diligence:t039] 2024-04-18 | Marco Rossi | Marco Rossi @ 4:42 (line 239)
+Okay, yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t040] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 4:44 (line 244)
+Understood. For daily replenishmentt a nightly... batch is workable.
+
+[transcript:02_2024-04-18_technical-due-diligence:t041] 2024-04-18 | Marco Rossi | Marco Rossi @ 4:56 (line 251)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t042] 2024-04-18 | Priya Nair | Priya Nair @ 4:58 (line 256)
+Then we agree.
+
+[transcript:02_2024-04-18_technical-due-diligence:t043] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 5:01 (line 261)
+Distribution centres.
+
+[transcript:02_2024-04-18_technical-due-diligence:t044] 2024-04-18 | Marco Rossi | Marco Rossi @ 5:06 (line 266)
+Got it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t045] 2024-04-18 | Priya Nair | Priya Nair @ 5:10 (line 271)
+Two. DC-1 and DC-2.
+
+[transcript:02_2024-04-18_technical-due-diligence:t046] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 5:17 (line 276)
+Same setup?
+
+[transcript:02_2024-04-18_technical-due-diligence:t047] 2024-04-18 | Priya Nair | Priya Nair @ 5:20 (line 281)
+No, and this is the thing so...
+
+[transcript:02_2024-04-18_technical-due-diligence:t048] 2024-04-18 | Lena Fischer | Lena Fischer @ 5:28 (line 286)
+Okay, yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t049] 2024-04-18 | Priya Nair | Priya Nair @ 5:29 (line 291)
+migrated onto...
+
+[transcript:02_2024-04-18_technical-due-diligence:t050] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 5:33 (line 296)
+Sure.
+
+[transcript:02_2024-04-18_technical-due-diligence:t051] 2024-04-18 | Priya Nair | Priya Nair @ 5:37 (line 301)
+current middleware two years ago. DC-2 was
+
+[transcript:02_2024-04-18_technical-due-diligence:t052] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 5:44 (line 306)
+Mm, okay.
+
+[transcript:02_2024-04-18_technical-due-diligence:t053] 2024-04-18 | Priya Nair | Priya Nair @ 5:48 (line 311)
+not, because it was supposed to be closing.
+
+[transcript:02_2024-04-18_technical-due-diligence:t054] 2024-04-18 | Lena Fischer | Lena Fischer @ 6:01 (line 318)
+It did not not close.
+
+[transcript:02_2024-04-18_technical-due-diligence:t055] 2024-04-18 | Priya Nair | Priya Nair @ 6:06 (line 323)
+It did did not close. So DC-2 runs on a version that is out of support, and the integration integration fails. Not constantly. Maybe every couple of weeks. And when it, fails it fails silently, which is worse than failing loudly.
+
+[transcript:02_2024-04-18_technical-due-diligence:t056] 2024-04-18 | Lena Fischer | Lena Fischer @ 6:36 (line 332)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t057] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 6:40 (line 337)
+Silently meaning no error?
+
+[transcript:02_2024-04-18_technical-due-diligence:t058] 2024-04-18 | Priya Nair | Priya Nair @ 6:47 (line 342)
+Meaning the job reports success and moves nothing. We find out when somebody notices the numbers are yesterday's.
+
+[transcript:02_2024-04-18_technical-due-diligence:t059] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 6:59 (line 347)
+How do you find out today?
+
+[transcript:02_2024-04-18_technical-due-diligence:t060] 2024-04-18 | Priya Nair | Priya Nair @ 7:05 (line 352)
+It's somewhere here. A person looks.
+
+[transcript:02_2024-04-18_technical-due-diligence:t061] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 7:21 (line 359)
+Yeah, yeah. Right.
+
+[transcript:02_2024-04-18_technical-due-diligence:t062] 2024-04-18 | Priya Nair | Priya Nair @ 7:28 (line 369)
+I have asked for for budget to upgrade three times. There has with the...
+
+[transcript:02_2024-04-18_technical-due-diligence:t063] 2024-04-18 | Marco Rossi | Marco Rossi @ 7:37 (line 374)
+Mm.
+
+[transcript:02_2024-04-18_technical-due-diligence:t064] 2024-04-18 | Priya Nair | Priya Nair @ 7:40 (line 379)
+nothing important depended on it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t065] 2024-04-18 | Marco Rossi | Marco Rossi @ 7:43 (line 384)
+Mm, okay.
+
+[transcript:02_2024-04-18_technical-due-diligence:t066] 2024-04-18 | Lena Fischer | Lena Fischer @ 7:47 (line 389)
+Well, and now something will.
+
+[transcript:02_2024-04-18_technical-due-diligence:t067] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 7:50 (line 394)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t068] 2024-04-18 | Priya Nair | Priya Nair @ 7:52 (line 399)
+Now something will, which is why,
+
+[transcript:02_2024-04-18_technical-due-diligence:t069] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 7:59 (line 404)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t070] 2024-04-18 | Priya Nair | Priya Nair @ 8:00 (line 409)
+I am telling him rather than complaining about it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t071] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 8:06 (line 414)
+Then it goes in the assessment as a named risk and we design monitoring around it from day one. I would... Okay so. rather build assuming it fails than discover it.
+
+[transcript:02_2024-04-18_technical-due-diligence:t072] 2024-04-18 | Priya Nair | Priya Nair @ 8:33 (line 425)
+That is the correct answer.
+
+[transcript:02_2024-04-18_technical-due-diligence:t073] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 8:36 (line 430)
+Mm-hm. Master data. Honestly, how bad?
+
+[transcript:02_2024-04-18_technical-due-diligence:t074] 2024-04-18 | Priya Nair | Priya Nair @ 8:44 (line 440)
+True. Product master is average. Store on the... of the range, I would guess a third but I have not measured. Shelf life is worse...
+
+[transcript:02_2024-04-18_technical-due-diligence:t075] 2024-04-18 | Lena Fischer | Lena Fischer @ 9:05 (line 452)
+Okay, yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t076] 2024-04-18 | Priya Nair | Priya Nair @ 9:09 (line 457)
+than that.
+
+[transcript:02_2024-04-18_technical-due-diligence:t077] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 9:14 (line 462)
+Mm. How much worse.
+
+[transcript:02_2024-04-18_technical-due-diligence:t078] 2024-04-18 | Priya Nair | Priya Nair @ 9:21 (line 472)
+you know Populated for maybe half, and wrong for some of what is populated, because nobody has owned that field since was created.
+
+[transcript:02_2024-04-18_technical-due-diligence:t079] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 9:39 (line 481)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t080] 2024-04-18 | Marco Rossi | Marco Rossi @ 9:40 (line 486)
+Yeah. Shelf life is central to the fresh case.
+
+[transcript:02_2024-04-18_technical-due-diligence:t081] 2024-04-18 | Priya Nair | Priya Nair @ 9:52 (line 495)
+I know. That is why I am saying, it in April.
+
+[transcript:02_2024-04-18_technical-due-diligence:t082] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 10:05 (line 504)
+Is remaining shelf life stored
+
+[transcript:02_2024-04-18_technical-due-diligence:t083] 2024-04-18 | Priya Nair | Priya Nair @ 10:08 (line 509)
+Yeah.
+
+[transcript:02_2024-04-18_technical-due-diligence:t084] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 10:11 (line 514)
+Sorry, go ahead. anywhere? As opposed to total.
+
+[transcript:02_2024-04-18_technical-due-diligence:t085] 2024-04-18 | Priya Nair | Priya Nair @ 10:21 (line 521)
+What do you mean by... So... remaining.
+
+[transcript:02_2024-04-18_technical-due-diligence:t086] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 10:33 (line 530)
+Yeah, yeah. Days of life left at the moment you place an order.
+
+[transcript:02_2024-04-18_technical-due-diligence:t087] 2024-04-18 | Lena Fischer | Lena Fischer @ 10:49 (line 542)
+Mm-hm.
+
+[transcript:02_2024-04-18_technical-due-diligence:t088] 2024-04-18 | Priya Nair | Priya Nair @ 10:52 (line 547)
+Then no. We store total on the article. What is I mean... warehouse system.
+
+[transcript:02_2024-04-18_technical-due-diligence:t089] 2024-04-18 | Lena Fischer | Lena Fischer @ 11:03 (line 554)
+Of course.
+
+[transcript:02_2024-04-18_technical-due-diligence:t090] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 11:04 (line 559)
+Can we get at that?
+
+[transcript:02_2024-04-18_technical-due-diligence:t091] 2024-04-18 | Priya Nair | Priya Nair @ 11:11 (line 564)
+Okay, yeah. I do not know. but...
+
+[transcript:02_2024-04-18_technical-due-diligence:t092] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 11:18 (line 574)
+Can you find out?
+
+[transcript:02_2024-04-18_technical-due-diligence:t093] 2024-04-18 | Priya Nair | Priya Nair @ 11:22 (line 579)
+I can ask.
+
+[transcript:02_2024-04-18_technical-due-diligence:t094] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 11:28 (line 584)
+Please, right because it changes the design.
+
+[transcript:02_2024-04-18_technical-due-diligence:t095] 2024-04-18 | Priya Nair | Priya Nair @ 11:33 (line 589)
+Noted.
+
+[transcript:02_2024-04-18_technical-due-diligence:t096] 2024-04-18 | Lena Fischer | Lena Fischer @ 11:38 (line 594)
+Okay, yeah. Yeah. How long does an assessment like this take to write up?
+
+[transcript:02_2024-04-18_technical-due-diligence:t097] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 11:47 (line 606)
+You will have it in two weeks. It will say ECC is fine,
+
+[transcript:02_2024-04-18_technical-due-diligence:t098] 2024-04-18 | Marco Rossi | Marco Rossi @ 11:53 (line 611)
+Yes.
+
+[transcript:02_2024-04-18_technical-due-diligence:t099] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 11:57 (line 616)
+the batch is workable, DC-2 is a named, risk, and and master data needs a cleansing workstream that somebody at Acme has to...
+
+[transcript:02_2024-04-18_technical-due-diligence:t100] 2024-04-18 | Lena Fischer | Lena Fischer @ 12:12 (line 623)
+Mm-hm.
+
+[transcript:02_2024-04-18_technical-due-diligence:t101] 2024-04-18 | Tomas Lindholm | Tomas Lindholm @ 12:15 (line 628)
+own.
+
+[transcript:02_2024-04-18_technical-due-diligence:t102] 2024-04-18 | Priya Nair | Priya Nair @ 12:19 (line 633)
+That will be me.
+
+[transcript:02_2024-04-18_technical-due-diligence:t103] 2024-04-18 | Lena Fischer | Lena Fischer @ 12:26 (line 638)
+Yeah so, we will discuss that.
+
+[transcript:02_2024-04-18_technical-due-diligence:t104] 2024-04-18 | Priya Nair | Priya Nair @ 12:29 (line 643)
+It will be me.
+

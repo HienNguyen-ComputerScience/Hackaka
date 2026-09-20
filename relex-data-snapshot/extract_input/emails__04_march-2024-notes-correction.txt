@@ -1,0 +1,48 @@
+# emails/04_march-2024-notes-correction.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:04_march-2024-notes-correction:m01] 2025-11-18T18:05 | Sofia Almeida -> Marco Rossi | subject: Notes from March 2024 demo - correction request
+Marco,
+
+Following the call yesterday. Putting this in writing so it is not just a comment in a
+meeting.
+
+The handover pack Acme-fresh-handover-v3, page 4, under key stakeholders, records
+against my name: "out October to November, surgery". I would like that removed.
+
+I said it in the demo in March 2024 because it was relevant to the project timeline. It
+was not said so that it could be copied into a document and given to consultants I have
+never met, eighteen months later.
+
+What I do want kept is that I am the only person at Acme who knows the fresh categories,
+because that is a real project risk and it is the reason I said anything at all.
+
+Please confirm when it is done, and tell me where else it appears. You said on the call
+that it would be in a few places.
+
+[email:04_march-2024-notes-correction:m02] 2025-11-19T09:30 | Marco Rossi -> Sofia Almeida | subject: Re: Notes from March 2024 demo - correction request
+Sofia,
+
+Understood, and you are right. I have asked Ana to remove it from the handover pack
+today and to check the project site.
+
+I will come back to you on where else it appears. I do not want to give you a list that
+turns out to be incomplete, so give me a few days.
+
+[email:04_march-2024-notes-correction:m03] 2025-11-21T15:12 | Ana Duarte -> Sofia Almeida | subject: Re: Notes from March 2024 demo - correction request
+Hi Sofia,
+
+Handover pack updated, now v4, the line is gone. The old version is still in the
+document history on the project site, which I cannot delete myself - I have raised it
+with our IT.
+
+Ana
+
+Best regards,
+
+[email:04_march-2024-notes-correction:m04] 2026-03-12T10:40 | Sofia Almeida -> Ana Duarte | subject: Notes from March 2024 demo - correction request
+Hi Ana,
+
+It is March. Was this ever finished? I have not had the list Marco promised, and the
+document history point was still open when we last spoke in November.
+

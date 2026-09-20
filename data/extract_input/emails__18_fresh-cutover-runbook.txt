@@ -1,0 +1,47 @@
+# emails/18_fresh-cutover-runbook.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:18_fresh-cutover-runbook:m01] 2025-12-12T16:30 | Ana Duarte -> Priya Nair, Lena Fischer, Sofia Almeida | subject: Fresh cutover runbook
+Attached is the fresh cutover runbook for Monday.
+
+It contains the on-call mobile numbers for Kwame, Priya and Lena. Please keep distribution
+to this group only. Priya asked for that specifically in February and it is a reasonable
+request.
+
+Best regards,
+
+[email:18_fresh-cutover-runbook:m02] 2025-12-12T17:10 | Lena Fischer -> Ana Duarte | subject: Re: Fresh cutover runbook
+Received. I am going to forward the operational sections to the four regional managers
+without the contact page, since they need to know what is happening Monday.
+
+Mit freundlichen Grüßen
+
+[email:18_fresh-cutover-runbook:m03] 2025-12-12T17:25 | Ana Duarte -> Lena Fischer | subject: Re: Fresh cutover runbook
+That is exactly the right way to do it, thank you.
+
+Best regards,
+
+[email:18_fresh-cutover-runbook:m04] 2026-01-20T11:15 | Nadia Haddad -> Ivan Petrov, Ruth Oyelaran | subject: FW: Fresh cutover runbook
+Hi Ivan, Ruth,
+
+Ahead of the bakery scoping session, this is the runbook we used for the fresh cutover in
+December. It is a useful template for how we will handle the bakery go-live.
+
+Nadia
+
+[email:18_fresh-cutover-runbook:m05] 2026-01-21T08:55 | Priya Nair -> Nadia Haddad | subject: Re: Fresh cutover runbook
+Nadia,
+
+Ivan has just replied to me from a thread I was not on, quoting the runbook.
+
+Did you forward the version with the contact page in it?
+
+[email:18_fresh-cutover-runbook:m06] 2026-01-21T09:20 | Nadia Haddad -> Priya Nair | subject: Re: Fresh cutover runbook
+I forwarded the file I had. I did not know there were two versions.
+
+[email:18_fresh-cutover-runbook:m07] 2026-01-21T09:35 | Priya Nair -> Nadia Haddad | subject: Fresh cutover runbook
+There were two versions because I asked for there to be two versions.
+
+My mobile is now with a consultancy I have no contract with. Please ask them to delete it
+and tell me when they have.
+

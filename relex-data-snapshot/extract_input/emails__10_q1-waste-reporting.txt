@@ -1,0 +1,51 @@
+# emails/10_q1-waste-reporting.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:10_q1-waste-reporting:m01] 2026-04-07T11:20 | Nadia Haddad -> Lena Fischer, Sofia Almeida | subject: Q1 2026 waste reporting - fresh
+Hello,
+
+First full quarter of fresh live. Numbers against the baseline we agreed in December.
+
+Produce and dairy, 25 pilot stores, January to March:
+
+  Fresh waste            4.1% -> 3.4% of fresh net sales
+  Absolute reduction     approximately 118 tonnes over the quarter
+  Estimated CO2e avoided approximately 296 tonnes
+  Availability           +1.9 points
+  Order automation       88% on the categories in scope
+
+The CO2e figure uses the conversion factors in your own sustainability report rather
+than ours, so it should reconcile with what you publish.
+
+Chilled ready meals is not in these numbers, it went live too late in the quarter.
+
+Two caveats. The baseline quarter had an unusually warm February which flatters produce.
+And the 118 tonnes is scaled from 25 stores, so please do not multiply it up to the full
+estate in any external communication without talking to us first.
+
+One note on how it is arrived at. The tonnage is derived from the article movement totals
+in the nightly extract, not counted from till data. That is the normal basis and it has
+been stable all quarter, but it is a derivation rather than a count and I would rather say
+so than have it come up later.
+
+[email:10_q1-waste-reporting:m02] 2026-04-07T13:05 | Lena Fischer -> Nadia Haddad | subject: Re: Q1 2026 waste reporting - fresh
+This is the first number in two years that I can take to the board without
+qualifying it to death.
+
+Robert - 3.4 percent. Target is 2.8. We are two thirds of the way there on the pilot
+cohort.
+
+Mit freundlichen Grüßen
+
+[email:10_q1-waste-reporting:m03] 2026-04-07T18:40 | Robert Kahn -> Lena Fischer | subject: Re: Q1 2026 waste reporting - fresh
+Good. What does 118 tonnes cost us at current prices?
+
+[email:10_q1-waste-reporting:m04] 2026-04-08T08:15 | Sofia Almeida -> Nadia Haddad | subject: Q1 2026 waste reporting - fresh
+Nadia - the produce number looks right to me. Dairy looks too good. Can you check whether
+the dairy baseline includes the yoghurt range, because we moved that between categories
+in November and I think it may be counted in one period and not the other.
+
+Separately. You say the tonnage comes off the extract totals. Has anyone put those next to
+the till numbers for the same three months? I am not saying they are wrong. I am saying I
+do not think anyone has looked, and we are about to put this in front of the board.
+

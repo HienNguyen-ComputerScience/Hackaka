@@ -1,0 +1,381 @@
+# transcripts/01_2024-03-20_solution-demo-value-workshop.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t001] 2024-03-20 | Marco Rossi | Marco Rossi @ 1:04 (line 15)
+Thanks for the time today. Can everyone hear me?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t002] 2024-03-20 | Lena Fischer | Lena Fischer @ 1:11 (line 20)
+Yes.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t003] 2024-03-20 | Marco Rossi | Marco Rossi @ 1:20 (line 25)
+Good. So we will walk through forecasting first, then replenished,
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t004] 2024-03-20 | Lena Fischer | Lena Fischer @ 1:34 (line 32)
+Yeah, yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t005] 2024-03-20 | Marco Rossi | Marco Rossi @ 1:35 (line 37)
+then then the fresh-food capability Lena flagged in the call last
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t006] 2024-03-20 | Lena Fischer | Lena Fischer @ 1:44 (line 42)
+Mm-hm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t007] 2024-03-20 | Marco Rossi | Marco Rossi @ 1:46 (line 47)
+month.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t008] 2024-03-20 | Lena Fischer | Lena Fischer @ 1:53 (line 52)
+Mm, okay. That That order is fine but I want to say something before before you
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t009] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 2:05 (line 62)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t010] 2024-03-20 | Lena Fischer | Lena Fischer @ 2:08 (line 67)
+start.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t011] 2024-03-20 | Marco Rossi | Marco Rossi @ 2:15 (line 72)
+Please.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t012] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 2:18 (line 77)
+Right.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t013] 2024-03-20 | Lena Fischer | Lena Fischer @ 2:22 (line 82)
+The fresh waste is our... biggest pain. That is why you are here. We throw away too much produce and dairy and it is not a rounding error, it is the thing my board asks me about. If you can move that fifteen to twenty percent, like this pays for itself and I do not need to argue about anything else.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t014] 2024-03-20 | Marco Rossi | Marco Rossi @ 3:04 (line 101)
+Understood.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t015] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 3:09 (line 106)
+Okay.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t016] 2024-03-20 | Lena Fischer | Lena Fischer @ 3:13 (line 111)
+I mean I say that now because in my experience the demo goes through everything else first and then we run out of time.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t017] 2024-03-20 | Marco Rossi | Marco Rossi @ 3:31 (line 123)
+Yeah, yeah. right That is a fair warning.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t018] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 3:35 (line 133)
+Should I introduce myself?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t019] 2024-03-20 | Marco Rossi | Marco Rossi @ 3:39 (line 138)
+Sorry, what? Yeah so, please.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t020] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 3:48 (line 145)
+Sofia Almeida, I manage the fresh categories. All of them, currently, yeah which is a longer story.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t021] 2024-03-20 | Lena Fischer | Lena Fischer @ 3:56 (line 150)
+And, we lost someone in January and have not replaced them.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t022] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 4:05 (line 155)
+sort of Tobias Ekström. He did chilled and I did produce, and now I do,
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t023] 2024-03-20 | Marco Rossi | Marco Rossi @ 4:12 (line 160)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t024] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 4:14 (line 165)
+both.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t025] 2024-03-20 | Lena Fischer | Lena Fischer @ 4:20 (line 170)
+He went to a competitor, which we are not supposed to say out loud.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t026] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 4:33 (line 177)
+He went to Hemtorget. Everyone knows. So today it is all manual and gut feel. That is... not me being I mean... and my judgement. Shelf life is not in any system properly.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t027] 2024-03-20 | Marco Rossi | Marco Rossi @ 4:57 (line 188)
+Can I get your email so I send you the follow-up directly?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t028] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 5:06 (line 193)
+sofia.almeida@acme-org.example. Two Ls in Almeida, no, you know one L. Sorry. A-L-M-E-I-D-A.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t029] 2024-03-20 | Lena Fischer | Lena Fischer @ 5:14 (line 198)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t030] 2024-03-20 | Marco Rossi | Marco Rossi @ 5:15 (line 203)
+sort of a direct line?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t031] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 5:18 (line 208)
+My mobile is easier. Zero seven, six two, four four one, actually nine oh three.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t032] 2024-03-20 | Marco Rossi | Marco Rossi @ 5:31 (line 215)
+Okay so, actually Thank you. Say more about that.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t033] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 5:45 (line 225)
+We have a shelf life field in the product master. It is populated for maybe half the range... and it is but... nobody has owned it since it was set up. So when the store orders, nothing in the process knows whether the thing has three days left or three weeks.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t034] 2024-03-20 | Lena Fischer | Lena Fischer @ 6:34 (line 247)
+Right.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t035] 2024-03-20 | Marco Rossi | Marco Rossi @ 6:38 (line 252)
+And you compensate manually.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t036] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 6:44 (line 257)
+I compensate manually. On the categories where it matters most, I go in and adjust. On the rest, we accept
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t037] 2024-03-20 | Marco Rossi | Marco Rossi @ 7:00 (line 264)
+Mm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t038] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 7:03 (line 269)
+the waste.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t039] 2024-03-20 | Marco Rossi | Marco Rossi @ 7:07 (line 274)
+Which categories are the worst?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t040] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 7:11 (line 279)
+There are about four where it is bad. The obvious ones are —
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t041] 2024-03-20 | Lena Fischer | Lena Fischer @ 7:21 (line 286)
+Sorry, Marco, is that your screen or ours?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t042] 2024-03-20 | Marco Rossi | Marco Rossi @ 7:28 (line 291)
+like That is mine, one moment. Let me share properly.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t043] 2024-03-20 | Lena Fischer | Lena Fischer @ 7:41 (line 298)
+actually Now it is coming through.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t044] 2024-03-20 | Marco Rossi | Marco Rossi @ 7:48 (line 303)
+Right. So this is the forecasting engine. What you are looking at here is a store-level forecast
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t045] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 7:59 (line 308)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t046] 2024-03-20 | Marco Rossi | Marco Rossi @ 8:00 (line 313)
+for a single product, and this line is what our model produced
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t047] 2024-03-20 | Lena Fischer | Lena Fischer @ 8:07 (line 318)
+Mm-hm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t048] 2024-03-20 | Marco Rossi | Marco Rossi @ 8:10 (line 323)
+versus this line which is actual. And you can see the uplift here.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t049] 2024-03-20 | Lena Fischer | Lena Fischer @ 8:18 (line 328)
+Right. Against what baseline?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t050] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 8:26 (line 338)
+Yeah, yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t051] 2024-03-20 | Marco Rossi | Marco Rossi @ 8:27 (line 343)
+you know Against their previous system. It is on the chart, this figure here.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t052] 2024-03-20 | Lena Fischer | Lena Fischer @ 8:46 (line 350)
+basically Right.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t053] 2024-03-20 | Marco Rossi | Marco Rossi @ 8:49 (line 355)
+And then if I scroll down, this is the same view aggregated, and you can see the pattern holds. This column is the one that matters.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t054] 2024-03-20 | Lena Fischer | Lena Fischer @ 9:01 (line 360)
+Okay, yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t055] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 9:03 (line 365)
+Is that a fresh product or ambient?
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t056] 2024-03-20 | Marco Rossi | Marco Rossi @ 9:10 (line 370)
+Yeah. This particular one is embient. But the mechanism is the same.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t057] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 9:19 (line 380)
+kind of like It is not the same though.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t058] 2024-03-20 | Lena Fischer | Lena Fischer @ 9:25 (line 385)
+Sure.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t059] 2024-03-20 | Marco Rossi | Marco Rossi @ 9:29 (line 390)
+like No, you are right, the fresh case is harder and I will come to it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t060] 2024-03-20 | Lena Fischer | Lena Fischer @ 9:43 (line 395)
+Please do come to it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t061] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 9:46 (line 400)
+Okay.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t062] 2024-03-20 | Marco Rossi | Marco Rossi @ 9:48 (line 405)
+So. Shelf-life optimisation. This sits in the allocation module. What it does is take remaining... life as an input to the order calculation, so a product with three days left is treated differently from one with three weeks, which addresses exactly what Sofia described.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t063] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 10:17 (line 416)
+Where was I. That is the thing I have been asking for since I started.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t064] 2024-03-20 | Marco Rossi | Marco Rossi @ 10:30 (line 423)
+sort of Good. Now, you know the way we would normally sequence this is core replenished first, then fresh as a second, phase. The reason is de-risking. Core replenished lands value quickly and it establishes the data flows that fresh depends on.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t065] 2024-03-20 | Lena Fischer | Lena Fischer @ 11:01 (line 434)
+How long
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t066] 2024-03-20 | Marco Rossi | Marco Rossi @ 11:06 (line 439)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t067] 2024-03-20 | Lena Fischer | Lena Fischer @ 11:09 (line 444)
+is a second phase.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t068] 2024-03-20 | Marco Rossi | Marco Rossi @ 11:15 (line 449)
+Realistically a few months after the first golive.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t069] 2024-03-20 | Lena Fischer | Lena Fischer @ 11:24 (line 454)
+Understood. But fresh is the reason we are here. Do not let
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t070] 2024-03-20 | Marco Rossi | Marco Rossi @ 11:32 (line 459)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t071] 2024-03-20 | Lena Fischer | Lena Fischer @ 11:33 (line 464)
+it become a someday item.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t072] 2024-03-20 | Marco Rossi | Marco Rossi @ 11:36 (line 469)
+Noted, and I will commit it as Phase 2 in the statement of work with... a target window rather than leaving it open.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t073] 2024-03-20 | Lena Fischer | Lena Fischer @ 11:47 (line 476)
+In writing.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t074] 2024-03-20 | Marco Rossi | Marco Rossi @ 11:54 (line 481)
+Yes. In writing.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t075] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 12:04 (line 491)
+Can I raise something awkward.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t076] 2024-03-20 | Lena Fischer | Lena Fischer @ 12:11 (line 496)
+Go ahead.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t077] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 12:15 (line 501)
+Okay, yeah. If fresh is a second phase and that lands late in the year, I have surgery scheduled. but... It is me. If the fresh work happens while I am, gone, it will happen without anyone who understands what we actually need.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t078] 2024-03-20 | Lena Fischer | Lena Fischer @ 12:46 (line 515)
+Mm. We will manage it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t079] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 12:50 (line 525)
+I am not asking you to manage it, I am telling, him so it is on the record.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t080] 2024-03-20 | Lena Fischer | Lena Fischer @ 13:06 (line 535)
+Mm-hm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t081] 2024-03-20 | Marco Rossi | Marco Rossi @ 13:09 (line 540)
+It is a real risk and I am glad you said it. Single point of knowledge on, the most important part of the scope.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t082] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 13:26 (line 549)
+Yes. sort of Yes.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t083] 2024-03-20 | Robert Kahn | Robert Kahn @ 13:34 (line 559)
+Mm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t084] 2024-03-20 | Marco Rossi | Marco Rossi @ 13:37 (line 564)
+I will note it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t085] 2024-03-20 | Lena Fischer | Lena Fischer @ 13:40 (line 569)
+Sure.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t086] 2024-03-20 | Robert Kahn | Robert Kahn @ 13:44 (line 574)
+Sorry I am late, I and...
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t087] 2024-03-20 | Marco Rossi | Marco Rossi @ 13:47 (line 579)
+Okay, yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t088] 2024-03-20 | Robert Kahn | Robert Kahn @ 13:50 (line 584)
+thing that overran.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t089] 2024-03-20 | Marco Rossi | Marco Rossi @ 13:55 (line 589)
+Yeah, yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t090] 2024-03-20 | Lena Fischer | Lena Fischer @ 13:57 (line 594)
+Sorry, go ahead. Robert, right this is Marco from relics. Robert is our CFO.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t091] 2024-03-20 | Marco Rossi | Marco Rossi @ 14:07 (line 601)
+Mm-hm.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t092] 2024-03-20 | Robert Kahn | Robert Kahn @ 14:08 (line 606)
+I have about twelve minutes and one question, which is what does this cost and when do I see it back.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t093] 2024-03-20 | Marco Rossi | Marco Rossi @ 14:22 (line 613)
+We have, not talked commercials yet today.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t094] 2024-03-20 | Robert Kahn | Robert Kahn @ 14:32 (line 620)
+Yes. Then let me be clear about the frame. Whatever we,
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t095] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 14:41 (line 630)
+Yeah.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t096] 2024-03-20 | Robert Kahn | Robert Kahn @ 14:45 (line 635)
+sign, I need return on investment inside twelve months. Ambient efficiency is nice. I understand it is real. But the board cares, about waste, because waste is what
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t097] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 15:03 (line 642)
+True.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t098] 2024-03-20 | Robert Kahn | Robert Kahn @ 15:06 (line 647)
+was in the newspaper, so that is what the case has to be built on.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t099] 2024-03-20 | Marco Rossi | Marco Rossi @ 15:14 (line 652)
+Sure. Then we will structure the value case around fresh waste plus inventory reduction, measured
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t100] 2024-03-20 | Robert Kahn | Robert Kahn @ 15:29 (line 662)
+Sure.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t101] 2024-03-20 | Marco Rossi | Marco Rossi @ 15:33 (line 667)
+against your current and then the...
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t102] 2024-03-20 | Robert Kahn | Robert Kahn @ 15:38 (line 672)
+Measured how.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t103] 2024-03-20 | Marco Rossi | Marco Rossi @ 15:45 (line 677)
+We agree the baseline with you before go-live and report against it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t104] 2024-03-20 | Robert Kahn | Robert Kahn @ 15:52 (line 682)
+Fine. Twelve
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t105] 2024-03-20 | Lena Fischer | Lena Fischer @ 15:56 (line 687)
+Mm, okay.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t106] 2024-03-20 | Robert Kahn | Robert Kahn @ 15:58 (line 692)
+months.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t107] 2024-03-20 | Lena Fischer | Lena Fischer @ 16:01 (line 697)
+Robert, the fresh module is phase two.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t108] 2024-03-20 | Robert Kahn | Robert Kahn @ 16:06 (line 702)
+But, then phase,
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t109] 2024-03-20 | Lena Fischer | Lena Fischer @ 16:12 (line 707)
+Okay.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t110] 2024-03-20 | Robert Kahn | Robert Kahn @ 16:14 (line 712)
+two needs to be inside the twelve months, kind of like does it not.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t111] 2024-03-20 | Marco Rossi | Marco Rossi @ 16:27 (line 719)
+That is a tighter constraint,
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t112] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 16:34 (line 724)
+Yep.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t113] 2024-03-20 | Marco Rossi | Marco Rossi @ 16:38 (line 729)
+than I had understood.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t114] 2024-03-20 | Robert Kahn | Robert Kahn @ 16:41 (line 734)
+It is the only constraint I have.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t115] 2024-03-20 | Lena Fischer | Lena Fischer @ 16:53 (line 741)
+We should let Robert go.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t116] 2024-03-20 | Robert Kahn | Robert Kahn @ 16:58 (line 746)
+Thank you. Send me one page, not forty.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t117] 2024-03-20 | Marco Rossi | Marco Rossi @ 17:06 (line 751)
+Understood.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t118] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 17:12 (line 756)
+He does that.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t119] 2024-03-20 | Lena Fischer | Lena Fischer @ 17:18 (line 761)
+He is not wrong though.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t120] 2024-03-20 | Marco Rossi | Marco Rossi @ 17:25 (line 766)
+Let me...
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t121] 2024-03-20 | Sofia Almeida | Sofia Almeida @ 17:28 (line 771)
+Mm, okay.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t122] 2024-03-20 | Marco Rossi | Marco Rossi @ 17:32 (line 776)
+give you my mobile so you are not going through the mailbox. It is plus three five one, Ohh, that's not the one I wanted to share. so nine one two, four four seven, oh two six.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t123] 2024-03-20 | Lena Fischer | Lena Fischer @ 18:00 (line 789)
+you know Got it.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t124] 2024-03-20 | Marco Rossi | Marco Rossi @ 18:07 (line 794)
+right I will send a written summary and the value case structure this week.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t125] 2024-03-20 | Robert Kahn | Robert Kahn @ 18:14 (line 799)
+Right.
+
+[transcript:01_2024-03-20_solution-demo-value-workshop:t126] 2024-03-20 | Lena Fischer | Lena Fischer @ 18:17 (line 804)
+Thank you.
+

@@ -1,0 +1,312 @@
+# transcripts/19_2026-01-28_bakery-scoping-PARTNER.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t001] 2026-01-28 | Marco Rossi | Marco Rossi @ 0:31 (line 15)
+For anyone who has, not met them,
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t002] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 0:38 (line 22)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t003] 2026-01-28 | Marco Rossi | Marco Rossi @ 0:41 (line 27)
+Ivan and Ruth are from Meridian, who Acme have brought in for the in-store production piece.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t004] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 0:53 (line 32)
+Got it.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t005] 2026-01-28 | Lena Fischer | Lena Fischer @ 0:55 (line 37)
+Meridian did our labour scheduling two years
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t006] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 1:00 (line 42)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t007] 2026-01-28 | Lena Fischer | Lena Fischer @ 1:02 (line 47)
+ago so they know the store operation.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t008] 2026-01-28 | Marco Rossi | Marco Rossi @ 1:06 (line 52)
+Mm-hm.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t009] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 1:08 (line 57)
+We know the so the...
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t010] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 1:15 (line 62)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t011] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 1:17 (line 67)
+You're on mute. I mean Good, because we do not.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t012] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 1:27 (line 74)
+Yeah, yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t013] 2026-01-28 | Marco Rossi | Marco Rossi @ 1:30 (line 79)
+So the scope. Bakery came out of the December go-live with the... percent of it is bake-off, which
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t014] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 1:41 (line 86)
+Right.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t015] 2026-01-28 | Marco Rossi | Marco Rossi @ 1:44 (line 91)
+is a production plan rather than,
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t016] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 1:51 (line 96)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t017] 2026-01-28 | Marco Rossi | Marco Rossi @ 1:54 (line 101)
+an order.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t018] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 1:59 (line 106)
+Right.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t019] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 2:00 (line 111)
+Yeah so, which what I said in the very first meeting, in March last,
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t020] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 2:07 (line 116)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t021] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 2:09 (line 121)
+year.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t022] 2026-01-28 | Marco Rossi | Marco Rossi @ 2:13 (line 126)
+so You did.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t023] 2026-01-28 | Lena Fischer | Lena Fischer @ 2:17 (line 131)
+Mm-hm.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t024] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 2:20 (line 136)
+I am going to keep saying it.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t025] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 2:31 (line 143)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t026] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 2:32 (line 148)
+What is the split by store format?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t027] 2026-01-28 | Marco Rossi | Marco Rossi @ 2:38 (line 153)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t028] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 2:41 (line 158)
+It varies. The big stores, bake more.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t029] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 2:51 (line 165)
+Do you have it by format?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t030] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 2:57 (line 172)
+I have it in a spreadsheet.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t031] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 3:03 (line 177)
+Of course you do.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t032] 2026-01-28 | Marco Rossi | Marco Rossi @ 3:07 (line 182)
+Hmm. Nadia, can you walk so... interface points?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t033] 2026-01-28 | Lena Fischer | Lena Fischer @ 3:24 (line 191)
+Sure.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t034] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 3:26 (line 196)
+Okay so. Yes. So the production plan needs a demand signal from us, and then whatever Meridian builds consumes it. The question...
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t035] 2026-01-28 | Marco Rossi | Marco Rossi @ 3:45 (line 205)
+Mm.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t036] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 3:49 (line 210)
+is where the boundary
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t037] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 3:56 (line 215)
+Right.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t038] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 3:58 (line 220)
+sits.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t039] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 4:05 (line 225)
+We would prefer to consume a forecast and own the plan.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t040] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 4:10 (line 230)
+That works for us.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t041] 2026-01-28 | Lena Fischer | Lena Fischer @ 4:14 (line 235)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t042] 2026-01-28 | Marco Rossi | Marco Rossi @ 4:18 (line 240)
+On timelines,
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t043] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 4:23 (line 245)
+Sure.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t044] 2026-01-28 | Marco Rossi | Marco Rossi @ 4:24 (line 250)
+we have capacity from March. Before that Nadia is on another account until —
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t045] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 4:34 (line 255)
+I mean, marco.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t046] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 4:37 (line 260)
+Okay, yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t047] 2026-01-28 | Marco Rossi | Marco Rossi @ 4:38 (line 265)
+so Sorry, yes. We have capacity from March.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t048] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 4:44 (line 270)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t049] 2026-01-28 | Lena Fischer | Lena Fischer @ 4:45 (line 275)
+But, is there a problem?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t050] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 4:50 (line 280)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t051] 2026-01-28 | Marco Rossi | Marco Rossi @ 4:51 (line 285)
+No. I was about to say something about another customer's schedule and I should not, with Meridian in the room. Nothing sinister, it is just not mine to share.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t052] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 5:09 (line 292)
+I mean, i mean We are used to it.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t053] 2026-01-28 | Lena Fischer | Lena Fischer @ 5:18 (line 297)
+Fine.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t054] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 5:25 (line 302)
+So... Can I ask
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t055] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 5:36 (line 309)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t056] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 5:39 (line 314)
+what happened with the December go live? We were told it went well but not much beyond that.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t057] 2026-01-28 | Lena Fischer | Lena Fischer @ 5:52 (line 319)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t058] 2026-01-28 | Marco Rossi | Marco Rossi @ 5:53 (line 324)
+It went
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t059] 2026-01-28 | Lena Fischer | Lena Fischer @ 5:58 (line 329)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t060] 2026-01-28 | Marco Rossi | Marco Rossi @ 5:59 (line 334)
+well.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t061] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 6:04 (line 339)
+Exactly.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t062] 2026-01-28 | Lena Fischer | Lena Fischer @ 6:05 (line 344)
+It went well and I will give you the honest version because you need
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t063] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 6:17 (line 351)
+Sure.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t064] 2026-01-28 | Lena Fischer | Lena Fischer @ 6:20 (line 356)
+it to plan. Produce and,
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t065] 2026-01-28 | Marco Rossi | Marco Rossi @ 6:24 (line 361)
+Right.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t066] 2026-01-28 | Lena Fischer | Lena Fischer @ 6:26 (line 366)
+dairy are working. The DC-2 feed still fails, less often than it did, and when
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t067] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 6:37 (line 371)
+Mm.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t068] 2026-01-28 | Lena Fischer | Lena Fischer @ 6:40 (line 376)
+it fails my planners stop trusting the numbers for a day or two afterwards. So if you are building on top of this, build assuming the
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t069] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 7:00 (line 387)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t070] 2026-01-28 | Lena Fischer | Lena Fischer @ 7:01 (line 392)
+feed is imperfect.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t071] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 7:05 (line 397)
+Okay.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t072] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 7:06 (line 402)
+That is useful. Thank you.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t073] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 7:11 (line 407)
+How often is less often?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t074] 2026-01-28 | Lena Fischer | Lena Fischer @ 7:14 (line 412)
+Hmm. Priya is not here. Once a fortnight, roughly.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t075] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 7:27 (line 419)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t076] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 7:28 (line 424)
+I can can share the incident log.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t077] 2026-01-28 | Marco Rossi | Marco Rossi @ 7:33 (line 429)
+Right. Let us check what is in that log before we
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t078] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 7:43 (line 439)
+Okay, yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t079] 2026-01-28 | Marco Rossi | Marco Rossi @ 7:44 (line 444)
+share it.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t080] 2026-01-28 | Sofia Almeida | Sofia Almeida @ 7:51 (line 449)
+Okay.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t081] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 7:52 (line 454)
+Okay so. It is just failure counts.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t082] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 7:58 (line 461)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t083] 2026-01-28 | Marco Rossi | Marco Rossi @ 7:59 (line 466)
+I mean It is a thread, threads have things them that were not so...
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t084] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 8:09 (line 471)
+Of course.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t085] 2026-01-28 | Marco Rossi | Marco Rossi @ 8:13 (line 476)
+to read.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t086] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 8:18 (line 481)
+Why?
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t087] 2026-01-28 | Marco Rossi | Marco Rossi @ 8:24 (line 486)
+Because it may have things it that are between us and I mean...
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t088] 2026-01-28 | Lena Fischer | Lena Fischer @ 8:33 (line 493)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t089] 2026-01-28 | Marco Rossi | Marco Rossi @ 8:37 (line 498)
+Acme's call, basically not mine, whether Meridian sees them.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t090] 2026-01-28 | Lena Fischer | Lena Fischer @ 8:48 (line 505)
+Can you see my screen? Send it to and...
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t091] 2026-01-28 | Marco Rossi | Marco Rossi @ 9:01 (line 512)
+That is the right way round.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t092] 2026-01-28 | Lena Fischer | Lena Fischer @ 9:04 (line 517)
+Yes.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t093] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 9:06 (line 522)
+Sensible.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t094] 2026-01-28 | Lena Fischer | Lena Fischer @ 9:11 (line 527)
+Right.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t095] 2026-01-28 | Marco Rossi | Marco Rossi @ 9:15 (line 532)
+Actions then. Meridian to consume a forecast and own the production plan. Sofia to send the bake-off split by
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t096] 2026-01-28 | Ruth Oyelaran | Ruth Oyelaran @ 9:25 (line 539)
+Agreed.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t097] 2026-01-28 | Marco Rossi | Marco Rossi @ 9:26 (line 544)
+store format. Nadia to define interface points
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t098] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 9:33 (line 549)
+Yeah, yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t099] 2026-01-28 | Marco Rossi | Marco Rossi @ 9:36 (line 554)
+by mid-February. Incident log to
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t100] 2026-01-28 | Nadia Haddad | Nadia Haddad @ 9:41 (line 559)
+Yeah.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t101] 2026-01-28 | Marco Rossi | Marco Rossi @ 9:42 (line 564)
+Lena for onward sharing at her discretion. And we start in March.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t102] 2026-01-28 | Ivan Petrov | Ivan Petrov @ 10:01 (line 573)
+Sorry, go ahead. Agreed.
+
+[transcript:19_2026-01-28_bakery-scoping-PARTNER:t103] 2026-01-28 | Lena Fischer | Lena Fischer @ 10:09 (line 580)
+Sure.
+

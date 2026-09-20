@@ -1,0 +1,46 @@
+# emails/02_fresh-uat-environment-access.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:02_fresh-uat-environment-access:m01] 2025-10-06T08:55 | Sofia Almeida -> Nadia Haddad | subject: Fresh UAT environment - access
+Hi Nadia,
+
+I am supposed to review the fresh UAT output this week but I have never logged into the
+test environment. Can you send me details?
+
+[email:02_fresh-uat-environment-access:m02] 2025-10-06T09:40 | Nadia Haddad -> Sofia Almeida | subject: Re: Fresh UAT environment - access
+Hi Sofia,
+
+Your credentials should be the same as production. The URL for test is:
+
+https://acme-test.relexsolutions-hosted.example/
+
+Let me know if it does not work, the UI is slightly different after the upgrade but it
+is basically the same.
+
+[email:02_fresh-uat-environment-access:m03] 2025-10-06T13:12 | Sofia Almeida -> Nadia Haddad | subject: Re: Fresh UAT environment - access
+It does not work. I reset my password and still get this:
+
+[email:02_fresh-uat-environment-access:m04] 2025-10-07T10:18 | Nadia Haddad -> Sofia Almeida | subject: Re: Fresh UAT environment - access
+Hi again,
+
+I created a new user for you and I can log in with it.
+
+UserName: SofAlme
+Password: SofAlme2025!
+
+Please change it after first login.
+
+best regards
+
+[email:02_fresh-uat-environment-access:m05] 2025-10-07T14:30 | Sofia Almeida -> Nadia Haddad | subject: Re: Fresh UAT environment - access
+Works, thank you 👍
+
+[email:02_fresh-uat-environment-access:m06] 2026-02-17T09:25 | Kwame Boateng -> Sofia Almeida | subject: Fresh UAT environment - access
+Hi Sofia,
+
+Reviving this thread because I need to set up the same access for the bakery workstream
+and I want to reuse whatever was done for you.
+
+Nadia, was SofAlme created as a normal user or with elevated rights? I cannot tell from
+the admin panel.
+

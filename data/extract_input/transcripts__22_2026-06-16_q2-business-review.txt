@@ -1,0 +1,333 @@
+# transcripts/22_2026-06-16_q2-business-review.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:22_2026-06-16_q2-business-review:t001] 2026-06-16 | Marco Rossi | Marco Rossi @ 0:07 (line 15)
+Third formal QBR. Robert, you said you would come to the ones that matter.
+
+[transcript:22_2026-06-16_q2-business-review:t002] 2026-06-16 | Robert Kahn | Robert Kahn @ 0:14 (line 20)
+This one matters. and...
+
+[transcript:22_2026-06-16_q2-business-review:t003] 2026-06-16 | Marco Rossi | Marco Rossi @ 0:17 (line 25)
+Okay, yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t004] 2026-06-16 | Robert Kahn | Robert Kahn @ 0:19 (line 30)
+fresh.
+
+[transcript:22_2026-06-16_q2-business-review:t005] 2026-06-16 | Ana Duarte | Ana Duarte @ 0:23 (line 35)
+Numbers first. Six months live on the twenty-five store. Fresh waste has moved from four point one percent to three, point two.
+
+[transcript:22_2026-06-16_q2-business-review:t006] 2026-06-16 | Marco Rossi | Marco Rossi @ 0:41 (line 44)
+Okay.
+
+[transcript:22_2026-06-16_q2-business-review:t007] 2026-06-16 | Robert Kahn | Robert Kahn @ 0:43 (line 49)
+But, three
+
+[transcript:22_2026-06-16_q2-business-review:t008] 2026-06-16 | Marco Rossi | Marco Rossi @ 0:48 (line 54)
+Yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t009] 2026-06-16 | Robert Kahn | Robert Kahn @ 0:51 (line 59)
+point two. The target is into the...
+
+[transcript:22_2026-06-16_q2-business-review:t010] 2026-06-16 | Ana Duarte | Ana Duarte @ 0:55 (line 64)
+The target is two point eight.
+
+[transcript:22_2026-06-16_q2-business-review:t011] 2026-06-16 | Robert Kahn | Robert Kahn @ 1:05 (line 71)
+So we
+
+[transcript:22_2026-06-16_q2-business-review:t012] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 1:10 (line 76)
+Fair enough.
+
+[transcript:22_2026-06-16_q2-business-review:t013] 2026-06-16 | Robert Kahn | Robert Kahn @ 1:11 (line 81)
+are not there.
+
+[transcript:22_2026-06-16_q2-business-review:t014] 2026-06-16 | Marco Rossi | Marco Rossi @ 1:16 (line 86)
+Right.
+
+[transcript:22_2026-06-16_q2-business-review:t015] 2026-06-16 | Ana Duarte | Ana Duarte @ 1:19 (line 91)
+Right, so... We are not there. About two thirds of the gap is closed.
+
+[transcript:22_2026-06-16_q2-business-review:t016] 2026-06-16 | Robert Kahn | Robert Kahn @ 1:33 (line 98)
+kind of like In tonnes?
+
+[transcript:22_2026-06-16_q2-business-review:t017] 2026-06-16 | Ana Duarte | Ana Duarte @ 1:36 (line 103)
+Roughly two hundred and forty tonnes avoided over six months on the cohort, and about six hundred tonnes of CO2 equivalent on your own published factors.
+
+[transcript:22_2026-06-16_q2-business-review:t018] 2026-06-16 | Robert Kahn | Robert Kahn @ 1:57 (line 112)
+And if I scale that to the estate?
+
+[transcript:22_2026-06-16_q2-business-review:t019] 2026-06-16 | Marco Rossi | Marco Rossi @ 2:03 (line 117)
+Mm.
+
+[transcript:22_2026-06-16_q2-business-review:t020] 2026-06-16 | Ana Duarte | Ana Duarte @ 2:07 (line 122)
+I would rather you did not, and I,
+
+[transcript:22_2026-06-16_q2-business-review:t021] 2026-06-16 | Lena Fischer | Lena Fischer @ 2:19 (line 129)
+Exactly.
+
+[transcript:22_2026-06-16_q2-business-review:t022] 2026-06-16 | Ana Duarte | Ana Duarte @ 2:20 (line 134)
+have said so every time we have reported this. The cohort is twenty-five of three three
+
+[transcript:22_2026-06-16_q2-business-review:t023] 2026-06-16 | Robert Kahn | Robert Kahn @ 2:36 (line 141)
+Mm-hm.
+
+[transcript:22_2026-06-16_q2-business-review:t024] 2026-06-16 | Ana Duarte | Ana Duarte @ 2:40 (line 146)
+hundred and forty stores and it is not a random twenty-five.
+
+[transcript:22_2026-06-16_q2-business-review:t025] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 2:54 (line 153)
+Sure.
+
+[transcript:22_2026-06-16_q2-business-review:t026] 2026-06-16 | Robert Kahn | Robert Kahn @ 2:58 (line 158)
+Then when can I scale it?
+
+[transcript:22_2026-06-16_q2-business-review:t027] 2026-06-16 | Ana Duarte | Ana Duarte @ 3:02 (line 163)
+Yeah, yeah. When it is chain wide, which is not scoped yet.
+
+[transcript:22_2026-06-16_q2-business-review:t028] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 3:14 (line 173)
+Okay.
+
+[transcript:22_2026-06-16_q2-business-review:t029] 2026-06-16 | Robert Kahn | Robert Kahn @ 3:15 (line 178)
+Right. And the twelve month question,
+
+[transcript:22_2026-06-16_q2-business-review:t030] 2026-06-16 | Marco Rossi | Marco Rossi @ 3:22 (line 183)
+Mm.
+
+[transcript:22_2026-06-16_q2-business-review:t031] 2026-06-16 | Robert Kahn | Robert Kahn @ 3:25 (line 188)
+which I have asked since March 2024. Did we get return on investment inside twelve months of signature?
+
+[transcript:22_2026-06-16_q2-business-review:t032] 2026-06-16 | Marco Rossi | Marco Rossi @ 3:37 (line 195)
+Signature was July 2024, so the twelve. Fresh went live in December 2025.
+
+[transcript:22_2026-06-16_q2-business-review:t033] 2026-06-16 | Robert Kahn | Robert Kahn @ 3:46 (line 200)
+So the answer is no.
+
+[transcript:22_2026-06-16_q2-business-review:t034] 2026-06-16 | Marco Rossi | Marco Rossi @ 3:51 (line 205)
+On that reading, no.
+
+[transcript:22_2026-06-16_q2-business-review:t035] 2026-06-16 | Robert Kahn | Robert Kahn @ 3:55 (line 210)
+Is there another reading?
+
+[transcript:22_2026-06-16_q2-business-review:t036] 2026-06-16 | Ana Duarte | Ana Duarte @ 4:02 (line 215)
+Yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t037] 2026-06-16 | Marco Rossi | Marco Rossi @ 4:03 (line 220)
+There is a reading where the, clock starts at fresh go-live, which puts us in
+
+[transcript:22_2026-06-16_q2-business-review:t038] 2026-06-16 | Ana Duarte | Ana Duarte @ 4:16 (line 227)
+Mm, okay.
+
+[transcript:22_2026-06-16_q2-business-review:t039] 2026-06-16 | Marco Rossi | Marco Rossi @ 4:20 (line 232)
+December 2026. I do not think about the...
+
+[transcript:22_2026-06-16_q2-business-review:t040] 2026-06-16 | Ana Duarte | Ana Duarte @ 4:27 (line 237)
+Mm-hm.
+
+[transcript:22_2026-06-16_q2-business-review:t041] 2026-06-16 | Marco Rossi | Marco Rossi @ 4:28 (line 242)
+to and I am not going to to argue
+
+[transcript:22_2026-06-16_q2-business-review:t042] 2026-06-16 | Lena Fischer | Lena Fischer @ 4:35 (line 247)
+Mm.
+
+[transcript:22_2026-06-16_q2-business-review:t043] 2026-06-16 | Marco Rossi | Marco Rossi @ 4:37 (line 252)
+for it.
+
+[transcript:22_2026-06-16_q2-business-review:t044] 2026-06-16 | Ana Duarte | Ana Duarte @ 4:41 (line 257)
+Yeah, yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t045] 2026-06-16 | Robert Kahn | Robert Kahn @ 4:42 (line 262)
+So, i
+
+[transcript:22_2026-06-16_q2-business-review:t046] 2026-06-16 | Lena Fischer | Lena Fischer @ 4:49 (line 267)
+Yes.
+
+[transcript:22_2026-06-16_q2-business-review:t047] 2026-06-16 | Robert Kahn | Robert Kahn @ 4:52 (line 272)
+appreciate that. I have been in
+
+[transcript:22_2026-06-16_q2-business-review:t048] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 4:59 (line 277)
+Okay, yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t049] 2026-06-16 | Robert Kahn | Robert Kahn @ 5:03 (line 282)
+rooms where somebody argued for it.
+
+[transcript:22_2026-06-16_q2-business-review:t050] 2026-06-16 | Lena Fischer | Lena Fischer @ 5:10 (line 289)
+You're on mute. Robert, can I say the part that is not in, the numbers.
+
+[transcript:22_2026-06-16_q2-business-review:t051] 2026-06-16 | Robert Kahn | Robert Kahn @ 5:30 (line 298)
+Got it. Go on.
+
+[transcript:22_2026-06-16_q2-business-review:t052] 2026-06-16 | Lena Fischer | Lena Fischer @ 5:35 (line 308)
+My planners trust the system now. In March last year two stores went back to spreadsheets, and it took four months to get them off them. Nobody is on a spreadsheet now except Sofia, so and Sofia is on one because we, never solved her data problem, not because she does not and the...
+
+[transcript:22_2026-06-16_q2-business-review:t053] 2026-06-16 | Robert Kahn | Robert Kahn @ 6:07 (line 319)
+Mm, okay.
+
+[transcript:22_2026-06-16_q2-business-review:t054] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 6:09 (line 324)
+That is...
+
+[transcript:22_2026-06-16_q2-business-review:t055] 2026-06-16 | Ana Duarte | Ana Duarte @ 6:13 (line 329)
+Right.
+
+[transcript:22_2026-06-16_q2-business-review:t056] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 6:17 (line 334)
+accurate.
+
+[transcript:22_2026-06-16_q2-business-review:t057] 2026-06-16 | Robert Kahn | Robert Kahn @ 6:21 (line 339)
+kind of like Sofia, yeah how much of your week is manual?
+
+[transcript:22_2026-06-16_q2-business-review:t058] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 6:27 (line 344)
+But, on the slow
+
+[transcript:22_2026-06-16_q2-business-review:t059] 2026-06-16 | Lena Fischer | Lena Fischer @ 6:30 (line 349)
+Right.
+
+[transcript:22_2026-06-16_q2-business-review:t060] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 6:34 (line 354)
+moving fresh lines, about a day and a half.
+
+[transcript:22_2026-06-16_q2-business-review:t061] 2026-06-16 | Robert Kahn | Robert Kahn @ 6:43 (line 359)
+Out of five.
+
+[transcript:22_2026-06-16_q2-business-review:t062] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 6:46 (line 364)
+Out of five.
+
+[transcript:22_2026-06-16_q2-business-review:t063] 2026-06-16 | Lena Fischer | Lena Fischer @ 6:53 (line 369)
+Okay.
+
+[transcript:22_2026-06-16_q2-business-review:t064] 2026-06-16 | Robert Kahn | Robert Kahn @ 6:57 (line 374)
+know And the reason from the...
+
+[transcript:22_2026-06-16_q2-business-review:t065] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 7:02 (line 379)
+The reason is a data field that lives in the warehouse Hmm. system, which we first asked about April 2024.
+
+[transcript:22_2026-06-16_q2-business-review:t066] 2026-06-16 | Marco Rossi | Marco Rossi @ 7:19 (line 388)
+Yeah, yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t067] 2026-06-16 | Robert Kahn | Robert Kahn @ 7:22 (line 393)
+Priya knows?
+
+[transcript:22_2026-06-16_q2-business-review:t068] 2026-06-16 | Lena Fischer | Lena Fischer @ 7:28 (line 398)
+Priya has asked. It a different team.
+
+[transcript:22_2026-06-16_q2-business-review:t069] 2026-06-16 | Robert Kahn | Robert Kahn @ 7:36 (line 403)
+So... Then I will ask. Send me when the...
+
+[transcript:22_2026-06-16_q2-business-review:t070] 2026-06-16 | Lena Fischer | Lena Fischer @ 7:45 (line 410)
+Mm-hm.
+
+[transcript:22_2026-06-16_q2-business-review:t071] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 7:46 (line 415)
+Thank you.
+
+[transcript:22_2026-06-16_q2-business-review:t072] 2026-06-16 | Marco Rossi | Marco Rossi @ 7:50 (line 420)
+On next steps there are two conversations. Chain wide rollout for the three fresh categories, and bakery, where the... in in build with Meridian.
+
+[transcript:22_2026-06-16_q2-business-review:t073] 2026-06-16 | Robert Kahn | Robert Kahn @ 8:12 (line 429)
+What does chain wide cost?
+
+[transcript:22_2026-06-16_q2-business-review:t074] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 8:16 (line 434)
+Exactly.
+
+[transcript:22_2026-06-16_q2-business-review:t075] 2026-06-16 | Marco Rossi | Marco Rossi @ 8:17 (line 439)
+I will come back.
+
+[transcript:22_2026-06-16_q2-business-review:t076] 2026-06-16 | Robert Kahn | Robert Kahn @ 8:23 (line 444)
+Do that. And put two point eight after the...
+
+[transcript:22_2026-06-16_q2-business-review:t077] 2026-06-16 | Ana Duarte | Ana Duarte @ 8:30 (line 449)
+Okay.
+
+[transcript:22_2026-06-16_q2-business-review:t078] 2026-06-16 | Robert Kahn | Robert Kahn @ 8:31 (line 454)
+three point two.
+
+[transcript:22_2026-06-16_q2-business-review:t079] 2026-06-16 | Marco Rossi | Marco Rossi @ 8:35 (line 459)
+Of course. Understood.
+
+[transcript:22_2026-06-16_q2-business-review:t080] 2026-06-16 | Ana Duarte | Ana Duarte @ 8:39 (line 469)
+One item,
+
+[transcript:22_2026-06-16_q2-business-review:t081] 2026-06-16 | Marco Rossi | Marco Rossi @ 8:46 (line 474)
+Agreed.
+
+[transcript:22_2026-06-16_q2-business-review:t082] 2026-06-16 | Ana Duarte | Ana Duarte @ 8:48 (line 479)
+So as you can see... to close from the last review. Sofia raised a request in November to have a personal, detail removed from our documentation. Marco.
+
+[transcript:22_2026-06-16_q2-business-review:t083] 2026-06-16 | Marco Rossi | Marco Rossi @ 9:09 (line 488)
+Yeah. Still not fully closed. Three of four locations done. The fourth...
+
+[transcript:22_2026-06-16_q2-business-review:t084] 2026-06-16 | Ana Duarte | Ana Duarte @ 9:18 (line 498)
+Okay, yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t085] 2026-06-16 | Marco Rossi | Marco Rossi @ 9:20 (line 503)
+is a document version.
+
+[transcript:22_2026-06-16_q2-business-review:t086] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 9:27 (line 508)
+If you look at this column. It is
+
+[transcript:22_2026-06-16_q2-business-review:t087] 2026-06-16 | Ana Duarte | Ana Duarte @ 9:40 (line 515)
+Yes.
+
+[transcript:22_2026-06-16_q2-business-review:t088] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 9:41 (line 520)
+seven months.
+
+[transcript:22_2026-06-16_q2-business-review:t089] 2026-06-16 | Marco Rossi | Marco Rossi @ 9:47 (line 525)
+It is seven months and I, do not Can you hear me? have a better answer than that.
+
+[transcript:22_2026-06-16_q2-business-review:t090] 2026-06-16 | Robert Kahn | Robert Kahn @ 10:06 (line 536)
+Sure. Katarina knows?
+
+[transcript:22_2026-06-16_q2-business-review:t091] 2026-06-16 | Marco Rossi | Marco Rossi @ 10:14 (line 546)
+Yeah. Katarina has it as an open action.
+
+[transcript:22_2026-06-16_q2-business-review:t092] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 10:21 (line 556)
+Yeah.
+
+[transcript:22_2026-06-16_q2-business-review:t093] 2026-06-16 | Robert Kahn | Robert Kahn @ 10:24 (line 561)
+Then close it.
+
+[transcript:22_2026-06-16_q2-business-review:t094] 2026-06-16 | Sofia Almeida | Sofia Almeida @ 10:30 (line 566)
+Yes.
+
+[transcript:22_2026-06-16_q2-business-review:t095] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 10:34 (line 571)
+Before we close. Sofia asked me something in April and I have only just done it. I put the extract totals next to the till numbers for January to March.
+
+[transcript:22_2026-06-16_q2-business-review:t096] 2026-06-16 | Lena Fischer | Lena Fischer @ 10:48 (line 578)
+And?
+
+[transcript:22_2026-06-16_q2-business-review:t097] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 10:51 (line 583)
+They do not reconcile. The extract is lower.
+
+[transcript:22_2026-06-16_q2-business-review:t098] 2026-06-16 | Robert Kahn | Robert Kahn @ 10:57 (line 588)
+Lower by how much?
+
+[transcript:22_2026-06-16_q2-business-review:t099] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 11:02 (line 593)
+I am not going to give you a number in this meeting because I have had it for two days and I do not trust it yet. It is not a rounding difference.
+
+[transcript:22_2026-06-16_q2-business-review:t100] 2026-06-16 | Ana Duarte | Ana Duarte @ 11:16 (line 600)
+The weeklies said the extract completed.
+
+[transcript:22_2026-06-16_q2-business-review:t101] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 11:21 (line 605)
+They did. It did. The job ran and the file landed every night. That is what completed means in that line. Nobody has ever checked what was in it.
+
+[transcript:22_2026-06-16_q2-business-review:t102] 2026-06-16 | Lena Fischer | Lena Fischer @ 11:39 (line 614)
+So the three point four.
+
+[transcript:22_2026-06-16_q2-business-review:t103] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 11:42 (line 619)
+Is derived off those totals, yes.
+
+[transcript:22_2026-06-16_q2-business-review:t104] 2026-06-16 | Robert Kahn | Robert Kahn @ 11:47 (line 624)
+I took three point four to the board in April.
+
+[transcript:22_2026-06-16_q2-business-review:t105] 2026-06-16 | Lena Fischer | Lena Fischer @ 11:52 (line 629)
+We both did.
+
+[transcript:22_2026-06-16_q2-business-review:t106] 2026-06-16 | Robert Kahn | Robert Kahn @ 11:55 (line 634)
+Then I would like to know whether I was wrong, and I would like to know it before the next one, not after.
+
+[transcript:22_2026-06-16_q2-business-review:t107] 2026-06-16 | Nadia Haddad | Nadia Haddad @ 12:06 (line 641)
+Understood. I do not have a cause yet.
+
+[transcript:22_2026-06-16_q2-business-review:t108] 2026-06-16 | Marco Rossi | Marco Rossi @ 12:11 (line 646)
+We will come back on it.
+
+[transcript:22_2026-06-16_q2-business-review:t109] 2026-06-16 | Robert Kahn | Robert Kahn @ 12:14 (line 651)
+When?
+
+[transcript:22_2026-06-16_q2-business-review:t110] 2026-06-16 | Marco Rossi | Marco Rossi @ 12:16 (line 656)
+Mm.
+

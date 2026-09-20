@@ -1,0 +1,264 @@
+# transcripts/20_2026-03-17_bakery-design-workshop.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:20_2026-03-17_bakery-design-workshop:t001] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 0:33 (line 15)
+First proper design session on
+
+[transcript:20_2026-03-17_bakery-design-workshop:t002] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 0:39 (line 20)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t003] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 0:40 (line 25)
+bakery. Meridian owns the production plan, we own the demand signal, and today we agree where, the line sits.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t004] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 0:55 (line 32)
+Yes.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t005] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 0:59 (line 37)
+Agreed.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t006] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:03 (line 42)
+actually Can I set out the problem first,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t007] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 1:10 (line 47)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t008] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:12 (line 52)
+because I do not think it has been stated properly to Meridian.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t009] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 1:20 (line 57)
+Please.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t010] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:24 (line 62)
+About sixty percent bakery is baked in store. That is not an ordering decision,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t011] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 1:35 (line 67)
+Yeah, yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t012] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:39 (line 72)
+it is a
+
+[transcript:20_2026-03-17_bakery-design-workshop:t013] 2026-03-17 | Priya Nair | Priya Nair @ 1:43 (line 77)
+True.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t014] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:45 (line 82)
+production decision,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t015] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 1:50 (line 87)
+Okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t016] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 1:51 (line 92)
+and it happens twice a day. The other forty percent...
+
+[transcript:20_2026-03-17_bakery-design-workshop:t017] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 1:58 (line 99)
+Yeah, yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t018] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 2:02 (line 104)
+is delivered, which behaves like the rest of fresh.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t019] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:09 (line 109)
+Sure. And the split,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t020] 2026-03-17 | Priya Nair | Priya Nair @ 2:16 (line 119)
+Mm-hm.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t021] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:20 (line 124)
+varies by
+
+[transcript:20_2026-03-17_bakery-design-workshop:t022] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 2:27 (line 129)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t023] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:29 (line 134)
+format?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t024] 2026-03-17 | Priya Nair | Priya Nair @ 2:32 (line 139)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t025] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 2:33 (line 144)
+Heavily. The big stores bake most of it. Convenience bakes almost
+
+[transcript:20_2026-03-17_bakery-design-workshop:t026] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:41 (line 149)
+Yes.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t027] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 2:43 (line 154)
+none.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t028] 2026-03-17 | Priya Nair | Priya Nair @ 2:46 (line 159)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t029] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:49 (line 164)
+Do you have,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t030] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 2:56 (line 169)
+Right.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t031] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 2:59 (line 174)
+that by store?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t032] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 3:03 (line 179)
+I have it a spreadsheet.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t033] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 3:07 (line 184)
+Can you send it?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t034] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 3:13 (line 189)
+I can. It is and...
+
+[transcript:20_2026-03-17_bakery-design-workshop:t035] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 3:16 (line 194)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t036] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 3:17 (line 199)
+Everything on this project is in
+
+[transcript:20_2026-03-17_bakery-design-workshop:t037] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 3:24 (line 204)
+True.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t038] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 3:28 (line 209)
+Sofia's spreadsheet.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t039] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 3:32 (line 214)
+Mm. That is not a joke, sort of it is a documented risk.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t040] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 3:49 (line 228)
+Okay, yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t041] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 3:50 (line 233)
+You are, right. I withdraw it.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t042] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 3:57 (line 240)
+On the boundary. Our proposal is that we produce a forecast at store, article and day for all of bakery, delivered and
+
+[transcript:20_2026-03-17_bakery-design-workshop:t043] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 4:10 (line 247)
+Yes.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t044] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 4:11 (line 252)
+baked, and Meridian consumes it and decides how it becomes a
+
+[transcript:20_2026-03-17_bakery-design-workshop:t045] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 4:18 (line 257)
+Mm-hm.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t046] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 4:19 (line 262)
+You're on mute. production plan.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t047] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 4:32 (line 269)
+Okay, yeah. We would want finer than day for the baked lines. Bread sold at eight in the morning and bread sold at four,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t048] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 5:02 (line 285)
+Okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t049] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 5:03 (line 290)
+in the afternoon are different products operationally.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t050] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 5:11 (line 295)
+Yeah, yeah. Intraday.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t051] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 5:19 (line 305)
+Two windows would be enough. Morning and afternoon.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t052] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 5:23 (line 310)
+That is not something this configuration does out of the box.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t053] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 5:29 (line 315)
+Yeah, yeah. We can split the day forecast on a fixed profile per store and category, derived from historical sales by hour. That is not a true intraday forecast.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t054] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 5:47 (line 327)
+Right.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t055] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 5:51 (line 332)
+Yeah. It is a day forecast with a shape applied.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t056] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 6:06 (line 339)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t057] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 6:09 (line 344)
+Would the shape be stable?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t058] 2026-03-17 | Priya Nair | Priya Nair @ 6:15 (line 349)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t059] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 6:19 (line 354)
+The shape is stable. Saturday, differs from weekdays, and the first Saturday after payday differs again.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t060] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 6:34 (line 361)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t061] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 6:35 (line 366)
+Then a profile by store, category and day type works.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t062] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 6:45 (line 373)
+That is enough for us.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t063] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 6:49 (line 378)
+Mm.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t064] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 6:50 (line 383)
+I want to be precise about what we are agreeing, yeah because this will be quoted back. We produce a day level forecast plus a fixed
+
+[transcript:20_2026-03-17_bakery-design-workshop:t065] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 7:08 (line 390)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t066] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 7:09 (line 395)
+intraday profile. We do not produce an intraday forecast. If the shape moves, the profile is wrong until somebody re-derives it.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t067] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 7:27 (line 402)
+Understood, and noted our side.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t068] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 7:33 (line 407)
+Who re-derives it, and how often?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t069] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 7:40 (line 412)
+That is the question nobody wants to own.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t070] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 7:44 (line 417)
+It will be me.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t071] 2026-03-17 | Priya Nair | Priya Nair @ 7:50 (line 422)
+Okay, yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t072] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 7:51 (line 427)
+Let us not decide that today. I will put it
+
+[transcript:20_2026-03-17_bakery-design-workshop:t073] 2026-03-17 | Ruth Oyelaran | Ruth Oyelaran @ 7:57 (line 432)
+Yeah, yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t074] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 8:00 (line 437)
+on the open items list with no owner, so it is visible rather than assumed.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t075] 2026-03-17 | Sofia Almeida | Sofia Almeida @ 8:14 (line 444)
+Mm.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t076] 2026-03-17 | Priya Nair | Priya Nair @ 8:16 (line 449)
+On data. The intraday sales history is in the till system, not in SAP.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t077] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 8:25 (line 454)
+Okay. Can we get it?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t078] 2026-03-17 | Priya Nair | Priya Nair @ 8:42 (line 466)
+Probably. It is a different team, and before you ask, no, I have not spoken to them yet.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t079] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 8:56 (line 473)
+Yeah.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t080] 2026-03-17 | Tomas Lindholm | Tomas Lindholm @ 9:00 (line 478)
+How different?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t081] 2026-03-17 | Priya Nair | Priya Nair @ 9:07 (line 483)
+Different building.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t082] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 9:11 (line 488)
+Mm, okay. Then that is a... dependency with a name on it. Priya, can you open that,
+
+[transcript:20_2026-03-17_bakery-design-workshop:t083] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 9:28 (line 500)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t084] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 9:32 (line 505)
+conversation this month rather than in May?
+
+[transcript:20_2026-03-17_bakery-design-workshop:t085] 2026-03-17 | Ivan Petrov | Ivan Petrov @ 9:39 (line 510)
+Mm, okay.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t086] 2026-03-17 | Priya Nair | Priya Nair @ 9:43 (line 515)
+I will open it this month.
+
+[transcript:20_2026-03-17_bakery-design-workshop:t087] 2026-03-17 | Nadia Haddad | Nadia Haddad @ 9:46 (line 520)
+Thank you. That is the one that will bite us otherwise.
+

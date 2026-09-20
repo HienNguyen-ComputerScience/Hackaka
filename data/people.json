@@ -1,0 +1,358 @@
+{
+ "person:lena-fischer": {
+  "person_id": "person:lena-fischer",
+  "name": "Lena Fischer",
+  "org": "Acme",
+  "role": "Head of Supply Chain",
+  "aliases": [
+   "Fischer",
+   "Lena",
+   "Lena Fischer"
+  ],
+  "emails": [
+   "lena.fischer@acme-org.example"
+  ],
+  "initials": "LF"
+ },
+ "person:robert-kahn": {
+  "person_id": "person:robert-kahn",
+  "name": "Robert Kahn",
+  "org": "Acme",
+  "role": "CFO",
+  "aliases": [
+   "Kahn",
+   "Robert",
+   "Robert Kahn"
+  ],
+  "emails": [
+   "robert.kahn@acme-org.example"
+  ],
+  "initials": "RK"
+ },
+ "person:sofia-almeida": {
+  "person_id": "person:sofia-almeida",
+  "name": "Sofia Almeida",
+  "org": "Acme",
+  "role": "Category Manager, Fresh",
+  "aliases": [
+   "Almeida",
+   "Sofia",
+   "Sofia Almeida"
+  ],
+  "emails": [
+   "sofia.almeida@acme-org.example"
+  ],
+  "initials": "SA"
+ },
+ "person:priya-nair": {
+  "person_id": "person:priya-nair",
+  "name": "Priya Nair",
+  "org": "Acme",
+  "role": "IT Integration Lead",
+  "aliases": [
+   "Nair",
+   "Priya",
+   "Priya Nair"
+  ],
+  "emails": [
+   "priya.nair@acme-org.example"
+  ],
+  "initials": "PN"
+ },
+ "person:jonas-weiss": {
+  "person_id": "person:jonas-weiss",
+  "name": "Jonas Weiss",
+  "org": "Acme",
+  "role": "Category Manager, Ambient",
+  "aliases": [
+   "Jonas",
+   "Jonas Weiss",
+   "Weiss"
+  ],
+  "emails": [],
+  "initials": "JW"
+ },
+ "person:katarina-voss": {
+  "person_id": "person:katarina-voss",
+  "name": "Katarina Voss",
+  "org": "Acme",
+  "role": "Data Protection Officer",
+  "aliases": [
+   "Katarina",
+   "Katarina Voss",
+   "Voss"
+  ],
+  "emails": [
+   "katarina.voss@acme-org.example"
+  ],
+  "initials": "KV"
+ },
+ "person:marco-rossi": {
+  "person_id": "person:marco-rossi",
+  "name": "Marco Rossi",
+  "org": "RELEX",
+  "role": "Account Executive",
+  "aliases": [
+   "Marco",
+   "Marco Rossi",
+   "Rossi"
+  ],
+  "emails": [
+   "marco.rossi@relexsolutions.example"
+  ],
+  "initials": "MR"
+ },
+ "person:ana-duarte": {
+  "person_id": "person:ana-duarte",
+  "name": "Ana Duarte",
+  "org": "RELEX",
+  "role": "Project Manager",
+  "aliases": [
+   "Ana",
+   "Ana Duarte",
+   "Duarte"
+  ],
+  "emails": [
+   "ana.duarte@relexsolutions.example"
+  ],
+  "initials": "AD"
+ },
+ "person:nadia-haddad": {
+  "person_id": "person:nadia-haddad",
+  "name": "Nadia Haddad",
+  "org": "RELEX",
+  "role": "Solution Consultant",
+  "aliases": [
+   "Haddad",
+   "Nadia",
+   "Nadia Haddad"
+  ],
+  "emails": [
+   "n.haddad@relexsolutions.example"
+  ],
+  "initials": "NH"
+ },
+ "person:tomas-lindholm": {
+  "person_id": "person:tomas-lindholm",
+  "name": "Tomas Lindholm",
+  "org": "RELEX",
+  "role": "Solution Architect",
+  "aliases": [
+   "Lindholm",
+   "Tomas",
+   "Tomas Lindholm"
+  ],
+  "emails": [
+   "tomas.lindholm@relexsolutions.example"
+  ],
+  "initials": "TL"
+ },
+ "person:kwame-boateng": {
+  "person_id": "person:kwame-boateng",
+  "name": "Kwame Boateng",
+  "org": "RELEX",
+  "role": "Technical Consultant",
+  "aliases": [
+   "Boateng",
+   "Kwame",
+   "Kwame Boateng"
+  ],
+  "emails": [
+   "k.boateng@relexsolutions.example"
+  ],
+  "initials": "KB"
+ },
+ "person:charlotte-meyer": {
+  "person_id": "person:charlotte-meyer",
+  "name": "Charlotte Meyer",
+  "org": "RELEX",
+  "role": "Service Delivery",
+  "aliases": [
+   "Charlotte",
+   "Charlotte Meyer",
+   "Meyer"
+  ],
+  "emails": [],
+  "initials": "CM"
+ },
+ "person:henrik-sorensen": {
+  "person_id": "person:henrik-sorensen",
+  "name": "Henrik Sørensen",
+  "org": "RELEX",
+  "role": "Account Director",
+  "aliases": [
+   "Henrik",
+   "Henrik Sorensen",
+   "Henrik Sørensen",
+   "Sorensen",
+   "Sørensen"
+  ],
+  "emails": [
+   "henrik.sorensen@relexsolutions.example"
+  ],
+  "initials": "HS"
+ },
+ "person:ivan-petrov": {
+  "person_id": "person:ivan-petrov",
+  "name": "Ivan Petrov",
+  "org": "Meridian Consulting",
+  "role": null,
+  "aliases": [
+   "Ivan",
+   "Ivan Petrov",
+   "Petrov"
+  ],
+  "emails": [
+   "i.petrov@meridian-consulting.example"
+  ],
+  "initials": "IP"
+ },
+ "person:ruth-oyelaran": {
+  "person_id": "person:ruth-oyelaran",
+  "name": "Ruth Oyelaran",
+  "org": "Meridian Consulting",
+  "role": null,
+  "aliases": [
+   "Oyelaran",
+   "Ruth",
+   "Ruth Oyelaran"
+  ],
+  "emails": [
+   "r.oyelaran@meridian-consulting.example"
+  ],
+  "initials": "RO"
+ },
+ "person:nils-ackermann": {
+  "person_id": "person:nils-ackermann",
+  "name": "Nils Ackermann",
+  "org": "Acme",
+  "role": "warehouse system owner (logistics IT)",
+  "aliases": [
+   "Ackermann",
+   "Nils",
+   "Nils Ackermann"
+  ],
+  "emails": [],
+  "initials": "NA"
+ },
+ "person:osman-yildirim": {
+  "person_id": "person:osman-yildirim",
+  "name": "Osman Yildirim",
+  "org": "Acme store staff",
+  "role": null,
+  "aliases": [
+   "Osman",
+   "Osman Yildirim",
+   "Yildirim"
+  ],
+  "emails": [],
+  "initials": "OY"
+ },
+ "person:marika-lindqvist": {
+  "person_id": "person:marika-lindqvist",
+  "name": "Marika Lindqvist",
+  "org": "Acme store staff",
+  "role": null,
+  "aliases": [
+   "Lindqvist",
+   "Marika",
+   "Marika Lindqvist"
+  ],
+  "emails": [],
+  "initials": "ML"
+ },
+ "person:heidi-salminen": {
+  "person_id": "person:heidi-salminen",
+  "name": "Heidi Salminen",
+  "org": "Acme store staff",
+  "role": null,
+  "aliases": [
+   "Heidi",
+   "Heidi Salminen",
+   "Salminen"
+  ],
+  "emails": [],
+  "initials": "HS"
+ },
+ "person:elin-bergqvist": {
+  "person_id": "person:elin-bergqvist",
+  "name": "Elin Bergqvist",
+  "org": null,
+  "role": null,
+  "aliases": [
+   "Bergqvist",
+   "Elin",
+   "Elin Bergqvist"
+  ],
+  "emails": [],
+  "initials": "EB"
+ },
+ "unresolved:Unknown Speaker": {
+  "person_id": "unresolved:Unknown Speaker",
+  "name": "Unknown Speaker",
+  "org": null,
+  "role": "UNRESOLVED speaker label",
+  "aliases": [
+   "Unknown Speaker"
+  ],
+  "emails": [],
+  "initials": null
+ },
+ "unresolved:Me": {
+  "person_id": "unresolved:Me",
+  "name": "Me",
+  "org": null,
+  "role": "UNRESOLVED speaker label",
+  "aliases": [
+   "Me"
+  ],
+  "emails": [],
+  "initials": null
+ },
+ "unresolved:Them": {
+  "person_id": "unresolved:Them",
+  "name": "Them",
+  "org": null,
+  "role": "UNRESOLVED speaker label",
+  "aliases": [
+   "Them"
+  ],
+  "emails": [],
+  "initials": null
+ },
+ "unresolved:Guest 1": {
+  "person_id": "unresolved:Guest 1",
+  "name": "Guest 1",
+  "org": null,
+  "role": "UNRESOLVED speaker label",
+  "aliases": [
+   "Guest 1"
+  ],
+  "emails": [],
+  "initials": null
+ },
+ "unresolved:+358 40 5512 097": {
+  "person_id": "unresolved:+358 40 5512 097",
+  "name": "+358 40 5512 097",
+  "org": null,
+  "role": "UNRESOLVED speaker label",
+  "aliases": [
+   "+358 40 5512 097"
+  ],
+  "emails": [],
+  "initials": null
+ },
+ "person:priyanka-rao": {
+  "person_id": "person:priyanka-rao",
+  "name": "Priyanka Rao",
+  "org": null,
+  "role": null,
+  "aliases": [
+   "Priyanka",
+   "Priyanka Rao",
+   "Rao"
+  ],
+  "emails": [],
+  "initials": "PR"
+ }
+}

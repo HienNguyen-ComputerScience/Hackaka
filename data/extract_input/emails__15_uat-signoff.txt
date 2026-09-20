@@ -1,0 +1,26 @@
+# emails/15_uat-signoff.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:15_uat-signoff:m01] 2025-01-21T17:30 | Ana Duarte -> Lena Fischer | subject: UAT sign-off - core replenishment
+Lena,
+
+As discussed this afternoon, for signature.
+
+"Acme Org confirms that user acceptance testing for core replenishment has been completed
+satisfactorily for the 25 store pilot cohort, covering ambient and dry goods categories.
+This sign-off does not extend to fresh categories, which remain in scope for a later
+phase, and does not constitute acceptance of the overall programme."
+
+Two UAT defects remain open, both the same root cause on case pack and minimum order
+quantity rounding. Both are scheduled for fix this week and neither is a blocker.
+
+Best regards,
+
+[email:15_uat-signoff:m02] 2025-01-22T08:50 | Lena Fischer -> Ana Duarte | subject: Re: UAT sign-off - core replenishment
+Signed and attached. The wording is what I asked for, thank you for being careful with it.
+
+Mit freundlichen Grüßen
+
+[email:15_uat-signoff:m03] 2025-01-24T16:20 | Kwame Boateng -> Ana Duarte | subject: UAT sign-off - core replenishment
+Both rounding defects fixed and re-tested. Nine of nine scenarios now pass.
+

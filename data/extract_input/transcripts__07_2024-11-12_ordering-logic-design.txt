@@ -1,0 +1,237 @@
+# transcripts/07_2024-11-12_ordering-logic-design.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:07_2024-11-12_ordering-logic-design:t001] 2024-11-12 | Ana Duarte | Ana Duarte @ 0:19 (line 15)
+Sofia, welcome. You have not been in one of these before.
+
+[transcript:07_2024-11-12_ordering-logic-design:t002] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 0:26 (line 20)
+No. I was told I did not need to be, since this phase
+
+[transcript:07_2024-11-12_ordering-logic-design:t003] 2024-11-12 | Ana Duarte | Ana Duarte @ 0:33 (line 25)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t004] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 0:37 (line 30)
+is embient.
+
+[transcript:07_2024-11-12_ordering-logic-design:t005] 2024-11-12 | Ana Duarte | Ana Duarte @ 0:40 (line 35)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t006] 2024-11-12 | Lena Fischer | Lena Fischer @ 0:42 (line 40)
+I asked her to come because phase two is hers and I want her to hear how the machine works before she has to but the...
+
+[transcript:07_2024-11-12_ordering-logic-design:t007] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 0:57 (line 47)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t008] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 0:58 (line 52)
+That is a good instinct.
+
+[transcript:07_2024-11-12_ordering-logic-design:t009] 2024-11-12 | Priya Nair | Priya Nair @ 1:01 (line 57)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t010] 2024-11-12 | Ana Duarte | Ana Duarte @ 1:04 (line 62)
+One second. So today is ordering parameters for the pilot cohort. Service so... cycles, so safety stock, rounding.
+
+[transcript:07_2024-11-12_ordering-logic-design:t011] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 1:24 (line 73)
+And, i will go through the mechanism and then we set numbers.
+
+[transcript:07_2024-11-12_ordering-logic-design:t012] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 1:34 (line 78)
+Can I ask a question that might be stupid.
+
+[transcript:07_2024-11-12_ordering-logic-design:t013] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 1:44 (line 85)
+Please.
+
+[transcript:07_2024-11-12_ordering-logic-design:t014] 2024-11-12 | Priya Nair | Priya Nair @ 1:50 (line 90)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t015] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 1:53 (line 95)
+You're on mute. When the system decides...
+
+[transcript:07_2024-11-12_ordering-logic-design:t016] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 1:59 (line 102)
+Mm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t017] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 2:02 (line 107)
+how much much to order, does it know into the...
+
+[transcript:07_2024-11-12_ordering-logic-design:t018] 2024-11-12 | Lena Fischer | Lena Fischer @ 2:10 (line 112)
+Okay, yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t019] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 2:13 (line 117)
+already in the store is?
+
+[transcript:07_2024-11-12_ordering-logic-design:t020] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 2:22 (line 124)
+For this phase, no. It knows how much there is, not how old.
+
+[transcript:07_2024-11-12_ordering-logic-design:t021] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 2:28 (line 129)
+Then for ambient that is fine. For my categories it... is the entire problem.
+
+[transcript:07_2024-11-12_ordering-logic-design:t022] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 2:43 (line 136)
+Yeah, yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t023] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 2:44 (line 141)
+I know. It is the thing Priya and I discussed in April and it has not been resolved.
+
+[transcript:07_2024-11-12_ordering-logic-design:t024] 2024-11-12 | Priya Nair | Priya Nair @ 2:53 (line 146)
+I asked the warehouse team. I did not get an answer. I... will ask again.
+
+[transcript:07_2024-11-12_ordering-logic-design:t025] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 3:07 (line 153)
+Can I explain why it matters, because I do not think it...
+
+[transcript:07_2024-11-12_ordering-logic-design:t026] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 3:14 (line 158)
+Right.
+
+[transcript:07_2024-11-12_ordering-logic-design:t027] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 3:18 (line 163)
+has been explained by someone but...
+
+[transcript:07_2024-11-12_ordering-logic-design:t028] 2024-11-12 | Ana Duarte | Ana Duarte @ 3:24 (line 168)
+Please do.
+
+[transcript:07_2024-11-12_ordering-logic-design:t029] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 3:29 (line 173)
+If I have a product with three days of life left and the system tells me to order the same quantity it would order for something...
+
+[transcript:07_2024-11-12_ordering-logic-design:t030] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 3:46 (line 180)
+Mm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t031] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 3:50 (line 185)
+with three weeks, I will throw away most of what arrives. So I override Every day, by hand,
+
+[transcript:07_2024-11-12_ordering-logic-design:t032] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 4:06 (line 192)
+Yeah, yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t033] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 4:10 (line 197)
+on the categories where it matters. And, on the categories about the...
+
+[transcript:07_2024-11-12_ordering-logic-design:t034] 2024-11-12 | Ana Duarte | Ana Duarte @ 4:17 (line 204)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t035] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 4:20 (line 209)
+not have time, we accept the waste. That is our four point one percent.
+
+[transcript:07_2024-11-12_ordering-logic-design:t036] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 4:33 (line 218)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t037] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 4:35 (line 223)
+Understood. And the threshold where it starts to matter?
+
+[transcript:07_2024-11-12_ordering-logic-design:t038] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 4:44 (line 228)
+Yes.
+
+[transcript:07_2024-11-12_ordering-logic-design:t039] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 4:48 (line 233)
+It is not a single number, it depends on the category. Under five days remaining I mean...
+
+[transcript:07_2024-11-12_ordering-logic-design:t040] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 4:58 (line 238)
+Yeah. That is specific enough to design against.
+
+[transcript:07_2024-11-12_ordering-logic-design:t041] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 5:08 (line 248)
+Let me just... Then write it down, because I have said twice now and I do not know where it goes.
+
+[transcript:07_2024-11-12_ordering-logic-design:t042] 2024-11-12 | Ana Duarte | Ana Duarte @ 5:26 (line 255)
+Mm, okay. It goes the workshop output... and into the phase two requirements. I will make sure it is in both.
+
+[transcript:07_2024-11-12_ordering-logic-design:t043] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 5:44 (line 269)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t044] 2024-11-12 | Sofia Almeida | Sofia Almeida @ 5:48 (line 274)
+Thank you.
+
+[transcript:07_2024-11-12_ordering-logic-design:t045] 2024-11-12 | Lena Fischer | Lena Fischer @ 5:52 (line 279)
+Can we
+
+[transcript:07_2024-11-12_ordering-logic-design:t046] 2024-11-12 | Priya Nair | Priya Nair @ 5:59 (line 284)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t047] 2024-11-12 | Lena Fischer | Lena Fischer @ 6:03 (line 289)
+get to the parameters.
+
+[transcript:07_2024-11-12_ordering-logic-design:t048] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 6:09 (line 294)
+Yes. Service level and... below.
+
+[transcript:07_2024-11-12_ordering-logic-design:t049] 2024-11-12 | +358 40 5512 097 | +358 40 5512 097 @ 6:17 (line 301)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t050] 2024-11-12 | Priya Nair | Priya Nair @ 6:20 (line 306)
+Let me just... What do we do today?
+
+[transcript:07_2024-11-12_ordering-logic-design:t051] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 6:32 (line 313)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t052] 2024-11-12 | Lena Fischer | Lena Fischer @ 6:34 (line 318)
+Ninety-nine on everything, in theory, which is
+
+[transcript:07_2024-11-12_ordering-logic-design:t053] 2024-11-12 | +358 40 5512 097 | +358 40 5512 097 @ 6:40 (line 323)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t054] 2024-11-12 | Lena Fischer | Lena Fischer @ 6:44 (line 328)
+why we carry so much stock.
+
+[transcript:07_2024-11-12_ordering-logic-design:t055] 2024-11-12 | Ana Duarte | Ana Duarte @ 6:48 (line 333)
+Okay, yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t056] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 6:49 (line 338)
+Then ninety-eight and ninety-five is a reduction and, you should expect the inventory number to fall and and the...
+
+[transcript:07_2024-11-12_ordering-logic-design:t057] 2024-11-12 | Lena Fischer | Lena Fischer @ 7:08 (line 347)
+Roughly flat is doing a lot of work in that sentence.
+
+[transcript:07_2024-11-12_ordering-logic-design:t058] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 7:17 (line 354)
+It is. That is what the pilot is for.
+
+[transcript:07_2024-11-12_ordering-logic-design:t059] 2024-11-12 | Lena Fischer | Lena Fischer @ 7:25 (line 359)
+Fine. Agreed.
+
+[transcript:07_2024-11-12_ordering-logic-design:t060] 2024-11-12 | Ana Duarte | Ana Duarte @ 7:32 (line 364)
+Review cycle?
+
+[transcript:07_2024-11-12_ordering-logic-design:t061] 2024-11-12 | +358 40 5512 097 | +358 40 5512 097 @ 7:38 (line 369)
+Okay.
+
+[transcript:07_2024-11-12_ordering-logic-design:t062] 2024-11-12 | Priya Nair | Priya Nair @ 7:42 (line 374)
+Daily order, sort of daily delivery on the fast lines, twice weekly below.
+
+[transcript:07_2024-11-12_ordering-logic-design:t063] 2024-11-12 | Lena Fischer | Lena Fischer @ 7:50 (line 379)
+Okay.
+
+[transcript:07_2024-11-12_ordering-logic-design:t064] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 7:54 (line 384)
+Can you hear me? Yeah so, that matches the batch, so nothing to solve there.
+
+[transcript:07_2024-11-12_ordering-logic-design:t065] 2024-11-12 | Priya Nair | Priya Nair @ 8:06 (line 391)
+Mm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t066] 2024-11-12 | Ana Duarte | Ana Duarte @ 8:09 (line 396)
+Rounding to case pack, where we have it.
+
+[transcript:07_2024-11-12_ordering-logic-design:t067] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 8:15 (line 401)
+Where we have it. Remediation is at about sixty
+
+[transcript:07_2024-11-12_ordering-logic-design:t068] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 8:20 (line 406)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t069] 2024-11-12 | Kwame Boateng | Kwame Boateng @ 8:23 (line 411)
+percent.
+
+[transcript:07_2024-11-12_ordering-logic-design:t070] 2024-11-12 | Priya Nair | Priya Nair @ 8:29 (line 416)
+It will be done for the cohort
+
+[transcript:07_2024-11-12_ordering-logic-design:t071] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 8:33 (line 421)
+True.
+
+[transcript:07_2024-11-12_ordering-logic-design:t072] 2024-11-12 | Priya Nair | Priya Nair @ 8:37 (line 426)
+before Christmas.
+
+[transcript:07_2024-11-12_ordering-logic-design:t073] 2024-11-12 | Ana Duarte | Ana Duarte @ 8:42 (line 431)
+Before Christmas is tight against I mean...
+
+[transcript:07_2024-11-12_ordering-logic-design:t074] 2024-11-12 | Tomas Lindholm | Tomas Lindholm @ 8:49 (line 436)
+Mm-hm.
+
+[transcript:07_2024-11-12_ordering-logic-design:t075] 2024-11-12 | Priya Nair | Priya Nair @ 8:51 (line 441)
+It is
+
+[transcript:07_2024-11-12_ordering-logic-design:t076] 2024-11-12 | Ana Duarte | Ana Duarte @ 8:54 (line 446)
+Yeah.
+
+[transcript:07_2024-11-12_ordering-logic-design:t077] 2024-11-12 | Priya Nair | Priya Nair @ 8:57 (line 451)
+tight. It is also what I have.
+
+[transcript:07_2024-11-12_ordering-logic-design:t078] 2024-11-12 | Ana Duarte | Ana Duarte @ 9:02 (line 456)
+Yeah. Then that is the plan and the dependency is on the record.
+

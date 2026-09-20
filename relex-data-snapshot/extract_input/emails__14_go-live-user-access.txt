@@ -1,0 +1,46 @@
+# emails/14_go-live-user-access.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:14_go-live-user-access:m01] 2025-01-28T11:20 | Ana Duarte -> Priya Nair, Lena Fischer | subject: Go-live user access and training
+Hello,
+
+For the 1 March go-live I need the user list for the pilot cohort. Roles we support are
+Planner, Category Manager, Store User and Administrator.
+
+Please send names, email addresses and role.
+
+Best regards,
+
+[email:14_go-live-user-access:m02] 2025-02-04T15:45 | Priya Nair -> Ana Duarte | subject: Re: Go-live user access and training
+Central team users of the replenishment system:
+
+Lena Fischer (lena.fischer@acme-org.example) - Administrator
+Priya Nair (priya.nair@acme-org.example) - Administrator
+Sofia Almeida (sofia.almeida@acme-org.example) - Category Manager
+Jonas Weiss (jonas.weiss@acme-org.example) - Category Manager
+Martina Reuss (martina.reuss@acme-org.example) - Planner
+Ahmed Nasser (ahmed.nasser@acme-org.example) - Planner
+Elin Bergqvist (elin.bergqvist@acme-org.example) - Planner
+
+Store users I will send separately, there are 25 of them and I do not have all the
+addresses yet.
+
+[email:14_go-live-user-access:m03] 2025-02-05T09:10 | Ana Duarte -> Priya Nair | subject: Re: Go-live user access and training
+Thank you. Sofia is listed as Category Manager but fresh is not in this phase. Should she
+have access at all?
+
+Best regards,
+
+[email:14_go-live-user-access:m04] 2025-02-05T10:30 | Lena Fischer -> Ana Duarte | subject: Re: Go-live user access and training
+Give her access. She should be able to see how it works before phase two lands on her.
+
+Mit freundlichen Grüßen
+
+[email:14_go-live-user-access:m05] 2025-02-20T16:15 | Ana Duarte -> Priya Nair, Lena Fischer | subject: Go-live user access and training
+Training sessions booked. Two hours for the central team on the 24th, one hour per region
+for store users across the 25th and 26th.
+
+Store user list still outstanding. I need it by Monday to create the accounts.
+
+Best regards,
+

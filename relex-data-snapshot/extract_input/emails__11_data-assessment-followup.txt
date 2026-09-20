@@ -1,0 +1,49 @@
+# emails/11_data-assessment-followup.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:11_data-assessment-followup:m01] 2024-05-02T10:15 | Tomas Lindholm -> Priya Nair | subject: Technical assessment - follow up
+Priya,
+
+Assessment written up as promised. Four conclusions.
+
+ECC 6.0 is fine and we have no concerns about the nightly batch for daily replenishment.
+
+DC-2 goes in as a named risk. Out of support middleware, intermittent failure, silent
+mode. We will design monitoring around it from day one rather than assume it works.
+
+Master data needs a remediation workstream owned on your side. Case pack quantity is the
+blocking gap.
+
+The open question from our call: is remaining shelf life obtainable? You said the total
+sits on the article and the arrival date is in the warehouse system. Could you find out
+whether that is exposed outside the WMS? It changes the phase two design and I would
+rather know in May 2024 than in 2025.
+
+Med vänliga hälsningar,
+
+[email:11_data-assessment-followup:m02] 2024-05-06T16:40 | Priya Nair -> Tomas Lindholm | subject: Re: Technical assessment - follow up
+Hi,
+
+Agreed on all four. I will own the remediation, whatever Lena says about it.
+
+On the warehouse question, I have asked. The person who owns that system is on secondment
+until August. I will chase in August.
+
+[email:11_data-assessment-followup:m03] 2024-08-20T09:05 | Tomas Lindholm -> Priya Nair | subject: Re: Technical assessment - follow up
+Priya,
+
+It is August. Any word on whether goods receipt date is available outside the WMS?
+
+Med vänliga hälsningar,
+
+[email:11_data-assessment-followup:m04] 2024-08-22T17:20 | Priya Nair -> Tomas Lindholm | subject: Re: Technical assessment - follow up
+He is back and says it is captured but not exposed. Getting it out means either an extract
+that nobody owns, or writing it back into SAP, which is a change request.
+
+I will not be raising a change request for something that is not in the current phase.
+
+[email:11_data-assessment-followup:m05] 2024-08-22T17:55 | Tomas Lindholm -> Priya Nair | subject: Technical assessment - follow up
+Understood. Logging it as a phase two dependency and closing this thread.
+
+Med vänliga hälsningar,
+

@@ -1,0 +1,171 @@
+# transcripts/04_2024-07-09_INTERNAL-handover-presales-to-delivery.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t001] 2024-07-09 | Me | Me turn 1 (line 12)
+like So this is handover. I have read the SOW and the technical assessment. What is not in either those?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t002] 2024-07-09 | Them | Them turn 2 (line 13)
+What is not in. A lot, honestly.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t003] 2024-07-09 | Me | Me turn 3 (line 15)
+Then let us start there rather than with what I have already read.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t004] 2024-07-09 | Them | Them turn 4 (line 16)
+Then let us start there. I have already read. Kahn. The CFO. He signed on the basis that this reduces fresh food waste, and he has said twelve months to me at least four times. That is in the SOW as an expectation, legal watered the wording, but he does not know that and he would not care. He thinks he has twelve months.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t005] 2024-07-09 | Me | Me turn 5 (line 18)
+sort of Twelve months from signature.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t006] 2024-07-09 | Them | Them turn 6 (line 19)
+From signature, so July next year.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t007] 2024-07-09 | Me | Me turn 7 (line 20)
+And fresh is phase two.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t008] 2024-07-09 | Them | Them turn 8 (line 21)
+I mean Fresh is phase two.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t009] 2024-07-09 | Me | Me turn 9 (line 22)
+That does not work.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t010] 2024-07-09 | Them | Them turn 10 (line 23)
+No.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t011] 2024-07-09 | Me | Me turn 11 (line 24)
+you know Has anyone said that to him?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t012] 2024-07-09 | Them | Them turn 12 (line 25)
+I have said the phasing to him twice and he has answered by repeating the twelve months. I do not think he has connected the two. I mean, he has connected them. He said it in the June meeting. He said phase two needs to be inside the twelve months.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t013] 2024-07-09 | Me | Me turn 13 (line 27)
+I mean. two needs to.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t014] 2024-07-09 | Them | Them turn 14 (line 28)
+Well, did he? Then he has connected them and I have not solved it.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t015] 2024-07-09 | Me | Me turn 15 (line 29)
+them and. solved it. I need that written down somewhere.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t016] 2024-07-09 | Them | Them turn 16 (line 31)
+I will put it in the account plan.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t017] 2024-07-09 | Me | Me turn 17 (line 32)
+Put it in the risk log, not the account plan. I read the risk log.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t018] 2024-07-09 | Them | Them turn 18 (line 33)
+Fine.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t019] 2024-07-09 | Me | Me turn 19 (line 34)
+you know Tomas, the technical side.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t020] 2024-07-09 | Them | Them turn 20 (line 35)
+Three things and only one of them is in the assessment properly.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t021] 2024-07-09 | Me | Me turn 21 (line 36)
+Three things and. the assessment properly. And the third?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t022] 2024-07-09 | Them | Them turn 22 (line 38)
+Remaining shelf-life does not exist. Not as a field, sort of not not anywhere we can reach. It is in the warehouse system as an arrival date and it is not exposed.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t023] 2024-07-09 | Me | Me turn 23 (line 39)
+not not anywhere. as an. Is that in the assessment?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t024] 2024-07-09 | Them | Them turn 24 (line 41)
+It is in the assessment as an open question. It not in the assessment as a phase two blocker, which is what it actually is.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t025] 2024-07-09 | Me | Me turn 25 (line 42)
+Why not?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t026] 2024-07-09 | Them | Them turn 26 (line 43)
+so Because when I wrote it in May the answer was still pending. answer came back in August and by then assessment.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t027] 2024-07-09 | Me | Me turn 27 (line 44)
+so Because. answer was still. and by then assessment. actually So the most important dependency on the project is a.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t028] 2024-07-09 | Them | Them turn 28 (line 46)
+Okay so, yes.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t029] 2024-07-09 | Me | Me turn 29 (line 47)
+Right. Kwame, note that as the first item on the phase two dependency list, and it needs a date and an owner.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t030] 2024-07-09 | Them | Them turn 30 (line 48)
+Owner on which side?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t031] 2024-07-09 | Me | Me turn 31 (line 49)
+right Priya nominally. But she has told Tomas twice twice that she will not raise a change request for something outside the current phase, and she is right, so the real owner is whoever runs phase two.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t032] 2024-07-09 | Them | Them turn 32 (line 50)
+right Priya nominally. But. and she is right, so. like Which is not appointed.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t033] 2024-07-09 | Me | Me turn 33 (line 52)
+Which is not appointed.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t034] 2024-07-09 | Them | Them turn 34 (line 53)
+Yeah so, i will put it down with no.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t035] 2024-07-09 | Me | Me turn 35 (line 54)
+People. Who am I dealing with?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t036] 2024-07-09 | Them | Them turn 36 (line 55)
+Lena Fischer is your day to day. She is good, she is direct, she will tell you when something is wrong rather than let fester. Do not surprise her.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t037] 2024-07-09 | Me | Me turn 37 (line 56)
+And Priya?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t038] 2024-07-09 | Them | Them turn 38 (line 57)
+Priya will tell you exactly why your plan will not work, and she will be right, and she will not enjoy being right. Treat her as an asset rather than an obstacle and she will do the same for you.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t039] 2024-07-09 | Me | Me turn 39 (line 58)
+Priya will tell you. will be. being right. Noted.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t040] 2024-07-09 | Them | Them turn 40 (line 60)
+basically There is one more person and she is not on the project.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t041] 2024-07-09 | Me | Me turn 41 (line 61)
+basically There. Well, who?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t042] 2024-07-09 | Them | Them turn 42 (line 63)
+Sofia Almeida. Category manager for fresh. She was in the demo in March she is the reason we understood the problem at all. She explained the shell life thing better than anyone, you know including us. Sofia Almeida. Category manager. know including us.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t043] 2024-07-09 | Me | Me turn 43 (line 65)
+Is she in phase one?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t044] 2024-07-09 | Them | Them turn 44 (line 66)
+No, phase one is ambient.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t045] 2024-07-09 | Me | Me turn 45 (line 67)
+Then I will not meet her for a year.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t046] 2024-07-09 | Them | Them turn 46 (line 68)
+Probably not.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t047] 2024-07-09 | Me | Me turn 47 (line 69)
+Is that a problem?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t048] 2024-07-09 | Them | Them turn 48 (line 70)
+I do not know. She is the only person at Acme who knows fresh, and she said so herself in the demo, unprompted. She also mentioned she has surgery coming up.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t049] 2024-07-09 | Me | Me turn 49 (line 71)
+I do not need to know that.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t050] 2024-07-09 | Them | Them turn 50 (line 72)
+yeah No, you probably do not.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t051] 2024-07-09 | Me | Me turn 51 (line 73)
+What I need to know is that fresh has one knowledge holder. That is a risk. The rest is hers.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t052] 2024-07-09 | Them | Them turn 52 (line 74)
+What I need. is hers. actually Agreed.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t053] 2024-07-09 | Me | Me turn 53 (line 76)
+I mean Last question. Is there anything in the sales conversation that Acme thinks is agreed and is not in SOW?
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t054] 2024-07-09 | Them | Them turn 54 (line 77)
+Not that I can think of. The The shelf life aware ordering. Sofia described a requirement in March and Marco said we would commit fresh as phase two with a target window. Sofia thinks the requirement is agreed. The SOW says fresh is phase two. Those are not the same thing. The The shelf. would commit fresh. That is fair.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t055] 2024-07-09 | Me | Me turn 55 (line 81)
+so Then Then that is the second thing on the dependency list.
+
+[transcript:04_2024-07-09_INTERNAL-handover-presales-to-delivery:t056] 2024-07-09 | Them | Them turn 56 (line 82)
+so Then Then that is.
+

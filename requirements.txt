@@ -1,3 +1,9 @@
-numpy
-rank_bm25
-sentence-transformers
+# Pinned to the environment the pipeline was built and verified with (Python 3.11).
+# torch comes from the CPU wheel index: the default PyPI wheel on Linux bundles CUDA (~2 GB) and
+# does not fit a 512 MB instance.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.3.2
+rank_bm25==0.2.2
+sentence-transformers==5.4.0
+transformers==5.5.4
+torch==2.5.1

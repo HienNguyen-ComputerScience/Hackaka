@@ -1,7 +1,7 @@
 """Judge-facing UI. Standard library only; one process; no login; no styling beyond legibility.
 
-    python pipeline/serve.py                      # http://localhost:8080
-    python pipeline/serve.py --host 0.0.0.0       # reachable from other machines on the network
+    python pipeline/serve.py                      # http://localhost:8080 (or $PORT when set)
+    python pipeline/serve.py --host 127.0.0.1     # local only; the default binds every interface
 
 Three things and nothing else:
   1. Ask a question -> answer.py's rendered claim graph (dates, sources, currency label, truth
@@ -15,6 +15,7 @@ allow-list of fields, and anchor strings have the internal-transcript turn numbe
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -653,8 +654,8 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--host", default="127.0.0.1")
-    ap.add_argument("--port", type=int, default=8080)
+    ap.add_argument("--host", default="0.0.0.0")
+    ap.add_argument("--port", type=int, default=int(os.environ.get("PORT", "8080")))   # Render injects PORT
     args = ap.parse_args()
     print("loading index and claim graph ...", flush=True)
     STATE.load()

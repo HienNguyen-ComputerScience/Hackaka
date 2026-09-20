@@ -1,0 +1,103 @@
+# emails/01_shelf-life-field-mapping.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:01_shelf-life-field-mapping:m01] 2025-07-08T09:14 | Nadia Haddad -> Priya Nair | subject: Shelf life field mapping - fresh export
+Hi Priya,
+
+For the fresh ordering configuration we need the remaining shelf life at the point of
+order, per article per site. Sofia has described where it comes from operationally but
+I need the actual field.
+
+Is it MARA-MHDHB, or is there something Acme-specific?
+
+Thanks
+
+[email:01_shelf-life-field-mapping:m02] 2025-07-09T11:02 | Priya Nair -> Nadia Haddad | subject: Re: Shelf life field mapping - fresh export
+Hi,
+
+MHDHB is the total shelf life, not remaining. It is populated for part of the range.
+
+Remaining life at order time is not stored anywhere I know of. It would have to be
+derived from goods receipt date, and that is in the warehouse system rather than in SAP.
+
+I will ask the warehouse team.
+
+[email:01_shelf-life-field-mapping:m03] 2025-07-22T15:40 | Nadia Haddad -> Priya Nair | subject: Re: Shelf life field mapping - fresh export
+Hi Priya,
+
+Following up on the below. Did the warehouse team come back on remaining shelf life?
+
+This is on our critical path for fresh UAT.
+
+[email:01_shelf-life-field-mapping:m04] 2025-07-23T08:51 | Priya Nair -> Nadia Haddad | subject: Re: Shelf life field mapping - fresh export
+Not yet. Half of them are on holiday. I will chase.
+
+[email:01_shelf-life-field-mapping:m05] 2025-08-19T10:05 | Ana Duarte -> Priya Nair | subject: Re: Shelf life field mapping - fresh export
+Hello,
+
+What is the status on this?
+
+FYI @Lena Fischer - this is the item I mentioned in the steering call.
+
+Best regards,
+
+[email:01_shelf-life-field-mapping:m06] 2025-08-20T16:33 | Priya Nair -> Ana Duarte | subject: Re: Shelf life field mapping - fresh export
+Hi,
+
+Warehouse team says goods receipt date is captured but not exposed outside the WMS. To
+get it to you we would need either an extract from the WMS, which nobody owns, or to
+write it back into SAP, which is a change request.
+
+Adding @Kwame Boateng who I think looked at the WMS extract for something else.
+
+[email:01_shelf-life-field-mapping:m07] 2025-08-26T09:12 | Kwame Boateng -> Priya Nair | subject: Re: Shelf life field mapping - fresh export
+Hi,
+
+I looked at a WMS extract in June but that was for a different thing (the DC-2 inventory
+feed). Different system as far as I can tell. I do not think it helps here.
+
+Sorry.
+
+[email:01_shelf-life-field-mapping:m08] 2025-09-04T14:20 | Nadia Haddad -> Priya Nair | subject: Re: Shelf life field mapping - fresh export
+Hi all,
+
+Adding Nadia (Öberg, not Haddad) who did something similar on another account.
+
+Since remaining shelf life is not available, I propose we proceed with an approximation:
+total shelf life from MHDHB minus average days-in-warehouse per article group, which we
+can derive from stock turn.
+
+It is not exact. For fast movers it will be close. For slow movers it will be wrong in
+the direction of assuming the stock is fresher than it is.
+
+If nobody objects I will build it that way so we are not blocked.
+
+[email:01_shelf-life-field-mapping:m09] 2025-09-09T08:40 | Ana Duarte -> Priya Nair | subject: Re: Shelf life field mapping - fresh export
+This thread is now two months old and has thirteen messages in it, which usually means
+email is the wrong medium.
+
+I am putting shelf life on the agenda for the Phase 2 escalation call on Friday. Priya,
+you do not need to attend, but if the warehouse extract is genuinely impossible please
+say so before Friday so we can plan around it rather than discuss it live.
+
+Best regards,
+
+[email:01_shelf-life-field-mapping:m10] 2025-09-11T17:22 | Priya Nair -> Ana Duarte | subject: Re: Shelf life field mapping - fresh export
+It is not impossible, it is unowned, which in practice is the same thing this year.
+
+Proceed with your approximation.
+
+[email:01_shelf-life-field-mapping:m11] 2025-10-30T11:45 | Ana Duarte -> Nadia Haddad | subject: Re: Shelf life field mapping - fresh export
+Hi,
+
+Coming back to this old thread. Was the approximation approach ever confirmed by Acme,
+or did we just proceed? I am writing up the config decisions and I cannot find an
+agreement anywhere.
+
+Nadia?
+
+Best regards,
+
+[email:01_shelf-life-field-mapping:m12] 2025-10-30T12:02 | Nadia Haddad -> Ana Duarte | subject: Shelf life field mapping - fresh export
+We proceeded. Nobody objected.
+

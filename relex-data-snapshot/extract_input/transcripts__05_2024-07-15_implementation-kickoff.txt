@@ -1,0 +1,363 @@
+# transcripts/05_2024-07-15_implementation-kickoff.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:05_2024-07-15_implementation-kickoff:t001] 2024-07-15 | Lena Fischer | Lena Fischer @ 3:13 (line 15)
+— and that is agreed then. Priya's...
+
+[transcript:05_2024-07-15_implementation-kickoff:t002] 2024-07-15 | Priya Nair | Priya Nair @ 3:19 (line 20)
+Mm, okay.
+
+[transcript:05_2024-07-15_implementation-kickoff:t003] 2024-07-15 | Lena Fischer | Lena Fischer @ 3:23 (line 25)
+team owns the remediation and relics supports.
+
+[transcript:05_2024-07-15_implementation-kickoff:t004] 2024-07-15 | Ana Duarte | Ana Duarte @ 3:30 (line 30)
+Agreed. I will write it it up that way.
+
+[transcript:05_2024-07-15_implementation-kickoff:t005] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 3:39 (line 35)
+Right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t006] 2024-07-15 | Priya Nair | Priya Nair @ 3:42 (line 40)
+With the caveat I mentioned.
+
+[transcript:05_2024-07-15_implementation-kickoff:t007] 2024-07-15 | Lena Fischer | Lena Fischer @ 3:45 (line 45)
+With the caveat. Welcome everyone. Goal today is to agree the the rollout plan and ownership, and we have just
+
+[transcript:05_2024-07-15_implementation-kickoff:t008] 2024-07-15 | Ana Duarte | Ana Duarte @ 3:54 (line 50)
+Yeah, yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t009] 2024-07-15 | Guest 1 | Guest 1 @ 3:57 (line 55)
+done half of the ownership,
+
+[transcript:05_2024-07-15_implementation-kickoff:t010] 2024-07-15 | Priya Nair | Priya Nair @ 4:04 (line 60)
+Right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t011] 2024-07-15 | Lena Fischer | Lena Fischer @ 4:05 (line 65)
+part before the recording started, so I will summarise,
+
+[transcript:05_2024-07-15_implementation-kickoff:t012] 2024-07-15 | Ana Duarte | Ana Duarte @ 4:10 (line 70)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t013] 2024-07-15 | Lena Fischer | Lena Fischer @ 4:13 (line 75)
+it in the notes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t014] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 4:18 (line 80)
+Sure.
+
+[transcript:05_2024-07-15_implementation-kickoff:t015] 2024-07-15 | Ana Duarte | Ana Duarte @ 4:22 (line 85)
+Shall I take, the rollout plan?
+
+[transcript:05_2024-07-15_implementation-kickoff:t016] 2024-07-15 | Lena Fischer | Lena Fischer @ 4:35 (line 94)
+Please.
+
+[transcript:05_2024-07-15_implementation-kickoff:t017] 2024-07-15 | Priya Nair | Priya Nair @ 4:42 (line 99)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t018] 2024-07-15 | Ana Duarte | Ana Duarte @ 4:46 (line 104)
+So the proposed approach is phased. Dry goods at DC-1 and a pilot store
+
+[transcript:05_2024-07-15_implementation-kickoff:t019] 2024-07-15 | Priya Nair | Priya Nair @ 4:53 (line 109)
+Right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t020] 2024-07-15 | Ana Duarte | Ana Duarte @ 4:56 (line 114)
+group first, then chain-wide, then the fresh-food module as Phase 2.
+
+[transcript:05_2024-07-15_implementation-kickoff:t021] 2024-07-15 | Lena Fischer | Lena Fischer @ 5:03 (line 119)
+I mean, how many stores in the pilot group?
+
+[transcript:05_2024-07-15_implementation-kickoff:t022] 2024-07-15 | Ana Duarte | Ana Duarte @ 5:08 (line 124)
+Right, so... We had said
+
+[transcript:05_2024-07-15_implementation-kickoff:t023] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 5:17 (line 131)
+True.
+
+[transcript:05_2024-07-15_implementation-kickoff:t024] 2024-07-15 | Ana Duarte | Ana Duarte @ 5:18 (line 136)
+forty.
+
+[transcript:05_2024-07-15_implementation-kickoff:t025] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 5:22 (line 141)
+Yes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t026] 2024-07-15 | Lena Fischer | Lena Fischer @ 5:25 (line 146)
+Forty is right. Spread across,
+
+[transcript:05_2024-07-15_implementation-kickoff:t027] 2024-07-15 | Priya Nair | Priya Nair @ 5:30 (line 151)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t028] 2024-07-15 | Lena Fischer | Lena Fischer @ 5:31 (line 156)
+the three regions so we are not testing
+
+[transcript:05_2024-07-15_implementation-kickoff:t029] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 5:35 (line 161)
+Yes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t030] 2024-07-15 | Lena Fischer | Lena Fischer @ 5:36 (line 166)
+one buying,
+
+[transcript:05_2024-07-15_implementation-kickoff:t031] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 5:40 (line 171)
+Okay.
+
+[transcript:05_2024-07-15_implementation-kickoff:t032] 2024-07-15 | Lena Fischer | Lena Fischer @ 5:43 (line 176)
+pattern.
+
+[transcript:05_2024-07-15_implementation-kickoff:t033] 2024-07-15 | Ana Duarte | Ana Duarte @ 5:48 (line 181)
+Yeah. Noted.
+
+[transcript:05_2024-07-15_implementation-kickoff:t034] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 5:58 (line 191)
+Sure.
+
+[transcript:05_2024-07-15_implementation-kickoff:t035] 2024-07-15 | Priya Nair | Priya Nair @ 5:59 (line 196)
+sort of On integrations. We will provide nightly I mean... is straightforward, we do it for other things already.
+
+[transcript:05_2024-07-15_implementation-kickoff:t036] 2024-07-15 | Ana Duarte | Ana Duarte @ 6:16 (line 203)
+Good.
+
+[transcript:05_2024-07-15_implementation-kickoff:t037] 2024-07-15 | Lena Fischer | Lena Fischer @ 6:20 (line 208)
+Right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t038] 2024-07-15 | Priya Nair | Priya Nair @ 6:23 (line 213)
+Heads up though. DC-2 runs on an older middleware version. It may be flaky.
+
+[transcript:05_2024-07-15_implementation-kickoff:t039] 2024-07-15 | Ana Duarte | Ana Duarte @ 6:33 (line 218)
+Yeah. How flaky.
+
+[transcript:05_2024-07-15_implementation-kickoff:t040] 2024-07-15 | Priya Nair | Priya Nair @ 6:41 (line 225)
+It fails. Not constantly, but it fails, and when it fails it fails silently, which is worse. We have known about it, for two years and there has never...
+
+[transcript:05_2024-07-15_implementation-kickoff:t041] 2024-07-15 | Ana Duarte | Ana Duarte @ 7:00 (line 232)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t042] 2024-07-15 | Priya Nair | Priya Nair @ 7:04 (line 237)
+been a business case to upgrade it.
+
+[transcript:05_2024-07-15_implementation-kickoff:t043] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 7:12 (line 242)
+Is that the same middleware as DC-1?
+
+[transcript:05_2024-07-15_implementation-kickoff:t044] 2024-07-15 | Lena Fischer | Lena Fischer @ 7:19 (line 247)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t045] 2024-07-15 | Priya Nair | Priya Nair @ 7:21 (line 252)
+No. DC-1
+
+[transcript:05_2024-07-15_implementation-kickoff:t046] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 7:27 (line 257)
+Mm.
+
+[transcript:05_2024-07-15_implementation-kickoff:t047] 2024-07-15 | Priya Nair | Priya Nair @ 7:31 (line 262)
+was migrated. DC-2 was not, because it was supposed to be closing, and then it did not close.
+
+[transcript:05_2024-07-15_implementation-kickoff:t048] 2024-07-15 | Ana Duarte | Ana Duarte @ 7:43 (line 267)
+Let us put DC-2 on the watch list from day one then. We will add monitoring so
+
+[transcript:05_2024-07-15_implementation-kickoff:t049] 2024-07-15 | Lena Fischer | Lena Fischer @ 7:59 (line 274)
+Yeah, yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t050] 2024-07-15 | Ana Duarte | Ana Duarte @ 8:02 (line 279)
+Let me just... at least it fails loudly.
+
+[transcript:05_2024-07-15_implementation-kickoff:t051] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 8:11 (line 286)
+Mm, okay.
+
+[transcript:05_2024-07-15_implementation-kickoff:t052] 2024-07-15 | Priya Nair | Priya Nair @ 8:15 (line 291)
+That would already be an improvement.
+
+[transcript:05_2024-07-15_implementation-kickoff:t053] 2024-07-15 | Ana Duarte | Ana Duarte @ 8:18 (line 296)
+Sure.
+
+[transcript:05_2024-07-15_implementation-kickoff:t054] 2024-07-15 | Lena Fischer | Lena Fischer @ 8:19 (line 301)
+Target for core replenishmentt go-live?
+
+[transcript:05_2024-07-15_implementation-kickoff:t055] 2024-07-15 | Ana Duarte | Ana Duarte @ 8:23 (line 306)
+Q1 2025 if master data is ready.
+
+[transcript:05_2024-07-15_implementation-kickoff:t056] 2024-07-15 | Lena Fischer | Lena Fischer @ 8:29 (line 311)
+And if it is not.
+
+[transcript:05_2024-07-15_implementation-kickoff:t057] 2024-07-15 | Ana Duarte | Ana Duarte @ 8:36 (line 316)
+Yeah so, then it moves. I, would rather say that... now than in February.
+
+[transcript:05_2024-07-15_implementation-kickoff:t058] 2024-07-15 | Priya Nair | Priya Nair @ 8:51 (line 325)
+It will not be ready.
+
+[transcript:05_2024-07-15_implementation-kickoff:t059] 2024-07-15 | Lena Fischer | Lena Fischer @ 8:57 (line 330)
+Priya.
+
+[transcript:05_2024-07-15_implementation-kickoff:t060] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 9:02 (line 335)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t061] 2024-07-15 | Priya Nair | Priya Nair @ 9:05 (line 340)
+Right, so... I am being useful, not,
+
+[transcript:05_2024-07-15_implementation-kickoff:t062] 2024-07-15 | Lena Fischer | Lena Fischer @ 9:18 (line 347)
+Okay, yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t063] 2024-07-15 | Priya Nair | Priya Nair @ 9:19 (line 352)
+difficult. Our product master has gaps. Case Case pack quantities are missing on a chunk of the range, and shelf life is worse. We will need a cleansing workstream and it...
+
+[transcript:05_2024-07-15_implementation-kickoff:t064] 2024-07-15 | Lena Fischer | Lena Fischer @ 9:42 (line 361)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t065] 2024-07-15 | Priya Nair | Priya Nair @ 9:44 (line 366)
+is not a two-week thing.
+
+[transcript:05_2024-07-15_implementation-kickoff:t066] 2024-07-15 | Ana Duarte | Ana Duarte @ 9:47 (line 371)
+That is what we agreed before the recording, that your, team owns remediation with our support.
+
+[transcript:05_2024-07-15_implementation-kickoff:t067] 2024-07-15 | Priya Nair | Priya Nair @ 10:01 (line 380)
+Yes. I am saying the timeline should reflect it.
+
+[transcript:05_2024-07-15_implementation-kickoff:t068] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 10:09 (line 385)
+Okay.
+
+[transcript:05_2024-07-15_implementation-kickoff:t069] 2024-07-15 | Ana Duarte | Ana Duarte @ 10:13 (line 390)
+Then let us hold Q1 as the target and flag master data as the dependency in the plan, explicitly, yeah with a review point.
+
+[transcript:05_2024-07-15_implementation-kickoff:t070] 2024-07-15 | Guest 1 | Guest 1 @ 10:30 (line 397)
+Fine.
+
+[transcript:05_2024-07-15_implementation-kickoff:t071] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 10:35 (line 402)
+Priya, can you show us how the feeds are structured today?
+
+[transcript:05_2024-07-15_implementation-kickoff:t072] 2024-07-15 | Priya Nair | Priya Nair @ 10:45 (line 409)
+I can show you the diagram. One second. Can you
+
+[transcript:05_2024-07-15_implementation-kickoff:t073] 2024-07-15 | Ana Duarte | Ana Duarte @ 11:00 (line 416)
+Okay, yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t074] 2024-07-15 | Priya Nair | Priya Nair @ 11:01 (line 421)
+see it?
+
+[transcript:05_2024-07-15_implementation-kickoff:t075] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 11:08 (line 426)
+Yeah, yeah. Yes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t076] 2024-07-15 | Ana Duarte | Ana Duarte @ 11:17 (line 436)
+Yes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t077] 2024-07-15 | Priya Nair | Priya Nair @ 11:20 (line 441)
+So this is the extract, and it goes into this, and then this box here is if you... And this is where DC-2 sits, this one on the right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t078] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 11:41 (line 450)
+What is that arrow?
+
+[transcript:05_2024-07-15_implementation-kickoff:t079] 2024-07-15 | Priya Nair | Priya Nair @ 11:45 (line 455)
+right That is the and...
+
+[transcript:05_2024-07-15_implementation-kickoff:t080] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 11:51 (line 460)
+Sure. Right.
+
+[transcript:05_2024-07-15_implementation-kickoff:t081] 2024-07-15 | Priya Nair | Priya Nair @ 11:59 (line 470)
+And then out through here into the warehouse system, and this whole, part on the left is not... relevant to you.
+
+[transcript:05_2024-07-15_implementation-kickoff:t082] 2024-07-15 | Ana Duarte | Ana Duarte @ 12:15 (line 479)
+Can you send that diagram after?
+
+[transcript:05_2024-07-15_implementation-kickoff:t083] 2024-07-15 | Priya Nair | Priya Nair @ 12:22 (line 484)
+It is a bit out of date but yes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t084] 2024-07-15 | Ana Duarte | Ana Duarte @ 12:28 (line 489)
+One thing I want to be clear on before yeah... in scope for fresh?
+
+[transcript:05_2024-07-15_implementation-kickoff:t085] 2024-07-15 | Guest 1 | Guest 1 @ 12:43 (line 498)
+Fresh is Phase 2.
+
+[transcript:05_2024-07-15_implementation-kickoff:t086] 2024-07-15 | Ana Duarte | Ana Duarte @ 12:48 (line 503)
+Understood, but I need to know what it I mean... Yeah. it.
+
+[transcript:05_2024-07-15_implementation-kickoff:t087] 2024-07-15 | Lena Fischer | Lena Fischer @ 13:05 (line 512)
+so Produce, dairy, bakery, the chilled ready meals. Sofia would give you a better answer.
+
+[transcript:05_2024-07-15_implementation-kickoff:t088] 2024-07-15 | Ana Duarte | Ana Duarte @ 13:16 (line 517)
+actually Is Sofia joining these?
+
+[transcript:05_2024-07-15_implementation-kickoff:t089] 2024-07-15 | Lena Fischer | Lena Fischer @ 13:23 (line 522)
+Okay so, she is not on this call, no. She explained if the...
+
+[transcript:05_2024-07-15_implementation-kickoff:t090] 2024-07-15 | Ana Duarte | Ana Duarte @ 13:32 (line 527)
+I was was not on that call.
+
+[transcript:05_2024-07-15_implementation-kickoff:t091] 2024-07-15 | Lena Fischer | Lena Fischer @ 13:38 (line 532)
+Ah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t092] 2024-07-15 | Ana Duarte | Ana Duarte @ 13:42 (line 537)
+I will get the notes.
+
+[transcript:05_2024-07-15_implementation-kickoff:t093] 2024-07-15 | Lena Fischer | Lena Fischer @ 13:46 (line 542)
+There was, a whole conversation about shelf life. It was the main thing, kind of yeah...
+
+[transcript:05_2024-07-15_implementation-kickoff:t094] 2024-07-15 | Ana Duarte | Ana Duarte @ 13:57 (line 549)
+Then I will find it. Sorry, this is exactly the thing that should not Yeah. happen.
+
+[transcript:05_2024-07-15_implementation-kickoff:t095] 2024-07-15 | Lena Fischer | Lena Fischer @ 14:17 (line 558)
+It is fine. Marco will have it.
+
+[transcript:05_2024-07-15_implementation-kickoff:t096] 2024-07-15 | Priya Nair | Priya Nair @ 14:21 (line 563)
+Are we doing a weekly?
+
+[transcript:05_2024-07-15_implementation-kickoff:t097] 2024-07-15 | Ana Duarte | Ana Duarte @ 14:24 (line 568)
+Weekly for the first month, then fortnightly.
+
+[transcript:05_2024-07-15_implementation-kickoff:t098] 2024-07-15 | Priya Nair | Priya Nair @ 14:32 (line 573)
+Not Mondays.
+
+[transcript:05_2024-07-15_implementation-kickoff:t099] 2024-07-15 | Lena Fischer | Lena Fischer @ 14:35 (line 578)
+Sure.
+
+[transcript:05_2024-07-15_implementation-kickoff:t100] 2024-07-15 | Ana Duarte | Ana Duarte @ 14:39 (line 583)
+Tuesdays.
+
+[transcript:05_2024-07-15_implementation-kickoff:t101] 2024-07-15 | Priya Nair | Priya Nair @ 14:46 (line 588)
+Tuesdays is fine.
+
+[transcript:05_2024-07-15_implementation-kickoff:t102] 2024-07-15 | Lena Fischer | Lena Fischer @ 14:50 (line 593)
+Anything else?
+
+[transcript:05_2024-07-15_implementation-kickoff:t103] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 14:54 (line 598)
+Access. We will need environment access for two people on our
+
+[transcript:05_2024-07-15_implementation-kickoff:t104] 2024-07-15 | Priya Nair | Priya Nair @ 14:59 (line 603)
+Mm, okay.
+
+[transcript:05_2024-07-15_implementation-kickoff:t105] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 15:03 (line 608)
+side by the end of the month.
+
+[transcript:05_2024-07-15_implementation-kickoff:t106] 2024-07-15 | Priya Nair | Priya Nair @ 15:08 (line 613)
+Names and emails.
+
+[transcript:05_2024-07-15_implementation-kickoff:t107] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 15:13 (line 618)
+Nadia Haddad,
+
+[transcript:05_2024-07-15_implementation-kickoff:t108] 2024-07-15 | Ana Duarte | Ana Duarte @ 15:19 (line 623)
+Yep.
+
+[transcript:05_2024-07-15_implementation-kickoff:t109] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 15:22 (line 628)
+n.haddad@relexsolutions.example, and Kwame Boateng, k.boateng@relexsolutions.example. Nadia our employee number four four two nine and Kwame is five one oh three, if your system wants that.
+
+[transcript:05_2024-07-15_implementation-kickoff:t110] 2024-07-15 | Priya Nair | Priya Nair @ 15:43 (line 637)
+It wants a personal email as a recovery address too, that is the annoying part.
+
+[transcript:05_2024-07-15_implementation-kickoff:t111] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 15:53 (line 642)
+I will ask them and send it over.
+
+[transcript:05_2024-07-15_implementation-kickoff:t112] 2024-07-15 | Priya Nair | Priya Nair @ 15:59 (line 647)
+Yeah. Do not put it in a Teams
+
+[transcript:05_2024-07-15_implementation-kickoff:t113] 2024-07-15 | Lena Fischer | Lena Fischer @ 16:08 (line 657)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t114] 2024-07-15 | Priya Nair | Priya Nair @ 16:09 (line 662)
+message, send it properly.
+
+[transcript:05_2024-07-15_implementation-kickoff:t115] 2024-07-15 | Lena Fischer | Lena Fischer @ 16:15 (line 667)
+Yeah.
+
+[transcript:05_2024-07-15_implementation-kickoff:t116] 2024-07-15 | Priya Nair | Priya Nair @ 16:18 (line 672)
+Send me the names and I will raise the tickets. It takes about two weeks
+
+[transcript:05_2024-07-15_implementation-kickoff:t117] 2024-07-15 | Lena Fischer | Lena Fischer @ 16:29 (line 677)
+Sure.
+
+[transcript:05_2024-07-15_implementation-kickoff:t118] 2024-07-15 | Priya Nair | Priya Nair @ 16:32 (line 682)
+so send them today.
+
+[transcript:05_2024-07-15_implementation-kickoff:t119] 2024-07-15 | Tomas Lindholm | Tomas Lindholm @ 16:40 (line 689)
+Will do.
+
+[transcript:05_2024-07-15_implementation-kickoff:t120] 2024-07-15 | Lena Fischer | Lena Fischer @ 16:44 (line 694)
+Good. Thank, you everyone.
+

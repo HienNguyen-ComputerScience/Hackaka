@@ -1,0 +1,35 @@
+# emails/06_fresh-category-hierarchy-question.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:06_fresh-category-hierarchy-question:m01] 2025-10-14T09:05 | Nadia Haddad -> Sofia Almeida | subject: Fresh category hierarchy - question
+Hi Sofia,
+
+Quick one - in the fresh hierarchy, does "chilled convenience" sit under ready meals or
+is it its own thing? The master data has it both ways depending on which site.
+
+Thanks
+
+[email:06_fresh-category-hierarchy-question:m02] 2025-10-14T09:06 | Sofia Almeida -> Nadia Haddad | subject: Re: Fresh category hierarchy - question
+Automatic reply: Fresh category hierarchy - question
+
+I am out of the office from 13 October and expect to return on 17 November. I will not
+be reading email during this period.
+
+For anything urgent relating to fresh categories please contact Jonas Weiss
+(jonas.weiss@acme-org.example, +49 151 7712 3308). Please note Jonas covers ambient and
+is not familiar with fresh, so for anything category-specific it may be better to wait.
+
+For medical appointments please contact my husband on the number he has for you.
+
+Sofia
+
+[email:06_fresh-category-hierarchy-question:m03] 2025-10-14T09:40 | Nadia Haddad -> Ana Duarte | subject: FW: Fresh category hierarchy - question
+Ana - I think Sofia has misconfigured her out of office, the last line was clearly not
+meant for work contacts. Should someone tell her? It is going to every person who emails
+her for six weeks.
+
+[email:06_fresh-category-hierarchy-question:m04] 2025-10-14T10:02 | Ana Duarte -> Nadia Haddad | subject: Fresh category hierarchy - question
+I will mention it to Lena rather than to Sofia directly. Do not forward it any further.
+
+Best regards,
+

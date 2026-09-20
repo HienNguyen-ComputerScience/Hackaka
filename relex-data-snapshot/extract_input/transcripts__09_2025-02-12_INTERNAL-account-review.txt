@@ -1,0 +1,138 @@
+# transcripts/09_2025-02-12_INTERNAL-account-review.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t001] 2025-02-12 | Me | Me turn 1 (line 12)
+so Right, so where are we with Acme.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t002] 2025-02-12 | Them | Them turn 2 (line 13)
+Go-live is in about three weeks for core. Dry goods, DC-1, the pilot group.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t003] 2025-02-12 | Me | Me turn 3 (line 14)
+Go-live is in. DC-1, the pilot group.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t004] 2025-02-12 | Them | Them turn 4 (line 15)
+Go-live is. DC-1, the pilot group.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t005] 2025-02-12 | Me | Me turn 5 (line 16)
+And the number.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t006] 2025-02-12 | Them | Them turn 6 (line 17)
+Signed at nine hundred and eighty eighty thousand annual. We held above the floor, we went to fourteen percent off list and the floor is eighteen, so there is headroom if Phase 2 needs sweetening.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t007] 2025-02-12 | Me | Me turn 7 (line 18)
+But, do not sweeten it yet.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t008] 2025-02-12 | Them | Them turn 8 (line 19)
+I was not going to.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t009] 2025-02-12 | Me | Me turn 9 (line 20)
+you know Talk me through the room.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t010] 2025-02-12 | Them | Them turn 10 (line 21)
+Lena Fischer is the champion, unambiguously. Head of supply chain, she brought us in, she defends us internally. If we lose Lena we lose the account.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t011] 2025-02-12 | Me | Me turn 11 (line 22)
+Is she safe?
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t012] 2025-02-12 | Them | Them turn 12 (line 23)
+She is safe. Kahn is the gate. CFO. He does not care about ambient, he does not care about automation rates, you know he cares about fresh waste because that is what the board asks him about, and he has said twelve months for ROI more than once.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t013] 2025-02-12 | Me | Me turn 13 (line 24)
+She is. care about ambient. that is what. about, and he has said.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t014] 2025-02-12 | Them | Them turn 14 (line 25)
+Three times in my hearing. kind of like So the twelve-month clock is the real deadline, not not the plan dates. kind of like So the. not not the plan dates.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t015] 2025-02-12 | Me | Me turn 15 (line 28)
+And Phase 2 sits where relative to that.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t016] 2025-02-12 | Them | Them turn 16 (line 29)
+like That is the problem. Twelve months from signature puts us at roughly the end of of this year. Phase 2 is not scoped yet.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t017] 2025-02-12 | Me | Me turn 17 (line 30)
+So it is tight.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t018] 2025-02-12 | Them | Them turn 18 (line 31)
+It is tight.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t019] 2025-02-12 | Me | Me turn 19 (line 32)
+Who else.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t020] 2025-02-12 | Them | Them turn 20 (line 33)
+Priya Nair in IT. She is not against us but she is not for us either. She She will do what is agreed and she will tell you exactly why will not work, which is actually useful, but she will not push anything uphill on our behalf.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t021] 2025-02-12 | Me | Me turn 21 (line 34)
+she is not. what is. you exactly why will. is actually useful.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t022] 2025-02-12 | Them | Them turn 22 (line 35)
+us but she. what is. she will. She has been straight with us every time. She has. I would not call her a blocker. I would call her weather.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t023] 2025-02-12 | Me | Me turn 23 (line 38)
+And the fresh person.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t024] 2025-02-12 | Them | Them turn 24 (line 39)
+Sofia Almeida. She She is one who actually understands the problem were hired to solve. She has no political weight whatsoever, I mean she is a category manager covering two roles, and she is the single point of knowledge on fresh. She flagged that herself in the demo.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t025] 2025-02-12 | Me | Me turn 25 (line 40)
+Is that in the risk register.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t026] 2025-02-12 | Them | Them turn 26 (line 41)
+It is in mine.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t027] 2025-02-12 | Me | Me turn 27 (line 42)
+So, put it in the account plan too.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t028] 2025-02-12 | Them | Them turn 28 (line 43)
+One more thing on Kahn. Do not schedule him on a Friday. He He has his kids Fridays since the separation and he will either decline or join and be somewhere else.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t029] 2025-02-12 | Me | Me turn 29 (line 44)
+Noted. Just put availability constraint in the notes, not the reason.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t030] 2025-02-12 | Them | Them turn 30 (line 45)
+Noted. Just. reason. But, fine.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t031] 2025-02-12 | Me | Me turn 31 (line 47)
+Competition?
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t032] 2025-02-12 | Them | Them turn 32 (line 48)
+Nobody on core, basically we won cleanly. But there is somebody circling the fresh module specifically. Lena mentioned they had been contacted, she did not say by whom and I did not push.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t033] 2025-02-12 | Me | Me turn 33 (line 49)
+That is worth knowing. Fresh is the emotional centre of the account and it it is the piece we have not delivered.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t034] 2025-02-12 | Them | Them turn 34 (line 50)
+Correct.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t035] 2025-02-12 | Me | Me turn 35 (line 51)
+yeah Renewal date?
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t036] 2025-02-12 | Them | Them turn 36 (line 52)
+Three years from signature, so mid twenty-seven.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t037] 2025-02-12 | Me | Me turn 37 (line 53)
+Then the risk is not renewal, kind of like the risk is Phase 2 slipping past Kahn's window and the fresh scope going out to tender.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t038] 2025-02-12 | Them | Them turn 38 (line 54)
+That is exactly the risk.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t039] 2025-02-12 | Me | Me turn 39 (line 55)
+actually How does this compare to the Braggeholm situation, are we we discounting similarly there?
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t040] 2025-02-12 | Them | Them turn 40 (line 56)
+actually How does this. we discounting similarly there?. brag a home went out at much steeper discount.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t041] 2025-02-12 | Me | Me turn 41 (line 58)
+Do not put that in any shared document.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t042] 2025-02-12 | Them | Them turn 42 (line 59)
+No.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t043] 2025-02-12 | Me | Me turn 43 (line 60)
+So, right. Actions. Marco, get Phase 2 scoped before the ninety-day review so we have something to show Kahn. Ana, DC-2 on the risk register with a named owner. And someone write down that Sofia is a single point of failure.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t044] 2025-02-12 | Them | Them turn 44 (line 61)
+So, right. Actions. Marco. review so we have something. DC-2 on the risk register. point of failure. you know I will do that today.
+
+[transcript:09_2025-02-12_INTERNAL-account-review:t045] 2025-02-12 | Me | Me turn 45 (line 63)
+Good.
+

@@ -1,0 +1,321 @@
+# transcripts/15_2025-09-12_fresh-phase2-escalation.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t001] 2025-09-12 | Marco Rossi | Marco Rossi @ 0:18 (line 15)
+And, i asked for this call because I would rather escalate early than explain later. Fresh-food Phase 2 is... about six weeks behind.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t002] 2025-09-12 | Lena Fischer | Lena Fischer @ 0:31 (line 22)
+Before you start, is shelf-life on
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t003] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 0:36 (line 27)
+Mm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t004] 2025-09-12 | Lena Fischer | Lena Fischer @ 0:37 (line 32)
+this agenda? Ana said it would be.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t005] 2025-09-12 | Marco Rossi | Marco Rossi @ 0:44 (line 37)
+Mm. It is, we will but... it. Ana put it on because email thread had thirteen messages in it and was going nowhere.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t006] 2025-09-12 | Priya Nair | Priya Nair @ 1:00 (line 49)
+Yes.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t007] 2025-09-12 | Lena Fischer | Lena Fischer @ 1:03 (line 54)
+Six.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t008] 2025-09-12 | Priya Nair | Priya Nair @ 1:09 (line 59)
+Right.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t009] 2025-09-12 | Marco Rossi | Marco Rossi @ 1:10 (line 64)
+Six. Two causes. The first is UAT resourcing on your side, we have not had the
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t010] 2025-09-12 | Lena Fischer | Lena Fischer @ 1:25 (line 71)
+Mm, okay.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t011] 2025-09-12 | Marco Rossi | Marco Rossi @ 1:28 (line 76)
+people we planned for. The second is ours, there is a calculation defect in the fresh-food allocation module that produces negative quantities... in test.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t012] 2025-09-12 | Priya Nair | Priya Nair @ 1:47 (line 83)
+Negative order quantities.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t013] 2025-09-12 | Marco Rossi | Marco Rossi @ 1:51 (line 88)
+Negative quantities,
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t014] 2025-09-12 | Lena Fischer | Lena Fischer @ 1:56 (line 93)
+Yeah, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t015] 2025-09-12 | Marco Rossi | Marco Rossi @ 1:59 (line 98)
+yes. It is a boundary condition, it...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t016] 2025-09-12 | Lena Fischer | Lena Fischer @ 2:07 (line 103)
+Sure.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t017] 2025-09-12 | Marco Rossi | Marco Rossi @ 2:08 (line 108)
+is understood, it is not a mystery, but it has to be fixed before UAT means anything.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t018] 2025-09-12 | Lena Fischer | Lena Fischer @ 2:19 (line 113)
+How long to fix.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t019] 2025-09-12 | Marco Rossi | Marco Rossi @ 2:23 (line 118)
+Yeah. Days, not weeks. It is already in development.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t020] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 2:34 (line 128)
+Got it.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t021] 2025-09-12 | Lena Fischer | Lena Fischer @ 2:35 (line 133)
+And the UAT resourcing is mine.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t022] 2025-09-12 | Marco Rossi | Marco Rossi @ 2:39 (line 138)
+It is.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t023] 2025-09-12 | Lena Fischer | Lena Fischer @ 2:42 (line 143)
+Then I will fix that. Fresh is the top priority, Robert asks me about it every single time I see him, and... I am not going to be the reason it slips. I will add capacity.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t024] 2025-09-12 | Marco Rossi | Marco Rossi @ 3:06 (line 150)
+I mean Thank you.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t025] 2025-09-12 | Priya Nair | Priya Nair @ 3:13 (line 155)
+Right.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t026] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 3:15 (line 160)
+Can I say something.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t027] 2025-09-12 | Lena Fischer | Lena Fischer @ 3:18 (line 165)
+Yes.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t028] 2025-09-12 | Priya Nair | Priya Nair @ 3:25 (line 170)
+Yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t029] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 3:29 (line 175)
+right I am still doing it by hand. That is what I want on the record. It is September twenty
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t030] 2025-09-12 | Lena Fischer | Lena Fischer @ 3:44 (line 184)
+Yeah, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t031] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 3:48 (line 189)
+twenty-five and I am doing fresh ordering in a spreadsheet exactly the way I was doing it when I first met Marco.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t032] 2025-09-12 | Marco Rossi | Marco Rossi @ 3:59 (line 194)
+I know.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t033] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 4:05 (line 199)
+And your
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t034] 2025-09-12 | Marco Rossi | Marco Rossi @ 4:10 (line 204)
+Mm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t035] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 4:11 (line 209)
+consultant, the new one, Tomas's colleague, he sent me a questionnaire last into the...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t036] 2025-09-12 | Marco Rossi | Marco Rossi @ 4:20 (line 214)
+Mm-hm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t037] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 4:23 (line 219)
+explain how...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t038] 2025-09-12 | Marco Rossi | Marco Rossi @ 4:29 (line 224)
+Mm, okay.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t039] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 4:33 (line 229)
+shelf life works in our categories.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t040] 2025-09-12 | Marco Rossi | Marco Rossi @ 4:36 (line 234)
+The questionnaire was Nadia's, and it was because the field mapping thread with Priya never resolved.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t041] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 4:55 (line 243)
+I am not on that thread.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t042] 2025-09-12 | Marco Rossi | Marco Rossi @ 4:59 (line 248)
+No, you are not.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t043] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 5:02 (line 253)
+Yeah, yeah. So there has been a two month email conversation about my categories that I have
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t044] 2025-09-12 | Marco Rossi | Marco Rossi @ 5:17 (line 265)
+Yes.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t045] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 5:19 (line 270)
+not been included in.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t046] 2025-09-12 | Marco Rossi | Marco Rossi @ 5:25 (line 275)
+Yes. Right.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t047] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 5:33 (line 282)
+True. But, i answered that question in March last last year. In the demo. It was the main thing I said. I said the shelf-life field is populated for about half the range and wrong for a portion of the rest, and that nothing in the ordering process knows whether something has three days left or three weeks. I remember saying it because it was the only reason I was in the room.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t048] 2025-09-12 | Marco Rossi | Marco Rossi @ 6:23 (line 304)
+You did say that.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t049] 2025-09-12 | Lena Fischer | Lena Fischer @ 6:28 (line 309)
+Of course.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t050] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 6:32 (line 314)
+So why am about the...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t051] 2025-09-12 | Priya Nair | Priya Nair @ 6:37 (line 319)
+Mm-hm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t052] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 6:41 (line 324)
+again eighteen months later.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t053] 2025-09-12 | Marco Rossi | Marco Rossi @ 6:48 (line 329)
+Because the people who joined this project,
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t054] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 6:55 (line 334)
+Right.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t055] 2025-09-12 | Marco Rossi | Marco Rossi @ 6:57 (line 339)
+did not have access to I mean... not make sure they did.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t056] 2025-09-12 | Priya Nair | Priya Nair @ 7:04 (line 346)
+Yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t057] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 7:06 (line 351)
+Okay so, i filled in the questionnaire anyway. It took me two hours.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t058] 2025-09-12 | Lena Fischer | Lena Fischer @ 7:16 (line 356)
+basically Sofia.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t059] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 7:23 (line 361)
+Yeah so, i am not being difficult, I am telling you the actual cost of this. Two hours of mine, and the answer worse than... the one I gave in March because I was rushing.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t060] 2025-09-12 | Marco Rossi | Marco Rossi @ 7:50 (line 370)
+That is a fair
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t061] 2025-09-12 | Priya Nair | Priya Nair @ 7:53 (line 375)
+Mm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t062] 2025-09-12 | Marco Rossi | Marco Rossi @ 7:56 (line 380)
+criticism and I do not have a defence.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t063] 2025-09-12 | Priya Nair | Priya Nair @ 8:04 (line 385)
+Agreed. This has happened on our side too, yeah to be fair. The master data requirements were re-specified twice.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t064] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 8:21 (line 397)
+like And the threshold, the one that actually matters, is that anything under —
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t065] 2025-09-12 | Lena Fischer | Lena Fischer @ 8:32 (line 402)
+yeah Sorry, Sofia, you have gone very quiet, are you still there?
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t066] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 8:41 (line 409)
+Can you hear me?
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t067] 2025-09-12 | Lena Fischer | Lena Fischer @ 8:45 (line 414)
+Mm. Now, kind of like yes.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t068] 2025-09-12 | Marco Rossi | Marco Rossi @ 8:50 (line 424)
+Mm, okay. Sorry Sofia, we lost about ten seconds.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t069] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 9:00 (line 434)
+Yeah. It does not matter, it is in, the questionnaire.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t070] 2025-09-12 | Priya Nair | Priya Nair @ 9:15 (line 446)
+Mm, okay.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t071] 2025-09-12 | Marco Rossi | Marco Rossi @ 9:19 (line 451)
+I mean
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t072] 2025-09-12 | Priya Nair | Priya Nair @ 9:24 (line 456)
+Mm-hm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t073] 2025-09-12 | Marco Rossi | Marco Rossi @ 9:25 (line 461)
+Let me propose a way forward. First, we we fix the defect, and that that starts today. Second, I am and the... drive fresh-food UAT, at our cost, so the work does not sit waiting on your team having spare capacity.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t074] 2025-09-12 | Lena Fischer | Lena Fischer @ 9:55 (line 470)
+Sure. Two weeks is enough?
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t075] 2025-09-12 | Marco Rossi | Marco Rossi @ 10:03 (line 480)
+Two weeks to get UAT moving properly. Third, I want to hold a fresh-food go or no-go decision on,
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t076] 2025-09-12 | Lena Fischer | Lena Fischer @ 10:16 (line 487)
+Yeah, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t077] 2025-09-12 | Marco Rossi | Marco Rossi @ 10:19 (line 492)
+the fifteenth,
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t078] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 10:25 (line 497)
+Right.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t079] 2025-09-12 | Marco Rossi | Marco Rossi @ 10:29 (line 502)
+of November. Not status update, from the...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t080] 2025-09-12 | Priya Nair | Priya Nair @ 10:36 (line 507)
+Okay, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t081] 2025-09-12 | Lena Fischer | Lena Fischer @ 10:37 (line 512)
+November fifteenth.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t082] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 10:40 (line 517)
+Yeah, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t083] 2025-09-12 | Marco Rossi | Marco Rossi @ 10:43 (line 522)
+If we are not
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t084] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 10:48 (line 527)
+Okay.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t085] 2025-09-12 | Marco Rossi | Marco Rossi @ 10:51 (line 532)
+One second. ready go live by so...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t086] 2025-09-12 | Priya Nair | Priya Nair @ 11:00 (line 539)
+Mm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t087] 2025-09-12 | Marco Rossi | Marco Rossi @ 11:03 (line 544)
+say so and we replan honestly rather than sliding.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t088] 2025-09-12 | Lena Fischer | Lena Fischer @ 11:12 (line 551)
+I would prefer that. And DC-2?
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t089] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 11:27 (line 560)
+Yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t090] 2025-09-12 | Marco Rossi | Marco Rossi @ 11:31 (line 565)
+The permanent fix is progressing but I am going be honest, it is progressing at reduced pace because the same engineers are on the defect.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t091] 2025-09-12 | Priya Nair | Priya Nair @ 11:46 (line 572)
+Mm, okay. like So DC-2 slips again.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t092] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 11:57 (line 584)
+Mm-hm.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t093] 2025-09-12 | Marco Rossi | Marco Rossi @ 11:58 (line 589)
+DC-2 continues at reduced pace. I am when the...
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t094] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 12:03 (line 594)
+Okay, yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t095] 2025-09-12 | Marco Rossi | Marco Rossi @ 12:07 (line 599)
+to pretend it is going faster than it it is.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t096] 2025-09-12 | Priya Nair | Priya Nair @ 12:14 (line 604)
+At least that is a straight answer.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t097] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 12:19 (line 609)
+Exactly.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t098] 2025-09-12 | Lena Fischer | Lena Fischer @ 12:21 (line 614)
+All right. Marco, yeah send me those four things in writing today, because I will need to walk Robert through,
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t099] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 12:35 (line 621)
+Yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t100] 2025-09-12 | Lena Fischer | Lena Fischer @ 12:37 (line 626)
+them tomorrow and he will ask for dates.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t101] 2025-09-12 | Marco Rossi | Marco Rossi @ 12:42 (line 631)
+Yeah. Today.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t102] 2025-09-12 | Lena Fischer | Lena Fischer @ 12:49 (line 641)
+Yeah.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t103] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 12:52 (line 646)
+And can whoever the consultant is read the, March notes before he talks to me.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t104] 2025-09-12 | Marco Rossi | Marco Rossi @ 13:04 (line 653)
+Mm-hm. He will read them before he talks to you.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t105] 2025-09-12 | Sofia Almeida | Sofia Almeida @ 13:10 (line 663)
+Thank you.
+
+[transcript:15_2025-09-12_fresh-phase2-escalation:t106] 2025-09-12 | Marco Rossi | Marco Rossi @ 13:17 (line 668)
+Yeah.
+

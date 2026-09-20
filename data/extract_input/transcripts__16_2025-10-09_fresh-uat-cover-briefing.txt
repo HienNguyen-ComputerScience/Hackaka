@@ -1,0 +1,264 @@
+# transcripts/16_2025-10-09_fresh-uat-cover-briefing.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t001] 2025-10-09 | Ana Duarte | Ana Duarte @ 0:24 (line 15)
+Sofia is out from Monday for about six weeks. Jonas is covering. This So... is the briefing.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t002] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 0:40 (line 24)
+Yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t003] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 0:41 (line 29)
+I want to say at the start that yeah... to work and I am doing it anyway.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t004] 2025-10-09 | Ana Duarte | Ana Duarte @ 0:55 (line 38)
+Mm.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t005] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 0:58 (line 43)
+Thanks.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t006] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 1:03 (line 48)
+Not you. The situation.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t007] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 1:10 (line 53)
+I know. I do embient.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t008] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 1:13 (line 58)
+How much fresh do you know, honestly?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t009] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 1:20 (line 63)
+I know the products. I do not know the ordering...
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t010] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 1:26 (line 68)
+Yeah, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t011] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 1:28 (line 73)
+behaviour, and... One second. I have never done a UAT.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t012] 2025-10-09 | Ana Duarte | Ana Duarte @ 1:46 (line 82)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t013] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 1:47 (line 87)
+Then Then let us be realistic about what
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t014] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 1:53 (line 92)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t015] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 1:56 (line 97)
+you can decide and what has to wait.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t016] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 2:04 (line 102)
+like That is the right approach. Can I, go through it as three lists?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t017] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 2:14 (line 109)
+Sure.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t018] 2025-10-09 | Ana Duarte | Ana Duarte @ 2:15 (line 114)
+Yeah so, please.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t019] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 2:20 (line 119)
+Yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t020] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 2:23 (line 124)
+Things Jonas can where the... hierarchy, because that documented. Anything about supplier lead times. Anything about the ambiant side of a shared category.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t021] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 2:42 (line 131)
+Let me just... Fine.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t022] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 2:51 (line 138)
+Things Jonas should not decide, so and I mean should not rather than cannot. Anything about shell life. Anything about the slow moving lines in produce, which behave differently from everything else and...
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t023] 2025-10-09 | Ana Duarte | Ana Duarte @ 3:14 (line 149)
+Yeah, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t024] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 3:17 (line 154)
+I cannot explain why in one meeting. And anything where the system's proposal looks wrong but you cannot say what is wrong with it.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t025] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 3:37 (line 161)
+That last one is most of UAT.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t026] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 3:41 (line 166)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t027] 2025-10-09 | Ana Duarte | Ana Duarte @ 3:44 (line 171)
+So what happens with those?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t028] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 3:47 (line 176)
+They wait.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t029] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 3:52 (line 181)
+Right. so For six weeks.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t030] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 3:58 (line 191)
+For six weeks. Or you send them to me and I will look, at them, which is what will actually happen and which everyone in this call knows.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t031] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 4:27 (line 204)
+Yeah, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t032] 2025-10-09 | Ana Duarte | Ana Duarte @ 4:28 (line 209)
+I am not going to ask you to work while you are off.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t033] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 4:37 (line 214)
+Mm.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t034] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 4:41 (line 219)
+You will not have to ask.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t035] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 4:45 (line 224)
+Right.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t036] 2025-10-09 | Ana Duarte | Ana Duarte @ 4:48 (line 229)
+Can you hear me? Sofia.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t037] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 4:56 (line 236)
+I mean, i am not being... difficult. I am telling you. If UAT stalls for six weeks the go/no-go moves, and if the go/no-go moves
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t038] 2025-10-09 | Ana Duarte | Ana Duarte @ 5:13 (line 243)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t039] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 5:14 (line 248)
+then Robert has a,
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t040] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 5:18 (line 253)
+Right.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t041] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 5:22 (line 258)
+conversation with Lena, and I would rather look
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t042] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 5:30 (line 263)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t043] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 5:33 (line 268)
+at.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t044] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 5:39 (line 273)
+Mm, okay. Can we reduce how many reach that yeah...
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t045] 2025-10-09 | Ana Duarte | Ana Duarte @ 5:51 (line 283)
+Right.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t046] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 5:54 (line 288)
+I take everything
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t047] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 6:00 (line 293)
+Okay, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t048] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 6:04 (line 298)
+Hmm. that is obviously a configuration... question and handle it myself, and Jonas takes anything documented, what is left?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t049] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 6:21 (line 307)
+Fewer. Maybe a third of what it would be.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t050] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 6:26 (line 312)
+right Then let us do that.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t051] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 6:32 (line 317)
+And third list. Things I have not
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t052] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 6:40 (line 322)
+Yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t053] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 6:41 (line 327)
+written down anywhere.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t054] 2025-10-09 | Ana Duarte | Ana Duarte @ 6:48 (line 334)
+Go on.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t055] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 6:51 (line 339)
+Okay.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t056] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 6:55 (line 344)
+The chilled ready meals promotion cycle is not in any document. It Hmm. runs on a four week rhythm that the commercial team... set in 2019 and never wrote down. If the,
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t057] 2025-10-09 | Ana Duarte | Ana Duarte @ 7:28 (line 357)
+True.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t058] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 7:30 (line 362)
+system forecasts a promotion on the wrong week, the number will look, plausible and be wrong.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t059] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 7:46 (line 369)
+Yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t060] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 7:50 (line 374)
+How would we know?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t061] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 7:54 (line 379)
+Okay so, you would
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t062] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 7:57 (line 384)
+Yeah, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t063] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 7:59 (line 389)
+not. I,
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t064] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 8:04 (line 394)
+Yes.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t065] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 8:05 (line 399)
+would.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t066] 2025-10-09 | Ana Duarte | Ana Duarte @ 8:08 (line 404)
+Sorry, go ahead. Can you write it down before, Monday?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t067] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 8:25 (line 413)
+I can write down the
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t068] 2025-10-09 | Ana Duarte | Ana Duarte @ 8:30 (line 418)
+Sure.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t069] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 8:31 (line 423)
+rhythm. I cannot write down which weeks the commercial team will break it, which they do about... twice a year.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t070] 2025-10-09 | Ana Duarte | Ana Duarte @ 8:47 (line 430)
+Write down what can. Even the rhythm so...
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t071] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 8:51 (line 435)
+I will send it tonight.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t072] 2025-10-09 | Ana Duarte | Ana Duarte @ 8:58 (line 440)
+Sure.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t073] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 8:59 (line 445)
+Send it to me as well.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t074] 2025-10-09 | Ana Duarte | Ana Duarte @ 9:05 (line 452)
+Mm.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t075] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 9:08 (line 457)
+I will send it to all three of you, because if I send it to one...
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t076] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 9:20 (line 462)
+Mm-hm.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t077] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 9:21 (line 467)
+person it will be gone by December.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t078] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 9:29 (line 472)
+Yeah, yeah. Fair.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t079] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 9:34 (line 482)
+Yeah, yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t080] 2025-10-09 | Ana Duarte | Ana Duarte @ 9:35 (line 487)
+Anything else?
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t081] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 9:39 (line 492)
+One thing and it it is not about the the, project. I
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t082] 2025-10-09 | Jonas Weiss | Jonas Weiss @ 9:49 (line 499)
+Yeah.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t083] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 9:51 (line 504)
+would rather people did not know why I am off. Yeah. Jonas knows because he had to. Nobody else needs
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t084] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 10:07 (line 513)
+Right.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t085] 2025-10-09 | Ana Duarte | Ana Duarte @ 10:09 (line 518)
+Understood.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t086] 2025-10-09 | Nadia Haddad | Nadia Haddad @ 10:14 (line 523)
+Mm-hm.
+
+[transcript:16_2025-10-09_fresh-uat-cover-briefing:t087] 2025-10-09 | Sofia Almeida | Sofia Almeida @ 10:15 (line 528)
+I say that because it turns out these things get written down.
+

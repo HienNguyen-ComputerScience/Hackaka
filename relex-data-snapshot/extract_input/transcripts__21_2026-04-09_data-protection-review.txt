@@ -1,0 +1,399 @@
+# transcripts/21_2026-04-09_data-protection-review.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:21_2026-04-09_data-protection-review:t001] 2026-04-09 | Katarina Voss | Katarina Voss @ 0:06 (line 15)
+I will be direct because I have thirty minutes. I am doing an annual review of processors and I have questions I have not had answered before.
+
+[transcript:21_2026-04-09_data-protection-review:t002] 2026-04-09 | Marco Rossi | Marco Rossi @ 0:22 (line 22)
+Go ahead.
+
+[transcript:21_2026-04-09_data-protection-review:t003] 2026-04-09 | Katarina Voss | Katarina Voss @ 0:26 (line 27)
+First, where does our data physically sit?
+
+[transcript:21_2026-04-09_data-protection-review:t004] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 0:30 (line 32)
+Okay. Your environment is hosted in the EU. West Europe region.
+
+[transcript:21_2026-04-09_data-protection-review:t005] 2026-04-09 | Katarina Voss | Katarina Voss @ 0:39 (line 42)
+Named in the agreement?
+
+[transcript:21_2026-04-09_data-protection-review:t006] 2026-04-09 | Lena Fischer | Lena Fischer @ 0:46 (line 47)
+Right.
+
+[transcript:21_2026-04-09_data-protection-review:t007] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 0:48 (line 52)
+The region is named, yes.
+
+[transcript:21_2026-04-09_data-protection-review:t008] 2026-04-09 | Katarina Voss | Katarina Voss @ 0:55 (line 57)
+Second. Sub-processors. Our DPA has an annex listing four. Is that still...
+
+[transcript:21_2026-04-09_data-protection-review:t009] 2026-04-09 | Lena Fischer | Lena Fischer @ 1:05 (line 62)
+Mm-hm.
+
+[transcript:21_2026-04-09_data-protection-review:t010] 2026-04-09 | Katarina Voss | Katarina Voss @ 1:08 (line 67)
+four?
+
+[transcript:21_2026-04-09_data-protection-review:t011] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 1:15 (line 72)
+I believe it is five now. There
+
+[transcript:21_2026-04-09_data-protection-review:t012] 2026-04-09 | Marco Rossi | Marco Rossi @ 1:24 (line 79)
+Yes.
+
+[transcript:21_2026-04-09_data-protection-review:t013] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 1:27 (line 84)
+is a monitoring monitoring and observability provider that was on the...
+
+[transcript:21_2026-04-09_data-protection-review:t014] 2026-04-09 | Marco Rossi | Marco Rossi @ 1:37 (line 89)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t015] 2026-04-09 | Katarina Voss | Katarina Voss @ 1:41 (line 94)
+Added when?
+
+[transcript:21_2026-04-09_data-protection-review:t016] 2026-04-09 | Marco Rossi | Marco Rossi @ 1:48 (line 99)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t017] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 1:50 (line 104)
+I would have to check the date.
+
+[transcript:21_2026-04-09_data-protection-review:t018] 2026-04-09 | Marco Rossi | Marco Rossi @ 1:55 (line 109)
+Mm, okay.
+
+[transcript:21_2026-04-09_data-protection-review:t019] 2026-04-09 | Katarina Voss | Katarina Voss @ 1:58 (line 114)
+Were we notified?
+
+[transcript:21_2026-04-09_data-protection-review:t020] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 2:04 (line 119)
+I do not know.
+
+[transcript:21_2026-04-09_data-protection-review:t021] 2026-04-09 | Katarina Voss | Katarina Voss @ 2:07 (line 124)
+Then that is my first finding. Where is that provider?
+
+[transcript:21_2026-04-09_data-protection-review:t022] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 2:14 (line 129)
+The company is European. I am not certain where all their processing happens and I would rather find out than guess in front of you.
+
+[transcript:21_2026-04-09_data-protection-review:t023] 2026-04-09 | Priya Nair | Priya Nair @ 2:33 (line 136)
+Okay, yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t024] 2026-04-09 | Guest 1 | Guest 1 @ 2:34 (line 141)
+so Please find out and put it in writing. If any of it...
+
+[transcript:21_2026-04-09_data-protection-review:t025] 2026-04-09 | Katarina Voss | Katarina Voss @ 2:44 (line 146)
+is.
+
+[transcript:21_2026-04-09_data-protection-review:t026] 2026-04-09 | Marco Rossi | Marco Rossi @ 2:49 (line 151)
+We will come back within a
+
+[transcript:21_2026-04-09_data-protection-review:t027] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 2:54 (line 156)
+Yeah, yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t028] 2026-04-09 | Marco Rossi | Marco Rossi @ 2:58 (line 161)
+week.
+
+[transcript:21_2026-04-09_data-protection-review:t029] 2026-04-09 | Priya Nair | Priya Nair @ 3:03 (line 166)
+Mm.
+
+[transcript:21_2026-04-09_data-protection-review:t030] 2026-04-09 | Katarina Voss | Katarina Voss @ 3:04 (line 171)
+Third question, and this is the one I actually came for. Meeting recordings.
+
+[transcript:21_2026-04-09_data-protection-review:t031] 2026-04-09 | Lena Fischer | Lena Fischer @ 3:17 (line 178)
+Yeah. Ah.
+
+[transcript:21_2026-04-09_data-protection-review:t032] 2026-04-09 | Guest 1 | Guest 1 @ 3:25 (line 188)
+Yes. actually Every meeting between our teams appears
+
+[transcript:21_2026-04-09_data-protection-review:t033] 2026-04-09 | Katarina Voss | Katarina Voss @ 3:37 (line 198)
+to be be recorded and transcribed. Who decided
+
+[transcript:21_2026-04-09_data-protection-review:t034] 2026-04-09 | Lena Fischer | Lena Fischer @ 3:43 (line 203)
+Okay.
+
+[transcript:21_2026-04-09_data-protection-review:t035] 2026-04-09 | Katarina Voss | Katarina Voss @ 3:47 (line 208)
+that?
+
+[transcript:21_2026-04-09_data-protection-review:t036] 2026-04-09 | Lena Fischer | Lena Fischer @ 3:53 (line 213)
+Nobody decided. It is on by default.
+
+[transcript:21_2026-04-09_data-protection-review:t037] 2026-04-09 | Priya Nair | Priya Nair @ 4:00 (line 218)
+Okay.
+
+[transcript:21_2026-04-09_data-protection-review:t038] 2026-04-09 | Katarina Voss | Katarina Voss @ 4:03 (line 223)
+On whose tenant?
+
+[transcript:21_2026-04-09_data-protection-review:t039] 2026-04-09 | Marco Rossi | Marco Rossi @ 4:10 (line 228)
+Right.
+
+[transcript:21_2026-04-09_data-protection-review:t040] 2026-04-09 | Priya Nair | Priya Nair @ 4:11 (line 233)
+like Both, depending on who organises.
+
+[transcript:21_2026-04-09_data-protection-review:t041] 2026-04-09 | Lena Fischer | Lena Fischer @ 4:17 (line 238)
+Right.
+
+[transcript:21_2026-04-09_data-protection-review:t042] 2026-04-09 | Katarina Voss | Katarina Voss @ 4:19 (line 243)
+So, so there are transcripts of our staff on your systems and transcripts of your staff on ours, going back how far?
+
+[transcript:21_2026-04-09_data-protection-review:t043] 2026-04-09 | Marco Rossi | Marco Rossi @ 4:30 (line 248)
+Two years, in our case. Since the first pre-sales call.
+
+[transcript:21_2026-04-09_data-protection-review:t044] 2026-04-09 | Lena Fischer | Lena Fischer @ 4:41 (line 255)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t045] 2026-04-09 | Katarina Voss | Katarina Voss @ 4:45 (line 260)
+What is the retention, period?
+
+[transcript:21_2026-04-09_data-protection-review:t046] 2026-04-09 | Marco Rossi | Marco Rossi @ 4:54 (line 267)
+I do not think there is one.
+
+[transcript:21_2026-04-09_data-protection-review:t047] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 5:00 (line 272)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t048] 2026-04-09 | Guest 1 | Guest 1 @ 5:04 (line 277)
+like There is always one. Either,
+
+[transcript:21_2026-04-09_data-protection-review:t049] 2026-04-09 | Marco Rossi | Marco Rossi @ 5:07 (line 282)
+Exactly.
+
+[transcript:21_2026-04-09_data-protection-review:t050] 2026-04-09 | Katarina Voss | Katarina Voss @ 5:08 (line 287)
+you have set it or you are keeping it
+
+[transcript:21_2026-04-09_data-protection-review:t051] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 5:16 (line 292)
+Yes.
+
+[transcript:21_2026-04-09_data-protection-review:t052] 2026-04-09 | Katarina Voss | Katarina Voss @ 5:19 (line 297)
+indefinitely, which is a decision you have made by not making
+
+[transcript:21_2026-04-09_data-protection-review:t053] 2026-04-09 | Priya Nair | Priya Nair @ 5:28 (line 302)
+Sure.
+
+[transcript:21_2026-04-09_data-protection-review:t054] 2026-04-09 | Katarina Voss | Katarina Voss @ 5:32 (line 307)
+it.
+
+[transcript:21_2026-04-09_data-protection-review:t055] 2026-04-09 | Priya Nair | Priya Nair @ 5:36 (line 312)
+Okay, yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t056] 2026-04-09 | Marco Rossi | Marco Rossi @ 5:40 (line 317)
+So, then we are keeping it indefinitely.
+
+[transcript:21_2026-04-09_data-protection-review:t057] 2026-04-09 | Katarina Voss | Katarina Voss @ 5:46 (line 322)
+Yeah. Yeah so, what that is the...
+
+[transcript:21_2026-04-09_data-protection-review:t058] 2026-04-09 | Lena Fischer | Lena Fischer @ 5:51 (line 332)
+Everything. Whatever anyone said.
+
+[transcript:21_2026-04-09_data-protection-review:t059] 2026-04-09 | Katarina Voss | Katarina Voss @ 5:55 (line 337)
+Yep. Give me an example of something in there that so...
+
+[transcript:21_2026-04-09_data-protection-review:t060] 2026-04-09 | Priya Nair | Priya Nair @ 6:05 (line 347)
+One of my team explained on if the... needed to move a so...
+
+[transcript:21_2026-04-09_data-protection-review:t061] 2026-04-09 | Marco Rossi | Marco Rossi @ 6:21 (line 354)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t062] 2026-04-09 | Priya Nair | Priya Nair @ 6:25 (line 359)
+was a family court date. That is in a transcript somewhere.
+
+[transcript:21_2026-04-09_data-protection-review:t063] 2026-04-09 | Katarina Voss | Katarina Voss @ 6:32 (line 364)
+kind of like Whose?
+
+[transcript:21_2026-04-09_data-protection-review:t064] 2026-04-09 | Marco Rossi | Marco Rossi @ 6:37 (line 369)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t065] 2026-04-09 | Priya Nair | Priya Nair @ 6:41 (line 374)
+Elin Bergqvist. She is
+
+[transcript:21_2026-04-09_data-protection-review:t066] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 6:47 (line 379)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t067] 2026-04-09 | Priya Nair | Priya Nair @ 6:48 (line 384)
+my integration team. It was the workshop on the eleventh September, sort of so it is in that recording.
+
+[transcript:21_2026-04-09_data-protection-review:t068] 2026-04-09 | Katarina Voss | Katarina Voss @ 7:06 (line 391)
+And she does not know it...
+
+[transcript:21_2026-04-09_data-protection-review:t069] 2026-04-09 | Guest 1 | Guest 1 @ 7:12 (line 396)
+is there.
+
+[transcript:21_2026-04-09_data-protection-review:t070] 2026-04-09 | Priya Nair | Priya Nair @ 7:17 (line 401)
+Yes. She does not know it exists.
+
+[transcript:21_2026-04-09_data-protection-review:t071] 2026-04-09 | Katarina Voss | Katarina Voss @ 7:27 (line 411)
+Hmm. Yes. That is the kind of thing.
+
+[transcript:21_2026-04-09_data-protection-review:t072] 2026-04-09 | Marco Rossi | Marco Rossi @ 7:35 (line 418)
+We also had a request in November from one of your colleagues to remove a health reference from our notes.
+
+[transcript:21_2026-04-09_data-protection-review:t073] 2026-04-09 | Katarina Voss | Katarina Voss @ 7:52 (line 425)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t074] 2026-04-09 | Guest 1 | Guest 1 @ 7:53 (line 430)
+Was it removed?
+
+[transcript:21_2026-04-09_data-protection-review:t075] 2026-04-09 | Marco Rossi | Marco Rossi @ 8:00 (line 435)
+From the notes we knew about. I committed to finding the others...
+
+[transcript:21_2026-04-09_data-protection-review:t076] 2026-04-09 | Katarina Voss | Katarina Voss @ 8:06 (line 440)
+True.
+
+[transcript:21_2026-04-09_data-protection-review:t077] 2026-04-09 | Marco Rossi | Marco Rossi @ 8:08 (line 445)
+and I have not closed
+
+[transcript:21_2026-04-09_data-protection-review:t078] 2026-04-09 | Katarina Voss | Katarina Voss @ 8:15 (line 450)
+So a data subject made an erasure request in November and... Sorry, what? it is April.
+
+[transcript:21_2026-04-09_data-protection-review:t079] 2026-04-09 | Marco Rossi | Marco Rossi @ 8:29 (line 459)
+Okay so, yes.
+
+[transcript:21_2026-04-09_data-protection-review:t080] 2026-04-09 | Katarina Voss | Katarina Voss @ 8:34 (line 464)
+Okay, yeah. I appreciate you telling me rather for the... I will send you the four actions in writing this afternoon so there
+
+[transcript:21_2026-04-09_data-protection-review:t081] 2026-04-09 | Lena Fischer | Lena Fischer @ 8:56 (line 476)
+Okay, yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t082] 2026-04-09 | Katarina Voss | Katarina Voss @ 8:59 (line 481)
+is no ambiguity about what I asked for.
+
+[transcript:21_2026-04-09_data-protection-review:t083] 2026-04-09 | Marco Rossi | Marco Rossi @ 9:04 (line 486)
+Okay so, basically Please do.
+
+[transcript:21_2026-04-09_data-protection-review:t084] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 9:07 (line 491)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t085] 2026-04-09 | Marco Rossi | Marco Rossi @ 9:08 (line 496)
+It would have been worse to have you find it.
+
+[transcript:21_2026-04-09_data-protection-review:t086] 2026-04-09 | Lena Fischer | Lena Fischer @ 9:13 (line 501)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t087] 2026-04-09 | Katarina Voss | Katarina Voss @ 9:16 (line 506)
+It would. Here is what I want. A retention period, stated.
+
+[transcript:21_2026-04-09_data-protection-review:t088] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 9:24 (line 511)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t089] 2026-04-09 | Katarina Voss | Katarina Voss @ 9:25 (line 516)
+A written answer on the fifth sub-processor. Confirmation that the November request request is fully closed, with a list
+
+[transcript:21_2026-04-09_data-protection-review:t090] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 9:41 (line 523)
+Okay.
+
+[transcript:21_2026-04-09_data-protection-review:t091] 2026-04-09 | Katarina Voss | Katarina Voss @ 9:43 (line 528)
+of where the data was. And going forward, a position on what happens but the...
+
+[transcript:21_2026-04-09_data-protection-review:t092] 2026-04-09 | Guest 1 | Guest 1 @ 9:55 (line 533)
+So...
+
+[transcript:21_2026-04-09_data-protection-review:t093] 2026-04-09 | Katarina Voss | Katarina Voss @ 9:57 (line 538)
+at the
+
+[transcript:21_2026-04-09_data-protection-review:t094] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 10:01 (line 543)
+Mm, okay.
+
+[transcript:21_2026-04-09_data-protection-review:t095] 2026-04-09 | Katarina Voss | Katarina Voss @ 10:05 (line 548)
+moment the position is that we...
+
+[transcript:21_2026-04-09_data-protection-review:t096] 2026-04-09 | Priya Nair | Priya Nair @ 10:12 (line 553)
+Right.
+
+[transcript:21_2026-04-09_data-protection-review:t097] 2026-04-09 | Katarina Voss | Katarina Voss @ 10:16 (line 558)
+accumulate everything and hope.
+
+[transcript:21_2026-04-09_data-protection-review:t098] 2026-04-09 | Priya Nair | Priya Nair @ 10:23 (line 563)
+Sure.
+
+[transcript:21_2026-04-09_data-protection-review:t099] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 10:25 (line 568)
+That is a,
+
+[transcript:21_2026-04-09_data-protection-review:t100] 2026-04-09 | Priya Nair | Priya Nair @ 10:28 (line 573)
+Mm, okay.
+
+[transcript:21_2026-04-09_data-protection-review:t101] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 10:29 (line 578)
+fair summary of the position.
+
+[transcript:21_2026-04-09_data-protection-review:t102] 2026-04-09 | Priya Nair | Priya Nair @ 10:36 (line 583)
+Okay.
+
+[transcript:21_2026-04-09_data-protection-review:t103] 2026-04-09 | Katarina Voss | Katarina Voss @ 10:37 (line 588)
+One more thing. I have seen a document that describes one... of your own people as, I mean and I am paraphrasing, the person whose judgement determines whether the project succeeds.
+
+[transcript:21_2026-04-09_data-protection-review:t104] 2026-04-09 | Marco Rossi | Marco Rossi @ 11:03 (line 597)
+Well, right...
+
+[transcript:21_2026-04-09_data-protection-review:t105] 2026-04-09 | Lena Fischer | Lena Fischer @ 11:10 (line 602)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t106] 2026-04-09 | Marco Rossi | Marco Rossi @ 11:13 (line 607)
+That would, be about one of your people, not ours.
+
+[transcript:21_2026-04-09_data-protection-review:t107] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 11:26 (line 614)
+Okay.
+
+[transcript:21_2026-04-09_data-protection-review:t108] 2026-04-09 | Guest 1 | Guest 1 @ 11:27 (line 619)
+It does not name her.
+
+[transcript:21_2026-04-09_data-protection-review:t109] 2026-04-09 | Marco Rossi | Marco Rossi @ 11:34 (line 624)
+No.
+
+[transcript:21_2026-04-09_data-protection-review:t110] 2026-04-09 | Katarina Voss | Katarina Voss @ 11:37 (line 629)
+you know It says the fresh category
+
+[transcript:21_2026-04-09_data-protection-review:t111] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 11:42 (line 634)
+Yeah.
+
+[transcript:21_2026-04-09_data-protection-review:t112] 2026-04-09 | Guest 1 | Guest 1 @ 11:46 (line 639)
+manager with sole knowledge of the categories.
+
+[transcript:21_2026-04-09_data-protection-review:t113] 2026-04-09 | Katarina Voss | Katarina Voss @ 11:53 (line 644)
+We have one of those. So it names her perfectly well without using her name,
+
+[transcript:21_2026-04-09_data-protection-review:t114] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 12:05 (line 651)
+Sure.
+
+[transcript:21_2026-04-09_data-protection-review:t115] 2026-04-09 | Katarina Voss | Katarina Voss @ 12:09 (line 656)
+and it is an assessment of an individual's competence held by a third party, which she has never seen.
+
+[transcript:21_2026-04-09_data-protection-review:t116] 2026-04-09 | Marco Rossi | Marco Rossi @ 12:22 (line 661)
+Yes. That is correct and I had not thought about it that way.
+
+[transcript:21_2026-04-09_data-protection-review:t117] 2026-04-09 | Priya Nair | Priya Nair @ 12:30 (line 671)
+Right.
+
+[transcript:21_2026-04-09_data-protection-review:t118] 2026-04-09 | Katarina Voss | Katarina Voss @ 12:33 (line 676)
+Most people have not. Removing a name is not anonymisation if one person fits the description.
+
+[transcript:21_2026-04-09_data-protection-review:t119] 2026-04-09 | Lena Fischer | Lena Fischer @ 12:45 (line 681)
+Katarina, is this going to stop the project.
+
+[transcript:21_2026-04-09_data-protection-review:t120] 2026-04-09 | Marco Rossi | Marco Rossi @ 12:53 (line 686)
+Yes.
+
+[transcript:21_2026-04-09_data-protection-review:t121] 2026-04-09 | Guest 1 | Guest 1 @ 12:55 (line 691)
+No. It is going to generate four actions and some discomfort, which is my job.
+
+[transcript:21_2026-04-09_data-protection-review:t122] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 13:06 (line 696)
+Understood.
+
+[transcript:21_2026-04-09_data-protection-review:t123] 2026-04-09 | Katarina Voss | Katarina Voss @ 13:12 (line 701)
+There is a fifth thing and I am not going to make it an action, because I cannot work out who it would be for.
+
+[transcript:21_2026-04-09_data-protection-review:t124] 2026-04-09 | Marco Rossi | Marco Rossi @ 13:26 (line 708)
+Go on.
+
+[transcript:21_2026-04-09_data-protection-review:t125] 2026-04-09 | Katarina Voss | Katarina Voss @ 13:29 (line 713)
+We have agreed a retention period. Twelve months on the recordings. I have been trying to find where that actually happens and I cannot find anywhere that it does.
+
+[transcript:21_2026-04-09_data-protection-review:t126] 2026-04-09 | Priya Nair | Priya Nair @ 13:49 (line 722)
+It is four different teams writing into the same place.
+
+[transcript:21_2026-04-09_data-protection-review:t127] 2026-04-09 | Guest 1 | Guest 1 @ 13:55 (line 727)
+Yes. And they each write a different shape, so there is no one record I can attach the rule to. If they all looked the same I could put a date on it and be finished.
+
+[transcript:21_2026-04-09_data-protection-review:t128] 2026-04-09 | Tomas Lindholm | Tomas Lindholm @ 14:15 (line 736)
+Could we change the shape?
+
+[transcript:21_2026-04-09_data-protection-review:t129] 2026-04-09 | Guest 1 | Guest 1 @ 14:19 (line 741)
+The one that went first cannot carry a date at all. It was never designed to. And everything since has copied it.
+
+[transcript:21_2026-04-09_data-protection-review:t130] 2026-04-09 | Lena Fischer | Lena Fischer @ 14:34 (line 748)
+So we have a commitment and no way to keep it.
+
+[transcript:21_2026-04-09_data-protection-review:t131] 2026-04-09 | Guest 1 | Guest 1 @ 14:40 (line 753)
+We have a commitment and nobody whose job it is. Those are different problems and I would like the second one solved first.
+
+[transcript:21_2026-04-09_data-protection-review:t132] 2026-04-09 | Marco Rossi | Marco Rossi @ 14:55 (line 760)
+Mm.
+

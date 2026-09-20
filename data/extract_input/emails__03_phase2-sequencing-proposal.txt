@@ -1,0 +1,73 @@
+# emails/03_phase2-sequencing-proposal.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:03_phase2-sequencing-proposal:m01] 2025-06-11T17:20 | Marco Rossi -> Lena Fischer, Robert Kahn | subject: Phase 2 sequencing - proposal
+Hello both,
+
+Following our conversation, a proposal for how we sequence Phase 2.
+
+Rather than delivering all four fresh categories together in one go-live, we would
+deliver produce and dairy first, then chilled ready meals, then bakery. Three smaller
+go-lives roughly six weeks apart.
+
+The advantage is that value starts landing earlier and each wave de-risks the next. The
+disadvantage is more cutover events and a longer total elapsed time, which I know is in
+tension with the twelve-month window.
+
+If this works for you we would build the plan around it. Happy to discuss.
+
+[email:03_phase2-sequencing-proposal:m02] 2025-08-14T11:08 | Ana Duarte -> Nadia Haddad, Tomas Lindholm | subject: FW: Phase 2 sequencing - proposal
+Forwarding for planning. The three-wave approach is what we are building towards.
+
+Nadia, can you sketch the UAT plan on that basis?
+
+Best regards,
+
+[email:03_phase2-sequencing-proposal:m03] 2025-08-14T15:55 | Nadia Haddad -> Ana Duarte | subject: Re: Phase 2 sequencing - proposal
+Will do. Just to check - did Acme actually confirm three waves? I have looked back
+through the thread and I cannot see a reply from Lena or Robert.
+
+[email:03_phase2-sequencing-proposal:m04] 2025-08-15T08:30 | Ana Duarte -> Nadia Haddad | subject: Re: Phase 2 sequencing - proposal
+Marco?
+
+Best regards,
+
+[email:03_phase2-sequencing-proposal:m05] 2025-08-15T09:02 | Marco Rossi -> Ana Duarte | subject: Re: Phase 2 sequencing - proposal
+It was discussed verbally in the June steering and nobody pushed back. I would treat it
+as agreed.
+
+[email:03_phase2-sequencing-proposal:m06] 2025-11-20T16:44 | Lena Fischer -> Marco Rossi | subject: Re: Phase 2 sequencing - proposal
+Marco,
+
+In the go/no-go meeting on Monday it was stated that we had agreed a three-wave rollout
+for fresh. I do not remember agreeing to that and Robert certainly did not.
+
+What we agreed was fresh as Phase 2 in one delivery. Three waves means three cutovers
+and pushes the last one well past the ROI window, which is exactly the thing Robert has
+been saying since March last year.
+
+Can you point me at where this was agreed?
+
+Mit freundlichen Grüßen
+
+[email:03_phase2-sequencing-proposal:m07] 2025-11-21T09:15 | Marco Rossi -> Lena Fischer | subject: Re: Phase 2 sequencing - proposal
+Lena,
+
+I cannot, and I have looked. It was discussed in the June steering, it was not minuted
+as a decision, and we built the plan on it. That is our error rather than a
+misunderstanding.
+
+What was actually decided on Monday is two deliveries, not three: produce, dairy and
+chilled ready meals together in December, and bakery separately as its own workstream.
+That is what is in the go/no-go record. If anyone said three waves in the room they were
+repeating a plan that had not been agreed with you.
+
+I have asked Ana to reissue the plan on the two-delivery basis today.
+
+[email:03_phase2-sequencing-proposal:m08] 2025-11-21T10:02 | Lena Fischer -> Marco Rossi | subject: Phase 2 sequencing - proposal
+Thank you for not arguing about it.
+
+Two deliveries is what I understood and it is what I have told Robert.
+
+Mit freundlichen Grüßen
+

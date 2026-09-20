@@ -1,0 +1,109 @@
+# reports/02_monthly-steering-reports.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[report:02_monthly-steering-reports:m01] 2025-07-31T17:20 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, July 2025.
+
+Status: 🟢 On Track
+
+Fresh Phase 2 configuration underway. No change to the December target.
+
+- Produce and dairy configuration progressing.
+- One open dependency with Acme IT on a data field. Not yet material.
+
+What we need from you: None.
+
+[report:02_monthly-steering-reports:m02] 2025-08-29T16:45 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Re: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, August 2025.
+
+Status: 🟡Slight Delay
+
+A data dependency with Acme IT has been open for five weeks.
+
+- The field we need for shelf life aware ordering does not exist in the form required.
+- We are preparing a workaround so the build is not blocked.
+- No change to the December target at this stage.
+
+What we need from you: Acme IT capacity to confirm the workaround is acceptable.
+
+[report:02_monthly-steering-reports:m03] 2025-09-30T17:10 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Re: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, September 2025.
+
+Status: 🔴 Risk
+
+Fresh Phase 2 is six weeks behind. Recovery plan in place.
+
+- Two causes: UAT resourcing on the Acme side, and a defect on ours. The defect is fixed.
+- RELEX has added a solution consultant for two weeks at our own cost.
+- A go or no-go decision is set for 15 November.
+
+What we need from you: UAT capacity from the Acme side through October.
+
+[report:02_monthly-steering-reports:m04] 2025-10-31T16:20 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Re: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, October 2025.
+
+Status: 🟡Slight Delay
+
+Two of the six weeks recovered. Go/no-go on track for 15 November.
+
+- UAT running on produce, dairy and chilled ready meals.
+- Bakery accuracy is poor and we expect to recommend descoping it.
+- Acme's fresh category manager is unavailable until mid November, which limits how fast UAT findings can be resolved.
+
+What we need from you: Confirmation that a bakery descope is acceptable in principle.
+
+[report:02_monthly-steering-reports:m05] 2025-11-28T17:00 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Re: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, November 2025.
+
+Status: 🟢 On Track
+
+Replanned. Fresh go-live 15 December for three categories.
+
+- Go/no-go held 17 November. Produce, dairy and chilled approved.
+- Bakery descoped to a separate workstream starting March 2026.
+- This is two deliveries rather than three. Any plan document showing three waves is superseded.
+
+What we need from you: None.
+
+[report:02_monthly-steering-reports:m06] 2026-01-30T16:30 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Re: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, January 2026.
+
+Status: 🟢 On Track
+
+Six weeks live. Stable.
+
+- No incidents over the holiday period.
+- Bakery workstream scoping with Meridian has begun.
+- Q1 measurement will be reported in April against the agreed baseline.
+
+What we need from you: None.
+
+[report:02_monthly-steering-reports:m07] 2026-04-10T17:40 | Marco Rossi -> Robert Kahn, Lena Fischer | subject: Acme monthly steering report
+Hi Robert, Lena,
+
+Monthly steering report, March 2026.
+
+Status: 🟢 On Track
+
+First full quarter of fresh live. Waste down from 4.1% to 3.4%.
+
+- Approximately 118 tonnes of fresh waste avoided across the 25 store cohort.
+- Approximately 296 tonnes CO2e avoided, on Acme's own published conversion factors.
+- Two caveats apply and are in the detail note. The figure should not be scaled to the full estate without discussion.
+- On the twelve month question: as Robert set out at the SOW review, this was always framed as an anticipation on our side rather than a commitment, and we have reported against it on that basis throughout.
+- Bakery build progressing.
+
+What we need from you: None.
+

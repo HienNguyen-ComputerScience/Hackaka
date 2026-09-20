@@ -1,15 +1,15 @@
-# Generated data stores. These are rebuilt from corpus/ by the pipeline and, after a deletion,
-# are the only place a removed person's pre-deletion state could still exist (in OS file history,
-# an editor swap file, or a careless `git add -A`). Never commit anything under here.
-/data/
+# DEPLOY BRANCH ONLY: data/ and relex-data-snapshot/ are committed here so Render can serve them.
+# Everywhere else they stay ignored (see master's .gitignore). A deletion made on the deployed
+# instance never reaches git: Render's disk is ephemeral and the app never commits.
 
 # Supplied input corpus. Not our work; not ours to redistribute via this repo either.
 /corpus/
 
-# Any backup / snapshot copy of a data store, wherever it's named or nested (e.g. taken before a
-# deletion run to diff against). Same reasoning as /data/ above.
+# Any backup copy of a data store, wherever it's named or nested. (The judging snapshot itself is
+# committed on this branch; other snapshot copies are not.)
 *backup*/
 *snapshot*/
+!/relex-data-snapshot/
 *_before/
 *_before.*
 *.bak

@@ -1,0 +1,50 @@
+# emails/13_master-data-remediation.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:13_master-data-remediation:m01] 2024-09-30T10:05 | Kwame Boateng -> Priya Nair | subject: Master data remediation - progress
+Priya,
+
+As agreed in the workshop, the remediation scope for the pilot cohort:
+
+  Articles in cohort                 4,214
+  Missing case pack quantity         1,317
+  Missing or default supplier lead   3,105
+  Shelf life populated               48%
+
+Case pack is the blocker. Lead times we can work around by deriving actuals from receipt
+history. Shelf life is out of scope for this phase.
+
+File attached with the 1,317.
+
+[email:13_master-data-remediation:m02] 2024-10-28T16:50 | Priya Nair -> Kwame Boateng | subject: Re: Master data remediation - progress
+Progress after four weeks: 780 of 1,317 done.
+
+Slower than I hoped. Two of the suppliers have not answered at all and between them they
+account for about 200 articles.
+
+[email:13_master-data-remediation:m03] 2024-11-25T09:30 | Ana Duarte -> Priya Nair | subject: Re: Master data remediation - progress
+Priya, where are we? The plan has this finishing before Christmas and Q1 go-live depends
+on it.
+
+Best regards,
+
+[email:13_master-data-remediation:m04] 2024-12-19T18:15 | Priya Nair -> Ana Duarte | subject: Re: Master data remediation - progress
+Done. All 1,317. The two unresponsive suppliers we resolved by measuring actual delivered
+quantities over six months and inferring the case pack, which is not ideal but it is
+right for 190 of the 200.
+
+I would like it recorded somewhere that this took my team three weeks of overtime in
+December.
+
+[email:13_master-data-remediation:m05] 2024-12-20T08:40 | Ana Duarte -> Priya Nair | subject: Re: Master data remediation - progress
+Recorded, and thank you. I have put it in the steering report.
+
+One thing for the record so it is not a surprise in six months: shelf life remains at 48%
+and untouched. That is correct for this phase and it will become the critical path for
+phase two.
+
+Best regards,
+
+[email:13_master-data-remediation:m06] 2024-12-20T09:02 | Priya Nair -> Ana Duarte | subject: Master data remediation - progress
+It will become someone else's critical path for phase two.
+

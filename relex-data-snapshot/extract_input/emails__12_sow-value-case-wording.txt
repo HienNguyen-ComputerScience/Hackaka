@@ -1,0 +1,42 @@
+# emails/12_sow-value-case-wording.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:12_sow-value-case-wording:m01] 2024-06-18T15:30 | Marco Rossi -> Lena Fischer, Robert Kahn | subject: SOW - value case wording
+Robert, Lena,
+
+Draft wording for the value case section, per our conversation.
+
+"The primary value driver for this engagement is the reduction of fresh food waste,
+measured as a percentage of fresh net sales against an agreed baseline. Both parties
+expect a return on the initial investment within twelve months of contract signature."
+
+I have deliberately written "expect" rather than "guarantee", because delivery depends on
+data readiness and resourcing on both sides. If your legal team wants to tighten it, I
+would rather discuss than receive a redline.
+
+Also added: a quarterly business review with a written report, as an obligation on us.
+
+[email:12_sow-value-case-wording:m02] 2024-06-25T11:10 | Lena Fischer -> Marco Rossi | subject: Re: SOW - value case wording
+Marco,
+
+Legal have looked at it. They have taken out "Both parties expect" and put in "RELEX
+anticipates". They also want the baseline defined in the contract rather than agreed
+later.
+
+I have told them the baseline cannot be defined before we know what we are measuring, so
+that one is probably not going anywhere. The first change I think they will insist on.
+
+Mit freundlichen Grüßen
+
+[email:12_sow-value-case-wording:m03] 2024-06-26T09:25 | Marco Rossi -> Lena Fischer | subject: Re: SOW - value case wording
+"RELEX anticipates" is fine, it says the same thing.
+
+On the baseline, agreed, it cannot be defined yet. Can we word it as "a baseline to be
+agreed in writing prior to go-live of the fresh phase"? That gives your legal team a
+commitment and gives us room.
+
+[email:12_sow-value-case-wording:m04] 2024-07-02T14:45 | Lena Fischer -> Marco Rossi | subject: SOW - value case wording
+That wording is in. Signed version going out this week.
+
+Mit freundlichen Grüßen
+

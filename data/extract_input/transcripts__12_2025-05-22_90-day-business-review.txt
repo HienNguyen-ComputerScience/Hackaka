@@ -1,0 +1,291 @@
+# transcripts/12_2025-05-22_90-day-business-review.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:12_2025-05-22_90-day-business-review:t001] 2025-05-22 | Marco Rossi | Marco Rossi @ 0:09 (line 15)
+Can you hear me? Headline results at ninety days. Forecast
+
+[transcript:12_2025-05-22_90-day-business-review:t002] 2025-05-22 | Lena Fischer | Lena Fischer @ 0:22 (line 22)
+Mm, okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t003] 2025-05-22 | Marco Rossi | Marco Rossi @ 0:26 (line 27)
+accuracy up six point two points versus baseline, ambient inventory down nine percent, order automation at ninety-one, percent.
+
+[transcript:12_2025-05-22_90-day-business-review:t004] 2025-05-22 | Priya Nair | Priya Nair @ 0:38 (line 34)
+Okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t005] 2025-05-22 | Robert Kahn | Robert Kahn @ 0:40 (line 39)
+Good, kind... of like but those are ambient numbers. Where is the fresh waste reduction? That is the case I approved.
+
+[transcript:12_2025-05-22_90-day-business-review:t006] 2025-05-22 | Priya Nair | Priya Nair @ 0:58 (line 48)
+Got it.
+
+[transcript:12_2025-05-22_90-day-business-review:t007] 2025-05-22 | Marco Rossi | Marco Rossi @ 1:01 (line 53)
+Fresh is Phase 2. We are scoping it now, UAT will start over the summer.
+
+[transcript:12_2025-05-22_90-day-business-review:t008] 2025-05-22 | Robert Kahn | Robert Kahn @ 1:10 (line 58)
+I need it live this this year. The twelve-month ROI clock is ticking.
+
+[transcript:12_2025-05-22_90-day-business-review:t009] 2025-05-22 | Priya Nair | Priya Nair @ 1:19 (line 63)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t010] 2025-05-22 | Marco Rossi | Marco Rossi @ 1:21 (line 68)
+Understood.
+
+[transcript:12_2025-05-22_90-day-business-review:t011] 2025-05-22 | Lena Fischer | Lena Fischer @ 1:26 (line 73)
+Yeah, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t012] 2025-05-22 | Robert Kahn | Robert Kahn @ 1:29 (line 78)
+I want to be precise, because I do not think this has landed. I did,
+
+[transcript:12_2025-05-22_90-day-business-review:t013] 2025-05-22 | Lena Fischer | Lena Fischer @ 1:37 (line 83)
+Mm-hm.
+
+[transcript:12_2025-05-22_90-day-business-review:t014] 2025-05-22 | Robert Kahn | Robert Kahn @ 1:41 (line 88)
+not approve a project to reduce ambiant ambiant inventory. Ambient inventory was fine. I approved a project because
+
+[transcript:12_2025-05-22_90-day-business-review:t015] 2025-05-22 | Marco Rossi | Marco Rossi @ 1:54 (line 95)
+Okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t016] 2025-05-22 | Robert Kahn | Robert Kahn @ 1:58 (line 100)
+we are throwing
+
+[transcript:12_2025-05-22_90-day-business-review:t017] 2025-05-22 | Lena Fischer | Lena Fischer @ 2:03 (line 105)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t018] 2025-05-22 | Robert Kahn | Robert Kahn @ 2:06 (line 110)
+away food and it was in newspaper. The number you have just given me is good good number and.
+
+[transcript:12_2025-05-22_90-day-business-review:t019] 2025-05-22 | Marco Rossi | Marco Rossi @ 2:24 (line 117)
+Okay so, that is fair.
+
+[transcript:12_2025-05-22_90-day-business-review:t020] 2025-05-22 | Priya Nair | Priya Nair @ 2:31 (line 122)
+Yeah, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t021] 2025-05-22 | Lena Fischer | Lena Fischer @ 2:32 (line 127)
+It is a good number though, Robert.
+
+[transcript:12_2025-05-22_90-day-business-review:t022] 2025-05-22 | Robert Kahn | Robert Kahn @ 2:40 (line 132)
+I said it was.
+
+[transcript:12_2025-05-22_90-day-business-review:t023] 2025-05-22 | Priya Nair | Priya Nair @ 2:45 (line 137)
+Okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t024] 2025-05-22 | Marco Rossi | Marco Rossi @ 2:47 (line 142)
+Let me show you where we are on the reporting.
+
+[transcript:12_2025-05-22_90-day-business-review:t025] 2025-05-22 | Robert Kahn | Robert Kahn @ 2:53 (line 147)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t026] 2025-05-22 | Marco Rossi | Marco Rossi @ 2:57 (line 152)
+Sharing now.
+
+[transcript:12_2025-05-22_90-day-business-review:t027] 2025-05-22 | Robert Kahn | Robert Kahn @ 3:04 (line 157)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t028] 2025-05-22 | Lena Fischer | Lena Fischer @ 3:05 (line 162)
+Coming through.
+
+[transcript:12_2025-05-22_90-day-business-review:t029] 2025-05-22 | Marco Rossi | Marco Rossi @ 3:08 (line 167)
+So this is the results dashboard. This top, row is what I just read out. And then this section is the trend over the ninety days, and you can see it stabilising here, which matters because the first three weeks were noisy.
+
+[transcript:12_2025-05-22_90-day-business-review:t030] 2025-05-22 | Lena Fischer | Lena Fischer @ 3:40 (line 178)
+Yeah, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t031] 2025-05-22 | Robert Kahn | Robert Kahn @ 3:41 (line 183)
+Why were they noisy.
+
+[transcript:12_2025-05-22_90-day-business-review:t032] 2025-05-22 | Priya Nair | Priya Nair @ 3:46 (line 188)
+Yeah, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t033] 2025-05-22 | Marco Rossi | Marco Rossi @ 3:48 (line 193)
+Master data corrections mostly. It is this dip here.
+
+[transcript:12_2025-05-22_90-day-business-review:t034] 2025-05-22 | Robert Kahn | Robert Kahn @ 3:53 (line 198)
+Mm, okay. How many stores is this covering.
+
+[transcript:12_2025-05-22_90-day-business-review:t035] 2025-05-22 | Priya Nair | Priya Nair @ 3:57 (line 208)
+Right.
+
+[transcript:12_2025-05-22_90-day-business-review:t036] 2025-05-22 | Marco Rossi | Marco Rossi @ 3:58 (line 213)
+The pilot group. Twenty-five stores.
+
+[transcript:12_2025-05-22_90-day-business-review:t037] 2025-05-22 | Lena Fischer | Lena Fischer @ 4:01 (line 218)
+Okay, yeah. Twenty-five?
+
+[transcript:12_2025-05-22_90-day-business-review:t038] 2025-05-22 | Marco Rossi | Marco Rossi @ 4:11 (line 228)
+Twenty-five, yes.
+
+[transcript:12_2025-05-22_90-day-business-review:t039] 2025-05-22 | Priya Nair | Priya Nair @ 4:18 (line 233)
+Mm-hm.
+
+[transcript:12_2025-05-22_90-day-business-review:t040] 2025-05-22 | Lena Fischer | Lena Fischer @ 4:21 (line 238)
+All right.
+
+[transcript:12_2025-05-22_90-day-business-review:t041] 2025-05-22 | Marco Rossi | Marco Rossi @ 4:26 (line 243)
+And then
+
+[transcript:12_2025-05-22_90-day-business-review:t042] 2025-05-22 | Robert Kahn | Robert Kahn @ 4:29 (line 248)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t043] 2025-05-22 | Marco Rossi | Marco Rossi @ 4:32 (line 253)
+this bottom panel the automation rate by...
+
+[transcript:12_2025-05-22_90-day-business-review:t044] 2025-05-22 | Robert Kahn | Robert Kahn @ 4:40 (line 258)
+Mm.
+
+[transcript:12_2025-05-22_90-day-business-review:t045] 2025-05-22 | Marco Rossi | Marco Rossi @ 4:43 (line 263)
+category, which is the ninety-one percent broken down. You can see which ones are dragging.
+
+[transcript:12_2025-05-22_90-day-business-review:t046] 2025-05-22 | Robert Kahn | Robert Kahn @ 4:58 (line 272)
+Fine. Send me the one page version.
+
+[transcript:12_2025-05-22_90-day-business-review:t047] 2025-05-22 | Marco Rossi | Marco Rossi @ 5:04 (line 277)
+I will.
+
+[transcript:12_2025-05-22_90-day-business-review:t048] 2025-05-22 | Lena Fischer | Lena Fischer @ 5:07 (line 282)
+You're on mute. Can I raise operational thing while Robert is,
+
+[transcript:12_2025-05-22_90-day-business-review:t049] 2025-05-22 | Robert Kahn | Robert Kahn @ 5:17 (line 289)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t050] 2025-05-22 | Lena Fischer | Lena Fischer @ 5:20 (line 294)
+Sorry, what? here.
+
+[transcript:12_2025-05-22_90-day-business-review:t051] 2025-05-22 | Marco Rossi | Marco Rossi @ 5:25 (line 301)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t052] 2025-05-22 | Robert Kahn | Robert Kahn @ 5:28 (line 306)
+Please.
+
+[transcript:12_2025-05-22_90-day-business-review:t053] 2025-05-22 | Lena Fischer | Lena Fischer @ 5:31 (line 311)
+The DC-2 nightly feed keeps failing. My team gets paged. It is eroding trust
+
+[transcript:12_2025-05-22_90-day-business-review:t054] 2025-05-22 | Priya Nair | Priya Nair @ 5:40 (line 316)
+Mm, okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t055] 2025-05-22 | Lena Fischer | Lena Fischer @ 5:41 (line 321)
+in the data.
+
+[transcript:12_2025-05-22_90-day-business-review:t056] 2025-05-22 | Priya Nair | Priya Nair @ 5:45 (line 326)
+Mm-hm.
+
+[transcript:12_2025-05-22_90-day-business-review:t057] 2025-05-22 | Robert Kahn | Robert Kahn @ 5:46 (line 331)
+So, how often.
+
+[transcript:12_2025-05-22_90-day-business-review:t058] 2025-05-22 | Lena Fischer | Lena Fischer @ 5:51 (line 336)
+Okay, yeah. Twice, three times a week.
+
+[transcript:12_2025-05-22_90-day-business-review:t059] 2025-05-22 | Robert Kahn | Robert Kahn @ 6:00 (line 346)
+That is not so...
+
+[transcript:12_2025-05-22_90-day-business-review:t060] 2025-05-22 | Lena Fischer | Lena Fischer @ 6:04 (line 351)
+Exactly.
+
+[transcript:12_2025-05-22_90-day-business-review:t061] 2025-05-22 | Priya Nair | Priya Nair @ 6:06 (line 356)
+It is the middleware. We flagged it at kickoff, like it went on the watch list, and the watch list has
+
+[transcript:12_2025-05-22_90-day-business-review:t062] 2025-05-22 | Robert Kahn | Robert Kahn @ 6:16 (line 361)
+Of course.
+
+[transcript:12_2025-05-22_90-day-business-review:t063] 2025-05-22 | Priya Nair | Priya Nair @ 6:19 (line 366)
+worked in the sense that we now know when it fails. But knowing is not fixing. We need a permanent fix, not nightly restarts.
+
+[transcript:12_2025-05-22_90-day-business-review:t064] 2025-05-22 | Marco Rossi | Marco Rossi @ 6:33 (line 373)
+Where was I. Agreed. Let us get a joint.
+
+[transcript:12_2025-05-22_90-day-business-review:t065] 2025-05-22 | Priya Nair | Priya Nair @ 6:40 (line 380)
+And, a date so...
+
+[transcript:12_2025-05-22_90-day-business-review:t066] 2025-05-22 | Marco Rossi | Marco Rossi @ 6:43 (line 385)
+A date.
+
+[transcript:12_2025-05-22_90-day-business-review:t067] 2025-05-22 | Lena Fischer | Lena Fischer @ 6:47 (line 390)
+And the reason I am raising it in... front of Robert is that my planners have started keeping their own spreadsheets You're on mute. again, because they do
+
+[transcript:12_2025-05-22_90-day-business-review:t068] 2025-05-22 | Robert Kahn | Robert Kahn @ 7:12 (line 401)
+Okay, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t069] 2025-05-22 | Lena Fischer | Lena Fischer @ 7:15 (line 406)
+not trust the morning numbers. Which undoes the thing we bought.
+
+[transcript:12_2025-05-22_90-day-business-review:t070] 2025-05-22 | Marco Rossi | Marco Rossi @ 7:24 (line 411)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t071] 2025-05-22 | Robert Kahn | Robert Kahn @ 7:25 (line 416)
+That is the most concerning sentence in this... meeting.
+
+[transcript:12_2025-05-22_90-day-business-review:t072] 2025-05-22 | Marco Rossi | Marco Rossi @ 7:40 (line 425)
+Yeah. Understood.
+
+[transcript:12_2025-05-22_90-day-business-review:t073] 2025-05-22 | Robert Kahn | Robert Kahn @ 7:49 (line 435)
+Right.
+
+[transcript:12_2025-05-22_90-day-business-review:t074] 2025-05-22 | Lena Fischer | Lena Fischer @ 7:53 (line 440)
+One more. Can we formalise the QBR cadence? We agreed quarterly in,
+
+[transcript:12_2025-05-22_90-day-business-review:t075] 2025-05-22 | Robert Kahn | Robert Kahn @ 8:02 (line 445)
+Yeah, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t076] 2025-05-22 | Lena Fischer | Lena Fischer @ 8:04 (line 450)
+the SOW and this is the first one, I mean ninety days, which is, technically on time but it has felt ad hoc.
+
+[transcript:12_2025-05-22_90-day-business-review:t077] 2025-05-22 | Marco Rossi | Marco Rossi @ 8:22 (line 459)
+Right. Okay so, yes. I will set with the...
+
+[transcript:12_2025-05-22_90-day-business-review:t078] 2025-05-22 | Lena Fischer | Lena Fischer @ 8:32 (line 469)
+You're on mute. With Robert invited but not required.
+
+[transcript:12_2025-05-22_90-day-business-review:t079] 2025-05-22 | Marco Rossi | Marco Rossi @ 8:40 (line 476)
+Okay.
+
+[transcript:12_2025-05-22_90-day-business-review:t080] 2025-05-22 | Robert Kahn | Robert Kahn @ 8:44 (line 481)
+I will come to the ones that matter.
+
+[transcript:12_2025-05-22_90-day-business-review:t081] 2025-05-22 | Lena Fischer | Lena Fischer @ 8:50 (line 486)
+Okay, yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t082] 2025-05-22 | Marco Rossi | Marco Rossi @ 8:52 (line 491)
+Hmm. Understood. So actions from my side. Joint engineering session on DC-2 with a dated permanent fix plan. Accelerate the Phase 2 scoping and start UAT over the summer. Formalise the QBR. And reframe the ROI reporting
+
+[transcript:12_2025-05-22_90-day-business-review:t083] 2025-05-22 | Priya Nair | Priya Nair @ 9:17 (line 500)
+Agreed.
+
+[transcript:12_2025-05-22_90-day-business-review:t084] 2025-05-22 | Marco Rossi | Marco Rossi @ 9:18 (line 505)
+so fresh waste is the headline once Phase 2 is live
+
+[transcript:12_2025-05-22_90-day-business-review:t085] 2025-05-22 | Robert Kahn | Robert Kahn @ 9:23 (line 510)
+Mm.
+
+[transcript:12_2025-05-22_90-day-business-review:t086] 2025-05-22 | Marco Rossi | Marco Rossi @ 9:26 (line 515)
+rather than a section at the back.
+
+[transcript:12_2025-05-22_90-day-business-review:t087] 2025-05-22 | Lena Fischer | Lena Fischer @ 9:31 (line 520)
+Yeah.
+
+[transcript:12_2025-05-22_90-day-business-review:t088] 2025-05-22 | Robert Kahn | Robert Kahn @ 9:35 (line 525)
+That last one the only one I will remember.
+
+[transcript:12_2025-05-22_90-day-business-review:t089] 2025-05-22 | Marco Rossi | Marco Rossi @ 9:41 (line 530)
+Then that is the one I will
+
+[transcript:12_2025-05-22_90-day-business-review:t090] 2025-05-22 | Robert Kahn | Robert Kahn @ 9:49 (line 535)
+Sure.
+
+[transcript:12_2025-05-22_90-day-business-review:t091] 2025-05-22 | Marco Rossi | Marco Rossi @ 9:50 (line 540)
+do first.
+
+[transcript:12_2025-05-22_90-day-business-review:t092] 2025-05-22 | Robert Kahn | Robert Kahn @ 9:53 (line 545)
+Yeah. And, sort of I...
+
+[transcript:12_2025-05-22_90-day-business-review:t093] 2025-05-22 | Lena Fischer | Lena Fischer @ 10:00 (line 555)
+Exactly.
+
+[transcript:12_2025-05-22_90-day-business-review:t094] 2025-05-22 | Robert Kahn | Robert Kahn @ 10:04 (line 560)
+have to go.
+
+[transcript:12_2025-05-22_90-day-business-review:t095] 2025-05-22 | Lena Fischer | Lena Fischer @ 10:09 (line 565)
+Thank you Robert.
+
+[transcript:12_2025-05-22_90-day-business-review:t096] 2025-05-22 | Marco Rossi | Marco Rossi @ 10:15 (line 570)
+Mm-hm.
+

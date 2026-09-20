@@ -1,0 +1,240 @@
+# transcripts/18_2025-12-11_fresh-cutover-call.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:18_2025-12-11_fresh-cutover-call:t001] 2025-12-11 | Ana Duarte | Ana Duarte @ 0:10 (line 15)
+Monday is fresh golive. Same format as February, yes or no against... each item.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t002] 2025-12-11 | Lena Fischer | Lena Fischer @ 0:23 (line 22)
+Go.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t003] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 0:27 (line 27)
+Yeah, yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t004] 2025-12-11 | Ana Duarte | Ana Duarte @ 0:31 (line 32)
+Configuration. Nadia.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t005] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 0:38 (line 37)
+Okay, yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t006] 2025-12-11 | Unknown Speaker | Unknown Speaker @ 0:41 (line 42)
+Yes for produce, so dairy and chilled ready meals. Bakery Bakery is out of scope.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t007] 2025-12-11 | Ana Duarte | Ana Duarte @ 0:50 (line 47)
+Shelf life logic.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t008] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 0:57 (line 52)
+Yes, with the caveat everyone in this room knows. It runs on the approximation. Total shell life minus average days Can you hear me? in warehouse by article group. It is not remaining life. On fast movers it will be close. On slow,
+
+[transcript:18_2025-12-11_fresh-cutover-call:t009] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 1:20 (line 63)
+Right.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t010] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 1:22 (line 68)
+movers it will assume the stock is fresher than
+
+[transcript:18_2025-12-11_fresh-cutover-call:t011] 2025-12-11 | Unknown Speaker | Unknown Speaker @ 1:28 (line 73)
+it is.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t012] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 1:33 (line 78)
+How much fresher?
+
+[transcript:18_2025-12-11_fresh-cutover-call:t013] 2025-12-11 | Lena Fischer | Lena Fischer @ 1:38 (line 83)
+Yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t014] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 1:40 (line 88)
+On the slowest tenth, possibly two days optimistic.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t015] 2025-12-11 | Priya Nair | Priya Nair @ 1:47 (line 95)
+Yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t016] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 1:48 (line 100)
+Yeah so, two days on a five day product is.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t017] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 1:56 (line 105)
+No, it is not.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t018] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 2:00 (line 110)
+And there is nothing better available.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t019] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 2:07 (line 115)
+Not without the warehouse data, which was first asked for in
+
+[transcript:18_2025-12-11_fresh-cutover-call:t020] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 2:14 (line 120)
+Yeah, yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t021] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 2:16 (line 125)
+April 2024.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t022] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 2:21 (line 130)
+Then I will watch the slow lines I mean...
+
+[transcript:18_2025-12-11_fresh-cutover-call:t023] 2025-12-11 | Lena Fischer | Lena Fischer @ 2:29 (line 135)
+Okay, yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t024] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 2:30 (line 140)
+is what I do now, so it... is not not worse.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t025] 2025-12-11 | Priya Nair | Priya Nair @ 2:39 (line 147)
+Mm.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t026] 2025-12-11 | Ana Duarte | Ana Duarte @ 2:42 (line 152)
+Sofia, can I ask you to log the, overrides rather than just making them? If we have your overrides we can improve the model. If you fix it silently we learn nothing.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t027] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 3:07 (line 163)
+yeah I can log them. Sorry, go ahead. It is more work.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t028] 2025-12-11 | Ana Duarte | Ana Duarte @ 3:21 (line 172)
+I know.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t029] 2025-12-11 | Priya Nair | Priya Nair @ 3:28 (line 177)
+Understood.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t030] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 3:32 (line 182)
+I will do it for six weeks weeks and
+
+[transcript:18_2025-12-11_fresh-cutover-call:t031] 2025-12-11 | Ana Duarte | Ana Duarte @ 3:44 (line 189)
+Fair enough.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t032] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 3:45 (line 194)
+then tell you whether I am still doing it.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t033] 2025-12-11 | Ana Duarte | Ana Duarte @ 3:52 (line 199)
+Okay, yeah. That is fair. Data, Kwame.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t034] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 4:01 (line 209)
+Fresh master data is loaded. The
+
+[transcript:18_2025-12-11_fresh-cutover-call:t035] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 4:06 (line 214)
+Mm, okay.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t036] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 4:08 (line 219)
+Let me scroll down. shelf life field is populated on sixty-one
+
+[transcript:18_2025-12-11_fresh-cutover-call:t037] 2025-12-11 | Lena Fischer | Lena Fischer @ 4:24 (line 226)
+Exactly.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t038] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 4:28 (line 231)
+percent for the three categories in scope, up from forty-eight, because Priya's team did pass in October.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t039] 2025-12-11 | Priya Nair | Priya Nair @ 4:37 (line 236)
+We did what if you...
+
+[transcript:18_2025-12-11_fresh-cutover-call:t040] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 4:44 (line 241)
+It helped.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t041] 2025-12-11 | Ana Duarte | Ana Duarte @ 4:51 (line 246)
+Feeds.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t042] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 4:54 (line 251)
+I mean, kind of like DC-1 Can you hear me? yes. DC-2 yes with the,
+
+[transcript:18_2025-12-11_fresh-cutover-call:t043] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 5:09 (line 260)
+Mm, okay.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t044] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 5:12 (line 265)
+standing caveat. Since we added the file size,
+
+[transcript:18_2025-12-11_fresh-cutover-call:t045] 2025-12-11 | Unknown Speaker | Unknown Speaker @ 5:18 (line 270)
+Okay, yeah.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t046] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 5:20 (line 275)
+check in March there have been no silent,
+
+[transcript:18_2025-12-11_fresh-cutover-call:t047] 2025-12-11 | Ana Duarte | Ana Duarte @ 5:24 (line 280)
+Okay.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t048] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 5:28 (line 285)
+failures, only loud ones. Four loud ones since March.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t049] 2025-12-11 | Lena Fischer | Lena Fischer @ 5:35 (line 290)
+Four loud is better than one silent.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t050] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 5:42 (line 295)
+Much better.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t051] 2025-12-11 | Ana Duarte | Ana Duarte @ 5:48 (line 300)
+The operator identifier field.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t052] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 5:51 (line 305)
+Excluded at the extract from the twenty-first of November. Confirmed in writing to Priya.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t053] 2025-12-11 | Priya Nair | Priya Nair @ 6:01 (line 310)
+right Received filed.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t054] 2025-12-11 | Ana Duarte | Ana Duarte @ 6:04 (line 315)
+Rollback.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t055] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 6:07 (line 320)
+We revert fresh ordering to manual within four hours. Sofia would be doing
+
+[transcript:18_2025-12-11_fresh-cutover-call:t056] 2025-12-11 | Priya Nair | Priya Nair @ 6:22 (line 327)
+Sure.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t057] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 6:24 (line 332)
+One second.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t058] 2025-12-11 | Unknown Speaker | Unknown Speaker @ 6:30 (line 337)
+it by hand, which is is the current state anyway.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t059] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 6:37 (line 342)
+So the rollback plan is me.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t060] 2025-12-11 | Ana Duarte | Ana Duarte @ 6:44 (line 347)
+Sure.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t061] 2025-12-11 | Nadia Haddad | Nadia Haddad @ 6:46 (line 352)
+The rollback plan is you.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t062] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 6:59 (line 359)
+Okay so, i have been the rollback plan for two years.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t063] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 7:04 (line 364)
+Sure.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t064] 2025-12-11 | Ana Duarte | Ana Duarte @ 7:07 (line 369)
+Store communications.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t065] 2025-12-11 | Lena Fischer | Lena Fischer @ 7:11 (line 374)
+Went out Monday. And this time there is a person on the phone from, Tuesday, not just monitoring.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t066] 2025-12-11 | Priya Nair | Priya Nair @ 7:26 (line 381)
+Sure.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t067] 2025-12-11 | Ana Duarte | Ana Duarte @ 7:30 (line 386)
+Who?
+
+[transcript:18_2025-12-11_fresh-cutover-call:t068] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 7:36 (line 391)
+Okay.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t069] 2025-12-11 | Lena Fischer | Lena Fischer @ 7:38 (line 396)
+Someone from my team. Not technical. Answers the phone
+
+[transcript:18_2025-12-11_fresh-cutover-call:t070] 2025-12-11 | Priya Nair | Priya Nair @ 7:46 (line 401)
+Okay.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t071] 2025-12-11 | Lena Fischer | Lena Fischer @ 7:47 (line 406)
+Okay so. and writes down what they said.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t072] 2025-12-11 | Ana Duarte | Ana Duarte @ 7:57 (line 413)
+Yes. That worked well in March.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t073] 2025-12-11 | Lena Fischer | Lena Fischer @ 8:08 (line 423)
+I mean, it is the only thing that worked well in March.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t074] 2025-12-11 | Ana Duarte | Ana Duarte @ 8:17 (line 428)
+On call, numbers as before. Kwame, are you here in January?
+
+[transcript:18_2025-12-11_fresh-cutover-call:t075] 2025-12-11 | Kwame Boateng | Kwame Boateng @ 8:31 (line 435)
+you know I am here in in January.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t076] 2025-12-11 | Lena Fischer | Lena Fischer @ 8:38 (line 440)
+Sure.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t077] 2025-12-11 | Ana Duarte | Ana Duarte @ 8:39 (line 445)
+Then we are going Monday.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t078] 2025-12-11 | Lena Fischer | Lena Fischer @ 8:43 (line 450)
+We are going Monday.
+
+[transcript:18_2025-12-11_fresh-cutover-call:t079] 2025-12-11 | Sofia Almeida | Sofia Almeida @ 8:50 (line 455)
+Yeah.
+

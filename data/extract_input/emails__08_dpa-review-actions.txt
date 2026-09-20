@@ -1,0 +1,54 @@
+# emails/08_dpa-review-actions.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:08_dpa-review-actions:m01] 2026-04-09T16:30 | Katarina Voss -> Marco Rossi | subject: Processor review - actions
+Marco,
+
+Following this afternoon, the four actions as I recorded them.
+
+1. Written confirmation of hosting region and whether it is named in the current
+   agreement.
+2. The fifth sub-processor: identity, what they process, where processing occurs, and
+   the transfer mechanism if any of it is outside the EU. Plus why we were not notified.
+3. The erasure request made in November: confirmation that it is fully closed, with a
+   list of every location the data was held.
+4. A stated retention period for meeting recordings and transcripts, and a position on
+   the existing two years of material.
+
+I would like all four within four weeks.
+
+[email:08_dpa-review-actions:m02] 2026-04-29T14:15 | Marco Rossi -> Katarina Voss | subject: Re: Processor review - actions
+Katarina,
+
+Responses to three of four.
+
+1. Hosting is EU West region. It is named in Schedule 2 of the agreement. Extract
+   attached.
+
+2. The fifth sub-processor is Halberd Observability BV, registered in the Netherlands.
+   They process application telemetry and logs. Processing occurs in the Netherlands and
+   Ireland. You were not notified because our notification process only covered
+   sub-processors handling primary customer data, and telemetry was not classified that
+   way. That classification was wrong and we have changed it.
+
+4. Retention period is set at eighteen months from creation, effective 1 May. The
+   existing backlog is being worked through - commitments and decisions extracted into a
+   record, then the underlying transcript deleted.
+
+I owe you item 3 and I do not want to send you a partial answer on it.
+
+[email:08_dpa-review-actions:m03] 2026-04-30T09:20 | Katarina Voss -> Marco Rossi | subject: Re: Processor review - actions
+Thank you, that is a good response to three.
+
+On item 4, I want to register a concern rather than an action. If you extract from a
+transcript and then delete the transcript, and the extraction has carried across
+something personal, you have made that permanent and removed the only means of checking.
+Please think about it before you run the backlog.
+
+Item 3 remains open.
+
+[email:08_dpa-review-actions:m04] 2026-06-23T10:05 | Katarina Voss -> Marco Rossi | subject: Processor review - actions
+Marco,
+
+Item 3.
+

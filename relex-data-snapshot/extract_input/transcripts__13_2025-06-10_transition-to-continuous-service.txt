@@ -1,0 +1,237 @@
+# transcripts/13_2025-06-10_transition-to-continuous-service.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t001] 2025-06-10 | Ana Duarte | Ana Duarte @ 0:16 (line 15)
+Core replenishment has been live three months. This is the yeah...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t002] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 0:22 (line 20)
+Yes.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t003] 2025-06-10 | Ana Duarte | Ana Duarte @ 0:25 (line 25)
+service. Charlotte...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t004] 2025-06-10 | Lena Fischer | Lena Fischer @ 0:30 (line 30)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t005] 2025-06-10 | Ana Duarte | Ana Duarte @ 0:33 (line 35)
+is taking the service side.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t006] 2025-06-10 | Priya Nair | Priya Nair @ 0:40 (line 40)
+Okay.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t007] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 0:44 (line 45)
+Hello. I will be your point of contact
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t008] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 0:48 (line 50)
+Okay, yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t009] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 0:50 (line 55)
+for anything operational from the first of July.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t010] 2025-06-10 | Lena Fischer | Lena Fischer @ 1:02 (line 62)
+And Ana?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t011] 2025-06-10 | Priya Nair | Priya Nair @ 1:05 (line 67)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t012] 2025-06-10 | Ana Duarte | Ana Duarte @ 1:09 (line 72)
+I stay on phase two. So
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t013] 2025-06-10 | Lena Fischer | Lena Fischer @ 1:12 (line 77)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t014] 2025-06-10 | Ana Duarte | Ana Duarte @ 1:14 (line 82)
+for fresh you have me, for anything live you have Charlotte.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t015] 2025-06-10 | Priya Nair | Priya Nair @ 1:23 (line 87)
+Mm.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t016] 2025-06-10 | Lena Fischer | Lena Fischer @ 1:27 (line 92)
+Two people.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t017] 2025-06-10 | Ana Duarte | Ana Duarte @ 1:30 (line 97)
+Two people.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t018] 2025-06-10 | Lena Fischer | Lena Fischer @ 1:36 (line 102)
+Can I say the obvious thing. Every time this project has split responsibility between two people, right something has fallen between them.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t019] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 1:51 (line 109)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t020] 2025-06-10 | Ana Duarte | Ana Duarte @ 1:53 (line 114)
+Okay Okay so, that is a reasonable thing to say...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t021] 2025-06-10 | Lena Fischer | Lena Fischer @ 1:59 (line 119)
+Mm-hm.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t022] 2025-06-10 | Ana Duarte | Ana Duarte @ 2:01 (line 124)
+and. What I can do is make the
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t023] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 2:08 (line 129)
+Okay, yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t024] 2025-06-10 | Ana Duarte | Ana Duarte @ 2:12 (line 134)
+boundary explicit rather than leaving it if you...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t025] 2025-06-10 | Lena Fischer | Lena Fischer @ 2:20 (line 139)
+Then do that.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t026] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 2:23 (line 144)
+Yes.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t027] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 2:26 (line 149)
+Let me try. Anything
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t028] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 2:29 (line 154)
+Sure.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t029] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 2:30 (line 159)
+about the system as it currently runs is mine. Incidents, the DC-2 feed, monitoring, access requests, parameter changes on existing categories, the quarterly report. Anything about categories that are not live yet is Ana's.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t030] 2025-06-10 | Lena Fischer | Lena Fischer @ 2:51 (line 166)
+Yes.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t031] 2025-06-10 | Priya Nair | Priya Nair @ 2:53 (line 171)
+Where does DC-2 sit? Because the permanent fix is a project, not an incident.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t032] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 3:03 (line 176)
+Yeah. Sorry, go ahead. Then that is a good example. The failures are mine, the permanent fix is... a change.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t033] 2025-06-10 | Lena Fischer | Lena Fischer @ 3:25 (line 190)
+Okay.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t034] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 3:29 (line 195)
+It has a date. Fifteenth of September, gated on Acme's quarterly change window.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t035] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 3:37 (line 200)
+Then I will hold it on the service risk register as well as it being in Ana's plan, I mean...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t036] 2025-06-10 | Priya Nair | Priya Nair @ 3:49 (line 205)
+Yes.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t037] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 3:51 (line 210)
+rather than none.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t038] 2025-06-10 | Priya Nair | Priya Nair @ 3:54 (line 215)
+That is the first sensible answer anyone has given about DC-2 in a year.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t039] 2025-06-10 | Lena Fischer | Lena Fischer @ 4:04 (line 220)
+Okay, yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t040] 2025-06-10 | Ana Duarte | Ana Duarte @ 4:06 (line 225)
+Charlotte, what do you need...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t041] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 4:09 (line 230)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t042] 2025-06-10 | Ana Duarte | Ana Duarte @ 4:12 (line 235)
+from me?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t043] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 4:17 (line 240)
+The incident history, the runbook, and half an hour on the things that are not written down.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t044] 2025-06-10 | Ana Duarte | Ana Duarte @ 4:26 (line 245)
+The things are not written down.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t045] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 4:29 (line 250)
+Every project has them.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t046] 2025-06-10 | Ana Duarte | Ana Duarte @ 4:33 (line 255)
+All right. Three, off the top of my head.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t047] 2025-06-10 | Lena Fischer | Lena Fischer @ 4:39 (line 260)
+I have told him.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t048] 2025-06-10 | Priya Nair | Priya Nair @ 4:46 (line 265)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t049] 2025-06-10 | Ana Duarte | Ana Duarte @ 4:48 (line 270)
+You have?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t050] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 4:53 (line 275)
+Sure.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t051] 2025-06-10 | Lena Fischer | Lena Fischer @ 4:56 (line 280)
+In April. He was not pleased and he did not escalate it, which
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t052] 2025-06-10 | Priya Nair | Priya Nair @ 5:09 (line 287)
+Mm.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t053] 2025-06-10 | Lena Fischer | Lena Fischer @ 5:13 (line 292)
+is his way of saying he is keeping it.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t054] 2025-06-10 | Ana Duarte | Ana Duarte @ 5:20 (line 297)
+That is useful on the... anything I have.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t055] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 5:30 (line 304)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t056] 2025-06-10 | Lena Fischer | Lena Fischer @ 5:31 (line 309)
+Sorry, what? It was in a corridor.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t057] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 5:40 (line 316)
+But, most of this is in a corridor.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t058] 2025-06-10 | Ana Duarte | Ana Duarte @ 5:48 (line 321)
+Charlotte, one more. Sofia Almeida is the only person at Acme who understands fresh. She is not in in scope for you because fresh that is the...
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t059] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 6:11 (line 332)
+Mm-hm. Noted. Is that in a risk register?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t060] 2025-06-10 | Ana Duarte | Ana Duarte @ 6:18 (line 342)
+yeah It is in three, in slightly different words.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t061] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 6:27 (line 347)
+Then is in none.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t062] 2025-06-10 | Lena Fischer | Lena Fischer @ 6:31 (line 352)
+Yeah, yeah. Can I ask what happens to everything you two know when you both move on?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t063] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 6:48 (line 364)
+Right.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t064] 2025-06-10 | Ana Duarte | Ana Duarte @ 6:52 (line 369)
+Somebody has this meeting again.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t065] 2025-06-10 | Tomas Lindholm | Tomas Lindholm @ 6:57 (line 374)
+Sure.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t066] 2025-06-10 | Lena Fischer | Lena Fischer @ 6:58 (line 379)
+That is not not an answer.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t067] 2025-06-10 | Priya Nair | Priya Nair @ 7:03 (line 384)
+True.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t068] 2025-06-10 | Ana Duarte | Ana Duarte @ 7:04 (line 389)
+No, actually it is not.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t069] 2025-06-10 | Priya Nair | Priya Nair @ 7:11 (line 394)
+Yeah.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t070] 2025-06-10 | Ana Duarte | Ana Duarte @ 7:18 (line 399)
+One more for the list, and it is a gap rather than a thing. Three of the sessions have no transcript at all.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t071] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 7:30 (line 406)
+Which three?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t072] 2025-06-10 | Ana Duarte | Ana Duarte @ 7:33 (line 411)
+The two interface workshops in February, and the planner training. I can tell you which three because I have the invitations. I cannot tell you what was said in them.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t073] 2025-06-10 | Charlotte Meyer | Charlotte Meyer @ 7:54 (line 420)
+Why those?
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t074] 2025-06-10 | Ana Duarte | Ana Duarte @ 7:57 (line 425)
+Whoever is in the room saves the recording. If nobody saves it there is nothing. It is not a system, it is a habit, and it is not a reliable one.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t075] 2025-06-10 | Priya Nair | Priya Nair @ 8:12 (line 432)
+The interface ones are the ones that matter.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t076] 2025-06-10 | Ana Duarte | Ana Duarte @ 8:16 (line 437)
+I know.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t077] 2025-06-10 | Lena Fischer | Lena Fischer @ 8:20 (line 442)
+Then say that in the handover. Not that it is complete.
+
+[transcript:13_2025-06-10_transition-to-continuous-service:t078] 2025-06-10 | Ana Duarte | Ana Duarte @ 8:25 (line 447)
+It will say what is missing.
+

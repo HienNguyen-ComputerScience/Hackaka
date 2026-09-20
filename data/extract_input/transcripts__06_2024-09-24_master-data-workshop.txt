@@ -1,0 +1,273 @@
+# transcripts/06_2024-09-24_master-data-workshop.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:06_2024-09-24_master-data-workshop:t001] 2024-09-24 | Ana Duarte | Ana Duarte @ 2:35 (line 15)
+This is the session where we find out how bad the data
+
+[transcript:06_2024-09-24_master-data-workshop:t002] 2024-09-24 | Priya Nair | Priya Nair @ 2:41 (line 20)
+Mm-hm.
+
+[transcript:06_2024-09-24_master-data-workshop:t003] 2024-09-24 | Ana Duarte | Ana Duarte @ 2:43 (line 25)
+is. Kwame,
+
+[transcript:06_2024-09-24_master-data-workshop:t004] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 2:50 (line 30)
+Yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t005] 2024-09-24 | Ana Duarte | Ana Duarte @ 2:54 (line 35)
+has been...
+
+[transcript:06_2024-09-24_master-data-workshop:t006] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 2:57 (line 40)
+Yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t007] 2024-09-24 | Ana Duarte | Ana Duarte @ 2:59 (line 45)
+through the first extract.
+
+[transcript:06_2024-09-24_master-data-workshop:t008] 2024-09-24 | Lena Fischer | Lena Fischer @ 3:02 (line 50)
+Yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t009] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 3:06 (line 55)
+I have. Do you want the good news or the number.
+
+[transcript:06_2024-09-24_master-data-workshop:t010] 2024-09-24 | Priya Nair | Priya Nair @ 3:17 (line 62)
+The number.
+
+[transcript:06_2024-09-24_master-data-workshop:t011] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 3:22 (line 67)
+Case pack
+
+[transcript:06_2024-09-24_master-data-workshop:t012] 2024-09-24 | Priya Nair | Priya Nair @ 3:27 (line 72)
+Mm-hm.
+
+[transcript:06_2024-09-24_master-data-workshop:t013] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 3:31 (line 77)
+quantity is missing on thirty-one percent of active articles.
+
+[transcript:06_2024-09-24_master-data-workshop:t014] 2024-09-24 | Lena Fischer | Lena Fischer @ 3:40 (line 82)
+Mm-hm.
+
+[transcript:06_2024-09-24_master-data-workshop:t015] 2024-09-24 | Priya Nair | Priya Nair @ 3:43 (line 87)
+I said a third and...
+
+[transcript:06_2024-09-24_master-data-workshop:t016] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 3:50 (line 92)
+You did. Store master is clean. Product hierarchy is
+
+[transcript:06_2024-09-24_master-data-workshop:t017] 2024-09-24 | Priya Nair | Priya Nair @ 3:58 (line 97)
+Exactly.
+
+[transcript:06_2024-09-24_master-data-workshop:t018] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 4:01 (line 102)
+clean. Supplier lead times are populated but I do not believe them,
+
+[transcript:06_2024-09-24_master-data-workshop:t019] 2024-09-24 | Lena Fischer | Lena Fischer @ 4:11 (line 107)
+Yeah, yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t020] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 4:13 (line 112)
+because a lot them are exactly seven days, which is what you get when somebody.
+
+[transcript:06_2024-09-24_master-data-workshop:t021] 2024-09-24 | Priya Nair | Priya Nair @ 4:29 (line 119)
+That is what happened.
+
+[transcript:06_2024-09-24_master-data-workshop:t022] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 4:36 (line 124)
+Sure. And shelf life is populated on forty-eight percent.
+
+[transcript:06_2024-09-24_master-data-workshop:t023] 2024-09-24 | Lena Fischer | Lena Fischer @ 4:45 (line 134)
+Which of those blocks us?
+
+[transcript:06_2024-09-24_master-data-workshop:t024] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 4:54 (line 141)
+Case pack blocks ordering. You cannot order in units the supplier does, You're on mute. not ship. Lead times affect accuracy rather than function. Shelf life does not block anything for this phase because fresh is not in it.
+
+[transcript:06_2024-09-24_master-data-workshop:t025] 2024-09-24 | Ana Duarte | Ana Duarte @ 5:16 (line 152)
+And, so the critical path is case pack.
+
+[transcript:06_2024-09-24_master-data-workshop:t026] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 5:24 (line 157)
+Yeah. So... Case pack for the pilot cohort. Not the whole range.
+
+[transcript:06_2024-09-24_master-data-workshop:t027] 2024-09-24 | Ana Duarte | Ana Duarte @ 5:39 (line 169)
+actually How many articles is that?
+
+[transcript:06_2024-09-24_master-data-workshop:t028] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 5:44 (line 174)
+For the cohort, about four thousand two hundred,
+
+[transcript:06_2024-09-24_master-data-workshop:t029] 2024-09-24 | Priya Nair | Priya Nair @ 5:48 (line 179)
+Yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t030] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 5:49 (line 184)
+Where was I. of which roughly if you...
+
+[transcript:06_2024-09-24_master-data-workshop:t031] 2024-09-24 | Priya Nair | Priya Nair @ 5:58 (line 191)
+Thirteen hundred is doable. Thirteen hundred is two people for
+
+[transcript:06_2024-09-24_master-data-workshop:t032] 2024-09-24 | Ana Duarte | Ana Duarte @ 6:03 (line 196)
+Understood.
+
+[transcript:06_2024-09-24_master-data-workshop:t033] 2024-09-24 | Priya Nair | Priya Nair @ 6:07 (line 201)
+three weeks.
+
+[transcript:06_2024-09-24_master-data-workshop:t034] 2024-09-24 | Ana Duarte | Ana Duarte @ 6:12 (line 206)
+Yeah, yeah. basically Do you have two people?
+
+[transcript:06_2024-09-24_master-data-workshop:t035] 2024-09-24 | Priya Nair | Priya Nair @ 6:19 (line 216)
+I have one and a half.
+
+[transcript:06_2024-09-24_master-data-workshop:t036] 2024-09-24 | Ana Duarte | Ana Duarte @ 6:27 (line 223)
+Then five weeks.
+
+[transcript:06_2024-09-24_master-data-workshop:t037] 2024-09-24 | Priya Nair | Priya Nair @ 6:34 (line 228)
+Yeah. Then five weeks, and that puts us into November, and I want that reflected in the plan rather than absorbed quietly.
+
+[transcript:06_2024-09-24_master-data-workshop:t038] 2024-09-24 | Ana Duarte | Ana Duarte @ 6:53 (line 240)
+It will be but...
+
+[transcript:06_2024-09-24_master-data-workshop:t039] 2024-09-24 | Priya Nair | Priya Nair @ 7:00 (line 245)
+My team owns it, you support. so...
+
+[transcript:06_2024-09-24_master-data-workshop:t040] 2024-09-24 | Ana Duarte | Ana Duarte @ 7:08 (line 250)
+Mm, okay.
+
+[transcript:06_2024-09-24_master-data-workshop:t041] 2024-09-24 | Priya Nair | Priya Nair @ 7:09 (line 255)
+kickoff.
+
+[transcript:06_2024-09-24_master-data-workshop:t042] 2024-09-24 | Ana Duarte | Ana Duarte @ 7:12 (line 260)
+It is, kind of like and I want want to say out loud that it was agreed before the recording started that day, so it is only in my notes. I would rather...
+
+[transcript:06_2024-09-24_master-data-workshop:t043] 2024-09-24 | Lena Fischer | Lena Fischer @ 7:36 (line 269)
+Fair enough.
+
+[transcript:06_2024-09-24_master-data-workshop:t044] 2024-09-24 | Ana Duarte | Ana Duarte @ 7:39 (line 274)
+it were somewhere... more official.
+
+[transcript:06_2024-09-24_master-data-workshop:t045] 2024-09-24 | Priya Nair | Priya Nair @ 7:49 (line 281)
+Then put it,
+
+[transcript:06_2024-09-24_master-data-workshop:t046] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 7:55 (line 286)
+Mm.
+
+[transcript:06_2024-09-24_master-data-workshop:t047] 2024-09-24 | Priya Nair | Priya Nair @ 7:59 (line 291)
+in the workshop output and I
+
+[transcript:06_2024-09-24_master-data-workshop:t048] 2024-09-24 | Ana Duarte | Ana Duarte @ 8:02 (line 296)
+Yes.
+
+[transcript:06_2024-09-24_master-data-workshop:t049] 2024-09-24 | Priya Nair | Priya Nair @ 8:05 (line 301)
+will confirm by email.
+
+[transcript:06_2024-09-24_master-data-workshop:t050] 2024-09-24 | Ana Duarte | Ana Duarte @ 8:10 (line 306)
+Thank you.
+
+[transcript:06_2024-09-24_master-data-workshop:t051] 2024-09-24 | Lena Fischer | Lena Fischer @ 8:14 (line 311)
+While we are on the cohort. The regional managers have pushed back on forty stores.
+
+[transcript:06_2024-09-24_master-data-workshop:t052] 2024-09-24 | Ana Duarte | Ana Duarte @ 8:24 (line 316)
+Pushed back... how?
+
+[transcript:06_2024-09-24_master-data-workshop:t053] 2024-09-24 | Lena Fischer | Lena Fischer @ 8:35 (line 323)
+Two of the three regions say they cannot support that many
+
+[transcript:06_2024-09-24_master-data-workshop:t054] 2024-09-24 | Ana Duarte | Ana Duarte @ 8:43 (line 328)
+Sure.
+
+[transcript:06_2024-09-24_master-data-workshop:t055] 2024-09-24 | Lena Fischer | Lena Fischer @ 8:45 (line 333)
+during their peak. So I have agreed to reduce it.
+
+[transcript:06_2024-09-24_master-data-workshop:t056] 2024-09-24 | Ana Duarte | Ana Duarte @ 8:53 (line 338)
+what?
+
+[transcript:06_2024-09-24_master-data-workshop:t057] 2024-09-24 | Lena Fischer | Lena Fischer @ 9:00 (line 343)
+Twenty-five. Spread the same way, I mean three regions, mixed formats.
+
+[transcript:06_2024-09-24_master-data-workshop:t058] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 9:07 (line 348)
+Okay.
+
+[transcript:06_2024-09-24_master-data-workshop:t059] 2024-09-24 | Ana Duarte | Ana Duarte @ 9:11 (line 353)
+That is a material change to the plan and to the measurement baseline.
+
+[transcript:06_2024-09-24_master-data-workshop:t060] 2024-09-24 | Lena Fischer | Lena Fischer @ 9:20 (line 358)
+so I understand. It for the...
+
+[transcript:06_2024-09-24_master-data-workshop:t061] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 9:27 (line 363)
+Twenty-five is is enough to prove it. It is thinner for measurement, so the results will be noisier.
+
+[transcript:06_2024-09-24_master-data-workshop:t062] 2024-09-24 | Ana Duarte | Ana Duarte @ 9:38 (line 368)
+Yes.
+
+[transcript:06_2024-09-24_master-data-workshop:t063] 2024-09-24 | Lena Fischer | Lena Fischer @ 9:39 (line 373)
+Yeah. Noisier but real.
+
+[transcript:06_2024-09-24_master-data-workshop:t064] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 9:46 (line 380)
+Yeah. Noisier but real.
+
+[transcript:06_2024-09-24_master-data-workshop:t065] 2024-09-24 | Priya Nair | Priya Nair @ 9:54 (line 390)
+Mm, okay.
+
+[transcript:06_2024-09-24_master-data-workshop:t066] 2024-09-24 | Ana Duarte | Ana Duarte @ 9:56 (line 395)
+Right, so... Then twenty-five,
+
+[transcript:06_2024-09-24_master-data-workshop:t067] 2024-09-24 | Priya Nair | Priya Nair @ 10:02 (line 402)
+Right.
+
+[transcript:06_2024-09-24_master-data-workshop:t068] 2024-09-24 | Ana Duarte | Ana Duarte @ 10:05 (line 407)
+and I will reissue the plan and the store list request. Priya, that changes what you send me.
+
+[transcript:06_2024-09-24_master-data-workshop:t069] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 10:21 (line 414)
+Exactly.
+
+[transcript:06_2024-09-24_master-data-workshop:t070] 2024-09-24 | Priya Nair | Priya Nair @ 10:24 (line 419)
+I will send twenty-five.
+
+[transcript:06_2024-09-24_master-data-workshop:t071] 2024-09-24 | Lena Fischer | Lena Fischer @ 10:27 (line 424)
+Yeah.
+
+[transcript:06_2024-09-24_master-data-workshop:t072] 2024-09-24 | Ana Duarte | Ana Duarte @ 10:31 (line 429)
+And can you note in the mail that... it is twenty-five and why, because I do not want to be explaining this... in six months.
+
+[transcript:06_2024-09-24_master-data-workshop:t073] 2024-09-24 | Priya Nair | Priya Nair @ 10:53 (line 438)
+I will note it.
+
+[transcript:06_2024-09-24_master-data-workshop:t074] 2024-09-24 | Lena Fischer | Lena Fischer @ 10:58 (line 443)
+you know Anything else?
+
+[transcript:06_2024-09-24_master-data-workshop:t075] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 11:03 (line 448)
+One thing. The extract I received has a column I did not expect. There is an operator identifier on some of the movement records.
+
+[transcript:06_2024-09-24_master-data-workshop:t076] 2024-09-24 | Priya Nair | Priya Nair @ 11:22 (line 457)
+Got it. Which records?
+
+[transcript:06_2024-09-24_master-data-workshop:t077] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 11:33 (line 467)
+Write-offs, mostly.
+
+[transcript:06_2024-09-24_master-data-workshop:t078] 2024-09-24 | Priya Nair | Priya Nair @ 11:40 (line 472)
+Right. so We do not need to send you
+
+[transcript:06_2024-09-24_master-data-workshop:t079] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 11:49 (line 482)
+I do not need to receive it.
+
+[transcript:06_2024-09-24_master-data-workshop:t080] 2024-09-24 | Ana Duarte | Ana Duarte @ 11:57 (line 487)
+Right.
+
+[transcript:06_2024-09-24_master-data-workshop:t081] 2024-09-24 | Priya Nair | Priya Nair @ 12:01 (line 492)
+Then let us take it out.
+
+[transcript:06_2024-09-24_master-data-workshop:t082] 2024-09-24 | Ana Duarte | Ana Duarte @ 12:04 (line 497)
+Mm-hm. Is that
+
+[transcript:06_2024-09-24_master-data-workshop:t083] 2024-09-24 | Lena Fischer | Lena Fischer @ 12:13 (line 507)
+Yes.
+
+[transcript:06_2024-09-24_master-data-workshop:t084] 2024-09-24 | Ana Duarte | Ana Duarte @ 12:17 (line 512)
+a change request?
+
+[transcript:06_2024-09-24_master-data-workshop:t085] 2024-09-24 | Priya Nair | Priya Nair @ 12:21 (line 517)
+like It is a five minute change. I will put it on the
+
+[transcript:06_2024-09-24_master-data-workshop:t086] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 12:31 (line 522)
+Mm-hm.
+
+[transcript:06_2024-09-24_master-data-workshop:t087] 2024-09-24 | Priya Nair | Priya Nair @ 12:32 (line 527)
+list.
+
+[transcript:06_2024-09-24_master-data-workshop:t088] 2024-09-24 | Kwame Boateng | Kwame Boateng @ 12:36 (line 532)
+Thank you.
+
+[transcript:06_2024-09-24_master-data-workshop:t089] 2024-09-24 | Ana Duarte | Ana Duarte @ 12:42 (line 537)
+Yeah. Noted as an action.
+
+[transcript:06_2024-09-24_master-data-workshop:t090] 2024-09-24 | Lena Fischer | Lena Fischer @ 12:53 (line 547)
+Yeah.
+

@@ -1,0 +1,309 @@
+# transcripts/10_2025-02-27_go-live-cutover.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:10_2025-02-27_go-live-cutover:t001] 2025-02-27 | Ana Duarte | Ana Duarte @ 0:11 (line 15)
+Right. Cutover is Saturday. This is the last call before it,
+
+[transcript:10_2025-02-27_go-live-cutover:t002] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 0:22 (line 22)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t003] 2025-02-27 | Ana Duarte | Ana Duarte @ 0:26 (line 27)
+so I want to... walk the checklist and I...
+
+[transcript:10_2025-02-27_go-live-cutover:t004] 2025-02-27 | Lena Fischer | Lena Fischer @ 0:34 (line 34)
+Okay, yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t005] 2025-02-27 | Ana Duarte | Ana Duarte @ 0:35 (line 39)
+Yeah. want to hear the word yes or the word no against each item rather rather than a discussion.
+
+[transcript:10_2025-02-27_go-live-cutover:t006] 2025-02-27 | Lena Fischer | Lena Fischer @ 0:53 (line 46)
+Agreed.
+
+[transcript:10_2025-02-27_go-live-cutover:t007] 2025-02-27 | Ana Duarte | Ana Duarte @ 0:59 (line 51)
+Well, master data cleansing. Priya.
+
+[transcript:10_2025-02-27_go-live-cutover:t008] 2025-02-27 | Priya Nair | Priya Nair @ 1:04 (line 56)
+Yes with a caveat.
+
+[transcript:10_2025-02-27_go-live-cutover:t009] 2025-02-27 | Ana Duarte | Ana Duarte @ 1:09 (line 61)
+Give me the caveat.
+
+[transcript:10_2025-02-27_go-live-cutover:t010] 2025-02-27 | Priya Nair | Priya Nair @ 1:14 (line 66)
+So, case pack quantities are done for everything in,
+
+[transcript:10_2025-02-27_go-live-cutover:t011] 2025-02-27 | Ana Duarte | Ana Duarte @ 1:19 (line 71)
+Mm, okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t012] 2025-02-27 | Priya Nair | Priya Nair @ 1:22 (line 76)
+the pilot cohort. Shelf life so...
+
+[transcript:10_2025-02-27_go-live-cutover:t013] 2025-02-27 | Ana Duarte | Ana Duarte @ 1:29 (line 81)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t014] 2025-02-27 | Priya Nair | Priya Nair @ 1:31 (line 86)
+shelf life does not matter for this go live because fresh is not in scope. If anyone tries to use, this for fresh in three months they will find the shelf life field is still mostly empty.
+
+[transcript:10_2025-02-27_go-live-cutover:t015] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 1:59 (line 97)
+you know Noted, and that is going in the risk log rather than in this call.
+
+[transcript:10_2025-02-27_go-live-cutover:t016] 2025-02-27 | Lena Fischer | Lena Fischer @ 2:10 (line 102)
+Yeah, yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t017] 2025-02-27 | Ana Duarte | Ana Duarte @ 2:12 (line 107)
+Feeds.
+
+[transcript:10_2025-02-27_go-live-cutover:t018] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 2:18 (line 112)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t019] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 2:19 (line 117)
+Yes for DC-1. DC-2 is a yes but I want
+
+[transcript:10_2025-02-27_go-live-cutover:t020] 2025-02-27 | Ana Duarte | Ana Duarte @ 2:28 (line 122)
+Mm.
+
+[transcript:10_2025-02-27_go-live-cutover:t021] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 2:31 (line 127)
+say it carefully. The feed runs it has run for eleven consecutive nights in test. It also failed twice I mean... weeks before that, silently, and if you... Hmm. I was watching.
+
+[transcript:10_2025-02-27_go-live-cutover:t022] 2025-02-27 | Ana Duarte | Ana Duarte @ 2:58 (line 140)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t023] 2025-02-27 | Lena Fischer | Lena Fischer @ 2:59 (line 145)
+So what happens on Saturday if it fails.
+
+[transcript:10_2025-02-27_go-live-cutover:t024] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 3:07 (line 152)
+Monitoring alerts me, and I have the runbook. But the honest
+
+[transcript:10_2025-02-27_go-live-cutover:t025] 2025-02-27 | Priya Nair | Priya Nair @ 3:14 (line 157)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t026] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 3:16 (line 162)
+answer is that when the... fails in production nobody will
+
+[transcript:10_2025-02-27_go-live-cutover:t027] 2025-02-27 | Ana Duarte | Ana Duarte @ 3:23 (line 169)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t028] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 3:24 (line 174)
+notice until the morning...
+
+[transcript:10_2025-02-27_go-live-cutover:t029] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 3:31 (line 179)
+Right.
+
+[transcript:10_2025-02-27_go-live-cutover:t030] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 3:32 (line 184)
+orders look wrong.
+
+[transcript:10_2025-02-27_go-live-cutover:t031] 2025-02-27 | Priya Nair | Priya Nair @ 3:39 (line 189)
+That what I said where the...
+
+[transcript:10_2025-02-27_go-live-cutover:t032] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 3:44 (line 194)
+You did.
+
+[transcript:10_2025-02-27_go-live-cutover:t033] 2025-02-27 | Priya Nair | Priya Nair @ 3:48 (line 199)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t034] 2025-02-27 | Ana Duarte | Ana Duarte @ 3:50 (line 204)
+Rollback.
+
+[transcript:10_2025-02-27_go-live-cutover:t035] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 3:57 (line 209)
+Yes. We can revert the incumbent ordering process within four hours for the,
+
+[transcript:10_2025-02-27_go-live-cutover:t036] 2025-02-27 | Ana Duarte | Ana Duarte @ 4:06 (line 214)
+Mm-hm.
+
+[transcript:10_2025-02-27_go-live-cutover:t037] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 4:10 (line 219)
+pilot cohort. It is manual and it is unpleasant but it works.
+
+[transcript:10_2025-02-27_go-live-cutover:t038] 2025-02-27 | Ana Duarte | Ana Duarte @ 4:17 (line 224)
+Cohort. Confirming for the record, this is the twenty-five store pilot group.
+
+[transcript:10_2025-02-27_go-live-cutover:t039] 2025-02-27 | Priya Nair | Priya Nair @ 4:24 (line 229)
+Twenty-five.
+
+[transcript:10_2025-02-27_go-live-cutover:t040] 2025-02-27 | Ana Duarte | Ana Duarte @ 4:31 (line 234)
+On-call. I need numbers, not names.
+
+[transcript:10_2025-02-27_go-live-cutover:t041] 2025-02-27 | Lena Fischer | Lena Fischer @ 4:37 (line 239)
+Yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t042] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 4:39 (line 244)
+Me for the feeds. Zero zero four four seven seven zero zero nine zero zero three one one eight,
+
+[transcript:10_2025-02-27_go-live-cutover:t043] 2025-02-27 | Lena Fischer | Lena Fischer @ 4:52 (line 249)
+Okay, yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t044] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 4:56 (line 254)
+that is my mobile and it is on all weekend.
+
+[transcript:10_2025-02-27_go-live-cutover:t045] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 5:05 (line 259)
+Okay, yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t046] 2025-02-27 | Priya Nair | Priya Nair @ 5:06 (line 264)
+Me for anything Acme side. Zero zero four nine one five one three three zero seven nine one two...
+
+[transcript:10_2025-02-27_go-live-cutover:t047] 2025-02-27 | Ana Duarte | Ana Duarte @ 5:15 (line 269)
+Yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t048] 2025-02-27 | Priya Nair | Priya Nair @ 5:17 (line 274)
+six.
+
+[transcript:10_2025-02-27_go-live-cutover:t049] 2025-02-27 | Lena Fischer | Lena Fischer @ 5:24 (line 279)
+And me if either of you cannot get a after the...
+
+[transcript:10_2025-02-27_go-live-cutover:t050] 2025-02-27 | Ana Duarte | Ana Duarte @ 5:32 (line 284)
+Sorry, go ahead. I have all three. I am putting them in the cutover runbook and
+
+[transcript:10_2025-02-27_go-live-cutover:t051] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 5:45 (line 291)
+Mm.
+
+[transcript:10_2025-02-27_go-live-cutover:t052] 2025-02-27 | Ana Duarte | Ana Duarte @ 5:49 (line 296)
+I will circulate it.
+
+[transcript:10_2025-02-27_go-live-cutover:t053] 2025-02-27 | Priya Nair | Priya Nair @ 5:53 (line 301)
+Do not circulate the the so... some strange places over the... years.
+
+[transcript:10_2025-02-27_go-live-cutover:t054] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 6:13 (line 312)
+Right.
+
+[transcript:10_2025-02-27_go-live-cutover:t055] 2025-02-27 | Ana Duarte | Ana Duarte @ 6:16 (line 317)
+Understood, distribution list is the five of us.
+
+[transcript:10_2025-02-27_go-live-cutover:t056] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 6:20 (line 322)
+Right.
+
+[transcript:10_2025-02-27_go-live-cutover:t057] 2025-02-27 | Lena Fischer | Lena Fischer @ 6:22 (line 327)
+So, what about but...
+
+[transcript:10_2025-02-27_go-live-cutover:t058] 2025-02-27 | Ana Duarte | Ana Duarte @ 6:25 (line 332)
+Store communications went out Tuesday. First orders generated Monday morning.
+
+[transcript:10_2025-02-27_go-live-cutover:t059] 2025-02-27 | Priya Nair | Priya Nair @ 6:33 (line 337)
+Exactly.
+
+[transcript:10_2025-02-27_go-live-cutover:t060] 2025-02-27 | Lena Fischer | Lena Fischer @ 6:36 (line 342)
+And, who is in the stores on Monday?
+
+[transcript:10_2025-02-27_go-live-cutover:t061] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 6:40 (line 347)
+Sure.
+
+[transcript:10_2025-02-27_go-live-cutover:t062] 2025-02-27 | Priya Nair | Priya Nair @ 6:42 (line 352)
+Nobody from... my team. It is a normal Monday them.
+
+[transcript:10_2025-02-27_go-live-cutover:t063] 2025-02-27 | Ana Duarte | Ana Duarte @ 6:52 (line 359)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t064] 2025-02-27 | Lena Fischer | Lena Fischer @ 6:56 (line 364)
+Then that is a gap. If twenty-five store managers get an... order proposal that looks strange on Monday morning and there is nobody to call, they will just override
+
+[transcript:10_2025-02-27_go-live-cutover:t065] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 7:25 (line 377)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t066] 2025-02-27 | Lena Fischer | Lena Fischer @ 7:26 (line 382)
+it and we so...
+
+[transcript:10_2025-02-27_go-live-cutover:t067] 2025-02-27 | Ana Duarte | Ana Duarte @ 7:32 (line 387)
+That is a fair point and I do not
+
+[transcript:10_2025-02-27_go-live-cutover:t068] 2025-02-27 | Priya Nair | Priya Nair @ 7:40 (line 392)
+Right.
+
+[transcript:10_2025-02-27_go-live-cutover:t069] 2025-02-27 | Ana Duarte | Ana Duarte @ 7:43 (line 397)
+have an answer prepared.
+
+[transcript:10_2025-02-27_go-live-cutover:t070] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 7:48 (line 402)
+Mm.
+
+[transcript:10_2025-02-27_go-live-cutover:t071] 2025-02-27 | Lena Fischer | Lena Fischer @ 7:52 (line 407)
+I will put someone from my team on it. Not a
+
+[transcript:10_2025-02-27_go-live-cutover:t072] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 8:04 (line 414)
+Yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t073] 2025-02-27 | Lena Fischer | Lena Fischer @ 8:08 (line 419)
+technical person, just someone who answers the phone and writes down what they said.
+
+[transcript:10_2025-02-27_go-live-cutover:t074] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 8:21 (line 426)
+Yeah. Yeah. That would be more useful than than the monitoring, honestly.
+
+[transcript:10_2025-02-27_go-live-cutover:t075] 2025-02-27 | Ana Duarte | Ana Duarte @ 8:46 (line 440)
+Anything else?
+
+[transcript:10_2025-02-27_go-live-cutover:t076] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 8:52 (line 445)
+One thing. I am on holiday from the tenth of March.
+
+[transcript:10_2025-02-27_go-live-cutover:t077] 2025-02-27 | Ana Duarte | Ana Duarte @ 9:04 (line 452)
+For how long?
+
+[transcript:10_2025-02-27_go-live-cutover:t078] 2025-02-27 | Lena Fischer | Lena Fischer @ 9:10 (line 457)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t079] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 9:14 (line 462)
+Two weeks. It was booked in November.
+
+[transcript:10_2025-02-27_go-live-cutover:t080] 2025-02-27 | Ana Duarte | Ana Duarte @ 9:18 (line 467)
+So you are here for cutover and the first ten days and then you are gone.
+
+[transcript:10_2025-02-27_go-live-cutover:t081] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 9:33 (line 474)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t082] 2025-02-27 | Ana Duarte | Ana Duarte @ 9:40 (line 479)
+sort of Who and...
+
+[transcript:10_2025-02-27_go-live-cutover:t083] 2025-02-27 | Priya Nair | Priya Nair @ 9:46 (line 484)
+Okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t084] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 9:50 (line 489)
+Nobody currently. I will write the the runbook properly so...
+
+[transcript:10_2025-02-27_go-live-cutover:t085] 2025-02-27 | Lena Fischer | Lena Fischer @ 9:55 (line 494)
+Yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t086] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 9:59 (line 499)
+it is not just in
+
+[transcript:10_2025-02-27_go-live-cutover:t087] 2025-02-27 | Priya Nair | Priya Nair @ 10:04 (line 504)
+Yes.
+
+[transcript:10_2025-02-27_go-live-cutover:t088] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 10:06 (line 509)
+my head.
+
+[transcript:10_2025-02-27_go-live-cutover:t089] 2025-02-27 | Priya Nair | Priya Nair @ 10:10 (line 514)
+Sure. A runbook is not a person.
+
+[transcript:10_2025-02-27_go-live-cutover:t090] 2025-02-27 | Kwame Boateng | Kwame Boateng @ 10:17 (line 524)
+No, it is not.
+
+[transcript:10_2025-02-27_go-live-cutover:t091] 2025-02-27 | Ana Duarte | Ana Duarte @ 10:23 (line 529)
+Mm. I will raise...
+
+[transcript:10_2025-02-27_go-live-cutover:t092] 2025-02-27 | Priya Nair | Priya Nair @ 10:33 (line 539)
+Sure.
+
+[transcript:10_2025-02-27_go-live-cutover:t093] 2025-02-27 | Ana Duarte | Ana Duarte @ 10:34 (line 544)
+resourcing. Priya, if it fails...
+
+[transcript:10_2025-02-27_go-live-cutover:t094] 2025-02-27 | Priya Nair | Priya Nair @ 10:39 (line 549)
+Yeah, yeah.
+
+[transcript:10_2025-02-27_go-live-cutover:t095] 2025-02-27 | Ana Duarte | Ana Duarte @ 10:40 (line 554)
+while Kwame is away, escalate to me directly and I will find someone.
+
+[transcript:10_2025-02-27_go-live-cutover:t096] 2025-02-27 | Lena Fischer | Lena Fischer @ 10:52 (line 561)
+Mm, okay.
+
+[transcript:10_2025-02-27_go-live-cutover:t097] 2025-02-27 | Priya Nair | Priya Nair @ 10:55 (line 566)
+I will escalate to you and you will find someone in six hours instead of one. I am not blaming you, I am describing what will happen.
+
+[transcript:10_2025-02-27_go-live-cutover:t098] 2025-02-27 | Ana Duarte | Ana Duarte @ 11:17 (line 575)
+That is accurate.
+
+[transcript:10_2025-02-27_go-live-cutover:t099] 2025-02-27 | Lena Fischer | Lena Fischer @ 11:23 (line 580)
+Are we going?
+
+[transcript:10_2025-02-27_go-live-cutover:t100] 2025-02-27 | Ana Duarte | Ana Duarte @ 11:27 (line 585)
+We are going.
+
+[transcript:10_2025-02-27_go-live-cutover:t101] 2025-02-27 | Tomas Lindholm | Tomas Lindholm @ 11:33 (line 590)
+Mm-hm.
+
+[transcript:10_2025-02-27_go-live-cutover:t102] 2025-02-27 | Lena Fischer | Lena Fischer @ 11:34 (line 595)
+Good.
+

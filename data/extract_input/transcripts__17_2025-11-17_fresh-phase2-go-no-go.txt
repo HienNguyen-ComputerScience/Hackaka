@@ -1,0 +1,435 @@
+# transcripts/17_2025-11-17_fresh-phase2-go-no-go.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t001] 2025-11-17 | Marco Rossi | Marco Rossi @ 0:14 (line 15)
+Okay so. This is the go or no-go we committed to in September. Nadia
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t002] 2025-11-17 | Lena Fischer | Lena Fischer @ 0:22 (line 22)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t003] 2025-11-17 | Marco Rossi | Marco Rossi @ 0:25 (line 27)
+has been running fresh UAT for the last two weeks.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t004] 2025-11-17 | Lena Fischer | Lena Fischer @ 0:34 (line 32)
+before anyone says it, we are not doing three waves. I saw
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t005] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 0:43 (line 37)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t006] 2025-11-17 | Lena Fischer | Lena Fischer @ 0:46 (line 42)
+that in a plan document last week and it is the first I... had heard of it.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t007] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 1:00 (line 49)
+Right.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t008] 2025-11-17 | Marco Rossi | Marco Rossi @ 1:02 (line 54)
+Noted. We will come back to you on where that came from.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t009] 2025-11-17 | Lena Fischer | Lena Fischer @ 1:11 (line 61)
+Put it in writing please, I. Sofia, you are back.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t010] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 1:26 (line 70)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t011] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 1:29 (line 75)
+I am back. Do not ask me about it, I am fine.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t012] 2025-11-17 | Lena Fischer | Lena Fischer @ 1:39 (line 80)
+I was not going to.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t013] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 1:46 (line 85)
+Everyone has asked me about it eleven times this week.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t014] 2025-11-17 | Marco Rossi | Marco Rossi @ 1:58 (line 92)
+This is the important part. Understood. Nadia?
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t015] 2025-11-17 | Priya Nair | Priya Nair @ 2:11 (line 99)
+Okay, yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t016] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 2:14 (line 104)
+The defect is fixed and verified. Negative Hmm. quantities are gone. UAT has run for nine working days on the four fresh categories and
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t017] 2025-11-17 | Priya Nair | Priya Nair @ 2:35 (line 113)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t018] 2025-11-17 | Unknown Speaker | Unknown Speaker @ 2:39 (line 118)
+the results are usable.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t019] 2025-11-17 | Marco Rossi | Marco Rossi @ 2:42 (line 123)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t020] 2025-11-17 | Lena Fischer | Lena Fischer @ 2:44 (line 128)
+Usable.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t021] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 2:49 (line 133)
+Usable, not excellent. Accuracy on produce and dairy is good. Bakery is poor and I know why. Chilled ready meals I do not... have enough data on because the history is short.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t022] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 3:08 (line 140)
+Bakery is poor because half of it is baked in store and it is not really an ordering problem.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t023] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 3:22 (line 147)
+That is
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t024] 2025-11-17 | Lena Fischer | Lena Fischer @ 3:25 (line 152)
+Sure.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t025] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 3:26 (line 157)
+my conclusion too.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t026] 2025-11-17 | Priya Nair | Priya Nair @ 3:32 (line 162)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t027] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 3:33 (line 167)
+Then take bakery out.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t028] 2025-11-17 | Marco Rossi | Marco Rossi @ 3:38 (line 172)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t029] 2025-11-17 | Lena Fischer | Lena Fischer @ 3:39 (line 177)
+Can we do that?
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t030] 2025-11-17 | Priya Nair | Priya Nair @ 3:44 (line 182)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t031] 2025-11-17 | Marco Rossi | Marco Rossi @ 3:48 (line 187)
+We can descope bakery from this...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t032] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 3:54 (line 192)
+Okay, yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t033] 2025-11-17 | Marco Rossi | Marco Rossi @ 3:55 (line 197)
+go-live and treat in-store production separately. It is not not a small change to the plan
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t034] 2025-11-17 | Priya Nair | Priya Nair @ 4:04 (line 202)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t035] 2025-11-17 | Marco Rossi | Marco Rossi @ 4:08 (line 207)
+but it is the right change.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t036] 2025-11-17 | Lena Fischer | Lena Fischer @ 4:14 (line 212)
+Then that is my decision. Go live on produce, dairy and chilled ready meals. Bakery comes later as its own,
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t037] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 4:23 (line 217)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t038] 2025-11-17 | Lena Fischer | Lena Fischer @ 4:26 (line 222)
+thing.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t039] 2025-11-17 | Marco Rossi | Marco Rossi @ 4:31 (line 227)
+Recorded.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t040] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 4:35 (line 232)
+One thing...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t041] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 4:39 (line 237)
+Okay, yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t042] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 4:43 (line 242)
+about the notes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t043] 2025-11-17 | Lena Fischer | Lena Fischer @ 4:46 (line 247)
+Right.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t044] 2025-11-17 | Marco Rossi | Marco Rossi @ 4:50 (line 252)
+Go ahead.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t045] 2025-11-17 | Unknown Speaker | Unknown Speaker @ 4:54 (line 257)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t046] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 4:56 (line 262)
+The March notes, from the demo last year. Somebody has clearly written down that I was having surgery, because Nadia
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t047] 2025-11-17 | Priya Nair | Priya Nair @ 5:09 (line 267)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t048] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 5:10 (line 272)
+knew about it before we met and I never told her.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t049] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 5:16 (line 277)
+It is in the handover pack. Document is called Acme-fresh-handover-v3, it is on the project... site.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t050] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 5:30 (line 284)
+Which page.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t051] 2025-11-17 | Priya Nair | Priya Nair @ 5:37 (line 289)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t052] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 5:38 (line 294)
+Page four, under key stakeholders. It says your name, your role, and then, Can you hear me? in brackets, out October November, surgery.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t053] 2025-11-17 | Priya Nair | Priya Nair @ 5:55 (line 303)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t054] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 5:57 (line 308)
+actually It was in the handover document I was given.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t055] 2025-11-17 | Priya Nair | Priya Nair @ 6:07 (line 315)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t056] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 6:09 (line 320)
+Right. I
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t057] 2025-11-17 | Priya Nair | Priya Nair @ 6:12 (line 325)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t058] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 6:14 (line 330)
+do not want that in there. I said... it in a meeting because it was relevant to the project timeline, I mean not so it could...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t059] 2025-11-17 | Priya Nair | Priya Nair @ 6:32 (line 339)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t060] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 6:35 (line 344)
+follow me around for two years. Take it out.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t061] 2025-11-17 | Marco Rossi | Marco Rossi @ 6:42 (line 349)
+We will take it out.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t062] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 6:47 (line 354)
+Sorry, go ahead. The bit that matters is that I
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t063] 2025-11-17 | Priya Nair | Priya Nair @ 6:54 (line 361)
+Okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t064] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 6:57 (line 366)
+You're on mute. am the only person who knows these categories. Keep that. Delete rest.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t065] 2025-11-17 | Marco Rossi | Marco Rossi @ 7:05 (line 373)
+That is a fair distinction and I mean...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t066] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 7:12 (line 378)
+And I would like to know where else...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t067] 2025-11-17 | Lena Fischer | Lena Fischer @ 7:19 (line 383)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t068] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 7:22 (line 388)
+it
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t069] 2025-11-17 | Marco Rossi | Marco Rossi @ 7:28 (line 393)
+Yeah. I do not know, honestly. It will be after the...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t070] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 7:40 (line 405)
+Then find them.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t071] 2025-11-17 | Priya Nair | Priya Nair @ 7:46 (line 410)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t072] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 7:50 (line 415)
+I am going to send this to you as an email as well, because I have watched things said in these calls disappear.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t073] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 8:03 (line 422)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t074] 2025-11-17 | Lena Fischer | Lena Fischer @ 8:04 (line 427)
+Sofia is right and I want it followed up properly, not just in this meeting's, notes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t075] 2025-11-17 | Marco Rossi | Marco Rossi @ 8:18 (line 434)
+I will own that.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t076] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 8:22 (line 439)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t077] 2025-11-17 | Priya Nair | Priya Nair @ 8:26 (line 444)
+On the data side, yeah, one thing. The fresh feed includes a field we should talk about.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t078] 2025-11-17 | Unknown Speaker | Unknown Speaker @ 8:36 (line 451)
+Which one?
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t079] 2025-11-17 | Priya Nair | Priya Nair @ 8:41 (line 456)
+The waste write-off records carry the operator so...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t080] 2025-11-17 | Marco Rossi | Marco Rossi @ 8:55 (line 463)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t081] 2025-11-17 | Priya Nair | Priya Nair @ 8:56 (line 468)
+item out. So when your system reads the waste data it is
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t082] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 9:03 (line 473)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t083] 2025-11-17 | Priya Nair | Priya Nair @ 9:05 (line 478)
+also reading who threw what away, yeah per person, per store, per day.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t084] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 9:17 (line 485)
+Right. What does the field look like?
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t085] 2025-11-17 | Priya Nair | Priya Nair @ 9:21 (line 495)
+It is OP_ID and it is a six digit number. So for, example four four seven
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t086] 2025-11-17 | Marco Rossi | Marco Rossi @ 9:31 (line 502)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t087] 2025-11-17 | Priya Nair | Priya Nair @ 9:33 (line 507)
+one. And four four eight nine three three is Osman Yildirim at the same store. I can... pull any of and then the...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t088] 2025-11-17 | Unknown Speaker | Unknown Speaker @ 9:48 (line 514)
+Understood.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t089] 2025-11-17 | Priya Nair | Priya Nair @ 9:55 (line 519)
+Marika has
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t090] 2025-11-17 | Lena Fischer | Lena Fischer @ 10:01 (line 524)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t091] 2025-11-17 | Priya Nair | Priya Nair @ 10:02 (line 529)
+the highest write-off numbers in that store it is because she works the shift
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t092] 2025-11-17 | Marco Rossi | Marco Rossi @ 10:13 (line 534)
+Exactly.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t093] 2025-11-17 | Priya Nair | Priya Nair @ 10:17 (line 539)
+where the reductions happen, basically not because she is careless. If someone
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t094] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 10:25 (line 544)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t095] 2025-11-17 | Priya Nair | Priya Nair @ 10:27 (line 549)
+reads that table without knowing that,
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t096] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 10:33 (line 554)
+Okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t097] 2025-11-17 | Priya Nair | Priya Nair @ 10:35 (line 559)
+she has problem.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t098] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 10:39 (line 564)
+We do not use that field.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t099] 2025-11-17 | Priya Nair | Priya Nair @ 10:45 (line 569)
+You receive it though.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t100] 2025-11-17 | Lena Fischer | Lena Fischer @ 10:48 (line 574)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t101] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 10:50 (line 579)
+We receive it, yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t102] 2025-11-17 | Priya Nair | Priya Nair @ 10:56 (line 584)
+Then either
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t103] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 11:00 (line 589)
+Sure.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t104] 2025-11-17 | Priya Nair | Priya Nair @ 11:03 (line 594)
+stop receiving it and... writing what you do,
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t105] 2025-11-17 | Marco Rossi | Marco Rossi @ 11:13 (line 601)
+Yeah, yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t106] 2025-11-17 | Priya Nair | Priya Nair @ 11:15 (line 606)
+with it, because our works council will ask and I would like to have
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t107] 2025-11-17 | Lena Fischer | Lena Fischer @ 11:26 (line 611)
+Okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t108] 2025-11-17 | Priya Nair | Priya Nair @ 11:30 (line 616)
+an answer before they they do rather than after.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t109] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 11:39 (line 621)
+I will confirm in writing tomorrow.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t110] 2025-11-17 | Priya Nair | Priya Nair @ 11:43 (line 626)
+You can see here. Send it to me and copy Lena. I want a record that is not a meeting note.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t111] 2025-11-17 | Marco Rossi | Marco Rossi @ 12:11 (line 635)
+That is a reasonable ask.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t112] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 12:18 (line 640)
+Okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t113] 2025-11-17 | Priya Nair | Priya Nair @ 12:19 (line 645)
+It is not just reasonable, it is a condition.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t114] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 12:25 (line 650)
+Right.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t115] 2025-11-17 | Priya Nair | Priya Nair @ 12:27 (line 655)
+We cannot have per-employee waste figures leaving our estate without,
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t116] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 12:35 (line 660)
+Yep.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t117] 2025-11-17 | Priya Nair | Priya Nair @ 12:36 (line 665)
+a consultation, and I am not starting a consultation for a field you do not use.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t118] 2025-11-17 | Unknown Speaker | Unknown Speaker @ 12:46 (line 670)
+Then we drop it at the extract. I
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t119] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 12:51 (line 675)
+will confirm the field name with you
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t120] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 12:57 (line 680)
+Right.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t121] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 13:01 (line 685)
+and we exclude it at source.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t122] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 13:10 (line 692)
+Exactly.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t123] 2025-11-17 | Priya Nair | Priya Nair @ 13:12 (line 697)
+Better.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t124] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 13:19 (line 702)
+Yes.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t125] 2025-11-17 | Lena Fischer | Lena Fischer @ 13:20 (line 707)
+Good catch, Priya.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t126] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 13:27 (line 712)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t127] 2025-11-17 | Priya Nair | Priya Nair @ 13:29 (line 717)
+So... It has been in
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t128] 2025-11-17 | Lena Fischer | Lena Fischer @ 13:39 (line 724)
+Yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t129] 2025-11-17 | Priya Nair | Priya Nair @ 13:40 (line 729)
+every feed since February.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t130] 2025-11-17 | Lena Fischer | Lena Fischer @ 13:43 (line 734)
+Ah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t131] 2025-11-17 | Marco Rossi | Marco Rossi @ 13:50 (line 739)
+So. Go-live on the fifteenth of December for produce, dairy and chilled ready meals.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t132] 2025-11-17 | Nadia Haddad | Nadia Haddad @ 13:58 (line 744)
+Okay, yeah.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t133] 2025-11-17 | Marco Rossi | Marco Rossi @ 13:59 (line 749)
+Bakery descoped to a separate so...
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t134] 2025-11-17 | Priya Nair | Priya Nair @ 14:03 (line 754)
+Okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t135] 2025-11-17 | Marco Rossi | Marco Rossi @ 14:07 (line 759)
+excluded at at extract, confirmed in writing. And Sofia's request handled and traced.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t136] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 14:15 (line 764)
+Thank you.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t137] 2025-11-17 | Lena Fischer | Lena Fischer @ 14:22 (line 769)
+Agreed.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t138] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 14:29 (line 774)
+Mm, okay.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t139] 2025-11-17 | Priya Nair | Priya Nair @ 14:36 (line 779)
+One last thing. If we are opening the reporting folder up to the wider team I would want to know who has looked at what.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t140] 2025-11-17 | Lena Fischer | Lena Fischer @ 14:50 (line 786)
+Opening it up to who? Those reports have always been readable. Anyone on the team could have opened any of them at any point in the last two years. They were just hard to find.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t141] 2025-11-17 | Priya Nair | Priya Nair @ 15:10 (line 795)
+That is not the same as being allowed to.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t142] 2025-11-17 | Lena Fischer | Lena Fischer @ 15:15 (line 800)
+No. But it is what we have had, and nobody has called it a problem until somebody made it easy.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t143] 2025-11-17 | Marco Rossi | Marco Rossi @ 15:29 (line 807)
+Mm.
+
+[transcript:17_2025-11-17_fresh-phase2-go-no-go:t144] 2025-11-17 | Sofia Almeida | Sofia Almeida @ 15:32 (line 812)
+I would call it a problem.
+

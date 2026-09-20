@@ -1,0 +1,46 @@
+# emails/05_dc2-incident-log.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[email:05_dc2-incident-log:m01] 2026-02-03T16:20 | Kwame Boateng -> Nadia Haddad, Tomas Lindholm | subject: DC-2 incident log
+Attaching the DC-2 incident log for January. Fourteen failures, eleven silent.
+
+Worth noting for internal purposes that four of them correlate with a scheduled job on
+Acme's side that Priya has said twice does not exist. Either she is wrong or something
+is running that she does not know about. I would not raise it that way with her.
+
+[email:05_dc2-incident-log:m02] 2026-02-04T09:15 | Nadia Haddad -> Kwame Boateng | subject: Re: DC-2 incident log
+Agreed, do not put it like that. Let us ask her whether anything changed in the January
+maintenance window and let her find it herself.
+
+[email:05_dc2-incident-log:m03] 2026-02-10T11:50 | Ana Duarte -> Ivan Petrov, Ruth Oyelaran | subject: FW: DC-2 incident log
+Hi Ivan, Ruth,
+
+As promised at the scoping session, the DC-2 incident log so you can plan around the
+feed reliability.
+
+Ana
+
+Best regards,
+
+[email:05_dc2-incident-log:m04] 2026-02-10T12:14 | Marco Rossi -> Ana Duarte | subject: Re: DC-2 incident log
+Ana - did you forward the whole chain or just the attachment?
+
+We agreed on the 28th that this went to Lena and she decided what Meridian saw.
+
+[email:05_dc2-incident-log:m05] 2026-02-10T12:31 | Ana Duarte -> Marco Rossi | subject: Re: DC-2 incident log
+The whole chain. Why - oh.
+
+Best regards,
+
+[email:05_dc2-incident-log:m06] 2026-02-10T14:08 | Ivan Petrov -> Ana Duarte | subject: DC-2 incident log
+Hi Ana,
+
+Received, thank you. We will build assuming roughly fortnightly failures.
+
+For what it is worth I would ignore the comment about the scheduled job. That kind of
+thing is in every project and it is not our business to have read it.
+
+Kind regards
+
+Kind regards,
+

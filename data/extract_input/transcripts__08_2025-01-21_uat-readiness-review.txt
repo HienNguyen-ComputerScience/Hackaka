@@ -1,0 +1,192 @@
+# transcripts/08_2025-01-21_uat-readiness-review.txt
+# one unit per block. unit_id | date | speaker | anchor
+
+[transcript:08_2025-01-21_uat-readiness-review:t001] 2025-01-21 | Ana Duarte | Ana Duarte @ 0:08 (line 15)
+Two questions today. Is the data ready, and is UAT ready. Priya first.
+
+[transcript:08_2025-01-21_uat-readiness-review:t002] 2025-01-21 | Lena Fischer | Lena Fischer @ 0:15 (line 20)
+Yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t003] 2025-01-21 | Priya Nair | Priya Nair @ 0:16 (line 25)
+Case pack for the cohort is done. Thirteen hundred articles, finished on the nineteenth of December.
+
+[transcript:08_2025-01-21_uat-readiness-review:t004] 2025-01-21 | Ana Duarte | Ana Duarte @ 0:28 (line 30)
+I mean That is genuinely good.
+
+[transcript:08_2025-01-21_uat-readiness-review:t005] 2025-01-21 | Lena Fischer | Lena Fischer @ 0:33 (line 35)
+Yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t006] 2025-01-21 | Priya Nair | Priya Nair @ 0:35 (line 40)
+It was a horrible three weeks and I would like it noted.
+
+[transcript:08_2025-01-21_uat-readiness-review:t007] 2025-01-21 | Ana Duarte | Ana Duarte @ 0:45 (line 45)
+Right. It is noted.
+
+[transcript:08_2025-01-21_uat-readiness-review:t008] 2025-01-21 | Priya Nair | Priya Nair @ 0:50 (line 55)
+Lead times...
+
+[transcript:08_2025-01-21_uat-readiness-review:t009] 2025-01-21 | Ana Duarte | Ana Duarte @ 0:57 (line 60)
+Of course.
+
+[transcript:08_2025-01-21_uat-readiness-review:t010] 2025-01-21 | Priya Nair | Priya Nair @ 0:58 (line 65)
+I have not touched. They are still mostly sevens.
+
+[transcript:08_2025-01-21_uat-readiness-review:t011] 2025-01-21 | Lena Fischer | Lena Fischer @ 1:09 (line 72)
+Sure.
+
+[transcript:08_2025-01-21_uat-readiness-review:t012] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 1:12 (line 77)
+Yeah. We can work around that by deriving actuals from receipt history, which is less, accurate for new articles and fine for everything else.
+
+[transcript:08_2025-01-21_uat-readiness-review:t013] 2025-01-21 | Priya Nair | Priya Nair @ 1:32 (line 86)
+Agreed. Do that.
+
+[transcript:08_2025-01-21_uat-readiness-review:t014] 2025-01-21 | Ana Duarte | Ana Duarte @ 1:41 (line 96)
+And shelf... One second. life?
+
+[transcript:08_2025-01-21_uat-readiness-review:t015] 2025-01-21 | Priya Nair | Priya Nair @ 1:54 (line 105)
+Untouched. Not in scope. And before anyone asks, the warehouse question is still unanswered,
+
+[transcript:08_2025-01-21_uat-readiness-review:t016] 2025-01-21 | Lena Fischer | Lena Fischer @ 2:02 (line 110)
+Mm-hm.
+
+[transcript:08_2025-01-21_uat-readiness-review:t017] 2025-01-21 | Priya Nair | Priya Nair @ 2:05 (line 115)
+and I have stopped chasing it because nothing,
+
+[transcript:08_2025-01-21_uat-readiness-review:t018] 2025-01-21 | Lena Fischer | Lena Fischer @ 2:13 (line 120)
+Yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t019] 2025-01-21 | Priya Nair | Priya Nair @ 2:16 (line 125)
+in this phase depends on it.
+
+[transcript:08_2025-01-21_uat-readiness-review:t020] 2025-01-21 | Ana Duarte | Ana Duarte @ 2:22 (line 130)
+Understood. It becomes phase two's problem.
+
+[transcript:08_2025-01-21_uat-readiness-review:t021] 2025-01-21 | Lena Fischer | Lena Fischer @ 2:28 (line 135)
+Okay, yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t022] 2025-01-21 | Priya Nair | Priya Nair @ 2:29 (line 140)
+It becomes phase two's problem.
+
+[transcript:08_2025-01-21_uat-readiness-review:t023] 2025-01-21 | Ana Duarte | Ana Duarte @ 2:36 (line 145)
+Sorry, go ahead. UAT. Kwame.
+
+[transcript:08_2025-01-21_uat-readiness-review:t024] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 2:46 (line 152)
+actually Eleven business scenarios, all run
+
+[transcript:08_2025-01-21_uat-readiness-review:t025] 2025-01-21 | Ana Duarte | Ana Duarte @ 2:53 (line 157)
+True.
+
+[transcript:08_2025-01-21_uat-readiness-review:t026] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 2:56 (line 162)
+at least once. Nine pass. Two fail, and both are the same root cause, which is rounding, on articles where case pack and minimum order quantity disagree.
+
+[transcript:08_2025-01-21_uat-readiness-review:t027] 2025-01-21 | Lena Fischer | Lena Fischer @ 3:16 (line 171)
+Sure.
+
+[transcript:08_2025-01-21_uat-readiness-review:t028] 2025-01-21 | Ana Duarte | Ana Duarte @ 3:17 (line 176)
+Fixable before golive?
+
+[transcript:08_2025-01-21_uat-readiness-review:t029] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 3:23 (line 181)
+Yeah. Fixable this week.
+
+[transcript:08_2025-01-21_uat-readiness-review:t030] 2025-01-21 | Ana Duarte | Ana Duarte @ 3:30 (line 191)
+Then who signs UAT off?
+
+[transcript:08_2025-01-21_uat-readiness-review:t031] 2025-01-21 | Lena Fischer | Lena Fischer @ 3:33 (line 196)
+I do.
+
+[transcript:08_2025-01-21_uat-readiness-review:t032] 2025-01-21 | Ana Duarte | Ana Duarte @ 3:37 (line 201)
+I would like it in writing if you...
+
+[transcript:08_2025-01-21_uat-readiness-review:t033] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 3:42 (line 206)
+Okay.
+
+[transcript:08_2025-01-21_uat-readiness-review:t034] 2025-01-21 | Lena Fischer | Lena Fischer @ 3:45 (line 211)
+Send me something to sign and I will sign it.
+
+[transcript:08_2025-01-21_uat-readiness-review:t035] 2025-01-21 | Ana Duarte | Ana Duarte @ 3:53 (line 216)
+I will send it today.
+
+[transcript:08_2025-01-21_uat-readiness-review:t036] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 3:59 (line 221)
+Okay, yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t037] 2025-01-21 | Lena Fischer | Lena Fischer @ 4:00 (line 226)
+Hmm. And, what am I signing exactly? Because I want to be careful. I am signing that ambiant core
+
+[transcript:08_2025-01-21_uat-readiness-review:t038] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 4:13 (line 235)
+Yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t039] 2025-01-21 | Lena Fischer | Lena Fischer @ 4:17 (line 240)
+replenishment works for twenty-five stores, not that the project is finished.
+
+[transcript:08_2025-01-21_uat-readiness-review:t040] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 4:25 (line 245)
+Yes.
+
+[transcript:08_2025-01-21_uat-readiness-review:t041] 2025-01-21 | Ana Duarte | Ana Duarte @ 4:27 (line 250)
+That is exactly what you are signing, and from the...
+
+[transcript:08_2025-01-21_uat-readiness-review:t042] 2025-01-21 | Lena Fischer | Lena Fischer @ 4:32 (line 255)
+so Good.
+
+[transcript:08_2025-01-21_uat-readiness-review:t043] 2025-01-21 | Ana Duarte | Ana Duarte @ 4:36 (line 260)
+Mm, okay. Cutover date. I would propose last weekend of February, so the twenty-seventh, with the first generated orders on the Monday.
+
+[transcript:08_2025-01-21_uat-readiness-review:t044] 2025-01-21 | Priya Nair | Priya Nair @ 4:51 (line 270)
+That works. Not the weekend, after, we have a change freeze.
+
+[transcript:08_2025-01-21_uat-readiness-review:t045] 2025-01-21 | Ana Duarte | Ana Duarte @ 5:06 (line 279)
+Right. The twenty-seventh then.
+
+[transcript:08_2025-01-21_uat-readiness-review:t046] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 5:13 (line 289)
+Hmm. I should flag something now rather than in March. I am on
+
+[transcript:08_2025-01-21_uat-readiness-review:t047] 2025-01-21 | Lena Fischer | Lena Fischer @ 5:26 (line 296)
+Yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t048] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 5:30 (line 301)
+holiday from the tenth of,
+
+[transcript:08_2025-01-21_uat-readiness-review:t049] 2025-01-21 | Lena Fischer | Lena Fischer @ 5:33 (line 306)
+Mm, okay.
+
+[transcript:08_2025-01-21_uat-readiness-review:t050] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 5:35 (line 311)
+March for two weeks. It was booked last November.
+
+[transcript:08_2025-01-21_uat-readiness-review:t051] 2025-01-21 | Ana Duarte | Ana Duarte @ 5:42 (line 316)
+Ten days after go-live.
+
+[transcript:08_2025-01-21_uat-readiness-review:t052] 2025-01-21 | Lena Fischer | Lena Fischer @ 5:48 (line 321)
+Okay, yeah.
+
+[transcript:08_2025-01-21_uat-readiness-review:t053] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 5:51 (line 326)
+Ten days after go live.
+
+[transcript:08_2025-01-21_uat-readiness-review:t054] 2025-01-21 | Priya Nair | Priya Nair @ 5:58 (line 331)
+Who covers DC-2?
+
+[transcript:08_2025-01-21_uat-readiness-review:t055] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 6:01 (line 336)
+I will write the runbook.
+
+[transcript:08_2025-01-21_uat-readiness-review:t056] 2025-01-21 | Priya Nair | Priya Nair @ 6:07 (line 341)
+I asked who, not what.
+
+[transcript:08_2025-01-21_uat-readiness-review:t057] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 6:13 (line 346)
+I know.
+
+[transcript:08_2025-01-21_uat-readiness-review:t058] 2025-01-21 | Priya Nair | Priya Nair @ 6:20 (line 351)
+Right.
+
+[transcript:08_2025-01-21_uat-readiness-review:t059] 2025-01-21 | Ana Duarte | Ana Duarte @ 6:24 (line 356)
+Sorry, go ahead. I will raise it. I am not going to pretend I have solved it in this call.
+
+[transcript:08_2025-01-21_uat-readiness-review:t060] 2025-01-21 | Lena Fischer | Lena Fischer @ 6:42 (line 365)
+Please do raise it. My if you...
+
+[transcript:08_2025-01-21_uat-readiness-review:t061] 2025-01-21 | Ana Duarte | Ana Duarte @ 6:46 (line 370)
+Mm-hm.
+
+[transcript:08_2025-01-21_uat-readiness-review:t062] 2025-01-21 | Lena Fischer | Lena Fischer @ 6:48 (line 375)
+care whose holiday it is.
+
+[transcript:08_2025-01-21_uat-readiness-review:t063] 2025-01-21 | Kwame Boateng | Kwame Boateng @ 6:58 (line 382)
+True.
+
